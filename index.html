@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeadBodyScript</title>
+
+    <link rel="stylesheet" href="assets/css/main/app.css" />
+    <link rel="stylesheet" href="assets/css/main/app-dark.css" />
+    
+    <link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png" sizes="180x180"/>
+    <link rel="icon" href="assets/images/logo/favicon-32x32.png" type="image/png" sizes="32x32"/>
+    <link rel="icon" href="assets/images/logo/favicon-16x16.png" type="image/png" sizes="16x16"/>
+    <link rel="manifest" href="assets/images/logo/site.webmanifest"/>
+
+    <link rel="stylesheet" href="assets/css/shared/iconly.css" />
+  </head>
+
+  <body>
+    <script src="assets/js/initTheme.js"></script>
+      <div id="app">
+        <div id="sidebar" class="active">
+          <div class="sidebar-wrapper active">
+            <div class="sidebar-header position-relative">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                  <a href="index.html"
+                  ><img src="assets/images/logo/logo.png" alt="Logo" srcset=""/>
+                  </a>
+                </div>
+              </div>
+            
+              <div class="theme-toggle d-flex gap-2 align-items-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+            </svg>
+
+            </svg>
+              <div class="form-check form-switch fs-6">
+                <input
+                class="form-check-input me-0"
+                type="checkbox"
+                id="toggle-dark"
+                style="cursor: pointer"/>
+                <label class="form-check-label"></label>
+              </div>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-moon" viewBox="0 0 16 16">
+                <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .625.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .509-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"/>
+                <path d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.46 5.46 0 0 1 1.055.209A3.603 3.603 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.576 3.576 0 0 1-2.241.634c.162.317.295.652.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z"/>
+              </svg>
+
+            </div>
+              <div class="sidebar-toggler x">
+              <a href="#" class="sidebar-hide d-xl-none d-block">
+              <i class="bi bi-x bi-middle"></i>
+              </a>
+            </div>
+          
+            </div>
+              <div class="sidebar-menu">
+                <ul class="menu">
+                <li class="sidebar-title">Menu</li>
+
+                <li class="sidebar-item active">
+                <a href="index.html" class="sidebar-link">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+                <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                <i class="bi bi-person-vcard"></i>
+                <span>About Me</span>
+                </a>
+                  <ul class="submenu">
+
+                    <li class="submenu-item">
+                    <a href="component-alert.html">Alert</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-badge.html">Badge</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-breadcrumb.html">Breadcrumb</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-button.html">Button</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-card.html">Card</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-carousel.html">Carousel</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-collapse.html">Collapse</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-dropdown.html">Dropdown</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-list-group.html">List Group</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-modal.html">Modal</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-navs.html">Navs</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-pagination.html">Pagination</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-progress.html">Progress</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-spinner.html">Spinner</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-toasts.html">Toasts</a>
+                    </li>
+
+                    <li class="submenu-item">
+                    <a href="component-tooltip.html">Tooltip</a>
+                    </li>
+
+                  </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-person-gear"></i>
+                  <span>Contributors</span>
+                  </a>
+                  <ul class="submenu">
+
+                    <li class="submenu-item">
+                      <a href="https://www.planetminecraft.com/member/-valery/">-Valery</a>
+                    </li>
+                    
+                    <li class="submenu-item">
+                      <a href="extra-component-avatar.html">MisterBlackPanda</a>
+                    </li>
+                    
+                  </ul>
+              </li>
+
+              <li class="sidebar-title">Link Tree</li>
+
+              <li class="sidebar-item">
+                <a href="https://discord.gg/pxEk4Ey4Hv" class="sidebar-link" target="_blank">
+                <i class="bi bi-discord"></i>
+                <span>Discord</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.instagram.com/iheadbodyscript/" class="sidebar-link" target="_blank">
+                <i class="bi bi-instagram"></i>
+                <span>Instagram</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.planetminecraft.com/member/iheadbodyscript/" class="sidebar-link" target="_blank">
+                <i class="bi bi-globe-americas"></i>
+                <span>Planet Minecraft</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.tiktok.com/@iheadbodyscript" class="sidebar-link" target="_blank">
+                <i class="bi bi-tiktok"></i>
+                <span>TikTok</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.twitch.tv/iheadbodyscript" class="sidebar-link" target="_blank">
+                <i class="bi bi-twitch"></i>
+                <span>Twitch</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://twitter.com/IHeadbodyscript" class="sidebar-link" target="_blank">
+                <i class="bi bi-twitter"></i>
+                <span>Twitter</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.youtube.com/@iheadbodyscript/featured" class="sidebar-link" target="_blank">
+                <i class="bi bi-youtube"></i>
+                <span>YouTube</span>
+                </a>
+              </li>
+
+              <li class="sidebar-title">Minecraft</li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                <i class="bi bi-file-earmark-zip-fill"></i>
+                <span>Data Packs</span>
+                </a>
+                <ul class="submenu">
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-chatbox.html">[D] Music</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-pricing.html">[D] Firearms</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-todolist.html">[D] Glock</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-todolist.html">[D] Mossberg</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-todolist.html">[D] Rurz</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-todolist.html">[D] UMP</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-widgets-todolist.html">[D] Kalishnikov</a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                <i class="bi bi-file-earmark-easel-fill"></i>
+                <span>Texture Packs</span>
+                </a>
+                <ul class="submenu">
+
+                  <li class="submenu-item">
+                  <a href="ui-icons-bootstrap-icons.html">[T] Music</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-icons-fontawesome.html">[T] Armor Stands</a>
+                  </li>
+
+                  <li class="submenu-item">
+                  <a href="ui-icons-dripicons.html">[T] Fireamrs</a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                <i class="bi bi-file-earmark-richtext-fill"></i>
+                <span>Map Packs</span>
+                </a>
+                <ul class="submenu">
+
+                <li class="submenu-item">
+                <a href="ui-chart-chartjs.html">[M] Showdown</a>
+                </li>
+
+                <li class="submenu-item">
+                <a href="ui-chart-apexcharts.html">[M] Z-NDU</a>
+                </li>
+
+                </ul>
+              </li>
+
+              <li class="sidebar-title">Support us directly</li>
+
+              <li class="sidebar-item">
+                <a href="https://github.com/HeadBodyScript" class="sidebar-link" target="_blank">
+                <i class="bi bi-award"></i>
+                <span>Sponsors</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.paypal.me/HeadBodyScript" class="sidebar-link" target="_blank">
+                <i class="bi bi-paypal"></i>
+                <span>PayPal</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://throne.me/iheadbodyscript/wishlist" class="sidebar-link" target="_blank">
+                <i class="bi bi-cart"></i>
+                <span>Wish list</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://github.com/HeadBodyScript" class="sidebar-link" target="_blank">
+                <i class="bi bi-github"></i>
+                <span>GitHub Subscription</span>
+                </a>
+              </li>
+
+
+
+
+
+
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+
+        <div class="page-content">
+          <section class="row">
+            <div class="col-12 col-lg-9">
+              <div class="row">
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    
+                    <div class="card-body px-4 py-4-5">
+
+                      <div class="row">
+                        <div
+                        class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
+                      >
+                        <div class="stats-icon blue mb-2">
+                            <div style = "position:relative;">
+                            <i class="fa-2xl bi bi-collection"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                        <h6 class="text-muted font-semibold">GitHub<br/>Repositories</h6>
+                        <h6 class="font-extrabold mb-0">
+                          <div id="getGitRepo"></div>
+                        </h6>
+                      </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-4 py-4-5">
+                      <div class="row">
+                        <div
+                          class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
+                        >
+                          <div class="stats-icon black mb-2">
+                              <div style = "position:relative;">
+                              <i class="fa-2xl bi bi-github"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                          <h6 class="text-muted font-semibold">GitHub<br/>Followers</h6>
+                          <h6 class="font-extrabold mb-0">
+                            <div id="getGitSubs"></div>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-9 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-4 py-4-5">
+                      <div class="row">
+                        <div
+                          class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
+                        >
+                          <div class="stats-icon purple mb-2">
+                              <div style = "position:relative;">
+                              <i class="fa-2xl bi bi-twitch"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                          <h6 class="text-muted font-semibold">Twitch<br/>Subscribers</h6>
+                          <div id="getTwitch"></div>
+                          <script src="//assets/js/count/twitch.js"></script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-3 col-md-6">
+                  <div class="card">
+                    <div class="card-body px-4 py-4-5">
+                      <div class="row">
+                        <div
+                          class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
+                        >
+                          <div class="stats-icon red mb-2">
+                            <div style = "position:relative;">
+                            <i class="fa-2xl bi bi-youtube"></i>
+                          </div>
+
+                          </div>
+                        </div>
+                        <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                          <h6 class="text-muted font-semibold">Youtube<br/>Subscribers</h6>
+                          <h6 class="font-extrabold mb-0">
+                          <div id="getYouTube"></div>
+                          <script src="assets/js/count/youtube.js"></script>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Profile Visit</h4>
+                    </div>
+                    <div class="card-body">
+                      <div id="chart-profile-visit"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-xl-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Profile Visit</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-primary"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/images/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Europe</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">862</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-europe"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-success"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/images/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">America</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">375</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-america"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="d-flex align-items-center">
+                            <svg
+                              class="bi text-danger"
+                              width="32"
+                              height="32"
+                              fill="blue"
+                              style="width: 10px"
+                            >
+                              <use
+                                xlink:href="assets/images/bootstrap-icons.svg#circle-fill"
+                              />
+                            </svg>
+                            <h5 class="mb-0 ms-3">Indonesia</h5>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h5 class="mb-0">1025</h5>
+                        </div>
+                        <div class="col-12">
+                          <div id="chart-indonesia"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Latest Comments</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-hover table-lg">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Comment</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/content/mc-server-icon.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">Si Cantik</p>
+                                </div>
+                              </td>
+                              <td class="col-auto">
+                                <div id="catFact"></div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="col-3">
+                                <div class="d-flex align-items-center">
+                                  <div class="avatar avatar-md">
+                                    <img src="assets/images/content/mc-server-icon.jpg" />
+                                  </div>
+                                  <p class="font-bold ms-3 mb-0">Si Ganteng</p>
+                                </div>
+                              </td>
+                              <td class="col-auto">
+                                <p class="mb-0">
+                                  Wow amazing design! Can you make another
+                                  tutorial for this design?
+                                </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-end">
+                    <div class="avatar avatar-xl">
+                      <img src="assets/images/content/mc-server-icon.jpg" />
+                    </div>
+                    <div class="ms-3 name">
+                      <h5 class="font-bold">Minecraft Server IP:</h5>
+
+                      <button class="btn btn-block btn-xl btn-outline-primary font-bold"
+                      onclick="copyText()" >
+                      Click to Copy IP</button>
+                          
+                      <script
+                      src="assets/js/ip_button.js">
+                      </script>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Recent Messages</h4>
+                </div>
+                <div class="card-content pb-4">
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/content/mc-server-icon.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">Hank Schrader</h5>
+                      <h6 class="text-muted mb-0">@johnducky</h6>
+                    </div>
+                  </div>
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/content/mc-server-icon.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">Dean Winchester</h5>
+                      <h6 class="text-muted mb-0">@imdean</h6>
+                    </div>
+                  </div>
+                  <div class="recent-message d-flex px-4 py-3">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/images/content/mc-server-icon.jpg" />
+                    </div>
+                    <div class="name ms-4">
+                      <h5 class="mb-1">John Dodol</h5>
+                      <h6 class="text-muted mb-0">@dodoljohn</h6>
+                    </div>
+                  </div>
+                  <div class="px-4">
+                    <button
+                      class="btn btn-block btn-xl btn-outline-primary font-bold mt-3"
+                    >
+                      Start Conversation
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Visitors Profile</h4>
+                </div>
+                <div class="card-body">
+                  <div id="chart-visitors-profile"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+      </div>
+    </div>
+    <script src="assets/js/count/github.js"></script>
+    <script src="assets/js/mewmew.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Need: Apexcharts -->
+    <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+  </body>
+</html>
