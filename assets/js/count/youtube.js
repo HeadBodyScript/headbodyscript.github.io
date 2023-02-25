@@ -1,6 +1,7 @@
 const youtubeKey = 'AIzaSyD6Twf3IrJNQ3Ffc58IJxUMXxdImkJbQXM';
 const youtubeUser = 'UCqYWhYvSGTLO0L-VIPpywPQ';
-const getYouTube = document.getElementById('getYouTube');
+const getYouTubesubs = document.getElementById('getYouTubesubs');
+const getYouTubeviews = document.getElementById('getYouTubeviews');
 
 let getSubscribers = () => {
 
@@ -10,9 +11,10 @@ let getSubscribers = () => {
     })
     .then(data => {
         console.log(data);
-        getYouTube.innerHTML = data["items"][0].statistics.subscriberCount;
+        getYouTubesubs.innerHTML = data["items"][0].statistics.subscriberCount;
+        getYouTubeviews.innerHTML = data["items"][0].statistics.viewCount;
     })
-
+      .catch(error => console.log('error', error));
 }
 
 getSubscribers();

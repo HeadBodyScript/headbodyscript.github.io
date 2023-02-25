@@ -395,15 +395,17 @@
                         <div
                           class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
                         >
-                          <div class="stats-icon purple mb-2">
+                          <div class="stats-icon red mb-2">
                               <div style = "position:relative;">
-                              <i class="fa-2xl bi bi-twitch"></i>
+                              <i class="fa-2xl bi bi-play-fill"></i>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                          <h6 class="text-muted font-semibold">Twitch<br/>Subscribers</h6>
+                          <h6 class="text-muted font-semibold">YouTube<br/>Views</h6>
+                          <h6 class="font-extrabold mb-0">
                           <div id="getYouTubeviews"></div>
+                          </h6>
                         </div>
                       </div>
                     </div>
@@ -425,7 +427,7 @@
                           </div>
                         </div>
                         <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                          <h6 class="text-muted font-semibold">Youtube<br/>Subscribers</h6>
+                          <h6 class="text-muted font-semibold">YouTube<br/>Subscribers</h6>
                           <h6 class="font-extrabold mb-0">
                           <div id="getYouTubesubs"></div>
                           </h6>
@@ -562,10 +564,7 @@
                                 </div>
                               </td>
                               <td class="col-auto">
-                                <p class="mb-0">
-                                  Wow amazing design! Can you make another
-                                  tutorial for this design?
-                                </p>
+                                <div id="serverStatus"></div>
                               </td>
                             </tr>
                           </tbody>
@@ -595,8 +594,10 @@
               </div>
               <div class="card">
                 <div class="card-header">
-                  <h4>Recent Messages</h4>
+                  <div style = "position:relative">
+                  <h4>Server Status</h4>
                 </div>
+              </div>
                 <div class="card-content pb-4">
                   <div class="recent-message d-flex px-4 py-3">
                     <div class="avatar avatar-lg">
@@ -649,8 +650,10 @@
 
       </div>
     </div>
+    <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
     <script src="assets/js/count/github.js"></script>
     <script src="assets/js/count/youtube.js"></script>
+    <script src="assets/js/count/server.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/app.js"></script>
 
