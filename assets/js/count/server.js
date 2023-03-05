@@ -1,6 +1,7 @@
 const serverStatus = document.getElementById('serverStatus');
 const serverMax = document.getElementById('serverMax');
-const serverTotal = document.getElementById('serverTotal');
+const serverOnline = document.getElementById('serverOnline');
+const serverVersion = document.getElementById('serverVersion');
 
 let getServer = () => {
 
@@ -14,6 +15,9 @@ let getServer = () => {
         .then(result => {
             console.log(result);
             serverStatus.innerHTML = result.online;
+            serverMax.innerHTML = result.players.max;
+            serverOnline.innerHTML = result.players.online;
+            serverVersion.innerHTML = result.version.name;
         })
         .catch(error => console.log('error', error));
 
