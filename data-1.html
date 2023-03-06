@@ -68,7 +68,7 @@
                 <ul class="menu">
                 <li class="sidebar-title">Menu</li>
 
-                <li class="sidebar-item active">
+                <li class="sidebar-item">
                 <a href="index.html" class="sidebar-link">
                 <i class="bi bi-grid-3x3-gap-fill"></i>
                 <span>Dashboard</span>
@@ -160,14 +160,14 @@
 
               <li class="sidebar-title">Minecraft</li>
 
-              <li class="sidebar-item has-sub">
+              <li class="sidebar-item has-sub active">
                 <a href="#" class="sidebar-link">
                 <i class="bi bi-file-earmark-zip-fill"></i>
                 <span>Data Packs</span>
                 </a>
                 <ul class="submenu">
 
-                  <li class="submenu-item">
+                  <li class="submenu-item active">
                   <a href="data-1.html">[D] Music</a>
                   </li>
 
@@ -214,7 +214,7 @@
                   </li>
 
                   <li class="submenu-item">
-                  <a href="texture-3.html">[T] Fireamrs</a>
+                  <a href="texture-3.html">[T] Fire arms</a>
                   </li>
 
                 </ul>
@@ -266,291 +266,40 @@
                 <i class="bi bi-github"></i>
                 <span>GitHub Subscription</span>
                 </a>
-              </li>
-
-
-
-
-
-
-              
+              </li> 
             </ul>
           </div>
         </div>
       </div>
+
       <div id="main">
-
         <div class="page-content">
-          <section class="row">
-            <div class="col-12 col-lg-9">
-              <div class="row">
-                <div class="col-6 col-lg-3 col-md-6">
-                  <div class="card">
-                    
-                    <div class="card-body px-4 py-4-5">
-
-                      <div class="row">
-                        <div
-                        class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
-                      >
-                        <div class="stats-icon blue mb-2">
-                            <div style = "position:relative;">
-                            <i class="fa-2xl bi bi-collection"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                        <h6 class="text-muted font-semibold">GitHub<br/>Repositories</h6>
-                        <h6 class="font-extrabold mb-0">
-                          <div id="getGitRepo"></div>
-                        </h6>
-                      </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 col-md-6">
-                  <div class="card">
-                    <div class="card-body px-4 py-4-5">
-                      <div class="row">
-                        <div
-                          class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
-                        >
-                          <div class="stats-icon black mb-2">
-                              <div style = "position:relative;">
-                              <i class="fa-2xl bi bi-github"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                          <h6 class="text-muted font-semibold">GitHub<br/>Followers</h6>
-                          <h6 class="font-extrabold mb-0">
-                            <div id="getGitSubs"></div>
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 col-md-6">
-                  <div class="card">
-                    <div class="card-body px-4 py-4-5">
-                      <div class="row">
-                        <div
-                          class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
-                        >
-                          <div class="stats-icon red mb-2">
-                              <div style = "position:relative;">
-                              <i class="fa-2xl bi bi-play-fill"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                          <h6 class="text-muted font-semibold">YouTube<br/>Views</h6>
-                          <h6 class="font-extrabold mb-0">
-                          <div id="getYouTubeviews"></div>
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-6 col-lg-3 col-md-6">
-                  <div class="card">
-                    <div class="card-body px-4 py-4-5">
-                      <div class="row">
-                        <div
-                          class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
-                        >
-                          <div class="stats-icon red mb-2">
-                            <div style = "position:relative;">
-                            <i class="fa-2xl bi bi-youtube"></i>
-                          </div>
-
-                          </div>
-                        </div>
-                        <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                          <h6 class="text-muted font-semibold">YouTube<br/>Subscribers</h6>
-                          <h6 class="font-extrabold mb-0">
-                          <div id="getYouTubesubs"></div>
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="col-12 col-xl-8">
-                <div class="card">
+          <section class="section">
+            <div class="row">
+              <div class="col-12">
+                <div class="card align-items-center">
                   <div class="card-header">
-                    <h4>Daily serotonin</h4>
+                    <h5 class="card-title">[Data Pack] Music</h5>
                   </div>
                   <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-hover table-lg">
-                        <thead>
-                          <tr>
-                            <th></th>
-                            <th>Cat Fact</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="col-3">
-                              <div class="d-flex align-items-center">
-                                <div class="avatar avatar-md">
-                                  
-                                </div>
-                                <p class="font-bold ms-3 mb-0">Did you know?</p>
-                              </div>
-                            </td>
-                            <td class="col-auto">
-                              <div id="catFact"></div>
-                            </td>
-                          </tr>
-
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-3 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <img class="try" src="https://thecatapi.com/api/images/get?format=src&type=gif">
-                  </div>
-                  <div class="card-body">
-                    <div id="chart-profile-visit"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-xl-4">
-                </div>
-
-              </div>
-            </div>
-            <div class="col-12 col-lg-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-end">
-                    <div class="avatar avatar-xl">
-                      <img src="https://eu.mc-api.net/v3/server/favicon/headbodyscript.ddns.net:25582" onerror="this.onerror=null; this.src='assets/images/content/mc-server-icon.jpg'" />
-                    </div>
-                    <div class="ms-3 name">
-                      <h5 class="font-bold">Minecraft Server IP:</h5>
-
-                      <button class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="copyText()" > Click to Copy IP</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              
-              <div class="card">
-                <div class="card-header">
-                  <div style = "position:relative">
-                    <div class="d-flex">
-                      <div class="center">
-                        <h4>Server Status</h4>
-                      </div>
-                    <div class="avatar avatar-xl img-right">
-                      <img src="https://eu.mc-api.net/v3/server/favicon/headbodyscript.ddns.net:25582" onerror="this.onerror=null; this.src='assets/images/content/mc-server-icon.jpg'" />
-                  </div>
-                  </div>
-                </div>
-              </div>
-                <div class="card-content pb-4">
-                  <div class="server d-flex py-4">
-                    <div class="name ms-4">
-                      <h5 class="mb-1">Status</h5>
-
-                      <div class="server d-flex px-4">
-
-                      <tr>
-                        <p>Online:</p>
-                        <div class="px-2" id="serverStatus"></div>
-                      </div>
-                      </tr>
-                    </div>
-                  </div>
-                  <div class="server d-flex">
-                    <div class="name ms-4">
-                      <h5 class="mb-1">Players</h5>
-
-                      <div class="server d-flex px-4">
-                        
-                        <tr>
-                        <p>Online:</p>
-                        <div class="px-2" id="serverOnline">N/A</div>
-                        </tr>
-                      </div>
-
-                      <div class="server d-flex px-4">
-                        <tr>
-                        <p>Max:</p>
-                        <div class="px-2" id="serverMax">N/A</div>
-                        </tr>
-                      </div>
-                      
-
-                    </div>
-                  </div>
-                  <div class="server d-flex py-3">
-                    <div class="name ms-4">
-                      <h5 class="mb-1">Version</h5>
-                      <div class="server d-flex px-4">
-
-                        <tr>
-                          <p>Java</p>
-                          <div class="px-2" id="serverVersion">0.0.0</div>
-                        </div>
-                        </tr>
-
-                        <div class="px-4">
-                          <button class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="getServer()">Refresh</button>
-                        </div>
-
-                    </div>
+                    <p>
+                      Direct downloads
+                      <a href="https://www.mediafire.com/file/9b1ij9058xvnyev/Prototype.Data%255BMUSIC%255D.zip/file"target="_blank">1.19.0</a>
+                    </p>
+                    <p>
+                      Source code
+                      <a href="https://github.com/HeadBodyScript/Prototype_Music"target="_blank">Click here</a>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            
           </section>
-
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Note: This site is temporary and will be replaced in the future</h4>
-                </div>
-                <div class="card-body">
-                  <div id="chart-profile-visit"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
+
     </div>
-    <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
-    <script src="assets/js/count/github.js"></script>
-    <script src="assets/js/count/youtube.js"></script>
-    <script src="assets/js/count/server.js"></script>
+
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/app.js"></script>
 
