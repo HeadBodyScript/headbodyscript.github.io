@@ -86,12 +86,13 @@ body.theme-dark body {
   margin: 0;
   text-align: var(--bs-body-text-align);
 }
+
 .image-replacement {
+  width: 10px;
+  height: 50px;
+  padding-left: 300px;
   background: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/assets/images/logo/logo.png)
     no-repeat;
-  width: 226px;
-  height: 19px;
-  padding-left: 180px;
 }
 body.theme-dark hr {
   border: 0;
