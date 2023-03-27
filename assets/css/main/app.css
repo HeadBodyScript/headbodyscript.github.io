@@ -3691,6 +3691,11 @@
     display: block;
     margin-left: auto;
   }
+  .img-dimi {
+    position: fixed;
+    right: 35px;
+    top: 35px;
+  }
   .center {
     display: block;
     margin-left: auto;
