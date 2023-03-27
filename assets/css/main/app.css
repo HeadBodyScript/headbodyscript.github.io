@@ -3481,6 +3481,9 @@
   .dropup-center {
     position: relative;
   }
+  .pictext {
+    text-align: center;
+  }
   .dropdown-toggle {
     white-space: nowrap;
   }
@@ -3690,11 +3693,6 @@
   .img-right {
     display: block;
     margin-left: auto;
-  }
-  .img-dimi {
-    position: fixed;
-    right: 35px;
-    top: 35px;
   }
   .center {
     display: block;
@@ -18402,8 +18400,6 @@
   .try {
     border-radius: 8px;
     width: 100%;
-    max-width:450px;
     height: 100%;
-    max-height: 800px;
   }
   
