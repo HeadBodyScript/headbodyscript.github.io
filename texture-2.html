@@ -208,9 +208,9 @@
                   <div class="card-body">
                     <p>
                       Direct downloads <br/>
-                      <a href="https://www.mediafire.com/file/tyxtc6de7syvuqx/Prototype.texture%255Barmorstand%255D.zip/file"target="_blank">Version 2.2 [1.19.4]</a><br/>
-                      <a href="https://www.mediafire.com/file/7ie4y1tzss7bibr/Prototype.textures%255Barmorstand%255Dold.zip/file"target="_blank">Version 2.1 [1.19.4]</a><br/>
-                      <a href="https://www.mediafire.com/file/8w2vszcbyk8fsxt/Prototype.textures%255Barmorstand%255Dold.zip/file"target="_blank">Version 1.1 [1.19.4]</a>
+                      <a href="https://www.mediafire.com/file/tyxtc6de7syvuqx/Prototype.texture%255Barmorstand%255D.zip/file" target="_blank"><button class="btn btn-block btn-xl btn-outline-primary font-bold">Version 2.2 [1.19.4]</button></a>
+                      <a href="https://www.mediafire.com/file/7ie4y1tzss7bibr/Prototype.textures%255Barmorstand%255Dold.zip/file" target="_blank"><button class="btn btn-block btn-xl btn-outline-primary font-bold">Version 2.1 [1.19.4]</button></a>
+                      <a href="https://www.mediafire.com/file/8w2vszcbyk8fsxt/Prototype.textures%255Barmorstand%255Dold.zip/file" target="_blank"><button class="btn btn-block btn-xl btn-outline-primary font-bold">Version 1.1 [1.19.4]</button></a>
                     </p>
                     <p>
                       Source code <br/>
@@ -292,13 +292,38 @@
                 </div>
                 <div class="server d-flex">
                   <div class="name ms-4">
-                    <h5 class="mb-1">How to use:</h5>
+                    <h5 class="mb-1">Commands (creative):</h5>
 
                     <div class="server d-flex px-4">
                       
                       <tr>
-                      <p>This Texture Pack adds both the classic and the slim player model as armorstands into the game without replacing the original model </p>
-                      
+                      <p>name.1=base<br/>
+                        <button id="content" class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="CopyToClipboard('base');return false;" >Click to Copy command</button><br/>
+                        <a id="base">/summon armor_stand ~ ~ ~ {ShowArms:1b,CustomName:'{"text":"base"}'}</a><br/><br/>
+                        
+                        name.2=Rebecca<br/>
+                        <a href="https://www.planetminecraft.com/skin/rebecca-cyberpunk-edgerunners-5717107/"target="_blank">Rebecca skin</a><br/>
+                        <button id="content" class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="CopyToClipboard('rebecca');return false;" >Click to Copy command</button><br/>
+                        <a id="rebecca">/summon armor_stand ~ ~ ~ {ShowArms:1b,CustomName:'{"text":"Rebecca"}'}</a><br/><br/>
+                        
+                        name.3=Lucy<br/>
+                        <a href="https://www.planetminecraft.com/skin/lucy-cyberpunk-edgerunners-5717109/"target="_blank">Lucy skin</a><br/>
+                        <button id="content" class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="CopyToClipboard('lucy');return false;" >Click to Copy command</button><br/>
+                        <a id="lucy">/summon armor_stand ~ ~ ~ {ShowArms:1b,CustomName:'{"text":"Lucy"}'}</a><br/><br/>
+                        
+                        name.4=Johnny Silverhand<br/>
+                        <a href="https://www.planetminecraft.com/skin/johnny-silverhand-4339600/"target="_blank">Johnny Silverhand skin</a><br/>
+                        <button id="content" class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="CopyToClipboard('silverhand');return false;" >Click to Copy command</button><br/>
+                        <a id="silverhand">/summon armor_stand ~ ~ ~ {ShowArms:1b,CustomName:'{"text":"Johnny Silverhand"}'}</a><br/><br/>
+                        
+                        name.5=David Martinez<br/>
+                        <a href="https://www.planetminecraft.com/skin/david-martinez-classic-version/"target="_blank">Johnny Silverhand skin</a><br/>
+                        <button id="content" class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="CopyToClipboard('david');return false;" >Click to Copy command</button><br/>
+                        <a id="david">/summon armor_stand ~ ~ ~ {ShowArms:1b,CustomName:'{"text":"David Martinez"}'}</a><br/><br/>
+                        
+                        Use this website to customize your armorstands position and other features<br/>
+                        <a href="https://haselkern.com/Minecraft-ArmorStand/"target="_blank">haselkern.com</a>
+                      </p>
                       </tr>
                     </div>
                   </div>
@@ -356,6 +381,7 @@ role="document">
 
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/copy.js"></script>
 
     <!-- Need: Apexcharts -->
     

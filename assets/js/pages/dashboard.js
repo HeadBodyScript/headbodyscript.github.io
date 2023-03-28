@@ -36,5 +36,3 @@ btnSend.addEventListener('click', () =>{
 });
 
 
-
-
