@@ -20,7 +20,7 @@ document.write(`
     <div class="sidebar-menu">
     <ul class="menu">
         <li
-          class="sidebar-title">Menu</li><li class="sidebar-item"><a href="./" class="sidebar-link"><i class="bi bi-grid-3x3-gap-fill"></i>
+          class="sidebar-title">Menu</li><li class="sidebar-item"><a href="../../" class="sidebar-link"><i class="bi bi-grid-3x3-gap-fill"></i>
             <span>Dashboard</span></a>
         </li>
 
@@ -33,26 +33,26 @@ document.write(`
         class="sidebar-title">Minecraft</li><li class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
             <span>Data Packs</span></a><ul class="submenu">
                 <li class="submenu-item"><a href="./pages/data/core">[D] Core</a></li>
-                <li class="submenu-item"><a href="./firearms">[D] Firearms</a></li>
-                <li class="submenu-item"><a href="./glock">[D] Glock</a></li>
-                <li class="submenu-item"><a href="./mossberg">[D] Mossberg</a></li>
-                <li class="submenu-item"><a href="./kurz">[D] Kurz</a></li>
-                <li class="submenu-item"><a href="./ump">[D] UMP</a></li>
-                <li class="submenu-item"><a href="./Kalishnikov">[D] Kalishnikov</a></li></ul>
+                <li class="submenu-item"><a href="./pages/data/firearms">[D] Firearms</a></li>
+                <li class="submenu-item"><a href="./pages/data/glock">[D] Glock</a></li>
+                <li class="submenu-item"><a href="./pages/data/mossberg">[D] Mossberg</a></li>
+                <li class="submenu-item"><a href="./pages/data/kurz">[D] Kurz</a></li>
+                <li class="submenu-item"><a href="./pages/data/ump">[D] UMP</a></li>
+                <li class="submenu-item"><a href="./pages/data/Kalishnikov">[D] Kalishnikov</a></li></ul>
         </li>
 
         <li 
         class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
             <span>Texture Packs</span></a><ul class="submenu">
-                <li class="submenu-item"><a href="./pages/data/music">[T] Music</a></li>
-                <li class="submenu-item"><a href="./pages/data/armorstands">[T] Armor Stands</a></li>
-                <li class="submenu-item"><a href="./pages/data/firearms">[T] Fireamrs</a></li></ul>
+                <li class="submenu-item"><a href="./pages/texture/music">[T] Music</a></li>
+                <li class="submenu-item"><a href="./pages/texture/armorstands">[T] Armor Stands</a></li>
+                <li class="submenu-item"><a href="./pages/texture/firearms">[T] Fireamrs</a></li></ul>
         </li>
 
         <li
         class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-richtext-fill"></i>
             <span>Map Packs</span></a><ul class="submenu">
-              <li class="submenu-item"><a href="./nacht-der-untoten">[M] Z-NDU</a></li></ul>
+              <li class="submenu-item"><a href="./pages/map/nacht-der-untoten">[M] Z-NDU</a></li></ul>
         </li>
     </ul>
     </div>
