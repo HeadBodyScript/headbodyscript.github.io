@@ -9,6 +9,7 @@ window.getSelection().removeAllRanges();
 window.getSelection().addRange(r);
 document.execCommand('copy');
 window.getSelection().removeAllRanges();
+}
 
 btnSend.addEventListener('click', () =>{
     btnSend.innerText = 'Copied';
@@ -16,5 +17,3 @@ btnSend.addEventListener('click', () =>{
         btnSend.innerText = 'Click to Copy command'
     },3000);
 });
-
-}
