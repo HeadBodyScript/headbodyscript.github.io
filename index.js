@@ -45,7 +45,7 @@ document.write(`
         class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
             <span>Texture Packs</span></a><ul class="submenu">
                 <li class="submenu-item"><a href="texture-1.html">[T] Music</a></li>
-                <li class="submenu-item"><a href="texture-2.html">[T] Armor Stands</a></li>
+                <li class="submenu-item"><a href="./texture-2">[T] Armor Stands</a></li>
                 <li class="submenu-item"><a href="texture-3.html">[T] Fireamrs</a></li></ul>
         </li>
 
