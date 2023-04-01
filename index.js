@@ -32,7 +32,7 @@ document.write(`
         <li
         class="sidebar-title">Minecraft</li><li class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
             <span>Data Packs</span></a><ul class="submenu">
-                <li class="submenu-item"><a href="./core">[D] Core</a></li>
+                <li class="submenu-item"><a href="./pages/data/core">[D] Core</a></li>
                 <li class="submenu-item"><a href="./firearms">[D] Firearms</a></li>
                 <li class="submenu-item"><a href="./glock">[D] Glock</a></li>
                 <li class="submenu-item"><a href="./mossberg">[D] Mossberg</a></li>
@@ -44,9 +44,9 @@ document.write(`
         <li 
         class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
             <span>Texture Packs</span></a><ul class="submenu">
-                <li class="submenu-item"><a href="./music">[T] Music</a></li>
-                <li class="submenu-item"><a href="./armorstands">[T] Armor Stands</a></li>
-                <li class="submenu-item"><a href="./firearms-texture">[T] Fireamrs</a></li></ul>
+                <li class="submenu-item"><a href="./pages/data/music">[T] Music</a></li>
+                <li class="submenu-item"><a href="./pages/data/armorstands">[T] Armor Stands</a></li>
+                <li class="submenu-item"><a href="./pages/data/firearms">[T] Fireamrs</a></li></ul>
         </li>
 
         <li
