@@ -1,6 +1,6 @@
 document.write(`
 <div class="sidebar-toggler x">
-<a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list"></i></a>
+<a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list sb"></i></a>
 </div>
 <div id="app">
   <div id="sidebar" class="active">
