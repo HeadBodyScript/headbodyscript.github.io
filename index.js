@@ -25,7 +25,7 @@ document.write(`
         </li>
 
         <li 
-        class="sidebar-item"><a href="./information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
+        class="sidebar-item"><a href="/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
             <span>About us</span></a>
         </li>
 
