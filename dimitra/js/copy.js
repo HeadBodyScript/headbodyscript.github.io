@@ -22,3 +22,4 @@ btnSend.addEventListener('click', () =>{
         btnSend.innerText = 'Copy again?'
     },3000);
 });
+copyText();

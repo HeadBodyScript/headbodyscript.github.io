@@ -65,8 +65,8 @@ let getServer = () => {
         })
         .catch(error => console.log('error', error));
 }
-
 getServer   ();
+
 const getGitSubs = document.getElementById('getGitSubs');
 const getGitRepo = document.getElementById('getGitRepo');
 let getInfo = () => {
