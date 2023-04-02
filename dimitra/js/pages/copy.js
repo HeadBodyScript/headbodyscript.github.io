@@ -1,4 +1,3 @@
-
 let btnSend = document.querySelector('button');
 let message = document.querySelector('h1');
 function CopyToClipboard(id)
