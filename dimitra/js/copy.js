@@ -1,18 +1,9 @@
-let btnSend = document.querySelector('button');
-let message = document.querySelector('h1');
-function copyBase() 
-{                       
-    var r = document.createRange();
-    r.selectNode(document.getElementById(id));
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(r);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-then(() =>
-btnSend.addEventListener('click', () =>{
-    btnSend.innerText = 'Copied';
-    setTimeout(()=>{
-        btnSend.innerText = 'Copy again?'
-    },3000);
-}))};
-
+let text = document.getElementById('base').innerHTML;
+const copyContent = async () => {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Content copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+}
