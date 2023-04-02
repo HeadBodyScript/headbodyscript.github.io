@@ -7,8 +7,8 @@ document.write(`
           <div class="logo">
             <a href="index.html">
               <picture>
-                <source srcset="dimitra/content/logo/logo.png" media="(prefers-color-scheme: dark)">
-                <img src="dimitra/content/logo/logo.png">
+                <source srcset="/dimitra/content/logo/logo.png" media="(prefers-color-scheme: dark)">
+                <img src="/dimitra/content/logo/logo.png">
               </picture>
             </a>
           </div>
