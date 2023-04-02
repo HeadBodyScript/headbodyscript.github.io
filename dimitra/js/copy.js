@@ -8,14 +8,11 @@ function copyBase()
     window.getSelection().addRange(r);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-}
-then(() => {
+then(() =>
 btnSend.addEventListener('click', () =>{
     btnSend.innerText = 'Copied';
     setTimeout(()=>{
         btnSend.innerText = 'Copy again?'
     },3000);
-});
-});
-
+}))};
 
