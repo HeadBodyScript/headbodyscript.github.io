@@ -37,7 +37,7 @@ document.write(`
         <liclass="sidebar-title">Minecraft</li>
 
         <li class="sidebar-item has-sub" id="Data"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
-            <span>Data Packs</span></a><ul class="submenu">
+            <span>Data Packs</span></a><ul class="submenu" id="DataPacks">
                 <li class="submenu-item" id="core"><a href="/pages/data/core">[D] Core</a></li>
                 <li class="submenu-item" id="fire-arms"><a href="/pages/data/firearms">[D] Firearms</a></li>
                 <li class="submenu-item" id="glock"><a href="/pages/data/glock">[D] Glock</a></li>
@@ -49,7 +49,7 @@ document.write(`
 
         <li 
         class="sidebar-item has-sub" id="Texture"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
-            <span>Texture Packs</span></a><ul class="submenu">
+            <span>Texture Packs</span></a><ul class="submenu" id="TexturePacks">
                 <li class="submenu-item" id="music"><a href="/pages/texture/music">[T] Music</a></li>
                 <li class="submenu-item" id="armorstands"><a href="/pages/texture/armorstands">[T] Armor Stands</a></li>
                 <li class="submenu-item" id="firearms"><a href="/pages/texture/firearms">[T] Fireamrs</a></li></ul>
@@ -57,7 +57,7 @@ document.write(`
 
         <li
         class="sidebar-item has-sub" id="Map"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-richtext-fill"></i>
-            <span>Map Packs</span></a><ul class="submenu">
+            <span>Map Packs</span></a><ul class="submenu" id="MapPacks">
               <li class="submenu-item" id="z-ndu"><a href="/pages/map/nacht-der-untoten">[M] Z-NDU</a></li></ul>
         </li>
     </ul>

@@ -9,4 +9,5 @@ window.getSelection().removeAllRanges();
 };
 
 document.getElementById("Texture").className += " active";
+document.getElementById("TexturePacks").className += " active";
 document.getElementById("armorstands").className += " active";
