@@ -38,7 +38,7 @@ let getServer = () => {
         method: 'GET',
         redirect: 'follow'
       };
-      fetch("https://eu.mc-api.net/v3/server/ping/headbodyscript.ddns.net:25582", requestOptions)
+      fetch("https://eu.mc-api.net/v3/server/ping/135.125.24.168:25582", requestOptions)
         .then(response => response.json())
         .then(result => {
             console.log(result);
