@@ -84,4 +84,5 @@ let getInfo = () => {
       .catch(error => console.log('error', error));
 }
 getInfo();
-  
+
+document.getElementById("Dashboard").className += " active";

@@ -1,0 +1,1 @@
+document.getElementById("Dashboard").className += " active";

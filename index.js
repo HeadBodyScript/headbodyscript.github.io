@@ -22,40 +22,43 @@ document.write(`
 
     <div class="sidebar-menu">
     <ul class="menu">
-        <li
-          class="sidebar-title">Menu</li><li class="sidebar-item"><a href="/" class="sidebar-link"><i class="bi bi-grid-3x3-gap-fill"></i>
+        <li class="sidebar-title">Menu</li>
+
+        <li 
+        class="sidebar-item" id="Dashboard"><a href="/" class="sidebar-link"><i class="bi bi-grid-3x3-gap-fill"></i>
             <span>Dashboard</span></a>
         </li>
 
         <li 
-        class="sidebar-item"><a href="/pages/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
+        class="sidebar-item" id="Information"><a href="/pages/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
             <span>About us</span></a>
         </li>
 
-        <li
-        class="sidebar-title">Minecraft</li><li class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
+        <liclass="sidebar-title">Minecraft</li>
+
+        <li class="sidebar-item has-sub" id="Data"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
             <span>Data Packs</span></a><ul class="submenu">
-                <li class="submenu-item"><a href="/pages/data/core">[D] Core</a></li>
-                <li class="submenu-item"><a href="/pages/data/firearms">[D] Firearms</a></li>
-                <li class="submenu-item"><a href="/pages/data/glock">[D] Glock</a></li>
-                <li class="submenu-item"><a href="/pages/data/mossberg">[D] Mossberg</a></li>
-                <li class="submenu-item"><a href="/pages/data/kurz">[D] Kurz</a></li>
-                <li class="submenu-item"><a href="/pages/data/ump">[D] UMP</a></li>
-                <li class="submenu-item"><a href="/pages/data/Kalishnikov">[D] Kalishnikov</a></li></ul>
+                <li class="submenu-item" id="core"><a href="/pages/data/core">[D] Core</a></li>
+                <li class="submenu-item" id="fire-arms"><a href="/pages/data/firearms">[D] Firearms</a></li>
+                <li class="submenu-item" id="glock"><a href="/pages/data/glock">[D] Glock</a></li>
+                <li class="submenu-item" id="mossberg"><a href="/pages/data/mossberg">[D] Mossberg</a></li>
+                <li class="submenu-item" id="kurz"><a href="/pages/data/kurz">[D] Kurz</a></li>
+                <li class="submenu-item" id="ump"><a href="/pages/data/ump">[D] UMP</a></li>
+                <li class="submenu-item" id="kalishnikov"><a href="/pages/data/Kalishnikov">[D] Kalishnikov</a></li></ul>
         </li>
 
         <li 
-        class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
+        class="sidebar-item has-sub" id="Texture"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
             <span>Texture Packs</span></a><ul class="submenu">
-                <li class="submenu-item"><a href="/pages/texture/music">[T] Music</a></li>
-                <li class="submenu-item"><a href="/pages/texture/armorstands">[T] Armor Stands</a></li>
-                <li class="submenu-item"><a href="/pages/texture/firearms">[T] Fireamrs</a></li></ul>
+                <li class="submenu-item" id="music"><a href="/pages/texture/music">[T] Music</a></li>
+                <li class="submenu-item" id="armorstands"><a href="/pages/texture/armorstands">[T] Armor Stands</a></li>
+                <li class="submenu-item" id="firearms"><a href="/pages/texture/firearms">[T] Fireamrs</a></li></ul>
         </li>
 
         <li
-        class="sidebar-item has-sub"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-richtext-fill"></i>
+        class="sidebar-item has-sub" id="Map"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-richtext-fill"></i>
             <span>Map Packs</span></a><ul class="submenu">
-              <li class="submenu-item"><a href="/pages/map/nacht-der-untoten">[M] Z-NDU</a></li></ul>
+              <li class="submenu-item" id="z-ndu"><a href="/pages/map/nacht-der-untoten">[M] Z-NDU</a></li></ul>
         </li>
     </ul>
     </div>
