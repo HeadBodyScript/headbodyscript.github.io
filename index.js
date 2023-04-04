@@ -34,7 +34,7 @@ document.write(`
             <span>About us</span></a>
         </li>
 
-        <liclass="sidebar-title">Minecraft</li>
+        <li class="sidebar-title">Minecraft</li>
 
         <li class="sidebar-item has-sub" id="Data"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
             <span>Data Packs</span></a><ul class="submenu" id="DataPacks">
