@@ -39,55 +39,62 @@
       <div class="page-content">
         <section class="section">
 
-          <div class="col-12">
-            <div class="card ">
-              <div class="card-header"></div>
-              <div class="card-header">
-                <h4>ALL ABOUT ME!</h4>
-            </div>
-            <div class="card-body">
-                <p>Click the accordions below to expand/collapse the accordion content.</p>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
-                                <i style="text-shadow: 2px 1px 0px rgb(0, 0, 0); color: rgb(255, 255, 255);height: 23px" class="bi bi-bookmark-fill"></i>  <div style="text-shadow: 2px 1px 0px rgb(0, 0, 0); color: rgb(255, 255, 255);"> Who am I? </div>
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="col-md-12">
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title" style="text-align: center;">Informative list about me</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true"> <i class="bi bi-caret-right-fill"></i> Personal information</a>
+                                <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false"> <i class="bi bi-caret-right-fill"></i> Games I play</a>
+                                <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                    href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false"> <i class="bi bi-caret-right-fill"></i> How to contact me</a>
                             </div>
                         </div>
-                        </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i style="text-shadow: 2px 1px 0px rgb(0, 0, 0); color: rgb(255, 255, 255);height: 23px" class="bi bi-bookmark-fill"></i> <div style="text-shadow: 2px 1px 0px rgb(0, 0, 0); color: rgb(255, 255, 255);" font color="#9900FF"> Why join the friend group? </div>
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i style="text-shadow: 2px 1px 0px rgb(0, 0, 0); color: rgb(255, 255, 255); height: 23px" class="bi bi-bookmark-fill"></i> <div style="text-shadow: 2px 1px 0px rgb(0, 0, 0); color: rgb(255, 255, 255);"> How to join the friend group? </div>
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="col-9">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+                                    <br/>
+                                    <i class="bi bi-record-fill"></i> Name:  <b>Cyan</b><br/>
+                                    <i class="bi bi-record-fill"></i> IGN: <b>HeadBodyScript</b><br/>
+                                    <i class="bi bi-record-fill"></i> Age: <b>21</b><br/>
+                                    <i class="bi bi-record-fill"></i> Height:  <b>182 CM</b> (6feet)<br/>
+                                    <i class="bi bi-record-fill"></i> Gender <b>Male</b><br/>
+                                    <i class="bi bi-record-fill"></i> Pronouns: <b>Whatever you want</b><br/>
+                                    <i class="bi bi-record-fill"></i> Sexuality: <b>Straight but 20€ is 20€</b><br/>
+                                    <i class="bi bi-record-fill"></i> Nationality: <b>Dutch</b><br/>
+                                    <i class="bi bi-record-fill"></i> Region: <b>Europe</b><br/>
+                                    <i class="bi bi-record-fill"></i> Time zone: <b>GMT+2</b><br/>
+                                    <i class="bi bi-record-fill"></i> Relationship status: <b>Available</b><br/>
+                                    <i class="bi bi-record-fill"></i> DM Status: <b>Open</b><br/>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab">
+                                    <br/>
+                                    <i class="bi bi-record-fill"></i> League of Legends
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                    aria-labelledby="v-pills-settings-tab">
+                                    <br/>
+                                    <i class="bi bi-record-fill"></i> You can add me on Discords <b>Wow fuck#9755</b>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-          </div>
+        </div>
         </section>
       </div>
     </div>

@@ -60,6 +60,86 @@ document.write(`
             <span>Map Packs</span></a><ul class="submenu" id="MapPacks">
               <li class="submenu-item" id="z-ndu"><a href="/pages/map/nacht-der-untoten">[M] Z-NDU</a></li></ul>
         </li>
+
+        <li class="sidebar-title">Link Tree</li>
+
+              <li class="sidebar-item">
+                <a href="https://discord.gg/pxEk4Ey4Hv" class="sidebar-link" target="_blank">
+                <i class="bi bi-discord"></i>
+                <span>Discord</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.instagram.com/iheadbodyscript/" class="sidebar-link" target="_blank">
+                <i class="bi bi-instagram"></i>
+                <span>Instagram</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.planetminecraft.com/member/iheadbodyscript/" class="sidebar-link" target="_blank">
+                <i class="bi bi-globe-americas"></i>
+                <span>Planet Minecraft</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.tiktok.com/@iheadbodyscript" class="sidebar-link" target="_blank">
+                <i class="bi bi-tiktok"></i>
+                <span>TikTok</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.twitch.tv/iheadbodyscript" class="sidebar-link" target="_blank">
+                <i class="bi bi-twitch"></i>
+                <span>Twitch</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://twitter.com/IHeadbodyscript" class="sidebar-link" target="_blank">
+                <i class="bi bi-twitter"></i>
+                <span>Twitter</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.youtube.com/@iheadbodyscript/featured" class="sidebar-link" target="_blank">
+                <i class="bi bi-youtube"></i>
+                <span>YouTube</span>
+                </a>
+              </li>
+              <li class="sidebar-title">Support us directly</li>
+
+              <li class="sidebar-item">
+                <a href="https://github.com/HeadBodyScript" class="sidebar-link" target="_blank">
+                <i class="bi bi-award"></i>
+                <span>Sponsors</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://www.paypal.me/HeadBodyScript" class="sidebar-link" target="_blank">
+                <i class="bi bi-paypal"></i>
+                <span>PayPal</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://throne.me/iheadbodyscript/wishlist" class="sidebar-link" target="_blank">
+                <i class="bi bi-cart"></i>
+                <span>Wish list</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="https://github.com/HeadBodyScript" class="sidebar-link" target="_blank">
+                <i class="bi bi-github"></i>
+                <span>GitHub Subscription</span>
+                </a>
+              </li>
     </ul>
     </div>
 </div>
