@@ -81,9 +81,7 @@ const getGitRepo3 = document.getElementById('getGitRepo3');
 const getGitRepo4 = document.getElementById('getGitRepo4');
 const getGitRepo5 = document.getElementById('getGitRepo5');
 const getGitRepo6 = document.getElementById('getGitRepo6');
-const getGitRepo7 = document.getElementById('getGitRepo7');
-const getGitRepo8 = document.getElementById('getGitRepo8');
-const getGitRepo9 = document.getElementById('getGitRepo9');
+
 
 let getInfoA = () => {
     var requestOptions = {
@@ -101,10 +99,25 @@ let getInfoA = () => {
         getGitRepo4.innerHTML = result[4].name;
         getGitRepo5.innerHTML = result[5].name;
         getGitRepo6.innerHTML = result[6].name;
-        getGitRepo7.innerHTML = result[7].name;
-        getGitRepo8.innerHTML = result[8].name;
-        getGitRepo9.innerHTML = result[9].name;
     })
       .catch(error => console.log('error', error));
 }
 getInfoA();
+
+/////
+
+const getGitRepoAA = document.getElementById('getGitRepoAA');
+let getInfo3 = () => {
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        getGitRepoAA.innerHTML = result.commit.message;
+    })
+      .catch(error => console.log('error', error));
+}
+getInfo3();
