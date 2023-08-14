@@ -58,7 +58,7 @@ let getInfo = () => {
       method: 'GET',
       redirect: 'follow'
     };
-    fetch("https://api.github.com/users/headbodyscript", requestOptions)
+    fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits?sha=main&per_page=1&page=1", requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result);
