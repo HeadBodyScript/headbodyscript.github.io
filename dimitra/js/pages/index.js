@@ -55,23 +55,26 @@ const getGitSubs = document.getElementById('getGitSubs');
 const getGitRepo = document.getElementById('getGitRepo');
 let getInfo = () => {
     var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
+    method: 'GET',
+    redirect: 'follow'
     };
     fetch("https://api.github.com/users/headbodyscript", requestOptions)
-      .then(response => response.json())
-      .then(result => {
+    .then(response => response.json())
+    .then(result => {
         console.log(result);
         getGitSubs.innerHTML = result.followers;
         getGitRepo.innerHTML = result.public_repos;
     })
-      .catch(error => console.log('error', error));
+    .catch(error => console.log('error', error));
 }
 getInfo();
 
+
 document.getElementById("Dashboard").className += " active";
 
-//const getGitRepoAAA = document.getElementById('getGitRepoAAA');
+
+//
+const getGitRepoAAA = document.getElementById('getGitRepoAAA');
 let getInfoA = () => {
     var requestOptions = {
       method: 'GET',
@@ -81,7 +84,7 @@ let getInfoA = () => {
       .then(response => response.json())
       .then(result => {
         console.log(result);
-        getGitRepoAAA.innerHTML = result.full_name;
+        getGitRepoAAA.innerHTML = result[0].description;
     })
       .catch(error => console.log('error', error));
 }
