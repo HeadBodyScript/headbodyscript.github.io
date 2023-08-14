@@ -85,4 +85,4 @@ let getInfoA = () => {
     })
       .catch(error => console.log('error', error));
 }
-getInfo();
+getInfoA();
