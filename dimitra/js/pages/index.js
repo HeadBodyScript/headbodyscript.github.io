@@ -86,3 +86,8 @@ let getInfoA = () => {
       .catch(error => console.log('error', error));
 }
 getInfoA();
+
+let pre = document.getElementById('output');
+let jstring = JSON.stringify({ a: 1, b:2,c:3 }, null, 4);
+
+pre.textContent = jstring;
