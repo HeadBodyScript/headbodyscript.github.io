@@ -106,8 +106,8 @@ getInfoA();
 
 /////
 
-const getGitRepoAA = document.getElementById('getGitRepoAA');
-let getInfo3 = () => {
+const getUpdate0 = document.getElementById('getUpdate0');
+let getInfoWebsite = () => {
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -116,8 +116,8 @@ let getInfo3 = () => {
       .then(response => response.json())
       .then(result => {
         console.log(result);
-        getGitRepoAA.innerHTML = result.commit.message;
+        getUpdate0.innerHTML = result.commit.message;
     })
       .catch(error => console.log('error', error));
 }
-getInfo3();
+getInfoWebsite();
