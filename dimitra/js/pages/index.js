@@ -72,6 +72,7 @@ getInfo();
 document.getElementById("Dashboard").className += " active";
 
 const getGitRepoAAA = document.getElementById('getGitRepoAAA');
+const getGitRepoAAA1 = document.getElementById('getGitRepoAAA1');
 let getInfoA = () => {
     var requestOptions = {
       method: 'GET',
@@ -82,6 +83,7 @@ let getInfoA = () => {
       .then(result => {
         console.log(result);
         getGitRepoAAA.innerHTML = result.full_name;
+        getGitRepoAAA1.innerHTML = result.full_name1;
     })
       .catch(error => console.log('error', error));
 }
