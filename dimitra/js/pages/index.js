@@ -80,6 +80,10 @@ const getGitRepo2 = document.getElementById('getGitRepo2');
 const getGitRepo3 = document.getElementById('getGitRepo3');
 const getGitRepo4 = document.getElementById('getGitRepo4');
 const getGitRepo5 = document.getElementById('getGitRepo5');
+const getGitRepo6 = document.getElementById('getGitRepo6');
+const getGitRepo7 = document.getElementById('getGitRepo7');
+const getGitRepo8 = document.getElementById('getGitRepo8');
+const getGitRepo9 = document.getElementById('getGitRepo9');
 
 let getInfoA = () => {
     var requestOptions = {
@@ -96,6 +100,10 @@ let getInfoA = () => {
         getGitRepo3.innerHTML = result[3].name;
         getGitRepo4.innerHTML = result[4].name;
         getGitRepo5.innerHTML = result[5].name;
+        getGitRepo5.innerHTML = result[6].name;
+        getGitRepo5.innerHTML = result[7].name;
+        getGitRepo5.innerHTML = result[8].name;
+        getGitRepo5.innerHTML = result[9].name;
     })
       .catch(error => console.log('error', error));
 }
