@@ -76,12 +76,6 @@ document.getElementById("Dashboard").className += " active";
 //
 const getGitRepo0 = document.getElementById('getGitRepo0');
 const getGitRepo1 = document.getElementById('getGitRepo1');
-const getGitRepo2 = document.getElementById('getGitRepo2');
-const getGitRepo3 = document.getElementById('getGitRepo3');
-const getGitRepo4 = document.getElementById('getGitRepo4');
-const getGitRepo5 = document.getElementById('getGitRepo5');
-const getGitRepo6 = document.getElementById('getGitRepo6');
-
 
 let getInfoA = () => {
     var requestOptions = {
@@ -94,17 +88,11 @@ let getInfoA = () => {
         console.log(result);
         getGitRepo0.innerHTML = result[0].name;
         getGitRepo1.innerHTML = result[1].name;
-        getGitRepo2.innerHTML = result[2].name;
-        getGitRepo3.innerHTML = result[3].name;
-        getGitRepo4.innerHTML = result[4].name;
-        getGitRepo5.innerHTML = result[5].name;
-        getGitRepo6.innerHTML = result[6].name;
+
     })
       .catch(error => console.log('error', error));
 }
 getInfoA();
-
-/////
 
 const getUpdate0 = document.getElementById('getUpdate0');
 let getInfoWebsite = () => {
