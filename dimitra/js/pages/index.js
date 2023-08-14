@@ -71,7 +71,7 @@ getInfo();
 
 document.getElementById("Dashboard").className += " active";
 
-const getGitRepoAA = document.getElementById('getGitRepo');
+const getGitRepoAAA = document.getElementById('getGitRepoAAA');
 let getInfoA = () => {
     var requestOptions = {
       method: 'GET',
@@ -87,7 +87,3 @@ let getInfoA = () => {
 }
 getInfoA();
 
-let pre = document.getElementById('output');
-let jstring = JSON.stringify({ a: 1, b:2,c:3 }, null, 4);
-
-pre.textContent = jstring;
