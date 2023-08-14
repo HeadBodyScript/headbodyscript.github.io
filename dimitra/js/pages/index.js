@@ -74,7 +74,7 @@ document.getElementById("Dashboard").className += " active";
 
 
 //
-const getGitRepo0 = document.getElementById('getGitRepo0').innerHTML="<div>mew</div>";
+const getGitRepo0 = document.getElementById('getGitRepo0').innerHTML+"<div>mew</div>";
 const getGitRepo1 = document.getElementById('getGitRepo1');
 const getGitRepo2 = document.getElementById('getGitRepo2');
 const getGitRepo3 = document.getElementById('getGitRepo3');
@@ -83,7 +83,7 @@ const getGitRepo5 = document.getElementById('getGitRepo5');
 const getGitRepo6 = document.getElementById('getGitRepo6');
 const getGitRepo7 = document.getElementById('getGitRepo7');
 const getGitRepo8 = document.getElementById('getGitRepo8');
-const getGitRepo9 = document.getElementById('getGitRepo9').innerHTML="<div>owo</div>";
+const getGitRepo9 = document.getElementById('getGitRepo9').innerHTML+"<div>owo</div>";
 
 let getInfoA = () => {
     var requestOptions = {
