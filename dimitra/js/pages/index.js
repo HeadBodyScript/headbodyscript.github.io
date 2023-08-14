@@ -77,11 +77,11 @@ let getInfoA = () => {
       method: 'GET',
       redirect: 'follow'
     };
-    fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main", requestOptions)
+    fetch("https://api.github.com/users/HeadBodyScript/repos", requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result);
-        getGitRepoAAA.innerHTML = result.commit.message;
+        getGitRepoAAA.innerHTML = result.full_name;
     })
       .catch(error => console.log('error', error));
 }
