@@ -108,7 +108,3 @@ let getInfoA = () => {
       .catch(error => console.log('error', error));
 }
 getInfoA();
-
-$( '.items' ).show();
-const dataHtml = '<div class="item">' + data + '</div>';
-$( '.items' ).append( dataHtml );
