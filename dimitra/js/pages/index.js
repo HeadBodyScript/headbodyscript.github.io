@@ -100,10 +100,10 @@ let getInfoA = () => {
         getGitRepo3.innerHTML = result[3].name;
         getGitRepo4.innerHTML = result[4].name;
         getGitRepo5.innerHTML = result[5].name;
-        getGitRepo5.innerHTML = result[6].name;
-        getGitRepo5.innerHTML = result[7].name;
-        getGitRepo5.innerHTML = result[8].name;
-        getGitRepo5.innerHTML = result[9].name;
+        getGitRepo6.innerHTML = result[6].name;
+        getGitRepo7.innerHTML = result[7].name;
+        getGitRepo8.innerHTML = result[8].name;
+        getGitRepo9.innerHTML = result[9].name;
     })
       .catch(error => console.log('error', error));
 }
