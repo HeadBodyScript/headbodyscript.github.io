@@ -71,6 +71,7 @@ getInfo();
 
 document.getElementById("Dashboard").className += " active";
 
+const commit_count = document.getElementById('commit_count');
 const base_url = 'https://api.github.com';
 
     function httpGet(theUrl, return_headers) {
