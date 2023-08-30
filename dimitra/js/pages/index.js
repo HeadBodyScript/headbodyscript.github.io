@@ -111,6 +111,6 @@ let getInfoWebsite = () => {
 getInfoWebsite();
 
 (async () => {
-  const text = await (await fetch("/path/to/the/text/file.txt")).text();
+  const text = await (await fetch("/ads.txt")).text();
   div.innerHTML = text;
 })();
