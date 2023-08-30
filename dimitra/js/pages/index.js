@@ -110,7 +110,8 @@ let getInfoWebsite = () => {
 }
 getInfoWebsite();
 
+const meow = document.getElementById('meow');
 (async () => {
   const text = await (await fetch("/ads.txt")).text();
-  div.innerHTML = text;
+  meow.innerHTML = text;
 })();
