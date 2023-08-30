@@ -109,3 +109,20 @@ let getInfoWebsite = () => {
       .catch(error => console.log('error', error));
 }
 getInfoWebsite();
+
+function bang(){
+	// filename = "/c:maxtestfile/test.txt";
+	filename = "/https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/ads.txt";
+	access = "readwrite";
+	typelist = new Array("iLaF" , "maxb" , "NUMBER" );
+	f = new File(filename, access, typelist);
+	while(f.isopen && f.position < f.eof ){
+		x = parseInt(f.readline(1) + "\n");
+		y = (x*.142)+3.01;
+		j = 14;
+	}
+	post("the num in file is");
+	post(x);
+	post();
+	f.close();
+}
