@@ -30,7 +30,7 @@ document.write(`
         </li>
 
         <li 
-        class="sidebar-item" id="Information"><a href="/pages/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
+        class="sidebar-item" id="Information"><a href="information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
             <span>About us</span></a>
         </li>
 
@@ -39,7 +39,7 @@ document.write(`
         <li class="sidebar-item has-sub" id="Data"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
             <span>Data Packs</span></a><ul class="submenu" id="DataPacks">
                 <li class="submenu-item" id="core"><a href="/pages/data/core">[D] Core</a></li>
-                <li class="submenu-item" id="fire-arms"><a href="/pages/data/firearms">[D] Firearms</a></li>
+                <li class="submenu-item" id="fire-arms"><a href="public/pages/data/firearms">[D] Firearms</a></li>
                 <li class="submenu-item" id="glock"><a href="/pages/data/glock">[D] Glock</a></li>
                 <li class="submenu-item" id="mossberg"><a href="/pages/data/mossberg">[D] Mossberg</a></li>
                 <li class="submenu-item" id="kurz"><a href="/pages/data/kurz">[D] Kurz</a></li>
@@ -51,7 +51,7 @@ document.write(`
         class="sidebar-item has-sub" id="Texture"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
             <span>Texture Packs</span></a><ul class="submenu" id="TexturePacks">
                 <li class="submenu-item" id="music"><a href="/pages/texture/music">[T] Music</a></li>
-                <li class="submenu-item" id="armorstands"><a href="/pages/texture/armorstands">[T] Armor Stands</a></li>
+                <li class="submenu-item" id="armorstands"><a href="https://headbodyscript.nl/armorstands/">[T] Armor Stands</a></li>
                 <li class="submenu-item" id="firearms"><a href="/pages/texture/firearms">[T] Fireamrs</a></li></ul>
         </li>
 
