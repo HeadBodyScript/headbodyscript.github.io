@@ -1,8 +1,9 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dimitra",
     "ignore": [
       "firebase.json",
+      "firebase-tools-instant-win.exe",
       "**/.*",
       "**/node_modules/**"
     ]
