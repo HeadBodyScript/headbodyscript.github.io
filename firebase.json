@@ -1,5 +1,10 @@
 {
   "hosting": {
+    "cleanUrls": true,
+    "trailingSlash": true,
+    "redirects": [
+      {"source":"https://headbodyscript.nl/information.html" , "destination":"https://headbodyscript.nl/information", "type":301}
+    ],
     "public": "dimitra",
     "ignore": [
       "firebase.json",

@@ -30,7 +30,7 @@ document.write(`
         </li>
 
         <li 
-        class="sidebar-item" id="Information"><a href="information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
+        class="sidebar-item" id="Information"><a href="https://headbodyscript.nl/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
             <span>About us</span></a>
         </li>
 
