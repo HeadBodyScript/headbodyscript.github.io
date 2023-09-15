@@ -9,11 +9,12 @@ document.write(`
 <link rel="icon" href="dimitra/content/logo/dark/favicon-16x16.png" type="image/png" sizes="16x16"/>
 <link rel="manifest" href="dimitra/content/logo/dark/site.webmanifest"/>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="HeadBodyScript">
-<meta property="og:url" content="https://headbodyscript.github.io/">
-<meta property="og:image" content="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
-<meta property="og:description" content="Download the best Minecraft content here and more!">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HeadBodyScript">
+<meta name="twitter:site" content="@https://headbodyscript.nl/">
+<meta name="twitter:description" content="Download the best Minecraft content here and more!">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
+<meta name="twitter:image:alt" content="HeadBodyS
 
 <title>HeadBodyScript</title>
 `);
