@@ -8,7 +8,7 @@ document.write(`
       <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a href="index.html">
+            <a href="https://headbodyscript.nl/">
               <picture>
                 <source srcset="/dimitra/content/logo/dark/logo.png" media="(prefers-color-scheme: dark)">
                 <img src="/dimitra/content/logo/logo.png">
@@ -25,7 +25,7 @@ document.write(`
         <li class="sidebar-title">Menu</li>
 
         <li 
-        class="sidebar-item" id="Dashboard"><a href="/" class="sidebar-link"><i class="bi bi-grid-3x3-gap-fill"></i>
+        class="sidebar-item" id="Dashboard"><a href="https://headbodyscript.nl/" class="sidebar-link"><i class="bi bi-grid-3x3-gap-fill"></i>
             <span>Dashboard</span></a>
         </li>
 
@@ -38,27 +38,27 @@ document.write(`
 
         <li class="sidebar-item has-sub" id="Data"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
             <span>Data Packs</span></a><ul class="submenu" id="DataPacks">
-                <li class="submenu-item" id="core"><a href="/pages/data/core">[D] Core</a></li>
-                <li class="submenu-item" id="fire-arms"><a href="public/pages/data/firearms">[D] Firearms</a></li>
-                <li class="submenu-item" id="glock"><a href="/pages/data/glock">[D] Glock</a></li>
-                <li class="submenu-item" id="mossberg"><a href="/pages/data/mossberg">[D] Mossberg</a></li>
-                <li class="submenu-item" id="kurz"><a href="/pages/data/kurz">[D] Kurz</a></li>
-                <li class="submenu-item" id="ump"><a href="/pages/data/ump">[D] UMP</a></li>
-                <li class="submenu-item" id="kalishnikov"><a href="/pages/data/Kalishnikov">[D] Kalishnikov</a></li></ul>
+                <li class="submenu-item" id="core"><a href="https://headbodyscript.nl/pages/data-packs/project-0">[D] Core</a></li>
+                <li class="submenu-item" id="fire-arms"><a href="https://headbodyscript.nl/pages/data-packs/project-main">[D] Firearms</a></li>
+                <li class="submenu-item" id="glock"><a href="https://headbodyscript.nl/pages/data-packs/project-1">[D] Glock</a></li>
+                <li class="submenu-item" id="mossberg"><a href="https://headbodyscript.nl/pages/data-packs/project-4">[D] Mossberg</a></li>
+                <li class="submenu-item" id="kurz"><a href="https://headbodyscript.nl/pages/data-packs/project-3">[D] Kurz</a></li>
+                <li class="submenu-item" id="ump"><a href="https://headbodyscript.nl/pages/data-packs/project-5">[D] UMP</a></li>
+                <li class="submenu-item" id="kalishnikov"><a href="https://headbodyscript.nl/pages/data-packs/project-2">[D] Kalishnikov</a></li></ul>
         </li>
 
         <li 
         class="sidebar-item has-sub" id="Texture"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-easel-fill"></i>
             <span>Texture Packs</span></a><ul class="submenu" id="TexturePacks">
-                <li class="submenu-item" id="music"><a href="/pages/texture/music">[T] Music</a></li>
-                <li class="submenu-item" id="armorstands"><a href="https://headbodyscript.nl/armorstands/">[T] Armor Stands</a></li>
-                <li class="submenu-item" id="firearms"><a href="/pages/texture/firearms">[T] Fireamrs</a></li></ul>
+                <li class="submenu-item" id="music"><a href="https://headbodyscript.nl/pages/texture-packs/project-1">[T] Music</a></li>
+                <li class="submenu-item" id="armorstands"><a href="https://headbodyscript.nl/pages/texture-packs/project-0">[T] Armor Stands</a></li>
+                <li class="submenu-item" id="firearms"><a href="https://headbodyscript.nl/pages/texture-packs/project-2"></a></li></ul>
         </li>
 
         <li
         class="sidebar-item has-sub" id="Map"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-richtext-fill"></i>
             <span>Map Packs</span></a><ul class="submenu" id="MapPacks">
-              <li class="submenu-item" id="z-ndu"><a href="/pages/map/nacht-der-untoten">[M] Z-NDU</a></li></ul>
+              <li class="submenu-item" id="z-ndu"><a href="https://headbodyscript.nl/pages/map-packs/project-0">[M] Z-NDU</a></li></ul>
         </li>
 
         <li class="sidebar-title">Link Tree</li>
