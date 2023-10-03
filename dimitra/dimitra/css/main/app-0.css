@@ -1,4 +1,8 @@
 @font-face {
+  font-family: 'Dimitra';
+  src: url('../fonts/dimitra.woff2') format('woff2');
+}
+@font-face {
   font-display: swap;
   font-family: Nunito;
   font-style: normal;
@@ -383,13 +387,6 @@
     overflow: auto !important;
   }
 }
-@charset "UTF-8";
-/*!
- * Bootstrap  v5.2.3 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
   --bs-blue: #435ebe;
   --bs-indigo: #6610f2;
