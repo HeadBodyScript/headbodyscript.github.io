@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body.theme-dark {
+  --logo: #ffffff;
   --bs-blue: #435ebe;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;

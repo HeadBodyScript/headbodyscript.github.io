@@ -388,6 +388,7 @@
   }
 }
 :root {
+  --logo: #000000;
   --bs-blue: #435ebe;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
