@@ -3,7 +3,7 @@
     "cleanUrls": true,
     "trailingSlash": true,
     "redirects": [
-      {"source":"https://headbodyscript.nl/vcard" , "destination":"https://headbodyscript.nl#vcard", "type":301}
+      {"source":"https://headbodyscript.nl/" , "destination":"https://headbodyscript.nl/", "type":301}
     ],
     "public": "HeadBodyScript",
     "ignore": [
