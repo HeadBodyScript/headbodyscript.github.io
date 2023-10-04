@@ -19,45 +19,6 @@ const serverStatus=document.getElementById("serverStatus"),serverMax=document.ge
 
 const getGitSubs=document.getElementById("getGitSubs"),getGitRepo=document.getElementById("getGitRepo");let getInfo=()=>{var e;fetch("https://api.github.com/users/headbodyscript",{method:"GET",redirect:"follow"}).then(e=>e.json()).then(e=>{console.log(e),getGitSubs.innerHTML=e.followers,getGitRepo.innerHTML=e.public_repos}).catch(e=>console.log("error",e))};getInfo();
 
-//
-const getGitRepo0 = document.getElementById('getGitRepo0');
-const getGitRepo1 = document.getElementById('getGitRepo1');
+const getUpdateWebsite=document.getElementById("getUpdateWebsite");let getInfoGithub=()=>{var e;fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main",{method:"GET",redirect:"follow"}).then(e=>e.json()).then(e=>{console.log(e),getUpdateWebsite.innerHTML=e.commit.message}).catch(e=>console.log("error",e))};getInfoGithub();
 
-let getInfoA = () => {
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    fetch("https://api.github.com/users/HeadBodyScript/repos", requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        console.log(result);
-        getGitRepo0.innerHTML = result[0].name;
-        getGitRepo1.innerHTML = result[1].name;
-
-    })
-      .catch(error => console.log('error', error));
-}
-getInfoA();
-
-const getUpdate0 = document.getElementById('getUpdate0');
-let getInfoWebsite = () => {
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main", requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        console.log(result);
-        getUpdate0.innerHTML = result.commit.message;
-    })
-      .catch(error => console.log('error', error));
-}
-getInfoWebsite();
-
-const README = document.getElementById('README');
-(async () => {
-  const text = await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")).text();
-  README.innerHTML = text;
-})();
+const README=document.getElementById("README");(async()=>{let t=await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")).text();README.innerHTML=t})();
