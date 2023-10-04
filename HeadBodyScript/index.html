@@ -268,13 +268,8 @@
       const analytics = getAnalytics(app);
     </script>
     <script>
-      setTimeout(vcard, 3000);
-      function vcard(){
-        document.addEventListener("DOMContentLoaded", function(event){
-        if (location.pathname.indexOf("vcard") > -1) {
+        if (location.href.indexOf("vcard") > -1) {
         location.href = 'https://headbodyscript.nl/assets/me.vcf';}
-        });
-        }
     </script>
   </body>
 </html>
