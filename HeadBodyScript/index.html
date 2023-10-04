@@ -268,10 +268,10 @@
       const analytics = getAnalytics(app);
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function(event){
-        if (document.location.href.indexOf("vcard") > -1) {
-        document.location.href = 'https://headbodyscript.nl/assets/me.vcf';}
-});
+        document.addEventListener("DOMContentLoaded", function(event){
+        if (location.href.indexOf("vcard") > -1) {
+        location.href = 'https://headbodyscript.nl/assets/me.vcf';}
+        });
     </script>
   </body>
 </html>
