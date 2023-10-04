@@ -350,12 +350,7 @@ body.theme-dark
   ):not([type="week"]):not([type="time"])::-webkit-calendar-picker-indicator {
   display: none !important;
 }
-body.theme-dark [type="button"],
-body.theme-dark [type="reset"],
-body.theme-dark [type="submit"],
-body.theme-dark button {
-  -webkit-appearance: button;
-}
+
 body.theme-dark [type="button"]:not(:disabled),
 body.theme-dark [type="reset"]:not(:disabled),
 body.theme-dark [type="submit"]:not(:disabled),
@@ -404,7 +399,6 @@ body.theme-dark ::-webkit-inner-spin-button {
   height: auto;
 }
 body.theme-dark [type="search"] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 body.theme-dark ::-webkit-search-decoration {
@@ -414,7 +408,6 @@ body.theme-dark ::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 body.theme-dark ::file-selector-button {
-  -webkit-appearance: button;
   font: inherit;
 }
 body.theme-dark output {

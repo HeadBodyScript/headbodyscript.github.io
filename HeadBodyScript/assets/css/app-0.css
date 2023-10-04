@@ -746,9 +746,6 @@ select:disabled {
 [type="button"],
 [type="reset"],
 [type="submit"],
-button {
-  -webkit-appearance: button;
-}
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
@@ -797,7 +794,6 @@ legend + * {
   height: auto;
 }
 [type="search"] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 ::-webkit-search-decoration {
@@ -807,7 +803,6 @@ legend + * {
   padding: 0;
 }
 ::file-selector-button {
-  -webkit-appearance: button;
   font: inherit;
 }
 output {
