@@ -36,7 +36,7 @@ document.write(`
               <li class="sidebar-item has-sub" id="Data"><a href="#" class="sidebar-link"><i class="bi bi-file-earmark-zip-fill"></i>
                   <span>Data Packs</span></a><ul class="submenu" id="DataPacks">
                       <li class="submenu-item" id="core"><a href="https://headbodyscript.nl/pages/data-packs/project-0">Core</a></li>
-                      <li class="submenu-item" id="fire-arms"><a href="https://headbodyscript.nl/pages/data-packs/project-main">Firearms</a></li>
+                      <li class="submenu-item" id="fire-arms"><a href="https://headbodyscript.nl/pages/data-packs/project-6">Firearms</a></li>
                       <li class="submenu-item" id="glock"><a href="https://headbodyscript.nl/pages/data-packs/project-1">Glock</a></li>
                       <li class="submenu-item" id="mossberg"><a href="https://headbodyscript.nl/pages/data-packs/project-4">Mossberg</a></li>
                       <li class="submenu-item" id="kurz"><a href="https://headbodyscript.nl/pages/data-packs/project-3">Kurz</a></li>
