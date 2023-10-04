@@ -112,6 +112,6 @@ getInfoWebsite();
 
 const meow = document.getElementById('meow');
 (async () => {
-  const text = await (await fetch("/ict-notes.txt")).text();
+  const text = await (await fetch("../README.md")).text();
   meow.innerHTML = text;
 })();
