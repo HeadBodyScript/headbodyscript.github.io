@@ -5,7 +5,7 @@
     "redirects": [
       {"source":"https://headbodyscript.nl/information.html" , "destination":"https://headbodyscript.nl/information", "type":301}
     ],
-    "public": "dimitra",
+    "public": "HeadBodyScript",
     "ignore": [
       "firebase.json",
       "firebase-tools-instant-win.exe",
