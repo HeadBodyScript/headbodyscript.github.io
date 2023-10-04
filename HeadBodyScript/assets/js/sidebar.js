@@ -142,6 +142,4 @@ document.write(`
       </div>
     </div>
   </div>
-  <script src="https://headbodyscript.nl/assets/js/initTheme.js"></script>
-  <script src="https://headbodyscript.nl/assets/js/app.js"></script>
 `);
