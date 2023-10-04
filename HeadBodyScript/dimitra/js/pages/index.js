@@ -112,6 +112,6 @@ getInfoWebsite();
 
 const meow = document.getElementById('meow');
 (async () => {
-  const text = await (await fetch("../../README.md")).text();
+  const text = await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")).text();
   meow.innerHTML = text;
 })();
