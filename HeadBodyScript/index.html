@@ -268,9 +268,10 @@
       const analytics = getAnalytics(app);
     </script>
     <script>
-      if (window.location.href.indexOf("owo") > -1) {
-        window.location.href = 'https://headbodyscript.nl/assets/me.vcf';
-}
+      window.addEventListener('load', function () {
+        if (window.location.href.indexOf("vcf") > -1) {
+        window.location.href = 'https://headbodyscript.nl/assets/me.vcf';}
+      })
     </script>
   </body>
 </html>
