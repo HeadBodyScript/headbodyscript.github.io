@@ -1,5 +1,5 @@
 document.write(`
-<div class="sidebar-toggler x">
+  <div class="sidebar-toggler x">
       <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list sb"></i></a>
       </div>
       <div id="app">
@@ -27,7 +27,7 @@ document.write(`
               </li>
       
               <li 
-              class="sidebar-item" id="Information"><a href="https://headbodyscript.nl/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
+              class="sidebar-item" id="Information"><a href="https://headbodyscript.nl/pages/information" class="sidebar-link"><i class="bi bi-person-vcard"></i>
                   <span>About us</span></a>
               </li>
       
@@ -140,6 +140,6 @@ document.write(`
           </ul>
           </div>
       </div>
-      </div>
-      </div>
+    </div>
+  </div>
 `);
