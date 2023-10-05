@@ -5128,9 +5128,3 @@ a {
 .sb {
   font-size: 2em
 }
-@media screen and (min-width: 1200px) {
-  .col-media {
-  min-height: 420px;
-  max-height: 420px;
-  }
-}
