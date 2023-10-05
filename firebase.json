@@ -17,6 +17,8 @@
       "**.gitignore**",
       "**.cache/**",
       "**README.md**",
+      "**HeadBodyScript/pages/portfolio.html**",
+      "**HeadBodyScript/assets/css/portfolio.css**",
       "**dist/**"
     ]
   }
