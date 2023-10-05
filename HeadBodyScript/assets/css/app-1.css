@@ -2273,3 +2273,8 @@ body.theme-dark .z-1 {
 body.theme-dark .theme-toggle {
   color: #9899ac
 }
+@media screen and (min-width: 1200px) {
+  .col-media {
+  height: 420px;
+  }
+}
