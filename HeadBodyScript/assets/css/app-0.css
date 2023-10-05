@@ -5130,6 +5130,6 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .col-media {
-  height: 420px;
+  min-height: 420px;
   }
 }
