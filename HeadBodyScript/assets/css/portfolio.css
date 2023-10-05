@@ -1,63 +1,53 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
 .main-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 430px);
-    margin-top: 200px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 430px);
+  margin-top: 200px;
+}
 
-  #main-2 {
-    margin-top: 100px;
-    min-height: 100vh;
-    padding: 2rem;
-  }
+#main-2 {
+  margin-top: 100px;
+  min-height: 100vh;
+  padding: 2rem;
+}
 
-  .sidebar-wrapper2 {
-    background-color: #1e1e2d;
-    bottom: 0;
-    height: 100px;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    transition: top 0.5s ease-out;
-    width: 100%;
-    z-index: 10;
-  }
+.sidebar-wrapper2 {
+  background-color: #1e1e2d;
+  bottom: 0;
+  height: 100px;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-out;
+  width: 100%;
+  z-index: 10;
+}
 
-  .set-border {
-    border-radius: 10px;
-    border: outset;
-    border-width: 2px;
-  }
-  .set-color-one {
-    border-color: #b8b8d1;
-  }
-  .set-color-two {
-    border-color: #5b5f97;
-  }
-  .set-color-three {
-    border-color: #ff6b6c;
-  }
-  .set-color-four {
-    border-color: #2ca58d;
-  }
+.set-border {
+  border-radius: 10px;
+  border: outset;
+  border-width: 2px;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    align-items: center;
-    background-color: #000;
-    border-radius: 0.5rem;
-    display: flex;
-    float: right;
-    justify-content: center;
+img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  background-color: #000;
+  border-radius: 0.5rem;
+  display: flex;
+  float: right;
+  justify-content: center;
 }
 
 .stats-icon2 {
-    align-items: center;
-    display: flex;
-    float: right;
-    justify-content: center;
-  }
+  align-items: center;
+  display: flex;
+  float: right;
+  justify-content: center;
+  margin-bottom: 20px;
+}
