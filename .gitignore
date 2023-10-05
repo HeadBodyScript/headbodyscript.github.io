@@ -63,5 +63,16 @@ node_modules/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+package-lock.json
+package.json
+postcss.config.js
 firebase.exe
+firebase.json
+.firebaserc
+.env
+.cache/
+dist/
+HeadBodyScript/sitemap.xml
+HeadBodyScript/robots.txt
+HeadBodyScript/firebase.json
+HeadBodyScript/ads.txt

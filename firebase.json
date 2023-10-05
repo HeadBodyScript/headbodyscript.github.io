@@ -10,7 +10,14 @@
       "firebase.json",
       "firebase.exe",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "**package-lock.json**",
+      "**package.json**",
+      "**postcss.config.js**",
+      "**.gitignore**",
+      "**.cache/**",
+      "**README.md**",
+      "**dist/**"
     ]
   }
 }
