@@ -5134,3 +5134,8 @@ a {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+
+.logo {
+  max-width: 64px;
+  max-height: 64px;
+}
