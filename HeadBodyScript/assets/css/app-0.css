@@ -5135,6 +5135,10 @@ a {
   object-fit: cover;
 }
 
+.main-logo {
+  max-width: 64px;
+  max-height: 64px;
+}
 .logo {
   max-width: 64px;
   max-height: 64px;
