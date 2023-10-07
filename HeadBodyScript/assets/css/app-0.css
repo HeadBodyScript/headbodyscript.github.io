@@ -5139,3 +5139,26 @@ a {
   max-width: 64px;
   max-height: 64px;
 }
+.d-flex-logo {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width:1940px) {
+  .d-flex-logo {
+  flex-direction:column-reverse;
+  }
+  .logo {
+      display: none;
+  }
+}
+@media screen and (max-width:1940px) {
+
+}
+@media screen and (max-width:992px) {
+  .d-flex-logo {
+      flex-direction:row;
+  }    
+  .logo {
+      display: block;
+  }
+}
