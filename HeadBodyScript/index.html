@@ -202,36 +202,35 @@
               <div class="card-header">
                 <div style="position:relative">
                   <div class="d-flex">
-                    <div class="center">
-                      <h4>Server Status</h4>
+                    <div style="width: 100%;">
+                      <h4 style="text-align: center;">Server Status</h4>
                     </div>
-                  <div class="logo img-right">
-                    <img class="logo" src="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
-                  </div>
                 </div>
               </div>
             </div>
               <div class="card-content pb-4">
-                <div class="server d-flex py-4">
-                  <div class="name ms-4">
+                <div class="server d-flex py-2">
+                  <div class="ms-4">
                     <h5 class="mb-1">Status</h5><div class="server d-flex px-4">
                     <tr><p>Online:</p><div class="px-2" id="serverStatus"></div></tr></div>
                   </div>
                 </div>
-                <div class="server d-flex">
-                  <div class="name ms-4">
+                <div class="server d-flex py-2">
+                  <div class="ms-4">
                     <h5 class="mb-1">Players</h5>
                     <div class="server d-flex px-4"><tr><p>Online:</p><div class="px-2" id="serverOnline">N/A</div></tr></div>
                     <div class="server d-flex px-4"><tr><p>Max:</p><div class="px-2" id="serverMax">N/A</div></tr></div>
                   </div>
                 </div>
-                <div class="server d-flex py-3">
-                  <div class="name ms-4">
+                <div class="server d-flex py-2">
+                  <div class="ms-4">
                     <h5 class="mb-1">Version</h5>
                     <div class="server d-flex px-4"><tr><p>Java</p><div class="px-2" id="serverVersion">0.0.0</div></tr></div>
-                    <div class="px-4">
-                      <button class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="getServer()">Refresh</button>
-                    </div>
+                  </div>
+                </div>
+                <div class="server d-flex py-2">
+                  <div class="px-4">
+                    <button class="btn btn-block btn-xl btn-outline-primary font-bold" onclick="getServer()">Refresh</button>
                   </div>
                 </div>
               </div>
