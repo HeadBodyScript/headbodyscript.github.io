@@ -24,7 +24,7 @@ const getUpdateWebsite=document.getElementById("getUpdateWebsite");let getInfoGi
 const README=document.getElementById("README");(async()=>{let t=await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")).text();README.innerHTML=t})();
 
 if (location.href.indexOf("vcard") > -1) {location.href = 'https://headbodyscript.nl/assets/me.vcf';}
-nameOfstring.replace('characterToBeReplaced', 'newCharacter');
-const serverMOTDEdit = serverMOTD.replace("§a", ""); // "Hello orld"
 
-console.log(serverMOTDEdit);
+
+
+serverMOTD.replace("§a", "");
