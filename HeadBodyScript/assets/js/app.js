@@ -108,12 +108,12 @@
               }, {
                 key: "onFirstLoad",
                 value: function() {
-                  window.innerWidth < 1200 && this.sidebarEL.classList.remove("active")
+                  window.innerWidth < 1350 && this.sidebarEL.classList.remove("active")
                 }
               }, {
                 key: "onResize",
                 value: function() {
-                  window.innerWidth < 1200 ? this.sidebarEL.classList.remove("active") : this.sidebarEL.classList.add("active"), this.deleteBackdrop(), this.toggleOverflowBody(!0)
+                  window.innerWidth < 1350 ? this.sidebarEL.classList.remove("active") : this.sidebarEL.classList.add("active"), this.deleteBackdrop(), this.toggleOverflowBody(!0)
                 }
               }, {
                 key: "toggle",
@@ -133,7 +133,7 @@
               }, {
                 key: "createBackdrop",
                 value: function() {
-                  if (!(window.innerWidth > 1200)) {
+                  if (!(window.innerWidth > 1350)) {
                     this.deleteBackdrop();
                     var e = document.createElement("div");
                     e.classList.add("sidebar-backdrop"), e.addEventListener("click", this.hide.bind(this)), document.body.appendChild(e)
