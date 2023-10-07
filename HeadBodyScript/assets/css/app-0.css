@@ -352,7 +352,7 @@ h1 {
   font-size: calc(1.375rem + 1.5vw)
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
 
   .h1,
   h1 {
@@ -365,7 +365,7 @@ h2 {
   font-size: calc(1.325rem + .9vw)
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
 
   .h2,
   h2 {
@@ -378,7 +378,7 @@ h3 {
   font-size: calc(1.3rem + .6vw)
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
 
   .h3,
   h3 {
@@ -391,7 +391,7 @@ h4 {
   font-size: calc(1.275rem + .3vw)
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
 
   .h4,
   h4 {
@@ -942,7 +942,7 @@ summary {
   }
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
   .col-xl {
     flex: 1 0 0%
   }
@@ -1915,7 +1915,7 @@ summary {
   }
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
   .modal-xl {
     --bs-modal-width: 1140px
   }
@@ -3151,7 +3151,7 @@ summary {
   }
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
   .d-xl-block {
     display: block !important
   }
@@ -3819,7 +3819,7 @@ summary {
   }
 }
 
-@media (min-width:1350px) {
+@media (min-width:1200px) {
   .fs-1 {
     font-size: 2.5rem !important
   }
