@@ -27,4 +27,4 @@ if (location.href.indexOf("vcard") > -1) {location.href = 'https://headbodyscrip
 
 
 
-serverMOTD.replace("§a", "");
+const server = serverMOTD.replace("§a", "");
