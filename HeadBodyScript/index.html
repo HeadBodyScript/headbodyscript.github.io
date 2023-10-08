@@ -261,7 +261,7 @@
                 <div class="server d-flex py-4">
                   <div class="name ms-4">
                     <tr>
-                      <div id="README"></div>
+                      <div id="README0"></div>
                     </tr>
                   </div>
                 </div>
@@ -271,6 +271,21 @@
         </section>
       </div>
     </div>
+    <script>
+      const getTimeWebsite = document.getElementById("getTimeWebsite"),
+  getUpdateWebsite = document.getElementById("getUpdateWebsite");
+let getInfoGithub = () => {
+  var e;
+  fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main", {
+    method: "GET",
+    redirect: "follow"
+  }).then(e => e.json()).then(e => {
+    console.log(e), getUpdateWebsite.innerHTML = e.commit.message, getTimeWebsite.innerHTML = e.commit.author.date
+  }).catch(e => console.log("error", e))
+};
+getInfoGithub();
+
+    </script>
     <script src="https://headbodyscript.nl/assets/js/init/index.js"></script>
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
