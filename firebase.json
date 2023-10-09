@@ -17,6 +17,9 @@
       "**.gitignore**",
       "**.cache/**",
       "**README.md**",
+      "**fakeindex.html**",
+      "**fakeindex.js**",
+      "**portfolio.html**",
       "**dist/**"
     ]
   }

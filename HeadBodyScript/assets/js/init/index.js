@@ -14,3 +14,4 @@ const getTimeWebsite=document.getElementById("getTimeWebsite"),getUpdateWebsite=
 
 (async()=>{let t=await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")).text();README0.innerHTML=t})();
 if (location.href.indexOf("vcard") > -1) {location.href = 'https://headbodyscript.nl/assets/me.vcf';};
+
