@@ -1,122 +1,122 @@
-const temp = {
-  "sha": "e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
-  "node_id": "C_kwDOHaKiu9oAKGU1NTc3MWVlYzBiMTU0MWRlNjdmZDI4ZjYyMjk2ZTBhOWI3ZDFmM2E",
-  "commit": {
-    "author": {
-      "name": "IHeadBodyScript",
-      "email": "IHeadBodyScript@gmail.com",
-      "date": "2023-10-08T13:54:28Z"
-    },
-    "committer": {
-      "name": "IHeadBodyScript",
-      "email": "IHeadBodyScript@gmail.com",
-      "date": "2023-10-08T13:54:28Z"
-    },
-    "message": "Display",
-    "tree": {
-      "sha": "989f239798ecc0175ab8b7b0b68d490acd1172f1",
-      "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/git/trees/989f239798ecc0175ab8b7b0b68d490acd1172f1"
-    },
-    "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/git/commits/e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
-    "comment_count": 1,
-    "verification": {
-      "verified": false,
-      "reason": "unsigned",
-      "signature": null,
-      "payload": null
-    }
-  },
-  "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/commits/e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
-  "html_url": "https://github.com/HeadBodyScript/HeadBodyScript/commit/e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
-  "comments_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/commits/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/comments",
-  "author": {
-    "login": "HeadBodyScript",
-    "id": 106414989,
-    "node_id": "U_kgDOBlfDjQ",
-    "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/HeadBodyScript",
-    "html_url": "https://github.com/HeadBodyScript",
-    "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
-    "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
-    "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
-    "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
-    "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
-    "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "committer": {
-    "login": "HeadBodyScript",
-    "id": 106414989,
-    "node_id": "U_kgDOBlfDjQ",
-    "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/HeadBodyScript",
-    "html_url": "https://github.com/HeadBodyScript",
-    "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
-    "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
-    "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
-    "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
-    "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
-    "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "parents": [
-    {
-      "sha": "49245b43da5f1f8da74cf7b9163b83c1de40a7c9",
-      "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/commits/49245b43da5f1f8da74cf7b9163b83c1de40a7c9",
-      "html_url": "https://github.com/HeadBodyScript/HeadBodyScript/commit/49245b43da5f1f8da74cf7b9163b83c1de40a7c9"
-    }
-  ],
-  "stats": {
-    "total": 0,
-    "additions": 0,
-    "deletions": 0
-  },
-  "files": [
-    {
-      "sha": "550607b49014b9cfbbd4be0b3a1933c646999363",
-      "filename": "user-interface/website-display/1.png",
-      "status": "added",
-      "additions": 0,
-      "deletions": 0,
-      "changes": 0,
-      "blob_url": "https://github.com/HeadBodyScript/HeadBodyScript/blob/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F1.png",
-      "raw_url": "https://github.com/HeadBodyScript/HeadBodyScript/raw/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F1.png",
-      "contents_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/contents/user-interface%2Fwebsite-display%2F1.png?ref=e55771eec0b1541de67fd28f62296e0a9b7d1f3a"
-    },
-    {
-      "sha": "28aeda46cefcddfe7f28444bcf624026c9039090",
-      "filename": "user-interface/website-display/2.png",
-      "status": "added",
-      "additions": 0,
-      "deletions": 0,
-      "changes": 0,
-      "blob_url": "https://github.com/HeadBodyScript/HeadBodyScript/blob/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F2.png",
-      "raw_url": "https://github.com/HeadBodyScript/HeadBodyScript/raw/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F2.png",
-      "contents_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/contents/user-interface%2Fwebsite-display%2F2.png?ref=e55771eec0b1541de67fd28f62296e0a9b7d1f3a"
-    },
-    {
-      "sha": "ed2a50c251e7c690fe6c6579edf1cbab9c8366d7",
-      "filename": "user-interface/website-display/3.png",
-      "status": "added",
-      "additions": 0,
-      "deletions": 0,
-      "changes": 0,
-      "blob_url": "https://github.com/HeadBodyScript/HeadBodyScript/blob/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F3.png",
-      "raw_url": "https://github.com/HeadBodyScript/HeadBodyScript/raw/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F3.png",
-      "contents_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/contents/user-interface%2Fwebsite-display%2F3.png?ref=e55771eec0b1541de67fd28f62296e0a9b7d1f3a"
-    }
-  ]
-}
+// const temp = {
+//   "sha": "e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
+//   "node_id": "C_kwDOHaKiu9oAKGU1NTc3MWVlYzBiMTU0MWRlNjdmZDI4ZjYyMjk2ZTBhOWI3ZDFmM2E",
+//   "commit": {
+//     "author": {
+//       "name": "IHeadBodyScript",
+//       "email": "IHeadBodyScript@gmail.com",
+//       "date": "2023-10-08T13:54:28Z"
+//     },
+//     "committer": {
+//       "name": "IHeadBodyScript",
+//       "email": "IHeadBodyScript@gmail.com",
+//       "date": "2023-10-08T13:54:28Z"
+//     },
+//     "message": "Display",
+//     "tree": {
+//       "sha": "989f239798ecc0175ab8b7b0b68d490acd1172f1",
+//       "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/git/trees/989f239798ecc0175ab8b7b0b68d490acd1172f1"
+//     },
+//     "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/git/commits/e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
+//     "comment_count": 1,
+//     "verification": {
+//       "verified": false,
+//       "reason": "unsigned",
+//       "signature": null,
+//       "payload": null
+//     }
+//   },
+//   "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/commits/e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
+//   "html_url": "https://github.com/HeadBodyScript/HeadBodyScript/commit/e55771eec0b1541de67fd28f62296e0a9b7d1f3a",
+//   "comments_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/commits/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/comments",
+//   "author": {
+//     "login": "HeadBodyScript",
+//     "id": 106414989,
+//     "node_id": "U_kgDOBlfDjQ",
+//     "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+//     "gravatar_id": "",
+//     "url": "https://api.github.com/users/HeadBodyScript",
+//     "html_url": "https://github.com/HeadBodyScript",
+//     "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+//     "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+//     "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+//     "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+//     "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+//     "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+//     "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+//     "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+//     "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+//     "type": "User",
+//     "site_admin": false
+//   },
+//   "committer": {
+//     "login": "HeadBodyScript",
+//     "id": 106414989,
+//     "node_id": "U_kgDOBlfDjQ",
+//     "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+//     "gravatar_id": "",
+//     "url": "https://api.github.com/users/HeadBodyScript",
+//     "html_url": "https://github.com/HeadBodyScript",
+//     "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+//     "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+//     "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+//     "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+//     "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+//     "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+//     "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+//     "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+//     "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+//     "type": "User",
+//     "site_admin": false
+//   },
+//   "parents": [
+//     {
+//       "sha": "49245b43da5f1f8da74cf7b9163b83c1de40a7c9",
+//       "url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/commits/49245b43da5f1f8da74cf7b9163b83c1de40a7c9",
+//       "html_url": "https://github.com/HeadBodyScript/HeadBodyScript/commit/49245b43da5f1f8da74cf7b9163b83c1de40a7c9"
+//     }
+//   ],
+//   "stats": {
+//     "total": 0,
+//     "additions": 0,
+//     "deletions": 0
+//   },
+//   "files": [
+//     {
+//       "sha": "550607b49014b9cfbbd4be0b3a1933c646999363",
+//       "filename": "user-interface/website-display/1.png",
+//       "status": "added",
+//       "additions": 0,
+//       "deletions": 0,
+//       "changes": 0,
+//       "blob_url": "https://github.com/HeadBodyScript/HeadBodyScript/blob/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F1.png",
+//       "raw_url": "https://github.com/HeadBodyScript/HeadBodyScript/raw/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F1.png",
+//       "contents_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/contents/user-interface%2Fwebsite-display%2F1.png?ref=e55771eec0b1541de67fd28f62296e0a9b7d1f3a"
+//     },
+//     {
+//       "sha": "28aeda46cefcddfe7f28444bcf624026c9039090",
+//       "filename": "user-interface/website-display/2.png",
+//       "status": "added",
+//       "additions": 0,
+//       "deletions": 0,
+//       "changes": 0,
+//       "blob_url": "https://github.com/HeadBodyScript/HeadBodyScript/blob/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F2.png",
+//       "raw_url": "https://github.com/HeadBodyScript/HeadBodyScript/raw/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F2.png",
+//       "contents_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/contents/user-interface%2Fwebsite-display%2F2.png?ref=e55771eec0b1541de67fd28f62296e0a9b7d1f3a"
+//     },
+//     {
+//       "sha": "ed2a50c251e7c690fe6c6579edf1cbab9c8366d7",
+//       "filename": "user-interface/website-display/3.png",
+//       "status": "added",
+//       "additions": 0,
+//       "deletions": 0,
+//       "changes": 0,
+//       "blob_url": "https://github.com/HeadBodyScript/HeadBodyScript/blob/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F3.png",
+//       "raw_url": "https://github.com/HeadBodyScript/HeadBodyScript/raw/e55771eec0b1541de67fd28f62296e0a9b7d1f3a/user-interface%2Fwebsite-display%2F3.png",
+//       "contents_url": "https://api.github.com/repos/HeadBodyScript/HeadBodyScript/contents/user-interface%2Fwebsite-display%2F3.png?ref=e55771eec0b1541de67fd28f62296e0a9b7d1f3a"
+//     }
+//   ]
+// }
 
 // const categories = [
 //   {
@@ -724,26 +724,8 @@ const temp = {
 //   }
 // ]
 
-
-
-let apiGitHub = () => {
-  var GitRepoList;
-
-  fetch("https://api.github.com/users/HeadBodyScript/repos", {})
-    .then(GitRepoList => GitRepoList.json())
-    .then(GitRepoList => {
-      console.log
-      (GitRepoList)
-      // .fetch("https://api.github.com/repos/${full_name}/commits/main"),
-      // document.body.innerHTML = GitRepoList.reduce((prev, cat) => prev + `<h2>${cat.full_name}</h2> <h2>${cat.description}</h2>`, '');
-      var hh = GitRepoList.reduce((prev, cat) => prev + `${cat.full_name}`, '');
-      // var uwu = GitRepoList.reduce((prev, cat) => prev + `<h6 class="font-extrabold mb-0"><div>https://api.github.com/repos/${cat.full_name}/commits/main</div></h6>`, '');`
-
-      var uwu = GitRepoList.reduce((prev, cat) => prev + `/repos/${cat.full_name}/commits`, '');
-
-      var GitRepoListmeow;
-
-      fetch(`https://api.github.com${uwu}/main`)
+function finalMeow () {
+        fetch(`https://api.github.com${uwu}/main`)
         .then(GitRepoListmeow => GitRepoListmeow.json())
         .then(GitRepoListmeow => {
           console.log
@@ -759,6 +741,22 @@ let apiGitHub = () => {
           filled.innerHTML=`<h6 class="font-extrabold mb-0"><div>${message}</div></h6>`
 
         })
+}
+
+let apiGitHub = () => {
+  var GitRepoList;
+  var GitRepoListmeow;
+  fetch("https://api.github.com/users/HeadBodyScript/repos", {})
+    .then(GitRepoList => GitRepoList.json())
+    .then(GitRepoList => {
+      console.log
+      (GitRepoList)
+      // .fetch("https://api.github.com/repos/${full_name}/commits/main"),
+      // document.body.innerHTML = GitRepoList.reduce((prev, cat) => prev + `<h2>${cat.full_name}</h2> <h2>${cat.description}</h2>`, '');
+      var hh = GitRepoList.reduce((prev, cat) => prev + `${cat.full_name}`, '');
+      // var uwu = GitRepoList.reduce((prev, cat) => prev + `<h6 class="font-extrabold mb-0"><div>https://api.github.com/repos/${cat.full_name}/commits/main</div></h6>`, '');`
+
+      var uwu = GitRepoList.reduce((prev, cat)=> prev + `/repos/${cat.full_name}/commits`, '');
 
       // var full = GitRepoList((cat)`$cat.full_name`)
       // fetch(`https://api.github.com/repos/${full_name}/commits/main`)
