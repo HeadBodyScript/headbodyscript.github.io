@@ -10,7 +10,45 @@ const serverStatus=document.getElementById("serverStatus"),serverMOTD=document.g
 
 const getGitSubs=document.getElementById("getGitSubs"),getGitRepo=document.getElementById("getGitRepo");let getInfo=()=>{var e;fetch("https://api.github.com/users/headbodyscript",{method:"GET",redirect:"follow"}).then(e=>e.json()).then(e=>{console.log(e),getGitSubs.innerHTML=e.followers,getGitRepo.innerHTML=e.public_repos}).catch(e=>console.log("error",e))};getInfo();
 
-const getTimeWebsite=document.getElementById("getTimeWebsite"),getUpdateWebsite=document.getElementById("getUpdateWebsite");let getInfoGithub=()=>{var e;fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main",{method:"GET",redirect:"follow"}).then(e=>e.json()).then(e=>{console.log(e),getUpdateWebsite.innerHTML=e.commit.message,getTimeWebsite.innerHTML=e.commit.author.date}).catch(e=>console.log("error",e))};getInfoGithub();
+// const getTimeWebsite=document.getElementById("getTimeWebsite"),getUpdateWebsite=document.getElementById("getUpdateWebsite");let getInfoGithub=()=>{var e;fetch("https://api.github.com/repos/HeadBodyScript/headbodyscript.github.io/commits/main",{method:"GET",redirect:"follow"}).then(e=>e.json()).then(e=>{console.log(e),getUpdateWebsite.innerHTML=e.commit.message,getTimeWebsite.innerHTML=e.commit.author.date}).catch(e=>console.log("error",e))};getInfoGithub();
+
+let GetGitRepo = () => {
+    var gitUser = "HeadBodyScript"
+    var GitRepoLink = "/repos/HeadBodyScript/DATA-Armoury/commits" // make link of the repo that you can can visit
+    fetch(`https://api.github.com/users/${gitUser}/repos`)
+    .then(Categories => Categories.json())
+    .then(Categories => { // console.log(Categories)
+
+        var reducedCategories = Categories.reduce((prev, obj) => prev + `/${obj.name}`, '');
+        localStorage.setItem('reducedList', reducedCategories);
+
+            function placeDiv() {
+
+            var _reducedCategories = localStorage.getItem('reducedList');
+            var splitCategories = _reducedCategories.split("/");
+            var resultCategories = splitCategories.pop();
+            var newReducedCategories = splitCategories.join("/");
+            localStorage.setItem('reducedList', newReducedCategories);
+            console.log(_reducedCategories)
+
+            fetch(`https://api.github.com/repos/HeadBodyScript/${resultCategories}/commits/main`)
+                .then(subCategories => subCategories.json())
+                .then(subCategories => {
+
+                var gitTime = subCategories.commit.author.date
+                var gitSummary = subCategories.commit.message
+                Form.innerHTML += `<tr><td class="col-1"><div class="d-flex align-items-center"><div class="avatar avatar-md"></div><p class="font-bold ms-3 mb-0">Website: ${resultCategories}</p></div></td><td class="updates">Message:<div class="min">${gitSummary}</div>Last Update:<div class="min"">${gitTime}</div></td></tr>`
+                })
+            }
+
+        let result = 0;
+        for (let i = 0; i < Categories.length; i++) {
+        result += placeDiv();
+        }
+    })
+};
+GetGitRepo();
+
 
 (async()=>{let t=await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")).text();README0.innerHTML=t})();
 if (location.href.indexOf("vcard") > -1) {location.href = 'https://headbodyscript.nl/assets/me.vcf';};

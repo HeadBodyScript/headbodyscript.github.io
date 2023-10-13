@@ -7,38 +7,31 @@ var conCategories = [{"id":497201947,"node_id":"R_kgDOHaKzGw","name":"DATA-Armou
 
 
 let GetGitRepo = () => {
-  var Categories;
-  var SubCategories;
-  var restVar;
-  var vars;
-  let globalName;
-  var temp = "/repos/HeadBodyScript/DATA-Armoury/commits"
-  fetch("https://api.github.com/users/HeadBodyScript/repos", {})
+  var gitUser = "HeadBodyScript"
+  var GitRepoLink = "/repos/HeadBodyScript/DATA-Armoury/commits" // make link of the repo that you can can visit
+  fetch(`https://api.github.com/users/${gitUser}/repos`)
     .then(Categories => Categories.json())
-    .then(Categories => {
-      console.log(Categories)
+    .then(Categories => { // console.log(Categories)
 
-      var _Reduce = Categories.reduce((prev, cat)=> prev + `/${cat.name}`,  '');
-      var vars = _Reduce
-      var restVar;
-      // window.var = restVar;
+      var reducedCategories = Categories.reduce((prev, obj)=> prev + `/${obj.name}`,  '');
+      localStorage.setItem('reducedList', reducedCategories);
 
       function placeDiv () {
 
-        var arrVars = vars.split("/");
-        var lastVar = arrVars.pop();
-        var restVar = arrVars.join("/");
-        let globalName = restVar;
-        console.log(globalName)
+        var _reducedCategories = localStorage.getItem('reducedList');
+        var splitCategories = _reducedCategories.split("/");
+        var resultCategories = splitCategories.pop();
+        var newReducedCategories = splitCategories.join("/");
+        localStorage.setItem('reducedList', newReducedCategories);
+        console.log(_reducedCategories)
 
-        fetch(`https://api.github.com/repos/HeadBodyScript/${lastVar}/commits/main`)
-        .then(SubCategories => SubCategories.json())
-        .then(SubCategories => {
-        // console.log
-        // (SubCategories)
-        var time = SubCategories.commit.author.date
-        var message = SubCategories.commit.message
-        Form.innerHTML+=`<tr><td class="col-1"><div class="d-flex align-items-center"><div class="avatar avatar-md"></div><p class="font-bold ms-3 mb-0">Website:<a href="${temp}">link</a></p></div></td><td class="updates">Message:<div class="min">${message}</div>Last Update:<div class="min"">${time}</div></td></tr>`
+        fetch(`https://api.github.com/repos/HeadBodyScript/${resultCategories}/commits/main`)
+        .then(subCategories => subCategories.json())
+        .then(subCategories => {
+
+        var gitTime = subCategories.commit.author.date
+        var gitSummary = subCategories.commit.message
+        Form.innerHTML+=`<tr><td class="col-1"><div class="d-flex align-items-center"><div class="avatar avatar-md"></div><p class="font-bold ms-3 mb-0">Website: ${resultCategories}</p></div></td><td class="updates">Message:<div class="min">${gitSummary}</div>Last Update:<div class="min"">${gitTime}</div></td></tr>`
         })
       }
 
@@ -46,11 +39,6 @@ let GetGitRepo = () => {
         for (let i=0;i<Categories.length;i++) {
           result += placeDiv();
         }
-        
-      DisplayReduce.innerHTML = vars
-      Displayrest.innerHTML = restVar
-      console.log(globalName)
-      console.log(vars);
     })
 };
 GetGitRepo();
