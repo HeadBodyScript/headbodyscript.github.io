@@ -37,7 +37,22 @@ let GetGitRepo = () => {
 
                 var gitTime = subCategories.commit.author.date
                 var gitSummary = subCategories.commit.message
-                Form.innerHTML += `<tr><td class="col-1"><div class="d-flex align-items-center"><div class="avatar avatar-md"></div><p class="font-bold ms-3 mb-0">Website: ${resultCategories}</p></div></td><td class="updates">Message:<div class="min">${gitSummary}</div>Last Update:<div class="min"">${gitTime}</div></td></tr>`
+                Form.innerHTML +=
+                `
+                <tr>
+                <td class="updates">
+                    <div class="updates font-bold" style="width: fit-content; margin-right: 10px;">
+                    Name:<div class="text-muted" style="margin-left: 10px;">${resultCategories}</div>
+                    </div>
+                    <div class="updates font-bold" style="width: fit-content; margin-right: 10px;">
+                    Summary:<p class="text-muted" style="margin-left: 10px;">${gitSummary}</p>
+                    </div>
+                    <div class="updates font-bold" style="width: fit-content; margin-right: 10px;">
+                    Release date:<p class="text-muted" style="margin-left: 10px;">${gitTime}</p>
+                    </div>
+                </td>
+                </tr>
+                `
                 })
             }
 
