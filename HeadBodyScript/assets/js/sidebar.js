@@ -1,7 +1,7 @@
 document.write(`
-  <div class="sidebar-toggler x">
+    <div class="sidebar-toggler x" style="position: absolute;">
       <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list sb"></i></a>
-      </div>
+    </div>
       <div id="app">
         <div id="sidebar" class="active">
           <div class="sidebar-wrapper active">
