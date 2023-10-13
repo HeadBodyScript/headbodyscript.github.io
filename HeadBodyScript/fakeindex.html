@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><title>GitHub - API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub - API</title>
     <link rel="stylesheet" href="https://headbodyscript.github.io/assets/css/app-0.css">
     <link rel="stylesheet" href="https://headbodyscript.github.io/assets/css/app-1.css">
   </head>
@@ -15,49 +13,42 @@
       <div class="card-body px-4 py-4-5">
         <div class="row">
           <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">Step 1</h6>
-            <h6 class="font-extrabold mb-0"><div id="List">ERROR.list</div></h6>
-<br>
-            <h6 class="text-muted font-semibold">Step 2</h6>
-            <h6 class="font-extrabold mb-0"><div id="varowo">ERROR.owo</div></h6>
+            <h6 class="text-muted font-semibold">Step 1: Fetch $user repositories<br>Result:</h6>
+            <h6 class="font-extrabold mb-0"><div id="DisplayArray">ERROR.list</div></h6>
             <br>
-            <h6 class="text-muted font-semibold">Step 3</h6>
-            <h6 class="font-extrabold mb-0"><div id="empty">ERROR.empty</div></h6>
-            <h6 class="font-extrabold mb-0"><div id="filled">ERROR.displaynewyes</div></h6>
+            <h6 class="text-muted font-semibold">Step 2: Create a loop that gets message from each object<br>Result:</h6>
+            <h6 class="font-extrabold mb-0"><div id="varowo">ERROR.owo</div></h6>
+            <!-- Each loop in created seperatly but in chains it together as 1 string -->
+            <br>
+            <h6 class="text-muted font-semibold">Step 3: display the "message" from inside the object<br>Result:</h6>
+            <h6 class="font-extrabold mb-0"><div id="False">ERROR.MessageFalse</div></h6>
+            <h6 class="font-extrabold mb-0"><div id="True">ERROR.MessageTrue</div></h6>
           </div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">varuwu</div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7" id="varuwu"></div>
+          <div class="text-muted font-semibold">Show Result from the reduce</div>
+          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7" id="DisplayReduce"></div>
+          <div class="text-muted font-semibold">Show Result from the element</div>
+          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7" id="Displayrest"></div>
         </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-body px-4 py-4-5">
-        <div class="row">
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">This is what the result should look like:</h6>
-            <h6 class="font-extrabold mb-0">
-              <div id="List0">Item 0</div>
-            </h6>
-            <h6 class="font-extrabold mb-0">
-              <div id="List1">Item 1</div>
-            </h6>
-            <h6 class="font-extrabold mb-0">
-              <div id="List2">Item 2</div>
-            </h6>
-            <h6 class="font-extrabold mb-0">
-              <div id="List3">Item 3</div>
-            </h6>
-            <h6 class="font-extrabold mb-0">
-              <div id="List4">Item 4</div>
-            </h6>
-            <h6 class="font-extrabold mb-0">
-              <div id="List5">Item 5</div>
-            </h6>
+    <div class="col-12 col-xl-12">
+      <div class="card">
+          <div class="card-header"></div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover table-lg">
+              <thead>
+                <th></th><h4>List of repositories:</h4><th></th>
+              </thead>
+              <tbody id="Form">
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
+
     <script src="fakeindex.js"></script>
   </body>
 
