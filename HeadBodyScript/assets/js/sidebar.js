@@ -1,5 +1,5 @@
 document.write(`
-    <div class="sidebar-toggler x" style="position: absolute;">
+    <div class="sidebar-toggler x" style="position: fixed;">
       <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list sb"></i></a>
     </div>
       <div id="app">
