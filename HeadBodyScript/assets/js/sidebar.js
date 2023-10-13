@@ -2,6 +2,9 @@ document.write(`
     <div class="sidebar-toggler x" style="position: fixed;">
       <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list sb"></i></a>
     </div>
+    <div class="sidebar-toggler x" style="position: fixed; right: 0;">
+      <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-list sb"></i></a>
+    </div>
       <div id="app">
         <div id="sidebar" class="active">
           <div class="sidebar-wrapper active">
