@@ -5193,7 +5193,7 @@ a {
 
 .splash-intro {
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -5209,9 +5209,15 @@ a {
   transform: translate(-50%, -50%);
   white-space: nowrap;
   color:#ffffff;
+  display: flex;
+  flex-direction: row;
   }
   
-  
+  @media screen and (max-width:800px) {
+      .splash-logo-header {
+          flex-direction:column;
+      }    
+  }
   
   .splash-logo {
   position: relative;
@@ -5219,6 +5225,7 @@ a {
   bottom: -20px;
   opacity: 0;
   font-family: "Dimitra";
+  margin-top: 50px;
   }
   
   .splash-logo.active {
