@@ -1,0 +1,364 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@font-face {
+  font-family: Dimitra;
+  src: url(https://headbodyscript.github.io/assets/fonts/dimitra.woff2) format('woff2')
+}
+:root {
+  --sidebar: #010409;
+  --main: #0d1117;
+  --divider: #21262d;
+  --text: white;
+  --sub-text: #8b949e;
+  --click-text: #58a6ff;
+  --button: #1f6feb;
+  --oreo: #5c509f;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--text);
+}
+
+a:visited {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--text);
+}
+
+a:active {
+  color: var(--text);
+}
+
+body {
+  background-color: var(--main);
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+  color: var(--text);
+}
+
+button {
+  background: none;
+  color: var(--text);
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+header {
+  background-color: var(--sidebar);
+  bottom: 0;
+  height: 95px;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-out;
+  width: 100%;
+  border-bottom: 1px solid var(--divider);
+}
+h6 {
+  color: var(--text);
+  font-size: 1800%;
+  width: max-content;
+  margin: 0;
+}
+
+h5 {
+  color: var(--text);
+  font-size: 200%;
+  width: max-content;
+  margin: 0;
+}
+
+img {
+  height: 750px;
+  width: auto;
+  border-radius: 100%;
+}
+
+i {
+  color: var(--text);
+}
+
+li {
+  padding: 5px;
+  color: var(--text);
+  padding-right: 15px;
+}
+
+section {
+  visibility: hidden;
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 95px;
+  min-height: calc(98vh - 95px);
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-text {
+  margin-left: 150px;
+  position: relative;
+  top: -40px;
+}
+
+/* boxes */
+
+.b-box {
+  position: absolute;
+  aspect-ratio: 1/1;
+  border-style: solid;
+  border-radius: 1px;
+  border-color: var(--divider);
+  transform: rotate(45deg);
+  z-index: -1
+}
+
+.b-one {
+  height: 25%;
+  top: 46.5%;
+  left: 15%;
+  animation: 8s linear infinite b-one
+}
+
+@keyframes b-one {
+
+  10%,
+  100% {
+    top: 46.5%
+  }
+
+  55%,
+  65% {
+    top: 51.5%
+  }
+}
+
+.b-two {
+  height: 15%;
+  top: 51.5%;
+  left: 10%;
+  animation: 8s linear infinite b-two
+}
+
+.b-four,
+.b-three {
+  top: 29.5%;
+  left: 78.4%
+}
+
+@keyframes b-two {
+
+  10%,
+  100% {
+    top: 51.5%
+  }
+
+  55%,
+  65% {
+    top: 46.5%
+  }
+}
+
+.b-three {
+  height: 15%;
+  animation: 8s linear infinite b-three
+}
+
+@keyframes b-three {
+
+  10%,
+  100% {
+    top: 29.5%
+  }
+
+  55%,
+  65% {
+    top: 24.5%
+  }
+}
+
+.b-four {
+  height: 30%;
+  animation: 8s linear infinite b-four
+}
+
+@keyframes b-four {
+
+  10%,
+  100% {
+    top: 29.5%
+  }
+
+  55%,
+  65% {
+    top: 34.5%
+  }
+}
+
+.b-mid {
+  height: 80%;
+  top: 26.5%;
+  left: 10%;
+  background-color: var(--divider);
+  border-image: linear-gradient(to right, #AD2831, darkorchid) 1
+}
+
+.text {
+  width: max-content;
+  position: absolute;
+  top: 30%;
+}
+
+#fade-1 {
+  left: 8%;
+}
+
+#fade-2 {
+  left: 62%;
+}
+
+
+.content {
+  width: max-content;
+  height: max-content;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.links {
+  position: relative;
+  top: 65px;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Dimitra;
+  font-size: xx-small;
+  color: var(--text);
+  text-shadow: 2px 2px var(--divider);
+  cursor: default;
+}
+
+
+
+/* SPLASH*/
+.splash-intro {
+  position: fixed;
+  z-index: 256;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--sidebar);
+  transition: 1s
+}
+
+.splash-logo-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: #fff;
+  display: flex;
+  flex-direction: row
+}
+
+@media screen and (max-width:900px) {
+  .splash-logo-header {
+    flex-direction: column
+  }
+}
+
+.splash-logo {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  font-family: Dimitra;
+  margin-top: 50px
+}
+
+.splash-logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: .5s ease-in-out
+}
+
+.splash-logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: .5s ease-in-out
+}
+
+/* Transition */
+.splash-transition-true {
+  position: fixed;
+  z-index: 256;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main);
+  margin-top: 95px;
+  border-top: 1px solid var(--divider);
+  opacity: 0;
+  transition: .5s ease-in-out
+}
+
+.splash-transition-false {
+  position: fixed;
+  z-index: 256;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main);
+  margin-top: 95px;
+  border-top: 1px solid var(--divider);
+  opacity: 100;
+  transition: .5s ease-in-out
+}
+
+.visible {
+  visibility: visible;
+  display: flex;
+}
+
+/* my work */
+
+.card {
+  min-width: 25%;
+  min-height: 300px;
+  background-color: #0d1117;
+}
+
+.row  {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

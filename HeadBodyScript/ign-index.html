@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio T.I.R.R.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/ign-app.css">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/site.webmanifest">
+    <script src="assets/js/ign-btn.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- <div class="splash-intro">
+        <h1 class="splash-logo-header">
+            <span class="splash-logo">Head</span><span class="splash-logo">Body</span><span class="splash-logo">Script</span>
+        </h1>
+    </div> -->
+    <div id="transition" class="splash-transition-true">
+
+    </div>
+    <header>
+        <div class="max-content logo">
+            <h3>headbodyscript</h3>
+        </div>
+        <ul class="links">
+            <li><i class="bi bi-code"></i><button onclick="TakeMeHome()">&nbsp;Home</button></li>
+            <li><i class="bi bi-code"></i><button onclick="ThisIsAboutMe()">&nbsp;About Me</button></li>
+            <li><i class="bi bi-code"></i><button onclick="AllMyWork()">&nbsp;My Work</button></li>
+            <li><i class="bi bi-code"></i><button onclick="TextMe()">&nbsp;Leave A Comment</button></li>
+        </ul>
+    </header>
+    <section id="TakeMeHome" class="visible">
+        <div class="text" id="fade-1">
+            <h6>Java</h6>
+        </div>
+        <div class="content">
+            <img src="ign-cyber0.png" alt="">
+            <div class="b-box b-mid"></div>
+        </div>
+        <div class="text" id="fade-2">
+            <h6>Script</h6>
+            <h5 class="sub-text">Ready For A Challenge</h5>
+        </div>
+        <div class="b-box b-one"></div>
+        <div class="b-box b-two"></div>
+        <div class="b-box b-three"></div>
+        <div class="b-box b-four"></div>
+    </section>
+    <section id="ThisIsAboutMe">
+        <div class="content">
+            <img src="ign-cyber1.png" alt="">
+            <div class="b-box b-mid"></div>
+        </div>
+    </section>
+    <section id="AllMyWork">
+        <div class="row">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+        </div>
+    </section>
+    <section id="TextMe">
+        <div class="content">
+            <img src="ign-cyber3.png" alt="">
+            <div class="b-box b-mid"></div>
+        </div>
+    </section>
+    <script src="assets/js/ign-app.js"></script>
+    <script>function TakeMeHome(){var s=document.getElementById("transition");s.classList.replace("splash-transition-true","splash-transition-false"),setTimeout(()=>{let e=document.querySelectorAll("*");e.forEach(s=>{s.classList.remove("visible")}),document.getElementById("TakeMeHome").classList.add("visible"),s.classList.replace("splash-transition-false","splash-transition-true")},1e3)}function ThisIsAboutMe(){var s=document.getElementById("transition");s.classList.replace("splash-transition-true","splash-transition-false"),setTimeout(()=>{let e=document.querySelectorAll("*");e.forEach(s=>{s.classList.remove("visible")}),document.getElementById("ThisIsAboutMe").classList.add("visible"),s.classList.replace("splash-transition-false","splash-transition-true")},1e3)}function AllMyWork(){var s=document.getElementById("transition");s.classList.replace("splash-transition-true","splash-transition-false"),setTimeout(()=>{let e=document.querySelectorAll("*");e.forEach(s=>{s.classList.remove("visible")}),document.getElementById("AllMyWork").classList.add("visible"),s.classList.replace("splash-transition-false","splash-transition-true")},1e3)}function TextMe(){var s=document.getElementById("transition");s.classList.replace("splash-transition-true","splash-transition-false"),setTimeout(()=>{let e=document.querySelectorAll("*");e.forEach(s=>{s.classList.remove("visible")}),document.getElementById("TextMe").classList.add("visible"),s.classList.replace("splash-transition-false","splash-transition-true")},1e3)}</script>
+</body>
+</html>
