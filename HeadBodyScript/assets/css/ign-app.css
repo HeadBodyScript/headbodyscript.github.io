@@ -225,12 +225,66 @@ ul {
 
 #fade-1 {
   left: 8%;
+  z-index: 1;
 }
 
 #fade-2 {
   left: 62%;
 }
+@media (max-width: 1980px) {
+  #fade-1 {
+    left: 4%;
+    top: 35%;
+  }
+  #fade-2 {
+    left: 12%;
+    top: 55%;
+  }
+  .text {
+    top: 20%;
+  }
+  h6 {
+    font-size: 1500%;
+  }
+  h5 {
+    font-size: 150%;
+  }
+  .content {
+    margin-left: 20%;
+  }
+}
 
+@media (max-width: 800px) {
+  #fade-1 {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 50%);
+  }
+  #fade-2 {
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, 50%);
+  }
+  .text {
+    top: 20%;
+  }
+  h6 {
+    font-size: 1000%;
+  }
+  h5 {
+    font-size: 80%;
+  }
+  .content {
+    margin-left: 0;
+  }
+  li {
+    padding-right: 2px;
+  }
+  .links {
+    margin-left: -10px;
+    margin-right: 0px;
+  }
+}
 
 .content {
   width: max-content;
