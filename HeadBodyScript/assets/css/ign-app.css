@@ -427,13 +427,17 @@ strong {
 @media (max-width: 800px) {
   #fade-1 {
     left: 50%;
-    top: 0;
+    top: 10%;
     transform: translate(-50%, 50%);
   }
   #fade-2 {
     left: 50%;
     top: 35%;
     transform: translate(-50%, 50%);
+  }
+  .sub-text {
+    margin-left: 0;
+    top: -20px;
   }
   .splash-logo-header {
     flex-direction: column
@@ -442,7 +446,7 @@ strong {
     top: 20%;
   }
   h6 {
-    font-size: 1000%;
+    font-size: 500%;
   }
   h5 {
     font-size: 80%;
@@ -469,37 +473,66 @@ strong {
   }
   .b-one {
     height: 25%;
-    top: 40.5%;
-    left: 15%;
+    top: 22.25%;
+    left: 20%;
     animation: 8s linear infinite b-one
   }
   @keyframes b-one {
-
     10%,
     100% {
-      top: 40.5%
+      top: 22.25%
     }
-  
     55%,
     65% {
-      top: 51.5%
+      top: 40%
+    }
+  }
+  .b-two {
+    height: 15%;
+    top: 27.3%;
+    left: 15%;
+    animation: 8s linear infinite b-two
+  }
+  @keyframes b-two {
+    10%,
+    100% {
+      top: 27.3%
+    }
+    55%,
+    65% {
+      top: 15%
+    }
+  }
+  .b-three {
+    height: 15%;
+    top: 27.3%;
+    left: 60.5%;
+    animation: 8s linear infinite b-three
+  }
+  @keyframes b-three {
+    10%,
+    100% {
+      top: 27.3%
+    }
+    55%,
+    65% {
+      top: 39.6%
     }
   }
   .b-four {
-    top: 14.5%;
-    left: 55.4%;
+    height: 25%;
+    top: 22.25%;
+    left: 39.1%;
     animation: 8s linear infinite b-four
   }
   @keyframes b-four {
-
     10%,
     100% {
-      top: 14.5%
+      top: 22.25%
     }
-  
     55%,
     65% {
-      top: 22.5%
+      top: 5.50%
     }
   }
 }
