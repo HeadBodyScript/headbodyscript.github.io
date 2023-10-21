@@ -221,6 +221,10 @@ strong {
   float: right;
 }
 
+#TakeMeHome {
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
 .content {
   max-height: 70vh;
 
