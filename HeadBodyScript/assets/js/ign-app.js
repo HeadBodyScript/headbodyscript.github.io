@@ -11,15 +11,39 @@ let GetGitRepo = () => {
             // make a for each loop of Categories to make var of data I need inside the function
             // Categories 0, create own list at 0. At List[0] get data from Categories[0] and so on
         var reducedCategories = Categories.reduce((prev, obj) => prev + `/${obj.name}`, '');
-        localStorage.setItem('reducedList', reducedCategories);
+        localStorage.setItem('reducedName', reducedCategories);
+
+        var reducedDescription = Categories.reduce((prev, obj) => prev + `/${obj.description}`, '');
+        localStorage.setItem('reducedDescription', reducedDescription);
 
             function placeDiv() {
 
-            var _reducedCategories = localStorage.getItem('reducedList');
+            var _reducedCategories = localStorage.getItem('reducedName');
             var splitCategories = _reducedCategories.split("/");
             var resultCategories = splitCategories.pop();
             var newReducedCategories = splitCategories.join("/");
-            localStorage.setItem('reducedList', newReducedCategories);
+            localStorage.setItem('reducedName', newReducedCategories);
+
+            var reducedDescription = localStorage.getItem('reducedDescription');
+            var splitDescription = reducedDescription.split("/");
+            var resultDescription = splitDescription.pop();
+            var newReducedDescription = splitDescription.join("/");
+            localStorage.setItem('reducedDescription', newReducedDescription);
+
+            // fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")
+            //     .then(ReadMe => ReadMe.text())
+
+            var ReadMe;
+
+            fetch(`https://raw.githubusercontent.com/${gitUser}/${resultCategories}/main/README.md`)
+            .then(res => res.text())
+            .then(data => {
+                ReadMe = data;
+            })
+            .then(() => {
+                console.log(ReadMe);
+            });
+
             // console.log(_reducedCategories)
 
             fetch(`https://api.github.com/repos/${gitUser}/${resultCategories}/commits/main`)
@@ -41,10 +65,10 @@ let GetGitRepo = () => {
                         <ul>
                             <li class="card-header"><strong>${resultCategories}</strong><img class="icon" src="icon.jpeg" alt=""></li>
                             <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
-                            <li class="border sub"><i class="bi bi-dot"></i>This is some text that makes up the description of the given challenge</li>
+                            <li class="border sub"><i class="bi bi-dot"></i>${resultDescription}</li>
                             <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
-                            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${t}</li>
-                            <li class="border"><i class="bi bi-caret-down-fill"></i>New Update</li>
+                            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${ReadMe}</li>
+                            <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
                             <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
                             <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
                             <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
