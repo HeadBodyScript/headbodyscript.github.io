@@ -20,28 +20,35 @@ let GetGitRepo = () => {
             var resultCategories = splitCategories.pop();
             var newReducedCategories = splitCategories.join("/");
             localStorage.setItem('reducedList', newReducedCategories);
-            console.log(_reducedCategories)
+            // console.log(_reducedCategories)
 
             fetch(`https://api.github.com/repos/${gitUser}/${resultCategories}/commits/main`)
                 .then(subCategories => subCategories.json())
                 .then(subCategories => {
                     console.log(subCategories)
 
+                    // fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md").text();README0.innerHTML=t
+
+
                 var gitTime = subCategories.commit.author.date
+                var gitName = subCategories.commit.author.name
                 var gitSummary = subCategories.commit.message
+                var gitIcon = subCategories.committer.avatar_url
                 Form.innerHTML +=
                 `
                 <div class="card">
                     <div class="card-container">
                         <ul>
-                            <li class="card-header"><strong>Project Name</strong><img class="icon" src="icon.jpeg" alt=""></li>
+                            <li class="card-header"><strong>${resultCategories}</strong><img class="icon" src="icon.jpeg" alt=""></li>
                             <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
+                            <li class="border sub"><i class="bi bi-dot"></i>This is some text that makes up the description of the given challenge</li>
                             <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
+                            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${t}</li>
                             <li class="border"><i class="bi bi-caret-down-fill"></i>New Update</li>
-                            <li class="border"><i class="bi bi-dot"></i>Time: ${gitTime}</li>
-                            <li class="border"><i class="bi bi-dot"></i>New Update</li>
-                            <li class="border"><i class="bi bi-dot"></i>Message: ${gitSummary}</li>
-                            <li class="border card-footer"><i class="bi bi-caret-right-fill"></i><a href="">Link To Website</a></li>
+                            <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
+                            <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
+                            <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
+                            <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${resultCategories}">Visit the repository</a></li>
                         </ul>
                     </div>
                 </div>
