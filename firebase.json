@@ -17,16 +17,6 @@
       "**.gitignore**",
       "**.cache/**",
       "**README.md**",
-      "**fakeindex.html**",
-      "**fakeindex.js**",
-      "**portfolio.html**",
-      "**ign-index.html**",
-      "**ign-app.css**",
-      "**ign-app.js**",
-      "**ign-cyber0.png**",
-      "**ign-cyber1.png**",
-      "**ign-cyber2.png**",
-      "**ign-cyber3.png**",
       "**dist/**"
 
     ]
