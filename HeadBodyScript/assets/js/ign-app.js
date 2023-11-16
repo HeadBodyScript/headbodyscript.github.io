@@ -1,15 +1,10 @@
 let GetGitRepo = () => {
     var gitUser = "Tijl-Pleuger-Vista"
-    var GitRepoLink = "/repos/HeadBodyScript/DATA-Armoury/commits"
     fetch(`https://api.github.com/users/${gitUser}/repos`)
     .then(Categories => Categories.json())
     .then(Categories => {
         console.log(Categories)
 
-            // (dont) make this so there are arrays of the obj you need to use in the placeDiv function
-
-            // make a for each loop of Categories to make var of data I need inside the function
-            // Categories 0, create own list at 0. At List[0] get data from Categories[0] and so on
         var reducedCategories = Categories.reduce((prev, obj) => prev + `/${obj.name}`, '');
         localStorage.setItem('reducedName', reducedCategories);
 
@@ -30,29 +25,17 @@ let GetGitRepo = () => {
             var newReducedDescription = splitDescription.join("/");
             localStorage.setItem('reducedDescription', newReducedDescription);
 
-            // fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md")
-            //     .then(ReadMe => ReadMe.text())
-
             var ReadMe;
-
             fetch(`https://raw.githubusercontent.com/${gitUser}/${resultCategories}/main/README.md`)
             .then(res => res.text())
             .then(data => {
                 ReadMe = data;
-            })
-            .then(() => {
-                console.log(ReadMe);
             });
-
-            // console.log(_reducedCategories)
 
             fetch(`https://api.github.com/repos/${gitUser}/${resultCategories}/commits/main`)
                 .then(subCategories => subCategories.json())
                 .then(subCategories => {
                     console.log(subCategories)
-
-                    // fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/README.md").text();README0.innerHTML=t
-
 
                 var gitTime = subCategories.commit.author.date
                 var gitName = subCategories.commit.author.name
@@ -91,8 +74,6 @@ GetGitRepo();
 let intro = document.querySelector('.splash-intro');
 let logo = document.querySelector('.splash-logo-header');
 let logoSpan = document.querySelectorAll('.splash-logo');
-
-
 window.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
     logoSpan.forEach((span, idx) => {
