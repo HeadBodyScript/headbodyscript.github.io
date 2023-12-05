@@ -201,12 +201,19 @@ strong {
   animation: 12s ease-in-out infinite b-four
 }
 @keyframes b-four {
-  100% {
-    top: 25vh
-  }
-  50% {
-    top: 49.5vh
-  }
+  0% {
+    -webkit-transform:translateY(25%)rotate(45deg)
+}
+
+50% {
+    -webkit-transform: translateY(-25%)rotate(45deg);
+    transform:translateY(-25%)rotate(45deg)
+}
+
+100% {
+    -webkit-transform: translateY(25%)rotate(45deg);
+    transform:translateY(25%)rotate(45deg)
+}
 }
 
 .b-mid {
