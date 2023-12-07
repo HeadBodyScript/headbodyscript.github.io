@@ -156,7 +156,7 @@ strong {
   height: 35%;
   top: 25vh;
   left: 20%;
-  animation: 15s ease-in-out infinite b-one
+  animation: 15s ease-in-out infinite hover
 }
 @keyframes b-one {
   100% {
@@ -170,7 +170,7 @@ strong {
   height: 20%;
   top: 30vh;
   left: 5%;
-  animation: 18s ease-in-out infinite b-two
+  animation: 18s ease-in-out infinite hover
 }
 @keyframes b-two {
   100% {
@@ -184,7 +184,7 @@ strong {
   height: 20%;
   top: 30vh;
   right: 5%;
-  animation: 9s ease-in-out infinite b-three
+  animation: 9s ease-in-out infinite hover
 }
 @keyframes b-three {
   100% {
@@ -198,9 +198,9 @@ strong {
   height: 35%;
   top: 25vh;
   right: 20%;
-  animation: 12s ease-in-out infinite b-four
+  animation: 12s ease-in-out infinite hover
 }
-@keyframes b-four {
+@keyframes hover {
   0% {
     -webkit-transform:translateY(25%)rotate(45deg)
 }
