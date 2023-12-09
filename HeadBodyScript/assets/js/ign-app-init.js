@@ -1,5 +1,4 @@
 
-var readMe
 var gitUser = "Tijl-Pleuger-Vista";
 let GetGitRepo = () => {
 
@@ -12,11 +11,9 @@ fetch(`https://api.github.com/users/${gitUser}/repos`)
   for (let i = 0; i < R_length; i++) {
 
     var gitRepoName = Response[i].name
-    
-    // console.log(text)
-      fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`)
-      .then(readMe => readMe.text())
 
+      var readMe = fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`).text
+      
       fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`)
               .then(subCategories => subCategories.json())
               .then(subCategories => {
