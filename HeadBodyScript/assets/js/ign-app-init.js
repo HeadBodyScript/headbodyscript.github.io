@@ -5,11 +5,8 @@ let GetGitRepo = () => {
       setTimeout(function() {
           var gitRepoName = gitCategories[i].name
           var ReadMe;
-        fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`)
-          .then(res => res.text())
-          .then(data => {
-            ReadMe = data;
-        });
+        fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`).then(data => data.text()).then(data => {ReadMe = data;});
+          setTimeout(function() {
         fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`).then(gitRepoInfo => gitRepoInfo.json()).then(gitRepoInfo => {
           var gitRepoName = gitCategories[i].name
           var gitRepoDesc = gitCategories[i].description
@@ -36,8 +33,9 @@ let GetGitRepo = () => {
               </div>
             </div>
             `
-        })
-      }, 100)
+          })
+        }, 500)
+      }, 500)
     }
   })
 };
