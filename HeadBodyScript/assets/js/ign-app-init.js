@@ -1,74 +1,109 @@
 let GetGitRepo = () => {
   var gitUser = "Tijl-Pleuger-Vista"
-  fetch(`https://api.github.com/users/${gitUser}/repos`)
-  .then(Categories => Categories.json())
-  .then(Categories => {
-  
-  var reducedCategories = Categories.reduce((prev, obj) => prev + `/${obj.name}`, '');
-  localStorage.setItem('reducedName', reducedCategories);
-  
-  var reducedDescription = Categories.reduce((prev, obj) => prev + `/${obj.description}`, '');
-  localStorage.setItem('reducedDescription', reducedDescription);
-  
-  function placeDiv() {
-  
-  var _reducedCategories = localStorage.getItem('reducedName');
-  var splitCategories = _reducedCategories.split("/");
-  var resultCategories = splitCategories.pop();
-  var newReducedCategories = splitCategories.join("/");
-  localStorage.setItem('reducedName', newReducedCategories);
-  
-  var reducedDescription = localStorage.getItem('reducedDescription');
-  var splitDescription = reducedDescription.split("/");
-  var resultDescription = splitDescription.pop();
-  var newReducedDescription = splitDescription.join("/");
-  localStorage.setItem('reducedDescription', newReducedDescription);
-  
-  var ReadMe;
-  fetch(`https://raw.githubusercontent.com/${gitUser}/${resultCategories}/main/README.md`)
-  .then(res => res.text())
-  .then(data => {
-      ReadMe = data;
-  });
-  
-  fetch(`https://api.github.com/repos/${gitUser}/${resultCategories}/commits/main`)
-      .then(subCategories => subCategories.json())
-      .then(subCategories => {
-  
-      var gitTime = subCategories.commit.author.date
-      var gitName = subCategories.commit.author.name
-      var gitSummary = subCategories.commit.message
-      var gitIcon = subCategories.committer.avatar_url
-      Form.innerHTML +=
-      `
-      <div class="card">
-          <div class="card-container">
-              <ul>
-                  <li class="card-header"><strong>${resultCategories}</strong></li>
-                  <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
-                  <li class="border sub"><i class="bi bi-dot"></i>${resultDescription}</li>
-                  <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
-                  <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${ReadMe}</li>
-                  <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
-                  <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
-                  <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
-                  <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
-                  <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${resultCategories}">Visit the repository</a></li>
-              </ul>
-          </div>
-      </div>
-      `
-      })
-  }
-  
-  let result = 0;
-  for (let i = 0; i < Categories.length; i++) {
-  result += placeDiv();
-  }
+  fetch(`https://api.github.com/users/${gitUser}/repos`).then(gitCategories => gitCategories.json()).then(gitCategories => {
+    for (let i = 0; i < gitCategories.length; i++) {
+      setTimeout(function() {
+          var gitRepoName = gitCategories[i].name
+          var ReadMe;
+        fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`)
+          .then(res => res.text())
+          .then(data => {
+            ReadMe = data;
+        });
+        fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`).then(gitRepoInfo => gitRepoInfo.json()).then(gitRepoInfo => {
+          var gitRepoName = gitCategories[i].name
+          var gitRepoDesc = gitCategories[i].description
+          var gitTime = gitRepoInfo.commit.author.date
+          var gitName = gitRepoInfo.commit.author.name
+          var gitSummary = gitRepoInfo.commit.message
+          var gitIcon = gitRepoInfo.committer.avatar_url
+          Form.innerHTML +=
+            `
+            <div class="card">
+              <div class="card-container">
+                  <ul>
+                      <li class="card-header"><strong>${gitRepoName}</strong></li>
+                      <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
+                      <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
+                      <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
+                      <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${ReadMe}</li>
+                      <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
+                      <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
+                      <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
+                      <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
+                      <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${gitRepoName}">Visit the repository</a></li>
+                  </ul>
+              </div>
+            </div>
+            `
+        })
+      }, 100)
+    }
   })
-  };
-  GetGitRepo();
-  
+};
+GetGitRepo();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   let intro = document.querySelector('.splash-intro');
   let logo = document.querySelector('.splash-logo-header');
   let logoSpan = document.querySelectorAll('.splash-logo');
@@ -76,7 +111,7 @@ let GetGitRepo = () => {
   setTimeout(() => {
     logoSpan.forEach((span, idx) => {
     setTimeout(() => {
-        span.classList.add('active');
+      span.classList.add('active');
     }, (idx + 1) * 400)
     });
     setTimeout(() => {
