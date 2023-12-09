@@ -78,3 +78,32 @@ GetGitRepo();
         fade.style.zIndex = "-256"
       }, 1e3)
   }
+
+var text0 = ["HTML", "Windows", "TopDesk", "Java"];
+var text1 = ["CSS", "Server", "Firebase", "Script"];
+var text2 = ["", "2016 - 2019", "", "Ready For A Challenge"];
+var counter = 0;
+var txt0 = document.getElementById("txt0");
+var txt1 = document.getElementById("txt1");
+var txt2 = document.getElementById("txt2");
+
+console.log(txt0)
+setInterval(change, 5000);
+
+function change() {
+  txt0.classList.add("hide");
+  txt1.classList.add("hide");
+  txt2.classList.add("hide");
+    setTimeout(function () {
+      txt0.innerHTML = text0[counter];
+      txt1.innerHTML = text1[counter];
+      txt2.innerHTML = text2[counter];
+      txt0.classList.remove("hide");
+      txt1.classList.remove("hide");
+      txt2.classList.remove("hide");
+        counter++;
+        if (counter >= text.length) {
+            counter = 0;
+        }
+    }, 1000);
+}
