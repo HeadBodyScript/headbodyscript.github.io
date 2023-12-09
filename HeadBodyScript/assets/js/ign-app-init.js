@@ -102,7 +102,7 @@ function change() {
       txt1.classList.remove("hide");
       txt2.classList.remove("hide");
         counter++;
-        if (counter >= text.length) {
+        if (counter >= text0.length) {
             counter = 0;
         }
     }, 1000);
