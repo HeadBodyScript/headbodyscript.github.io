@@ -62,7 +62,7 @@ header {
   z-index: 10;
   background-color: var(--sidebar);
   bottom: 0;
-  height: 12vh;
+  height: 100px;
   overflow-y: auto;
   position: fixed;
   top: 0;
@@ -88,10 +88,10 @@ h5 {
   max-width: 60vh;
   width: auto;
   border-radius: 100%;
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: calc(50% + 68px);
   left: 50%;
-  transform: translate(-50%, 10%);
+  transform: translate(-50%, -50%);
 }
 
 i {
@@ -110,8 +110,8 @@ section {
   display: none;
   flex-direction: column;
   box-sizing: border-box;
-  margin-top: 12vh;
-  min-height: calc(100vh - 12vh);
+  margin-top: 100px;
+  min-height: calc(100vh - 100px);
   padding: 1rem;
 }
 
@@ -217,10 +217,12 @@ strong {
 }
 
 .b-mid {
-  height: 100%;
-  top: 95px;
+  position: absolute;
+  height: 60%;
+  
+  top: calc(50% + 68px);
   left: 50%;
-  transform: translate(-50%, 0) rotate(45deg);
+  transform: translate(-50%, -50%)rotate(45deg);
   background-color: var(--divider);
   border-image: linear-gradient(to right, #AD2831, darkorchid) 1
 }
@@ -245,12 +247,12 @@ strong {
   overflow-y:hidden;
 }
 .content {
-  max-height: 70vh;
-
-  position: relative;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, 10%); */
+  display: flex;
+  min-width: 100%;
+  min-height: calc(100vh - 132px);
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .links {
@@ -329,7 +331,7 @@ strong {
   width: 100%;
   height: 100vh;
   background-color: var(--main);
-  margin-top: 95px;
+  margin-top: 100px;
   border-top: 1px solid var(--divider);
   opacity: 0;
   transition: .5s ease-in-out
@@ -343,7 +345,7 @@ strong {
   width: 100%;
   height: 100vh;
   background-color: var(--main);
-  margin-top: 95px;
+  margin-top: 100px;
   border-top: 1px solid var(--divider);
   opacity: 100;
   transition: .5s ease-in-out
