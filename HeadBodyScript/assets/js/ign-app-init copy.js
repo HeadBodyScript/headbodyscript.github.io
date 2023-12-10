@@ -1,33 +1,38 @@
+async function wait(gitRepoName, gitUser, gitCategories, i) {
+  var response = await fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`);
+  var gitReadMe = await response.text();
+  var response = await fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`)
+  var gitRepoInfo = await response.json();
+  var gitRepoName = gitCategories[i].name, gitRepoDesc = gitCategories[i].description, gitTime = gitRepoInfo.commit.author.date, gitName = gitRepoInfo.commit.author.name, gitSummary = gitRepoInfo.commit.message, gitIcon = gitRepoInfo.committer.avatar_url
+  Form.innerHTML +=
+  `
+  <div class="card">
+    <div class="card-container">
+        <ul>
+            <li class="card-header"><strong>${gitRepoName}</strong></li>
+            <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
+            <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
+            <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
+            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${gitReadMe}</li>
+            <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
+            <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
+            <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
+            <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
+            <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${gitRepoName}">Visit the repository</a></li>
+        </ul>
+    </div>
+  </div>
+  `
+}
+
 let GetGitRepo = () => {
   var gitUser = "Tijl-Pleuger-Vista"
   fetch(`https://api.github.com/users/${gitUser}/repos`).then(gitCategories => gitCategories.json()).then(gitCategories => {
-    for (let i = 0; i < gitCategories.length; i++) { fetchMovies(i); }
-      async function fetchMovies(i) {
+    for (let i = 0; i < gitCategories.length; i++) {
         var gitRepoName = gitCategories[i].name
-        var ReadMe;
-          var _ReadMe = await fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`).then(data => data.text()).then(data => {ReadMe = data;});
-          fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`).then(gitRepoInfo => gitRepoInfo.json()).then(gitRepoInfo => {
-        var gitRepoName = gitCategories[i].name, gitRepoDesc = gitCategories[i].description, gitTime = gitRepoInfo.commit.author.date, gitName = gitRepoInfo.commit.author.name, gitSummary = gitRepoInfo.commit.message, gitIcon = gitRepoInfo.committer.avatar_url
-        Form.innerHTML +=
-          `
-          <div class="card">
-            <div class="card-container">
-                <ul>
-                    <li class="card-header"><strong>${gitRepoName}</strong></li>
-                    <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
-                    <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
-                    <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
-                    <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${_ReadMe}</li>
-                    <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
-                    <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
-                    <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
-                    <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
-                    <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${gitRepoName}">Visit the repository</a></li>
-                </ul>
-            </div>
-          </div>
-          `
-      })
+
+        wait(gitRepoName, gitUser, gitCategories, i)
+
     }
   })
 };
