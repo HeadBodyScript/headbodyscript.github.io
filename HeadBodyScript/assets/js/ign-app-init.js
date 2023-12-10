@@ -1,45 +1,41 @@
 let GetGitRepo = () => {
   var gitUser = "Tijl-Pleuger-Vista"
   fetch(`https://api.github.com/users/${gitUser}/repos`).then(gitCategories => gitCategories.json()).then(gitCategories => {
-    for (let i = 0; i < gitCategories.length; i++) {
-      setTimeout(function() {
-          var gitRepoName = gitCategories[i].name
-          var ReadMe;
-        fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`).then(data => data.text()).then(data => {ReadMe = data;});
-          setTimeout(function() {
-        fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`).then(gitRepoInfo => gitRepoInfo.json()).then(gitRepoInfo => {
-          var gitRepoName = gitCategories[i].name
-          var gitRepoDesc = gitCategories[i].description
-          var gitTime = gitRepoInfo.commit.author.date
-          var gitName = gitRepoInfo.commit.author.name
-          var gitSummary = gitRepoInfo.commit.message
-          var gitIcon = gitRepoInfo.committer.avatar_url
-          Form.innerHTML +=
-            `
-            <div class="card">
-              <div class="card-container">
-                  <ul>
-                      <li class="card-header"><strong>${gitRepoName}</strong></li>
-                      <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
-                      <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
-                      <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
-                      <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${ReadMe}</li>
-                      <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
-                      <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
-                      <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
-                      <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
-                      <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${gitRepoName}">Visit the repository</a></li>
-                  </ul>
-              </div>
+    for (let i = 0; i < gitCategories.length; i++) { fetchMovies(i); }
+      async function fetchMovies(i) {
+        var gitRepoName = gitCategories[i].name
+        var ReadMe;
+          var _ReadMe = await fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`).then(data => data.text()).then(data => {ReadMe = data;});
+          fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`).then(gitRepoInfo => gitRepoInfo.json()).then(gitRepoInfo => {
+        var gitRepoName = gitCategories[i].name, gitRepoDesc = gitCategories[i].description, gitTime = gitRepoInfo.commit.author.date, gitName = gitRepoInfo.commit.author.name, gitSummary = gitRepoInfo.commit.message, gitIcon = gitRepoInfo.committer.avatar_url
+        Form.innerHTML +=
+          `
+          <div class="card">
+            <div class="card-container">
+                <ul>
+                    <li class="card-header"><strong>${gitRepoName}</strong></li>
+                    <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
+                    <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
+                    <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
+                    <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${_ReadMe}</li>
+                    <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
+                    <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
+                    <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
+                    <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
+                    <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${gitRepoName}">Visit the repository</a></li>
+                </ul>
             </div>
-            `
-          })
-        }, 500)
-      }, 500)
+          </div>
+          `
+      })
     }
   })
 };
 GetGitRepo();
+
+
+// stuff
+
 
   let intro = document.querySelector('.splash-intro');
   let logo = document.querySelector('.splash-logo-header');
@@ -85,7 +81,6 @@ var txt0 = document.getElementById("txt0");
 var txt1 = document.getElementById("txt1");
 var txt2 = document.getElementById("txt2");
 
-console.log(txt0)
 setInterval(change, 5000);
 
 function change() {
