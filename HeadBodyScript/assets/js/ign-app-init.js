@@ -24,15 +24,12 @@ async function wait(gitRepoName, gitUser, gitCategories, i) {
   </div>
   `
 }
-
 let GetGitRepo = () => {
   var gitUser = "Tijl-Pleuger-Vista"
   fetch(`https://api.github.com/users/${gitUser}/repos`).then(gitCategories => gitCategories.json()).then(gitCategories => {
     for (let i = 0; i < gitCategories.length; i++) {
         var gitRepoName = gitCategories[i].name
-
         wait(gitRepoName, gitUser, gitCategories, i)
-
     }
   })
 };
