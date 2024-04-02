@@ -18,6 +18,7 @@ let GetGitRepo = () => {
     fetch(`https://api.github.com/users/${gitUser}/repos`)
     .then(Categories => Categories.json())
     .then(Categories => { // console.log(Categories)
+        console.log(Categories)
 
         var reducedCategories = Categories.reduce((prev, obj) => prev + `/${obj.name}`, '');
         localStorage.setItem('reducedList', reducedCategories);
@@ -29,11 +30,12 @@ let GetGitRepo = () => {
             var resultCategories = splitCategories.pop();
             var newReducedCategories = splitCategories.join("/");
             localStorage.setItem('reducedList', newReducedCategories);
-            console.log(_reducedCategories)
+            // console.log(_reducedCategories)
 
             fetch(`https://api.github.com/repos/HeadBodyScript/${resultCategories}/commits/main`)
                 .then(subCategories => subCategories.json())
                 .then(subCategories => {
+                    console.log(Categories)
 
                 var gitTime = subCategories.commit.author.date
                 var gitSummary = subCategories.commit.message
