@@ -1,30 +1,119 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@font-face{
+    font-family: dimitra;
+    src: url(https://headbodyscript.github.io/assets/fonts/dimitra.woff2) format('woff2')
+}
+@font-face{
+    font-family: main;
+    src: url(../font/main.ttf) format('ttf')
+}
 :root {
-    --text: ;
     --text-sub: ;
     --text-link: ;
+    --divider: gray;
+    --banner: 300px;
 }
 
 /* Data */
 [data="false"] {
-    --color-bg: #ffffff;
-    --color-fg: #000000;
+    --background: #ffffff;
+    --text: black;
 }
   
 [data="true"] {
-    --color-bg: #000000;
-    --color-fg: #ffffff;
+    --background: #000000;
+    --text: white;
 }
 
 /* Tags */
 body{
     margin: 0;
+    font-family: main;
 }
-
+header{
+    position: relative;
+    top: 0;
+    height: 75px;
+}
+.header-wrapper{
+    margin: 0 24px;
+    width: calc(100% - 24px - 24px);
+    height: 75px;
+}
+ul, li{
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    list-style-type: none;
+}
+li{
+    margin-left: 20px;
+}
 /* ID */
 #app{
     width: 100%;
     min-height: 100dvh;
-    background-color: var(--color-bg);
+    background-color: var(--background);
 }
 
 /* Class */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.banner-wrapper-outer{
+    height: var(--banner);
+}
+.banner-wrapper-inner{
+    height: var(--banner);
+}
+.banner{
+    background-image: url(../img/banner_profile.jpg);
+    height: 100%;
+    background-position-x: center;
+    border-bottom: 1px solid var(--divider);
+}
+
+.banner-content-wrapper{
+    position: relative;
+    top: calc(var(--banner) * -1);
+    width: 100%;
+    height: var(--banner);
+}
+.icon{
+    position: relative;
+    top: 16px;
+    left: 24px;
+    height: 256px;
+    width: 256px;
+    border-bottom: 1px solid var(--divider);
+    border-radius: 3px;
+    background-image: url(../img/HeadBodyScript.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.50), 0 20px 20px 0 rgba(0, 0, 0, 0.50);
+}
+.ico{
+    height: 64px;
+    width: 64px;
+}
+
+.index{
+    width: 500px;
+    min-height: calc(100dvh - 75px - var(--banner));
+}
+
+.content{
+    width: calc(100% - 500px);
+    min-height: calc(100dvh - 75px - var(--banner));
+}
+
+
+/* spacers */
