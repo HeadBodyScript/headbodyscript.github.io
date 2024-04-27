@@ -1,0 +1,30 @@
+:root {
+    --text: ;
+    --text-sub: ;
+    --text-link: ;
+}
+
+/* Data */
+[data="false"] {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+}
+  
+[data="true"] {
+    --color-bg: #000000;
+    --color-fg: #ffffff;
+}
+
+/* Tags */
+body{
+    margin: 0;
+}
+
+/* ID */
+#app{
+    width: 100%;
+    min-height: 100dvh;
+    background-color: var(--color-bg);
+}
+
+/* Class */
