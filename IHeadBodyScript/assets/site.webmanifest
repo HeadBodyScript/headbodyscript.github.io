@@ -1,0 +1,14 @@
+{
+  "name":"HeadBodyScript || Home",
+  "short_name":"Home",
+  "icons":[
+      {"src":"https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/favicon.ico","type":"icon"},
+      {"src":"https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/512.png","sizes":"512x512","type":"icon"}
+    ],
+  "theme_color":"#000000",
+  "background_color":"#000000",
+  "display":"standalone",
+  "description":"The place of creation and wonders",
+  "categories":["entertainment"],
+  "start_url": "https://headbodyscript.nl/"
+}
