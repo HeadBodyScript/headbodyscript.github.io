@@ -15,11 +15,17 @@
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 
-      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="assets/icon/test.png" type="image/x-icon">
+      <link rel="icon" href="assets/icon/test.png" sizes="144x144">
+      <link rel="icon" href="assets/icon/test.png" sizes="96x96">
+      <link rel="icon" href="assets/icon/test.png" sizes="48x48">
+      <link rel="icon" href="assets/icon/test.png" sizes="32x32">
+      
+      <!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
       <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/144.png" sizes="144x144">
       <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/96.png" sizes="96x96">
       <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/48.png" sizes="48x48">
-      <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/32.png" sizes="32x32">
+      <link rel="icon" href="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/icon/32.png" sizes="32x32"> -->
       <link rel="manifest" href="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/IHeadBodyScript/assets/manifest/">
 
       <meta name="twitter:card" content="summary">
@@ -42,24 +48,39 @@
   <body onload="checkData()">
     <div id="app" data="false">
       <header>
-        <div class="header-wrapper row">
-          <div class="center">
-              <ul class="row">
-                <li class="center"><img class="ico" src="favicon.ico" alt=""></li>
-                <li class="center"><i class="bi bi-code"></i>Minecraft</li>
-                <li class="center"><i class="bi bi-code"></i>Web Development</li>
-                <li class="center"><i class="bi bi-code"></i>About</li>
-              </ul>
-          </div>
+        <div class="header-wrapper justify-content row">
+          <ul class="row">
+            <li class="center"><a href="index"><i class="bi bi-code"></i>Minecraft</a></li>
+            <li class="center"><a href="index"><i class="bi bi-code"></i>Web Development</a></li>
+            <li class="center"><a href="index"><i class="bi bi-code"></i>Game</a></li>
+            <li class="center"><a href="index"><i class="bi bi-code"></i>About</a></li>
+          </ul>
+          <ul class="row">
+            <li class="center"><a href="index"><i class="bi bi-code"></i>login</a></li>
+            <li class="center"><img id="userIcon" class="user-icon" src="assets/img/user.jpg"></li>
+          </ul>
         </div>
       </header>
       <section>
         <div class="banner-wrapper-outer">
           <div class="banner-wrapper-inner">
-            <div class="banner"></div>
+            <div class="banner">
+            </div>
           </div>
-          <div class="banner-content-wrapper">
-            <div class="icon">
+          <div class="banner-content-wrapper row">
+            <div class="banner-content-icon">
+              <div class="icon">
+              </div>
+            </div>
+            <div class="banner-content-info">
+              <div class="banner-info-wrapper center">
+                <div id="info" class="banner-info">
+                  <p class="i-name">HeadBodyScript</p>
+                  <p class="i-info">Level: 22</p>
+                  <p class="i-info">Location: Night City</p>
+                  <p class="i-info">Faction: The Moxes</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

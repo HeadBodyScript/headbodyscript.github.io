@@ -9,3 +9,17 @@ function checkData() {
 }
 
 // to-do: make button that changes theme
+
+console.log(window.innerWidth)
+console.log(window.innerHeight)
+
+let GetGitRepo = () => {
+    var gitUser = "HeadBodyScript"
+    fetch(`https://api.github.com/users/${gitUser}`).then(gitUserInfo => gitUserInfo.json()).then(gitUserInfo => {
+        console.log(gitUserInfo);
+        document.getElementById("userIcon").src=gitUserInfo.avatar_url;
+    })
+  };
+  GetGitRepo();
+
+//   (async()=>{let t=await (await fetch("https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/README.md")).text();info.innerHTML=t})();
