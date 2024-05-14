@@ -4,6 +4,8 @@ async function wait(gitRepoName, gitUser, gitCategories, i) {
   var response = await fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`)
   var gitRepoInfo = await response.json();
   var gitRepoName = gitCategories[i].name, gitRepoDesc = gitCategories[i].description, gitTime = gitRepoInfo.commit.author.date, gitName = gitRepoInfo.commit.author.name, gitSummary = gitRepoInfo.commit.message, gitIcon = gitRepoInfo.committer.avatar_url
+  console.log(gitRepoInfo)
+  console.log(gitReadMe)
   Form.innerHTML +=
   `
   <div class="card">
@@ -13,7 +15,9 @@ async function wait(gitRepoName, gitUser, gitCategories, i) {
             <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
             <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
             <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
-            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>${gitReadMe}</li>
+            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>
+            <pre>${gitReadMe}</pre>
+            </li>
             <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
             <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
             <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
@@ -25,11 +29,44 @@ async function wait(gitRepoName, gitUser, gitCategories, i) {
   `
 }
 let GetGitRepo = () => {
+  // github info cards
   var gitUser = "Tijl-Pleuger-Vista"
   fetch(`https://api.github.com/users/${gitUser}/repos`).then(gitCategories => gitCategories.json()).then(gitCategories => {
     for (let i = 0; i < gitCategories.length; i++) {
         var gitRepoName = gitCategories[i].name
         wait(gitRepoName, gitUser, gitCategories, i)
+    }
+  })
+  // intro plash transition
+  
+  let intro = document.querySelector('.splash-intro');
+  // let logo = document.querySelector('.splash-logo-header');
+  let logoSpan = document.querySelectorAll('.splash-logo');
+  window.addEventListener('DOMContentLoaded', () => {
+    if (sessionStorage.getItem("splash") === null) {
+      setTimeout(() => {
+        logoSpan.forEach((span, idx) => {
+        setTimeout(() => {
+          span.classList.add('active');
+        }, (idx + 1) * 400)
+        });
+        setTimeout(() => {
+        logoSpan.forEach((span, idx) => {
+            setTimeout(() => {
+            span.classList.remove('active');
+            span.classList.add('fade');
+            }, (idx + 1) * 50)
+        })
+        }, 2000);
+        setTimeout(() => {
+        intro.style.top = '-100vh';
+        },2300)
+        // local
+        sessionStorage.setItem("splash", "true");
+      })
+    }
+    else {
+      intro.style.top = '-100vh';
     }
   })
 };
@@ -74,29 +111,6 @@ GetGitRepo();
 // stuff
 
 
-  let intro = document.querySelector('.splash-intro');
-  let logo = document.querySelector('.splash-logo-header');
-  let logoSpan = document.querySelectorAll('.splash-logo');
-  window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    logoSpan.forEach((span, idx) => {
-    setTimeout(() => {
-      span.classList.add('active');
-    }, (idx + 1) * 400)
-    });
-    setTimeout(() => {
-    logoSpan.forEach((span, idx) => {
-        setTimeout(() => {
-        span.classList.remove('active');
-        span.classList.add('fade');
-        }, (idx + 1) * 50)
-    })
-    }, 2000);
-    setTimeout(() => {
-    intro.style.top = '-100vh';
-    },2300)
-  })
-  })
   
   function btnMenu(_id) {
       new_id = "section" + _id

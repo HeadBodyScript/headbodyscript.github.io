@@ -506,6 +506,7 @@ strong {
 
 body::-webkit-scrollbar {
   width: 6px;               /* width of the entire scrollbar */
+  height: 6px;
 }
 
 body::-webkit-scrollbar-track {
@@ -519,6 +520,7 @@ body::-webkit-scrollbar-thumb {
 
 .scrollbar::-webkit-scrollbar {
   width: 6px;               /* width of the entire scrollbar */
+  height: 6px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
@@ -554,3 +556,6 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+.active{
+  border-bottom: 2px solid;
+}
