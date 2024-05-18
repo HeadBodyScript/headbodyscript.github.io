@@ -1,1 +1,0 @@
-document.getElementById("Information").className += " active";
