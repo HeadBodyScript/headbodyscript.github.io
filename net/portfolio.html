@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HeadBodyScript</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HeadBodyScript">
+    <meta name="twitter:description" content="Just code it">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HeadBodyScript">
+    <meta property="og:url" content="https://headbodyscript.nl/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
+    <meta property="og:description" content="Just code it">
+
+    <meta name="description" content="Just code it">
+    <meta name="keywords" content="Minecraft, Datapacks, Texturepack, Maps, HeadBodyScript">
+    <meta name="author" content="HeadBodyScript">
+    <meta name="language" content="EN">
+    
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="assets/icon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/icon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="assets/icon/site.webmanifest">
+  </head>
+  <body id="app" data="false">
+    <div id="transition" class="splash-transition-true"></div>
+    <header>
+      <div class="max-content logo row">
+        <img class="icon" src="assets/icon/android-chrome-192x192.png" alt="">
+        <h3 class="center">headbodyscript</h3>
+      </div>
+      <ul class="links">
+          <li class="active"><i class="bi bi-code"></i><button id="Home" onclick="btnMenu(this.id)">&nbsp;Home</button></li>
+          <li><i class="bi bi-code"></i><button id="Information" onclick="btnMenu(this.id)">&nbsp;About Me</button></li>
+          <li><i class="bi bi-code"></i><button id="Portfolio" onclick="btnMenu(this.id)">&nbsp;My Work</button></li>
+          <li><i class="bi bi-code"></i><button id="Comment" onclick="btnMenu(this.id)">&nbsp;Leave A Comment</button></li>
+      </ul>
+  </header>
+
+  <section id="sectionHome" class="visible">
+      <img class="content-img" src="assets/img/main.png" alt="">
+      <div class="b-box b-mid"></div>
+      <div class="text" id="fade-1">
+          <h6 id="txt0">Java</h6>
+      </div>
+      <div class="text" id="fade-2">
+          <h6 id="txt1">Script</h6>
+          <h5 class="sub-text" id="txt2">Ready For A Challenge</h5>
+      </div>
+      <div class="b-box b-one"></div>
+      <div class="b-box b-two"></div>
+      <div class="b-box b-three"></div>
+      <div class="b-box b-four"></div>
+  </section>
+
+  <section id="sectionInformation">
+      <div class="content">
+          <div class="b-box b-mid"></div>
+          <p>
+              My story <br><br>
+
+              The Beginning <br>
+              This is some text that explains what created me and why I am what I am <br><br>
+
+              My Vision <br>
+              This is some text that explains what I want to achieve in this sector for example be a helpful asset to a project
+          </p>
+      </div>
+  </section>
+
+  <section id="sectionPortfolio">
+      <div id="Form" class="row">
+      </div>
+  </section>
+  <section id="sectionComment">
+      <div class="content">
+          <img src="assets/img/main.png" alt="">
+          <div class="b-box b-mid"></div>
+      </div>
+  </section>
+  
+    <script src="assets/js/portfolio.js"></script>
+  </body>
+</html>
