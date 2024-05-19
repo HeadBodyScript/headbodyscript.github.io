@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HeadBodyScript</title>
+    <title>HeadBodyScript || Portfolio</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,46 +32,41 @@
   <body id="app" data="false">
     <div id="transition" class="splash-transition-true"></div>
     <header>
-      <div class="max-content logo row">
-        <img class="icon" src="assets/icon/android-chrome-192x192.png" alt="">
+      <div class="logo">
         <h3 class="center">headbodyscript</h3>
       </div>
-      <ul class="links">
-          <li class="active"><i class="bi bi-code"></i><button id="Home" onclick="btnMenu(this.id)">&nbsp;Home</button></li>
-          <li><i class="bi bi-code"></i><button id="Information" onclick="btnMenu(this.id)">&nbsp;About Me</button></li>
-          <li><i class="bi bi-code"></i><button id="Portfolio" onclick="btnMenu(this.id)">&nbsp;My Work</button></li>
-          <li><i class="bi bi-code"></i><button id="Comment" onclick="btnMenu(this.id)">&nbsp;Leave A Comment</button></li>
+      <ul class="list-links row">
+          <li><i class="bi bi-code"></i><button id="Home" onclick="btnMenu(this.id)">Home</button></li>
+          <li><i class="bi bi-code"></i><button id="Information" onclick="btnMenu(this.id)">About Me</button></li>
+          <li><i class="bi bi-code"></i><button id="Portfolio" onclick="btnMenu(this.id)">Challenges</button></li>
+          <li><i class="bi bi-code"></i><button id="Comment" onclick="btnMenu(this.id)">Chat Room</button></li>
       </ul>
+        <ul class="list-login row center">
+            <li><button>login</button></li>
+            <li><img class="user-icon" src="assets/img/user.png" alt=""></li>
+        </ul>
   </header>
 
   <section id="sectionHome" class="visible">
-      <img class="content-img" src="assets/img/main.png" alt="">
-      <div class="b-box b-mid"></div>
-      <div class="text" id="fade-1">
-          <h6 id="txt0">Java</h6>
-      </div>
-      <div class="text" id="fade-2">
-          <h6 id="txt1">Script</h6>
-          <h5 class="sub-text" id="txt2">Ready For A Challenge</h5>
-      </div>
-      <div class="b-box b-one"></div>
-      <div class="b-box b-two"></div>
-      <div class="b-box b-three"></div>
-      <div class="b-box b-four"></div>
+      <img class="main-img" src="assets/img/main.png" alt="">
+      <div class="box main"></div>
+        <div class="text text-top">
+            <h6 id="text-alpha">Java</h6>
+            <h5 id="text-beta" class="sub-text"></h5>
+        </div>
+        <div class="text text-bottom">
+            <h6 id="text-charlie">Script</h6>
+            <h5 id="text-delta" class="sub-text">Ready For A Challenge</h5>
+        </div>
+      <div class="box alpha"></div>
+      <div class="box beta"></div>
+      <div class="box charlie"></div>
+      <div class="box delta"></div>
   </section>
 
   <section id="sectionInformation">
       <div class="content">
-          <div class="b-box b-mid"></div>
-          <p>
-              My story <br><br>
 
-              The Beginning <br>
-              This is some text that explains what created me and why I am what I am <br><br>
-
-              My Vision <br>
-              This is some text that explains what I want to achieve in this sector for example be a helpful asset to a project
-          </p>
       </div>
   </section>
 

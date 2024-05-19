@@ -1,11 +1,13 @@
+var gitUser = "HeadBodyScript"
+
 async function wait(gitRepoName, gitUser, gitCategories, i) {
   var response = await fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`);
   var gitReadMe = await response.text();
   var response = await fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`)
   var gitRepoInfo = await response.json();
   var gitRepoName = gitCategories[i].name, gitRepoDesc = gitCategories[i].description, gitTime = gitRepoInfo.commit.author.date, gitName = gitRepoInfo.commit.author.name, gitSummary = gitRepoInfo.commit.message, gitIcon = gitRepoInfo.committer.avatar_url
-  console.log(gitRepoInfo)
-  console.log(gitReadMe)
+  // console.log(gitRepoInfo)
+  // console.log(gitReadMe)
   Form.innerHTML +=
   `
   <div class="card">
@@ -120,31 +122,38 @@ GetGitRepo();
       }, 1e3), setTimeout(() => {
         fade.style.zIndex = "-256"
       }, 1e3)
-  }
+}
 
-var text0 = ["HTML", "Windows", "TopDesk", "Java"];
-var text1 = ["CSS", "Server", "Firebase", "Script"];
-var text2 = ["", "2016 - 2019", "", "Ready For A Challenge"];
 var counter = 0;
-var txt0 = document.getElementById("txt0");
-var txt1 = document.getElementById("txt1");
-var txt2 = document.getElementById("txt2");
+
+var innerTextAlpha = ["HTML", "Windows", "TopDesk", "Java"];
+var innerTextBeta = ["", "", "", ""];
+var innerTextCharlie = ["CSS", "Server", "Firebase", "Script"];
+var innerTextDelta = ["", "2016 - 2019", "", "Ready For A Challenge"];
+
+var classAlpha = document.getElementById("text-alpha");
+var classBeta = document.getElementById("text-beta");
+var classCharlie = document.getElementById("text-charlie");
+var classDelta = document.getElementById("text-delta");
 
 setInterval(change, 5000);
 
 function change() {
-  txt0.classList.add("hide");
-  txt1.classList.add("hide");
-  txt2.classList.add("hide");
+  classAlpha.classList.add("hide");
+  classBeta.classList.add("hide");
+  classCharlie.classList.add("hide");
+  classDelta.classList.add("hide");
     setTimeout(function () {
-      txt0.innerHTML = text0[counter];
-      txt1.innerHTML = text1[counter];
-      txt2.innerHTML = text2[counter];
-      txt0.classList.remove("hide");
-      txt1.classList.remove("hide");
-      txt2.classList.remove("hide");
+      classAlpha.innerHTML = innerTextAlpha[counter];
+      classBeta.innerHTML = innerTextBeta[counter];
+      classCharlie.innerHTML = innerTextCharlie[counter];
+      classDelta.innerHTML = innerTextDelta[counter];
+      classAlpha.classList.remove("hide");
+      classBeta.classList.remove("hide");
+      classCharlie.classList.remove("hide");
+      classDelta.classList.remove("hide");
         counter++;
-        if (counter >= text0.length) {
+        if (counter >= 4) {
             counter = 0;
         }
     }, 1000);
