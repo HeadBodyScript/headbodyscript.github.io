@@ -1,7 +1,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 @font-face {
   font-family: headbodyscript;
-  src: url(https://github.com/HeadBodyScript/headbodyscript.github.io/raw/main/net/assets/font/headbodyscript.woff2) format('woff2')
+  src: url(../font/headbodyscript.woff2) format('woff2')
+}
+@font-face {
+  font-family: cyberpunk;
+  src: url(../font/cyberpunk.ttf);
 }
 :root {
   --sidebar: #010409;
@@ -14,21 +18,15 @@
   --link: #1f6feb;
   --hover: rgba(185, 160, 106, 0.333);
 }
+a:active,
+a:hover,
+a:visited,
+a:link,
 a {
   text-decoration: none;
-}
-a:link {
   color: var(--color);
 }
-a:visited {
-  color: var(--color);
-}
-a:hover {
-  color: var(--color);
-}
-a:active {
-  color: var(--color);
-}
+
 body {
   background-color: var(--main);
   margin: 0;
@@ -36,7 +34,7 @@ body {
   min-width: 100%;
   overflow-x: hidden;
   color: var(--color);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: cyberpunk;
 }
 button {
   background: none;
@@ -275,7 +273,9 @@ body::-webkit-scrollbar-thumb {
 .main-img{
   max-width: 60vh;
   width: auto;
-  border-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -296,6 +296,7 @@ body::-webkit-scrollbar-thumb {
 #text-alpha,#text-beta,#text-charlie,#text-delta {
   opacity: 1;
   transition: opacity 1s;
+  font-family: cyberpunk;
 }
 /* BOXES */
 .box{
@@ -308,6 +309,39 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(45deg);
   z-index: -1
 }
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .main{
   position: absolute;
   height: 60%;
@@ -315,8 +349,9 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   transform: translate(-50%, -50%)rotate(45deg);
   background-color: var(--divider);
-  border-image: linear-gradient(to right, #AD2831, darkorchid) 1
+  /* border-image: linear-gradient(to right, #AD2831, darkorchid) 1 */
 }
+
 .alpha{
   height: 35%;
   top: 35%;
