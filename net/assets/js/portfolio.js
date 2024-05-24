@@ -124,37 +124,41 @@ GetGitRepo();
       }, 1e3)
 }
 
-// var counter = 0;
 
-// var innerTextAlpha = ["HTML", "Windows", "TopDesk", "Java"];
-// var innerTextBeta = ["", "", "", ""];
-// var innerTextCharlie = ["CSS", "Server", "Firebase", "Script"];
-// var innerTextDelta = ["", "2016 - 2019", "", "Ready For A Challenge"];
+let _init = () => {
+  fetch("/net/assets/json/quotes.json")
+  .then(quote => quote.json())
+  .then(
+    console.log(quote)
 
-// var classAlpha = document.getElementById("text-alpha");
-// var classBeta = document.getElementById("text-beta");
-// var classCharlie = document.getElementById("text-charlie");
-// var classDelta = document.getElementById("text-delta");
+)
+}
+_init();
 
-// setInterval(change, 5000);
+var i = 0;
 
-// function change() {
-//   classAlpha.classList.add("hide");
-//   classBeta.classList.add("hide");
-//   classCharlie.classList.add("hide");
-//   classDelta.classList.add("hide");
-//     setTimeout(function () {
-//       classAlpha.innerHTML = innerTextAlpha[counter];
-//       classBeta.innerHTML = innerTextBeta[counter];
-//       classCharlie.innerHTML = innerTextCharlie[counter];
-//       classDelta.innerHTML = innerTextDelta[counter];
-//       classAlpha.classList.remove("hide");
-//       classBeta.classList.remove("hide");
-//       classCharlie.classList.remove("hide");
-//       classDelta.classList.remove("hide");
-//         counter++;
-//         if (counter >= 4) {
-//             counter = 0;
-//         }
-//     }, 1000);
-// }
+
+var TP = document.getElementById("t-primary");
+var TS = document.getElementById("t-secondary");
+var BP = document.getElementById("b-primary");
+var BS = document.getElementById("b-secondary");
+
+var classes = [TP, TS, BP, BS];
+
+setInterval(change, 5000);
+
+function change() {
+  classes.classList.add("hide");
+
+    setTimeout(function () {
+      classAlpha.innerHTML = innerTextAlpha[i];
+      classBeta.innerHTML = innerTextBeta[i];
+      classCharlie.innerHTML = innerTextCharlie[i];
+      classDelta.innerHTML = innerTextDelta[i];
+      classes.classList.remove("hide");
+        i++;
+        if (i >= 4) {
+            i = 0;
+        }
+    }, 1000);
+}

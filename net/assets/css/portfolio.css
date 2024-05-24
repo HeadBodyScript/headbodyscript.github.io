@@ -1,49 +1,23 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-@font-face {
-  font-family: headbodyscript;
-  src: url(../font/headbodyscript.woff2) format('woff2')
-}
-@font-face {
-  font-family: cyberpunk;
-  src: url(../font/cyberpunk.ttf);
-}
 :root {
   --sidebar: #010409;
-  --main: #0d1117;
-  --main-inner: #161B22;
+  --backgound-color: #0d1117;
+  --backgound-color-inner: #161B22;
   --divider: #21262d;
   --sub-divider: #21262D;
   --color: white;
   --sub-text: #dddddd;
   --link: #1f6feb;
   --hover: rgba(185, 160, 106, 0.333);
+  --borderWidth: 3px;
 }
-a:active,
-a:hover,
-a:visited,
-a:link,
-a {
-  text-decoration: none;
-  color: var(--color);
-}
-
 body {
-  background-color: var(--main);
-  margin: 0;
-  min-height: 100%;
-  min-width: 100%;
+  background-color: var(--backgound-color);
   overflow-x: hidden;
   color: var(--color);
   font-family: cyberpunk;
 }
 button {
-  background: none;
   color: var(--color);
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
 }
 header {
   z-index: 10;
@@ -64,14 +38,12 @@ header div:nth-child(3){
   height: 30px;
 }
 h6 {
-  color: var(--color);
   font-size: 1200%;
   width: 100%;
   text-align: center;
   margin: 0;
 }
 h5 {
-  color: var(--color);
   font-size: 200%;
   width: 100%;
   text-align: center;
@@ -83,7 +55,6 @@ i {
 li{
   padding-bottom: 6px;
   margin: 0 12px;
-  color: var(--color);
   user-select: text !important;
 }
 .select{
@@ -187,7 +158,7 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--main);
+  background-color: var(--backgound-color);
   margin-top: 100px;
   border-top: 1px solid var(--divider);
   opacity: 0;
@@ -200,29 +171,13 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--main);
+  background-color: var(--backgound-color);
   margin-top: 100px;
   border-top: 1px solid var(--divider);
   opacity: 100;
   transition: .5s ease-in-out
 }
 
-/* FLEX */
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.row{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.column{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
 /* ICONS */
 .bi-code{
   margin-right: 8px;
@@ -245,32 +200,27 @@ body::-webkit-scrollbar-thumb {
 /* HOME */
 .headbodyscript{
   width: fit-content;
-  font-family: headbodyscript;
   font-size: x-small;
-  color: var(--color);
   text-shadow: 2px 2px var(--divider);
   cursor:pointer;
 }
 .headbodyscript p{
   margin: 0;
 }
-.text{
+.p-a-top,
+.p-a-bottom{
   width: max-content;
+  width: calc(100% - 32px);
+}
+.p-a-top{
   position: absolute;
-}
-.text-top{
   top: 100px;
-  width: 100%;
 }
-.text-bottom{
-  bottom: 0px;
-  width: 100%;
+.p-a-bottom{
+  position: absolute;
+  bottom: 40px;
 }
-.sub-text{
-  position: relative;
-  top: -40px;
-  right: 110px;
-}
+
 .list-links{
   position: relative;
   top: 71px;
@@ -285,12 +235,11 @@ body::-webkit-scrollbar-thumb {
   background-size: contain;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
-.main-img{
+.master-img{
   max-width: 60vh;
   width: auto;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -299,11 +248,6 @@ body::-webkit-scrollbar-thumb {
 .hide{
   opacity: 0 !important;
   transition: slide-in-anim 1s ease-out forwards;
-}
-#text-alpha,#text-beta,#text-charlie,#text-delta {
-  opacity: 1;
-  transition: opacity 1s;
-  font-family: cyberpunk;
 }
 /* BOXES */
 .box-container div{
@@ -341,16 +285,6 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(45deg);
 }
 
-.main{
-  position: absolute;
-  height: 60%;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%)rotate(45deg);
-  background-color: var(--divider);
-  border-image: linear-gradient(to right, #AD2831, darkorchid) 1
-}
-
 /* CHALLENGES */
 .card{
   margin-top: 50px;
@@ -359,7 +293,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #0d1117;
 }
 .card-container{
-  background-color: var(--main);
+  background-color: var(--backgound-color);
   border: 1px;
   border-style: solid;
   border-radius: 8px;
@@ -368,7 +302,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 5px;
 }
 .card-header{
-  background-color: var(--main-inner);
+  background-color: var(--backgound-color-inner);
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
@@ -448,3 +382,53 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   top: 5px;
 }
+
+
+
+/* MATER BOX */
+#box {
+  position: absolute;
+  height: 60%;
+  aspect-ratio: 1/1;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%)rotate(45deg);
+}
+.master-box {
+  background: var(--divider);
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.master-box:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+.master-cover{
+  position: absolute;
+  height: 60%;
+  aspect-ratio: 1/1;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%)rotate(45deg);
+  background-color: var(--divider);
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

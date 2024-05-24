@@ -21,7 +21,8 @@
     <meta name="keywords" content="Minecraft, Datapacks, Texturepack, Maps, HeadBodyScript">
     <meta name="author" content="HeadBodyScript">
     <meta name="language" content="EN">
-    
+
+    <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/portfolio.css">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png" sizes="180x180">
@@ -43,9 +44,8 @@
         </div>
         <div class="user float-right">
           <ul class="row center">
-            <li class="reset"><button>LOGIN</button></li>
+            <li class="reset"><button id="login" onclick="btnMenu(this.id)">LOGIN</button></li>
             <li class="reset">
-              <!-- <img class="user-icon" src="assets/img/user.png" alt=""> -->
               <div class="user-icon"></div>
             </li>
           </ul>
@@ -61,21 +61,22 @@
       </div>
   </header>
   <section id="HOME" class="visible">
-      <div class="gradient-border box main">
-      </div>
-        <div class="text text-top">
-            <h6 id="text-alpha">TOP TEXT</h6>
-            <h5 id="text-beta" class="sub-text">TEST</h5>
+      <div class="master-box" id="box"></div>
+      <div class="master-cover"></div>
+      <img class="master-img" src="assets/img/main.webp" alt="">
+        <div class="p-a-top">
+            <h6 id="t-primary">JAVA</h6>
+            <h5 id="t-secondary"></h5>
         </div>
-        <div class="text text-bottom">
-            <h6 id="text-charlie">BOTTOM TEXT</h6>
-            <h5 id="text-delta" class="sub-text">Ready For A Challenge</h5>
+        <div class="p-a-bottom">
+            <h6 id="b-primary">SCRIPT</h6>
+            <h5 id="b-secondary">Ready For A Challenge</h5>
         </div>
         <div class="box-container">
-          <div class="box alpha"></div>
-          <div class="box beta"></div>
-          <div class="box charlie"></div>
-          <div class="box delta"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
         </div>
   </section>
 
@@ -94,6 +95,9 @@
           <img src="assets/img/main.png" alt="">
           <div class="b-box b-mid"></div>
       </div>
+  </section>
+  <section id="LOGIN">
+
   </section>
     <script src="assets/js/portfolio.js"></script>
   </body>
