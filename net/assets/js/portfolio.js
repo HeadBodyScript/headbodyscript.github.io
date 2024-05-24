@@ -124,30 +124,21 @@ GetGitRepo();
       }, 1e3)
 }
 
-
+var response = {"t":{"primary":[{"quote":"html"},{"quote":"windows"},{"quote":"topdesk"},{"quote":"java"}],"secondary":[{"quote":""},{"quote":""},{"quote":""},{"quote":""}]},"b":{"primary":[{"quote":"css"},{"quote":"server"},{"quote":"firebase"},{"quote":"script"}],"secondary":[{"quote":""},{"quote":"2016 - 2019"},{"quote":""},{"quote":"ready for a challenge"}]}}
+console.log(response)
 var i = 0;
 
-var TP = document.getElementById("t-primary");
-var TS = document.getElementById("t-secondary");
-var BP = document.getElementById("b-primary");
-var BS = document.getElementById("b-secondary");
-
-var classes = [TP, TS, BP, BS];
-
 setInterval(change, 5000);
-
 function change() {
-  classes.classList.add("hide");
+  document.querySelectorAll('#t-primary, #t-secondary, #b-primary, #b-secondary').forEach(c => c.classList.add('fade'))
 
     setTimeout(function () {
-      classAlpha.innerHTML = innerTextAlpha[i];
-      classBeta.innerHTML = innerTextBeta[i];
-      classCharlie.innerHTML = innerTextCharlie[i];
-      classDelta.innerHTML = innerTextDelta[i];
-      classes.classList.remove("hide");
+      document.getElementById("t-primary").innerText = response.t.primary[i].quote
+      document.getElementById("t-secondary").innerText = response.t.secondary[i].quote
+      document.getElementById("b-primary").innerText = response.b.primary[i].quote
+      document.getElementById("b-secondary").innerText = response.b.secondary[i].quote
+      document.querySelectorAll('#t-primary, #t-secondary, #b-primary, #b-secondary').forEach(c => c.classList.remove('fade'))
         i++;
-        if (i >= 4) {
-            i = 0;
-        }
+        if (i >= 4) {i = 0;}
     }, 1000);
 }

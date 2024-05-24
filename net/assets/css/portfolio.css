@@ -220,6 +220,25 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   bottom: 40px;
 }
+.p-a-top h6:not(.fade),
+.p-a-top h5:not(.fade),
+.p-a-bottom h6:not(.fade),
+.p-a-bottom h5:not(.fade){
+  opacity: 100;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+.fade{
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
 
 .list-links{
   position: relative;
@@ -244,10 +263,6 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.hide{
-  opacity: 0 !important;
-  transition: slide-in-anim 1s ease-out forwards;
 }
 /* BOXES */
 .box-container div{
