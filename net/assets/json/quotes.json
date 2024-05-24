@@ -2,16 +2,16 @@
     "t": {
       "primary": [
         {
-          "quote": "html"
+          "quote": "HTML"
         },
         {
-          "quote": "windows"
+          "quote": "WINDOWS"
         },
         {
-          "quote": "topdesk"
+          "quote": "TOPDESK"
         },
         {
-          "quote": "java"
+          "quote": "JAVA"
         }
       ],
       "secondary": [
@@ -32,16 +32,16 @@
     "b": {
       "primary": [
         {
-          "quote": "css"
+          "quote": "CSS"
         },
         {
-          "quote": "server"
+          "quote": "SERVER"
         },
         {
-          "quote": "firebase"
+          "quote": "FIREBASE"
         },
         {
-          "quote": "script"
+          "quote": "SCRIPT"
         }
       ],
       "secondary": [
@@ -55,7 +55,7 @@
           "quote": ""
         },
         {
-          "quote": "ready for a challenge"
+          "quote": "READY FOR A CHALLENGE"
         }
       ]
     }

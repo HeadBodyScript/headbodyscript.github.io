@@ -254,16 +254,6 @@ body::-webkit-scrollbar-thumb {
   background-size: contain;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
-.master-img{
-  max-width: 60vh;
-  width: auto;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 /* BOXES */
 .box-container div{
   top: 35%;
@@ -434,7 +424,24 @@ body::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%)rotate(45deg);
   background-color: var(--divider);
 }
-
+/* .master-img{
+  position: absolute;
+  height: 60%;
+  aspect-ratio: 1/1;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+} */
+.master-img{
+  width: 60vh;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 @keyframes animatedgradient {
 	0% {
 		background-position: 0% 50%;
