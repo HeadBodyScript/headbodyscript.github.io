@@ -30,57 +30,71 @@
     <link rel="manifest" href="assets/icon/site.webmanifest">
   </head>
   <body id="app" data="false">
-    <div id="transition" class="splash-transition-true"></div>
-    <header>
-      <div class="logo">
-        <h3 class="center">headbodyscript</h3>
-      </div>
-      <ul class="list-links row">
-          <li><i class="bi bi-code"></i><button id="Home" onclick="btnMenu(this.id)">Home</button></li>
-          <li><i class="bi bi-code"></i><button id="Information" onclick="btnMenu(this.id)">About Me</button></li>
-          <li><i class="bi bi-code"></i><button id="Portfolio" onclick="btnMenu(this.id)">Challenges</button></li>
-          <li><i class="bi bi-code"></i><button id="Comment" onclick="btnMenu(this.id)">Chat Room</button></li>
-      </ul>
-        <ul class="list-login row center">
-            <li><button>login</button></li>
-            <li><img class="user-icon" src="assets/img/user.png" alt=""></li>
-        </ul>
-  </header>
+    <div id="transition" class="transition-true"></div>
+    <header class="header column">
+      <div>
 
-  <section id="sectionHome" class="visible">
-      <img class="main-img" src="assets/img/main2.webp" alt="">
-      <div class="gradient-border box main"></div>
+      </div>
+      <div class="container row">
+        <div class="float-center">
+          <div class="headbodyscript">
+            <p class="bottom">headbodyscript</p>
+          </div>
+        </div>
+        <div class="user float-right">
+          <ul class="row center">
+            <li class="reset"><button>LOGIN</button></li>
+            <li class="reset">
+              <!-- <img class="user-icon" src="assets/img/user.png" alt=""> -->
+              <div class="user-icon"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <ul class="select row">
+          <li><i class="bi bi-code"></i><button id="home" onclick="btnMenu(this.id)">Home</button></li>
+          <li><i class="bi bi-code"></i><button id="information" onclick="btnMenu(this.id)">About Me</button></li>
+          <li><i class="bi bi-code"></i><button id="portfolio" onclick="btnMenu(this.id)">Challenges</button></li>
+          <li><i class="bi bi-code"></i><button id="comment" onclick="btnMenu(this.id)">Chat Room</button></li>
+        </ul>
+      </div>
+  </header>
+  <section id="HOME" class="visible">
+      <div class="gradient-border box main">
+      </div>
         <div class="text text-top">
-            <h6 id="text-alpha">JAVA</h6>
-            <h5 id="text-beta" class="sub-text"></h5>
+            <h6 id="text-alpha">TOP TEXT</h6>
+            <h5 id="text-beta" class="sub-text">TEST</h5>
         </div>
         <div class="text text-bottom">
-            <h6 id="text-charlie">SCRIPT</h6>
+            <h6 id="text-charlie">BOTTOM TEXT</h6>
             <h5 id="text-delta" class="sub-text">Ready For A Challenge</h5>
         </div>
-      <div class="box alpha"></div>
-      <div class="box beta"></div>
-      <div class="box charlie"></div>
-      <div class="box delta"></div>
+        <div class="box-container">
+          <div class="box alpha"></div>
+          <div class="box beta"></div>
+          <div class="box charlie"></div>
+          <div class="box delta"></div>
+        </div>
   </section>
 
-  <section id="sectionInformation">
+  <section id="INFORMATION">
       <div class="content">
 
       </div>
   </section>
 
-  <section id="sectionPortfolio">
+  <section id="PORTFOLIO">
       <div id="Form" class="row">
       </div>
   </section>
-  <section id="sectionComment">
+  <section id="COMMENT">
       <div class="content">
           <img src="assets/img/main.png" alt="">
           <div class="b-box b-mid"></div>
       </div>
   </section>
-  
     <script src="assets/js/portfolio.js"></script>
   </body>
 </html>

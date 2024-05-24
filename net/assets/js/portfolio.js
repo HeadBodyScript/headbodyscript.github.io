@@ -112,49 +112,49 @@ GetGitRepo();
 
 
   
-  function btnMenu(_id) {
-      new_id = "section" + _id
+  function btnMenu(id) {
+      _id = id.toUpperCase()
       var fade = document.getElementById("transition");
-      fade.style.zIndex = "256", fade.classList.replace("splash-transition-true", "splash-transition-false"), setTimeout(() => {
+      fade.style.zIndex = "256", fade.classList.replace("transition-true", "transition-false"), setTimeout(() => {
         document.querySelectorAll(".visible").forEach(newSection => {
           newSection.classList.remove("visible")
-        }), document.getElementById(new_id).classList.add("visible"), fade.classList.replace("splash-transition-false", "splash-transition-true")
+        }), document.getElementById(_id).classList.add("visible"), fade.classList.replace("transition-false", "transition-true")
       }, 1e3), setTimeout(() => {
         fade.style.zIndex = "-256"
       }, 1e3)
 }
 
-var counter = 0;
+// var counter = 0;
 
-var innerTextAlpha = ["HTML", "Windows", "TopDesk", "Java"];
-var innerTextBeta = ["", "", "", ""];
-var innerTextCharlie = ["CSS", "Server", "Firebase", "Script"];
-var innerTextDelta = ["", "2016 - 2019", "", "Ready For A Challenge"];
+// var innerTextAlpha = ["HTML", "Windows", "TopDesk", "Java"];
+// var innerTextBeta = ["", "", "", ""];
+// var innerTextCharlie = ["CSS", "Server", "Firebase", "Script"];
+// var innerTextDelta = ["", "2016 - 2019", "", "Ready For A Challenge"];
 
-var classAlpha = document.getElementById("text-alpha");
-var classBeta = document.getElementById("text-beta");
-var classCharlie = document.getElementById("text-charlie");
-var classDelta = document.getElementById("text-delta");
+// var classAlpha = document.getElementById("text-alpha");
+// var classBeta = document.getElementById("text-beta");
+// var classCharlie = document.getElementById("text-charlie");
+// var classDelta = document.getElementById("text-delta");
 
-setInterval(change, 5000);
+// setInterval(change, 5000);
 
-function change() {
-  classAlpha.classList.add("hide");
-  classBeta.classList.add("hide");
-  classCharlie.classList.add("hide");
-  classDelta.classList.add("hide");
-    setTimeout(function () {
-      classAlpha.innerHTML = innerTextAlpha[counter];
-      classBeta.innerHTML = innerTextBeta[counter];
-      classCharlie.innerHTML = innerTextCharlie[counter];
-      classDelta.innerHTML = innerTextDelta[counter];
-      classAlpha.classList.remove("hide");
-      classBeta.classList.remove("hide");
-      classCharlie.classList.remove("hide");
-      classDelta.classList.remove("hide");
-        counter++;
-        if (counter >= 4) {
-            counter = 0;
-        }
-    }, 1000);
-}
+// function change() {
+//   classAlpha.classList.add("hide");
+//   classBeta.classList.add("hide");
+//   classCharlie.classList.add("hide");
+//   classDelta.classList.add("hide");
+//     setTimeout(function () {
+//       classAlpha.innerHTML = innerTextAlpha[counter];
+//       classBeta.innerHTML = innerTextBeta[counter];
+//       classCharlie.innerHTML = innerTextCharlie[counter];
+//       classDelta.innerHTML = innerTextDelta[counter];
+//       classAlpha.classList.remove("hide");
+//       classBeta.classList.remove("hide");
+//       classCharlie.classList.remove("hide");
+//       classDelta.classList.remove("hide");
+//         counter++;
+//         if (counter >= 4) {
+//             counter = 0;
+//         }
+//     }, 1000);
+// }
