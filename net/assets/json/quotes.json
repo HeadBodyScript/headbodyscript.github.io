@@ -1,62 +1,62 @@
 {
-    "t":{
-        "primary":[
-           {
-            "quote":""
-           },
-           {
-            "quote":""
-           },
-           {
-            "quote":""
-           },
-           {
-            "quote":""
-           }
-        ],
-        "secondary":[
-            {
-                "quote":""
-               },
-               {
-                "quote":""
-               },
-               {
-                "quote":""
-               },
-               {
-                "quote":""
-               }
-        ]
+    "t": {
+      "primary": [
+        {
+          "quote": "html"
+        },
+        {
+          "quote": "windows"
+        },
+        {
+          "quote": "topdesk"
+        },
+        {
+          "quote": "java"
+        }
+      ],
+      "secondary": [
+        {
+          "quote": ""
+        },
+        {
+          "quote": ""
+        },
+        {
+          "quote": ""
+        },
+        {
+          "quote": ""
+        }
+      ]
     },
-    "b":{
-        "primary":[
-            {
-                "quote":""
-               },
-               {
-                "quote":""
-               },
-               {
-                "quote":""
-               },
-               {
-                "quote":""
-               }
-        ],
-        "secondary":[
-            {
-                "quote":""
-               },
-               {
-                "quote":""
-               },
-               {
-                "quote":""
-               },
-               {
-                "quote":""
-               }
-        ]
+    "b": {
+      "primary": [
+        {
+          "quote": "css"
+        },
+        {
+          "quote": "server"
+        },
+        {
+          "quote": "firebase"
+        },
+        {
+          "quote": "script"
+        }
+      ],
+      "secondary": [
+        {
+          "quote": ""
+        },
+        {
+          "quote": "2016 - 2019"
+        },
+        {
+          "quote": ""
+        },
+        {
+          "quote": "ready for a challenge"
+        }
+      ]
     }
-}
+  }

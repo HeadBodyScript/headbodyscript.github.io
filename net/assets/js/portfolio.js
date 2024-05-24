@@ -125,18 +125,7 @@ GetGitRepo();
 }
 
 
-let _init = () => {
-  fetch("/net/assets/json/quotes.json")
-  .then(quote => quote.json())
-  .then(
-    console.log(quote)
-
-)
-}
-_init();
-
 var i = 0;
-
 
 var TP = document.getElementById("t-primary");
 var TS = document.getElementById("t-secondary");
