@@ -1,23 +1,17 @@
 var userGitHub = "Tijl-Pleuger-Vista"
 
 async function wait(userGitHub, response, i) {
-  var box = []
     var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`)
     var repository = await repository.json();
-    var repositoryIgnore = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${response[i].name}/main/ignore.json`)
-    if (repositoryIgnore.ok == true){
-      var repositoryIgnore = await repositoryIgnore.json();
-      Array.prototype.push.apply(box, repositoryIgnore);
-    }
     var repositoryContributors = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/contributors`)
     var repositoryContributors = await repositoryContributors.json();
+    var box = []
 
     for (let i = 0; i < repositoryContributors.length; i++) {
       var addToBox = [{
         "user":repositoryContributors[i].login,
         "url":repositoryContributors[i].url,
-        "ico":repositoryContributors[i].avatar_url,
-        "contributions":repositoryContributors[i].contributions
+        "ico":repositoryContributors[i].avatar_url
       }]
     Array.prototype.push.apply(box, addToBox);
   }
@@ -55,7 +49,7 @@ async function createCard(userGitHub, i){
     let GitHub = JSON.parse(localStorage.getItem(i));
     var README = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${GitHub[0].repository}/main/README.md`);
     var README = await README.text();
-    var newDiv = 
+    Form.innerHTML +=
     `
     <div class="card">
     <div class="card-menu space-between row">
@@ -77,27 +71,24 @@ async function createCard(userGitHub, i){
           </div>
         </li>
         <li class="border row"><i class="bi bi-chevron-right"></i>
-          <p class="git-content"><a class="color" href="https://github.com/${userGitHub}/${GitHub[0].repository}">UID: ${GitHub[0].repository}</a></p>
+          <p class="git-content"><a class="color" href="https://github.com/${userGitHub}/${GitHub[0].repository}">${GitHub[0].repository}</a></p>
         </li>
         <li class="border row"><i class="bi bi-chevron-right"></i>
-          <p class="git-content">Info: ${GitHub[0].description}</p>
+          <p class="git-content">${GitHub[0].description}</p>
         </li>
         <li class="border row"><i class="bi bi-chevron-right"></i>
-          <p class="git-content">Owner: ${userGitHub}</p>
+          <p class="git-content">${userGitHub}</p>
         </li>
-        <li class="border row"><i class="bi bi-chevron-right"></i>
-        <p class="git-content">Contributors:</p>
-      </li>
         `
         for (let i = 2; i < GitHub.length; i++) {
-          var newDiv = newDiv += 
+          Form.innerHTML +=
           `
-          <li>
-            <a class="color row" href="${GitHub[i].url}"><img class="git-icon" src="${GitHub[i].ico}" alt="icon"><p class="git-text">${GitHub[i].user}</p><p class="git-contributions">${GitHub[i].contributions}</p></a>
+          <li class="border row"><i class="bi bi-chevron-right"></i>
+            <a href="${GitHub[i].url}"><img class="icon" src="${GitHub[i].ico}" alt="icon">${GitHub[i].user}</a>
           </li>
           `
       }
-      var newDiv = newDiv +=
+        Form.innerHTML +=
         `
       </ul>
     </div>
@@ -115,14 +106,11 @@ async function createCard(userGitHub, i){
     <div class="card-container card-spacer">
       <ul>
         <li class="card-header-small center"><p>img</p></li>
-        <li class="border">
-        <img src="" alt="">
-        </li>
+        <li class="border"></li>
       </ul>
     </div>
   </div>
     `
-    Form.innerHTML += newDiv
 }
 
 function sectionSelect(id) {
@@ -159,13 +147,93 @@ pause.addEventListener('click', pauseAudio)
 function playAudio() {audio.play();}
 function pauseAudio() {audio.pause();}
 
-// var mew = [
-//   {"test":"1"},
-//   {"mew":"2"},
-//   {"bla":"3"},
-//   {"qwerty":"4"}
-// ]
-// console.log(mew)
+var mew = [
+  {
+    "login": "HeadBodyScript",
+    "id": 106414989,
+    "node_id": "U_kgDOBlfDjQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/HeadBodyScript",
+    "html_url": "https://github.com/HeadBodyScript",
+    "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+    "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+    "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+    "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+    "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+    "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 74
+  },
+  {
+    "login": "jeerast",
+    "id": 60871887,
+    "node_id": "MDQ6VXNlcjYwODcxODg3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/60871887?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jeerast",
+    "html_url": "https://github.com/jeerast",
+    "followers_url": "https://api.github.com/users/jeerast/followers",
+    "following_url": "https://api.github.com/users/jeerast/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jeerast/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jeerast/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jeerast/subscriptions",
+    "organizations_url": "https://api.github.com/users/jeerast/orgs",
+    "repos_url": "https://api.github.com/users/jeerast/repos",
+    "events_url": "https://api.github.com/users/jeerast/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jeerast/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 24
+  },
+  {
+    "login": "DaniaAlfa",
+    "id": 113337724,
+    "node_id": "U_kgDOBsFlfA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/113337724?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/DaniaAlfa",
+    "html_url": "https://github.com/DaniaAlfa",
+    "followers_url": "https://api.github.com/users/DaniaAlfa/followers",
+    "following_url": "https://api.github.com/users/DaniaAlfa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/DaniaAlfa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/DaniaAlfa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/DaniaAlfa/subscriptions",
+    "organizations_url": "https://api.github.com/users/DaniaAlfa/orgs",
+    "repos_url": "https://api.github.com/users/DaniaAlfa/repos",
+    "events_url": "https://api.github.com/users/DaniaAlfa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/DaniaAlfa/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 8
+  },
+  {
+    "login": "IEatYourCode",
+    "id": 151540061,
+    "node_id": "U_kgDOCQhRXQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/151540061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/IEatYourCode",
+    "html_url": "https://github.com/IEatYourCode",
+    "followers_url": "https://api.github.com/users/IEatYourCode/followers",
+    "following_url": "https://api.github.com/users/IEatYourCode/following{/other_user}",
+    "gists_url": "https://api.github.com/users/IEatYourCode/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/IEatYourCode/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/IEatYourCode/subscriptions",
+    "organizations_url": "https://api.github.com/users/IEatYourCode/orgs",
+    "repos_url": "https://api.github.com/users/IEatYourCode/repos",
+    "events_url": "https://api.github.com/users/IEatYourCode/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/IEatYourCode/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 6
+  }
+]
+
 
 // function mewmew(mew){
 // var mewl = mew.length
