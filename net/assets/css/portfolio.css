@@ -3,9 +3,9 @@
   --backgound-color: #0d1117;
   --backgound-color-inner: #161B22;
   --divider: #21262d;
-  --sub-divider: #21262D;
+  --sub-divider: #30363d;
   --color: white;
-  --sub-text: #dddddd;
+  --sub-text: #ffffffa1;
   --link: #1f6feb;
   --hover: rgba(185, 160, 106, 0.333);
   --borderWidth: 3px;
@@ -241,7 +241,6 @@ body::-webkit-scrollbar-thumb {
   -ms-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
 }
-
 .list-links{
   position: relative;
   top: 71px;
@@ -282,76 +281,6 @@ body::-webkit-scrollbar-thumb {
   border-color: var(--divider);
   transform: rotate(45deg);
 }
-
-/* CHALLENGES */
-.card{
-  min-width: 33.33%;
-  max-width: 33.33%;
-  background-color: #0d1117;
-}
-.card-container{
-  background-color: var(--backgound-color);
-  border: 1px;
-  border-style: solid;
-  border-radius: 8px;
-  border-color: var(--divider);
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.card-header{
-  background-color: var(--backgound-color-inner);
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  margin: 0;
-  padding: 0;
-}
-.link{
-  color: var(--link);
-}
-.readme {
-  height: 200px;
-  overflow: auto;
-}
-.border {
-  border: 1px;
-  border-top-style: solid;
-  border-top-color: var(--sub-divider) ;
-}
-.icon {
-  border-radius: 100%;
-  height: 20px;
-  float: right;
-}
-
-@keyframes slide-in-anim {
-	20% {
-		opacity: 0;
-	}
-	60% {
-		transform: translateX(-45%);
-	}
-	75% {
-		transform: translateX(-52%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(-50%);
-	}
-}
-
-@keyframes hover {
-  0% {
-    -webkit-transform:translateY(25%)rotate(45deg)
-  }
-50% {
-    -webkit-transform: translateY(-25%)rotate(45deg);
-    transform:translateY(-25%)rotate(45deg)
-  }
-100% {
-    -webkit-transform: translateY(25%)rotate(45deg);
-    transform:translateY(25%)rotate(45deg)
-  }
-}
 .container{
   width: 100%;
   position: relative;
@@ -365,7 +294,6 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   right     : 0;
 }
-
 .bottom{
   position: relative;
   top: 20px;
@@ -424,15 +352,6 @@ body::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%)rotate(45deg);
   background-color: var(--divider);
 }
-/* .master-img{
-  position: absolute;
-  height: 60%;
-  aspect-ratio: 1/1;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-} */
 .master-img{
   width: 60vh;
   border-bottom-left-radius: 100%;
@@ -442,6 +361,139 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* REPOSITORIES */
+.card{
+  width: 25%;
+  background-color: #0d1117;
+  margin-bottom: 42px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.card-container{
+  background-color: var(--backgound-color);
+  border: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: var(--sub-divider);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.card-header{
+  background-color: var(--backgound-color-inner);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.card-header div{
+  position: relative;
+  top: 16px;
+}
+.card-header div p:nth-child(2){
+  position: relative;
+  bottom: 18px;
+  margin-left: 8px;
+}
+.card-header div p:nth-child(3){
+  position: relative;
+  bottom: 12px;
+  margin-left: 8px;
+  color: var(--sub-text);
+  font-size: smaller;
+}
+.card-header-small{
+  background-color: var(--backgound-color-inner);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+}
+.card-header-small i,
+.card-header-small p{
+  position: relative;
+  top: 3px;
+  margin: 0;
+  font-size: smaller;
+  margin-left: 8px;
+}
+.card-spacer{
+  margin-top: 16px;
+}
+.card-menu{
+  margin: 0 6px 8px 6px;
+  width: calc(100% - 12px);
+}
+.card-pre{
+  margin: 0;
+  height: 22px;
+}
+.para{
+  font-size: smaller;
+  margin-right: 2px;
+}
+.border {
+  height: 40px;
+  border: 1px;
+  border-top-style: solid;
+  border-top-color: var(--sub-divider);
+  margin: 0;
+  padding: 0;
+}
+.bi-chevron-right,
+.git-content{
+  position: relative;
+  top: 9px;
+  margin: 0;
+  font-size: smaller;
+  margin-left: 8px;
+}
+.readme {
+  height: auto;
+  max-height: 200px;
+  word-wrap: break-word;
+  overflow: auto;
+}
+.link{
+  color: var(--link);
+}
+.color{
+  color: var(--color);
+}
+.icon {
+  border-radius: 100%;
+  height: 20px;
+  margin-left: 16px;
+}
+.bi-hdd-stack{
+  position: relative;
+  bottom: 1px;
+}
+.visit p{
+  position: relative;
+  bottom: 1px;
+}
+.space-between{
+  justify-content: space-between;
+}
+.bi-chevron-right,
+.visit p,
+.visit{
+  margin: 0;
+  margin-left: 8px;
+}
+.visit{
+  border-radius: 3px;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  animation: animatedgradient 10s ease alternate infinite;
+  background-size: 300% 300%;
+  padding: 2px 6px;
+}
+pre{
+  margin: 0;
+}
+/* ANIMATION */
 @keyframes animatedgradient {
 	0% {
 		background-position: 0% 50%;
@@ -453,8 +505,53 @@ body::-webkit-scrollbar-thumb {
 		background-position: 0% 50%;
 	}
 }
-
-@media only screen and (max-width: 1070px) {
+@keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-45%);
+	}
+	75% {
+		transform: translateX(-52%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%);
+	}
+}
+@keyframes hover {
+  0% {
+    -webkit-transform:translateY(25%)rotate(45deg)
+  }
+50% {
+    -webkit-transform: translateY(-25%)rotate(45deg);
+    transform:translateY(-25%)rotate(45deg)
+  }
+100% {
+    -webkit-transform: translateY(25%)rotate(45deg);
+    transform:translateY(25%)rotate(45deg)
+  }
+}
+/* MEDIA */
+@media only screen and (max-width: 1920px) {
+  .card{
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .card{
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .card{
+    width: 100%;
+  }
+  .card-container{
+    margin-left: 0;
+    margin-right: 0;
+  }
   .float-center{
     position: absolute;
     left     : 10px;
@@ -468,7 +565,6 @@ body::-webkit-scrollbar-thumb {
   }
   h6 {
     font-size: 400%;
-
   }
   h5 {
     font-size: 100%;
