@@ -29,10 +29,10 @@ header {
   border-bottom: 1px solid var(--divider);
 }
 header div:nth-child(1){
-  height: 30px;
+  height: 20px;
 }
 header div:nth-child(2){
-  height: 40px;
+  height: 50px;
 }
 header div:nth-child(3){
   height: 30px;
@@ -180,6 +180,8 @@ body::-webkit-scrollbar-thumb {
 
 /* ICONS */
 .bi-code{
+  position: relative;
+  bottom: 1px;
   margin-right: 8px;
 }
 .bi-dot{
@@ -245,15 +247,6 @@ body::-webkit-scrollbar-thumb {
   top: 71px;
 }
 
-#user-icon{
-  position: relative;
-  top: 4px;
-  width: 30px;
-  height: 30px;
-  /* background-image: url(../img/user.png); */
-  background-size: contain;
-  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-}
 /* BOXES */
 .box-container div{
   top: 35%;
@@ -292,7 +285,6 @@ body::-webkit-scrollbar-thumb {
 
 /* CHALLENGES */
 .card{
-  margin-top: 50px;
   min-width: 33.33%;
   max-width: 33.33%;
   background-color: #0d1117;
@@ -383,13 +375,19 @@ body::-webkit-scrollbar-thumb {
 }
 .user li,
 .user li button{
-  height: 40px;
+  height: 50px;
 }
 .user li img{
   position: relative;
   top: 5px;
 }
-
+.user-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-size: contain;
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+}
 
 
 /* MATER BOX */
@@ -456,3 +454,23 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+@media only screen and (max-width: 1070px) {
+  .float-center{
+    position: absolute;
+    left     : 10px;
+    transform : translate(0, 0);
+  }
+  .bi-code{
+    display: none;
+  }
+  li {
+    margin: 0 8px;
+  }
+  h6 {
+    font-size: 400%;
+
+  }
+  h5 {
+    font-size: 100%;
+  }
+}

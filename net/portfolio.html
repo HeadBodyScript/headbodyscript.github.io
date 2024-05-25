@@ -4,7 +4,7 @@
     <title>HeadBodyScript || Portfolio</title>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="HeadBodyScript">
@@ -44,9 +44,9 @@
         </div>
         <div class="user float-right">
           <ul class="row center">
-            <li class="reset"><button id="login" onclick="sectionSelect(this.id)">LOGIN</button></li>
+            <li class="reset"><button type="button" id="login" onclick="sectionSelect(this.id)">LOGIN</button></li>
             <li class="reset">
-              <img id="user-icon" src="/assets/img/user.png" alt="user-icon">
+              <img class="user-icon" id="user-icon" src="/assets/img/user.png" alt="user-icon">
             </li>
           </ul>
         </div>
@@ -84,8 +84,8 @@
       <audio id="myAudio">
         <source src="/assets/theme.mp3" type="audio/mpeg">
       </audio>
-      <button id="play">play</button>
-      <button id="pause">pause</button>
+      <button type="button" id="play">play</button>
+      <button type="button" id="pause">pause</button>
   </section>
 
   <section id="PORTFOLIO">
@@ -102,7 +102,7 @@
   <section id="LOGIN">
     <div class="center">
       <div class="column">
-        <button class="gsi-material-button">
+        <button type="button" class="gsi-material-button">
           <div class="gsi-material-button-state"></div>
           <div class="gsi-material-button-content-wrapper">
             <div class="gsi-material-button-icon">
@@ -118,7 +118,7 @@
             <span style="display: none;">Continue with Google</span>
           </div>
         </button>
-        <button id="github" style="margin-top: 20px;" class="gsi-material-button">
+        <button type="button" id="github" style="margin-top: 20px;" class="gsi-material-button">
           <div class="gsi-material-button-state"></div>
           <div class="gsi-material-button-content-wrapper">
             <div class="gsi-material-button-icon">
