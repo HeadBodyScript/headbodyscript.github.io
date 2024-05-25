@@ -1,0 +1,905 @@
+{
+    "repo":[
+        {
+            "sha": "675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+            "node_id": "C_kwDOKe0bJ9oAKDY3NWY0OTg2NjMwNmQ4ZTc3M2U2NWYyZTk3ZTVmYjVjZTNiOGE0NGQ",
+            "commit": {
+                "author": {
+                    "name": "HeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-17T14:38:27Z"
+                },
+                "committer": {
+                    "name": "HeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-17T14:38:27Z"
+                },
+                "message": "Minify + fix",
+                "tree": {
+                    "sha": "188f1ef8d7c82e0f45544ec82e2fe3372fcf25cf",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/git/trees/188f1ef8d7c82e0f45544ec82e2fe3372fcf25cf"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/git/commits/675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/commits/675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/commit/675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/commits/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/comments",
+            "author": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "4ffcaa41620e87ee8da66017e8fedbe342b4bb86",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/commits/4ffcaa41620e87ee8da66017e8fedbe342b4bb86",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/commit/4ffcaa41620e87ee8da66017e8fedbe342b4bb86"
+                }
+            ],
+            "stats": {
+                "total": 544,
+                "additions": 208,
+                "deletions": 336
+            },
+            "files": [
+                {
+                    "sha": "eb6d36a25f839955b44d8f9ef32317b00f825144",
+                    "filename": "app.css",
+                    "status": "removed",
+                    "additions": 0,
+                    "deletions": 91,
+                    "changes": 91,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/app.css",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/app.css",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/app.css?ref=4ffcaa41620e87ee8da66017e8fedbe342b4bb86",
+                    "patch": "@@ -1,91 +0,0 @@\n-body {\n-    background-color: #cccccc;\n-  }\n-\n-.first1 {\n-  position: absolute;\n-  top: 50%;\n-  left: 50%;\n-  transform: translate(-50%, -50%);\n-  padding: px 0;\n-}\n-\n-.center {\n-  position: static;\n-\n-  }\n-\n-.centerleft {\n-  position: absolute;\n-  top: 50%;\n-  left: 25%;\n-  transform: translate(-50%, -50%);\n-  }\n-\n-  .centerright {\n-    position: absolute;\n-    top: 50%;\n-    left: 75%;\n-    transform: translate(-50%, -50%);\n-    }\n-\n-.cards {\n-    border-radius: 25px;\n-    background:#8a8fa3;\n-    padding: 20px;\n-    width: 200px;\n-    height: 150px;\n-  }\n-\n-  .footer {\n-    position: absolute;\n-    bottom: -20%;\n-    width: 100%;\n-    height: 2.5rem;\n-    left : 200px;\n-  }\n-\n-  .row {\n-    --bs-gutter-x: 1.5rem;\n-    --bs-gutter-y: 0;\n-    display: flex;\n-    flex-wrap: wrap;\n-    margin-left: calc(var(--bs-gutter-x) * -0.5);\n-    margin-right: calc(var(--bs-gutter-x) * -0.5);\n-    margin-top: calc(var(--bs-gutter-y) * -1);\n-  }\n-  \n-  .title {\n-    position: absolute;\n-    top: 10%;\n-    left: 50%;\n-    transform: translate(-50%, -50%);\n-    font-size: 50px;\n-    }\n-\n-    .box {\n-      display: flex;\n-      align-items:center;\n-   }\n-\n-   .left  {\n-    float: right;    \n-     margin: 0 0 0 25px;\n-    }\n-\n-    .px  {\n-      float: both;    \n-      margin: 0 0 0 10px;\n-      }\n-\n-      .py  {\n-        margin-bottom: 10px;\n-\n-        }\n-\n-        .button1s \t{\n-          color: transparent; \n-          background-color: transparent; \n-          border-color: transparent; \n-          cursor: default;\n-        }\n\\ No newline at end of file"
+                },
+                {
+                    "sha": "67d380e21d9fec4aa320d391937f23876d924489",
+                    "filename": "assets/css/app.css",
+                    "status": "added",
+                    "additions": 101,
+                    "deletions": 0,
+                    "changes": 101,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fcss%2Fapp.css",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fcss%2Fapp.css",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/assets%2Fcss%2Fapp.css?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -0,0 +1,101 @@\n+@import url(\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css\");\n+:root {\n+  --txt: #000000;\n+}\n+body {\n+  margin: 0;\n+  background-color: #cccccc;\n+  width: 100%;\n+  min-height: 100dvh;\n+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n+}\n+button, input[type=\"submit\"], input[type=\"reset\"] {\n+\tbackground: none;\n+\tcolor: inherit;\n+\tborder: none;\n+\tpadding: 0;\n+\tfont: inherit;\n+\tcursor: pointer;\n+\toutline: inherit;\n+}\n+.center {\n+  display: flex;\n+  justify-content: center;\n+  align-items: center;\n+}\n+.row {\n+  display: flex !important;\n+  flex-wrap: wrap;\n+  flex-direction: row;\n+}\n+.column {\n+  display: flex;\n+  flex-wrap: wrap;\n+  flex-direction: column;\n+}\n+.box{\n+  background: rgba(0,0,0,.2);\n+  box-sizing: border-box;\n+}\n+.border{\n+  border-radius: 10px;\n+}\n+.spacing{\n+  margin: 10px 10px;\n+}\n+.icon{\n+  height: 64px;\n+  width: 64px;\n+}\n+a {\n+  text-decoration: none;\n+}\n+\n+a:link {\n+  color: var(--txt);\n+}\n+\n+a:visited {\n+  color: var(--txt);\n+}\n+\n+a:hover {\n+  color: var(--txt);\n+  text-decoration: underline;\n+}\n+.content-box{\n+  margin-top: 16px;\n+  display: grid;\n+  grid-template-columns: repeat(2, 1fr);\n+  grid-template-rows: repeat(3, 1fr);\n+  grid-column-gap: 0px;\n+  grid-row-gap: 0px;\n+}\n+.content-box:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }\n+.content-box:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }\n+.content-box:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }\n+.content-box:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }\n+.content-box:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }\n+.content-box:nth-child(6) { grid-area: 2 / 3 / 3 / 4; }\n+\n+.content{\n+  height: 100px;\n+  width: 100%;\n+}\n+.card{\n+  width: 100%;\n+  height: 100%;\n+}\n+.card .box{\n+  width: 99%;\n+  height: 95%;\n+}\n+.bi{\n+  position: relative;\n+  bottom: 2px;\n+  margin: 0 3px;\n+}\n+p{\n+  width: fit-content;\n+  margin: 0;\n+}\n\\ No newline at end of file"
+                },
+                {
+                    "sha": "845f6bc2b8118746d5596a5536832cefd9e78ce6",
+                    "filename": "assets/css/click.css",
+                    "status": "added",
+                    "additions": 16,
+                    "deletions": 0,
+                    "changes": 16,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fcss%2Fclick.css",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fcss%2Fclick.css",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/assets%2Fcss%2Fclick.css?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -0,0 +1,16 @@\n+body{\n+  background-image: url(\"../img/click.png\");\n+  background-color: #cccccc;\n+  background-repeat: no-repeat;\n+  background-attachment: fixed;\n+  background-size: cover;\n+  height: 100dvh;\n+  margin: 0;\n+}\n+.center{\n+  display: flex;\n+  justify-content: center;\n+  align-items: center;\n+  font-size: 200px;\n+  height: 100%;\n+}\n\\ No newline at end of file"
+                },
+                {
+                    "sha": "67aff1c2119eb4ba194cd8bd540f7c0a28c3ca7d",
+                    "filename": "assets/css/snake.css",
+                    "status": "added",
+                    "additions": 14,
+                    "deletions": 0,
+                    "changes": 14,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fcss%2Fsnake.css",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fcss%2Fsnake.css",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/assets%2Fcss%2Fsnake.css?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -0,0 +1,14 @@\n+html, body {\n+    height: 100%;\n+    margin: 0;\n+  }\n+\n+  body {\n+    background: black;\n+    display: flex;\n+    align-items: center;\n+    justify-content: center;\n+  }\n+  canvas {\n+    border: 1px solid white;\n+  }\n\\ No newline at end of file"
+                },
+                {
+                    "sha": "c6cc4fd912755c9aff0f976603b315bfc7515103",
+                    "filename": "assets/img/click.png",
+                    "status": "renamed",
+                    "additions": 0,
+                    "deletions": 0,
+                    "changes": 0,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fimg%2Fclick.png",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fimg%2Fclick.png",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/assets%2Fimg%2Fclick.png?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "previous_filename": "img.png"
+                },
+                {
+                    "sha": "c53773c998aeaf558cba8cde3936a6c850695c64",
+                    "filename": "assets/js/click.js",
+                    "status": "renamed",
+                    "additions": 0,
+                    "deletions": 0,
+                    "changes": 0,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fjs%2Fclick.js",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fjs%2Fclick.js",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/assets%2Fjs%2Fclick.js?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "previous_filename": "json.js"
+                },
+                {
+                    "sha": "7583e9604199f59be640714a009b48b99e112c16",
+                    "filename": "assets/js/snake.js",
+                    "status": "added",
+                    "additions": 1,
+                    "deletions": 0,
+                    "changes": 1,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fjs%2Fsnake.js",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/assets%2Fjs%2Fsnake.js",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/assets%2Fjs%2Fsnake.js?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -0,0 +1 @@\n+var canvas=document.getElementById(\"game\"),context=canvas.getContext(\"2d\"),grid=16,count=0,snake={x:160,y:160,dx:grid,dy:0,cells:[],maxCells:4},apple={x:320,y:320};function getRandomInt(e,n){return Math.floor(Math.random()*(n-e))+e}function loop(){requestAnimationFrame(loop),!(++count<4)&&(count=0,context.clearRect(0,0,canvas.width,canvas.height),snake.x+=snake.dx,snake.y+=snake.dy,snake.x<0?snake.x=canvas.width-grid:snake.x>=canvas.width&&(snake.x=0),snake.y<0?snake.y=canvas.height-grid:snake.y>=canvas.height&&(snake.y=0),snake.cells.unshift({x:snake.x,y:snake.y}),snake.cells.length>snake.maxCells&&snake.cells.pop(),context.fillStyle=\"red\",context.fillRect(apple.x,apple.y,grid-1,grid-1),context.fillStyle=\"green\",snake.cells.forEach(function(e,n){context.fillRect(e.x,e.y,grid-1,grid-1),e.x===apple.x&&e.y===apple.y&&(snake.maxCells++,apple.x=getRandomInt(0,25)*grid,apple.y=getRandomInt(0,25)*grid);for(var a=n+1;a<snake.cells.length;a++)e.x===snake.cells[a].x&&e.y===snake.cells[a].y&&(snake.x=160,snake.y=160,snake.cells=[],snake.maxCells=4,snake.dx=grid,snake.dy=0,apple.x=getRandomInt(0,25)*grid,apple.y=getRandomInt(0,25)*grid)}))}document.addEventListener(\"keydown\",function(e){37===e.which&&0===snake.dx?(snake.dx=-grid,snake.dy=0):38===e.which&&0===snake.dy?(snake.dy=-grid,snake.dx=0):39===e.which&&0===snake.dx?(snake.dx=grid,snake.dy=0):40===e.which&&0===snake.dy&&(snake.dy=grid,snake.dx=0)}),requestAnimationFrame(loop);"
+                },
+                {
+                    "sha": "5d5497e287883c9f13acf86c6e14dcfc2654a617",
+                    "filename": "click.html",
+                    "status": "modified",
+                    "additions": 1,
+                    "deletions": 3,
+                    "changes": 4,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/click.html",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/click.html",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/click.html?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -4,13 +4,11 @@\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Vista [test site]</title>\n-    \n-    <link rel=\"stylesheet\" href=\"new.css\"/>\n+    <link rel=\"stylesheet\" href=\"assets/css/click.css\"/>\n     <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"assets/logo/apple-touch-icon.png\">\n     <link rel=\"icon\" type=\"assets/logo/image/png\" sizes=\"32x32\" href=\"assets/logo/favicon-32x32.png\">\n     <link rel=\"icon\" type=\"assets/logo/image/png\" sizes=\"16x16\" href=\"assets/logo/favicon-16x16.png\">\n     <link rel=\"manifest\" href=\"assets/logo/site.webmanifest\">\n-\n </head>\n <body>\n     <div class=\"center\">"
+                },
+                {
+                    "sha": "7aa1f60a9dc8afbcfd40763d2fa4d733fb757d40",
+                    "filename": "click.mp3",
+                    "status": "removed",
+                    "additions": 0,
+                    "deletions": 0,
+                    "changes": 0,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/click.mp3",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/click.mp3",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/click.mp3?ref=4ffcaa41620e87ee8da66017e8fedbe342b4bb86"
+                },
+                {
+                    "sha": "5b4d3408029741b887e107b02bb2515e29d2b505",
+                    "filename": "index.html",
+                    "status": "modified",
+                    "additions": 63,
+                    "deletions": 55,
+                    "changes": 118,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/index.html",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/index.html",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/index.html?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -1,62 +1,70 @@\n <!DOCTYPE html>\n <html lang=\"en\">\n-<head>\n+  <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-    <title>Vista [test site]</title>\n-\n-    <link rel=\"stylesheet\" href=\"app.css\"/>\n-    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"assets/logo/apple-touch-icon.png\">\n-    <link rel=\"icon\" type=\"assets/logo/image/png\" sizes=\"32x32\" href=\"assets/logo/favicon-32x32.png\">\n-    <link rel=\"icon\" type=\"assets/logo/image/png\" sizes=\"16x16\" href=\"assets/logo/favicon-16x16.png\">\n-    <link rel=\"manifest\" href=\"assets/logo/site.webmanifest\">\n-\n-</head>\n-<body>\n-\n-    <a class=\"title box\">My Test Website\n-        <button onClick=\"playMyAudio()\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">\n-            <audio src=\"https://www.fesliyanstudios.com/play-mp3/387\" id=\"myAudio\"></audio>\n-        <picture class=\"left\" id=\"click\">\n-            <img src=\"assets/logo/apple-touch-icon.png\" style=\"width:auto;\">\n-        </button>\n-        </picture>\n-    </a>\n-\n-\n-\n-    <div class=\"first1 row\">\n-    <div class=\"center cards px-4 py-4 px py\">\n-        <a href=\"click.html\">click for jumpscare</a><br/>\n-        <a href=\"pong.html\">click for pong</a>\n+    <title>HeadBodyScript || Test</title>\n+    <link rel=\"stylesheet\" href=\"assets/css/app.css\"/>\n+    <link rel=\"apple-touch-icon\" href=\"https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/apple-touch-icon.png\" sizes=\"180x180\">\n+    <link rel=\"icon\" href=\"https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/favicon-32x32.png\" type=\"image/png\" sizes=\"32x32\">\n+    <link rel=\"icon\" href=\"https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/favicon-16x16.png\" type=\"image/png\" sizes=\"16x16\">\n+    <link rel=\"manifest\" href=\"https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/logo/site.webmanifest\">\n+  </head>\n+  <body>\n+    <div class=\"box center\">\n+        <a class=\"spacing\" href=\"/\">My Test Website</a>\n+        <img class=\"spacing icon\" src=\"assets/logo/apple-touch-icon.png\" alt=\"logo\">\n     </div>\n-    \n-    <div class=\"center cards px-4 py-4 px py\">\n-        <a> Hello<br/>I am Tijl Pleuger<br/>I am 21 years old<br/>Ask me for help but only when I am not busy </a>\n+    <div class=\"content-box center\">\n+        <div class=\"content\">\n+            <div class=\"center card\">\n+                <div class=\"center column box\">\n+                    <a href=\"click.html\"><i class=\"bi bi-chevron-double-right\"></i>Jumpscare<i class=\"bi bi-chevron-double-left\"></i></a><br>\n+                    <a href=\"snake.html\"><i class=\"bi bi-chevron-double-right\"></i>Pong Mini Game<i class=\"bi bi-chevron-double-left\"></i></a>\n+                </div>\n+            </div>\n+        </div>\n+        <div class=\"content\">\n+            <div class=\"center card\">\n+                <div class=\"center column box\">\n+                    <p>Hello</p>\n+                    <p>I am Tijl Pleuger</p>\n+                    <p>I am 22 years of age</p>\n+                    <p>Ask me for help but only when I am not busy</p>\n+                </div>\n+            </div>\n+        </div>\n+        <div class=\"content\">\n+            <div class=\"center card\">\n+                <div class=\"center box\">\n+                    <p>I'm also not sure what we have to do so click the link on my left</p>\n+                </div>\n+            </div>\n+        </div>\n+        <div class=\"content\">\n+            <div class=\"center card\">\n+                <div class=\"center box\"></div>\n+            </div>\n+        </div>\n+        <div class=\"content\">\n+            <div class=\"center card\">\n+                <div class=\"center box\"></div>\n+            </div>\n+        </div>\n+        <div class=\"content\">\n+            <div class=\"center card\">\n+                <div class=\"center column box\">\n+                    <p>Click for my website I made in the summer</p>\n+                    <p><a href=\"https://headbodyscript.github.io/\"><i class=\"bi bi-chevron-double-right\"></i>headbodyscript<i class=\"bi bi-chevron-double-left\"></i></a></p>\n+                </div>\n+            </div>\n+        </div>\n     </div>\n-\n-    <div class=\"center cards px-4 py-4 px py\">\n-        <a> I'm also not sure what we have to do so click the link on my left </a>\n+    <div class=\"box center\" style=\"margin-top: 8px;\">\n+        <footer class=\"footer center column\">\n+            <p>Click for my website I made in the summer</p>\n+            <p><a href=\"https://headbodyscript.github.io/\">www.headbodyscript.com</a></p>\n+        </footer>\n     </div>\n-\n-    <div class=\"center cards px-4 py-4 px py\" id=\"meow\">\n-        <a>these</a>\n-    </div>\n-\n-    <div class=\"center cards px-4 py-4 px py\">\n-        <a>are</a>\n-    </div>\n-\n-    <div class=\"center cards px-4 py-4 px py\">\n-        <a>flex</a>\n-    </div>\n-\n-    <footer class=\"footer\">\n-        <p>Click for my website I made in the summer</p>\n-        <p><a href=\"https://headbodyscript.github.io/\">www.headbodyscript.com</a></p>\n-    </footer>\n-</div>\n-\n-<script src=\"json.js\"></script>\n-</body>\n-</html>\n\\ No newline at end of file\n+  </body>\n+</html>"
+                },
+                {
+                    "sha": "505bda10faa406600a2c034007de92a0df07ed65",
+                    "filename": "new.css",
+                    "status": "removed",
+                    "additions": 0,
+                    "deletions": 16,
+                    "changes": 16,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/new.css",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/new.css",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/new.css?ref=4ffcaa41620e87ee8da66017e8fedbe342b4bb86",
+                    "patch": "@@ -1,16 +0,0 @@\n-body {\n-    background-image: url(\"img.png\");\n-    background-color: #cccccc;\n-    background-repeat: no-repeat;\n-    background-attachment: fixed;\n-    background-size: cover;\n-   }\n-\n-.center {\n-  position: absolute;\n-  top: 50%;\n-  left: 50%;\n-  transform: translate(-50%, -50%);\n-  font-size: 200px;\n-  }\n-"
+                },
+                {
+                    "sha": "fcdbb91b1131991f6a9947fba9c82979cf26f2a7",
+                    "filename": "pong.html",
+                    "status": "removed",
+                    "additions": 0,
+                    "deletions": 171,
+                    "changes": 171,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/pong.html",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/4ffcaa41620e87ee8da66017e8fedbe342b4bb86/pong.html",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/pong.html?ref=4ffcaa41620e87ee8da66017e8fedbe342b4bb86",
+                    "patch": "@@ -1,171 +0,0 @@\n-<!DOCTYPE html>\n-<html>\n-<head>\n-  <title>Basic Snake HTML Game</title>\n-  <meta charset=\"UTF-8\">\n-  <style>\n-  html, body {\n-    height: 100%;\n-    margin: 0;\n-  }\n-\n-  body {\n-    background: black;\n-    display: flex;\n-    align-items: center;\n-    justify-content: center;\n-  }\n-  canvas {\n-    border: 1px solid white;\n-  }\n-  </style>\n-</head>\n-<body>\n-<canvas width=\"400\" height=\"400\" id=\"game\"></canvas>\n-<script>\n-var canvas = document.getElementById('game');\n-var context = canvas.getContext('2d');\n-\n-// the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work\n-// (e.g. 16 * 25 = 400)\n-var grid = 16;\n-var count = 0;\n-\n-var snake = {\n-  x: 160,\n-  y: 160,\n-\n-  // snake velocity. moves one grid length every frame in either the x or y direction\n-  dx: grid,\n-  dy: 0,\n-\n-  // keep track of all grids the snake body occupies\n-  cells: [],\n-\n-  // length of the snake. grows when eating an apple\n-  maxCells: 4\n-};\n-var apple = {\n-  x: 320,\n-  y: 320\n-};\n-\n-// get random whole numbers in a specific range\n-// @see https://stackoverflow.com/a/1527820/2124254\n-function getRandomInt(min, max) {\n-  return Math.floor(Math.random() * (max - min)) + min;\n-}\n-\n-// game loop\n-function loop() {\n-  requestAnimationFrame(loop);\n-\n-  // slow game loop to 15 fps instead of 60 (60/15 = 4)\n-  if (++count < 4) {\n-    return;\n-  }\n-\n-  count = 0;\n-  context.clearRect(0,0,canvas.width,canvas.height);\n-\n-  // move snake by it's velocity\n-  snake.x += snake.dx;\n-  snake.y += snake.dy;\n-\n-  // wrap snake position horizontally on edge of screen\n-  if (snake.x < 0) {\n-    snake.x = canvas.width - grid;\n-  }\n-  else if (snake.x >= canvas.width) {\n-    snake.x = 0;\n-  }\n-\n-  // wrap snake position vertically on edge of screen\n-  if (snake.y < 0) {\n-    snake.y = canvas.height - grid;\n-  }\n-  else if (snake.y >= canvas.height) {\n-    snake.y = 0;\n-  }\n-\n-  // keep track of where snake has been. front of the array is always the head\n-  snake.cells.unshift({x: snake.x, y: snake.y});\n-\n-  // remove cells as we move away from them\n-  if (snake.cells.length > snake.maxCells) {\n-    snake.cells.pop();\n-  }\n-\n-  // draw apple\n-  context.fillStyle = 'red';\n-  context.fillRect(apple.x, apple.y, grid-1, grid-1);\n-\n-  // draw snake one cell at a time\n-  context.fillStyle = 'green';\n-  snake.cells.forEach(function(cell, index) {\n-\n-    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is\n-    context.fillRect(cell.x, cell.y, grid-1, grid-1);\n-\n-    // snake ate apple\n-    if (cell.x === apple.x && cell.y === apple.y) {\n-      snake.maxCells++;\n-\n-      // canvas is 400x400 which is 25x25 grids\n-      apple.x = getRandomInt(0, 25) * grid;\n-      apple.y = getRandomInt(0, 25) * grid;\n-    }\n-\n-    // check collision with all cells after this one (modified bubble sort)\n-    for (var i = index + 1; i < snake.cells.length; i++) {\n-\n-      // snake occupies same space as a body part. reset game\n-      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {\n-        snake.x = 160;\n-        snake.y = 160;\n-        snake.cells = [];\n-        snake.maxCells = 4;\n-        snake.dx = grid;\n-        snake.dy = 0;\n-\n-        apple.x = getRandomInt(0, 25) * grid;\n-        apple.y = getRandomInt(0, 25) * grid;\n-      }\n-    }\n-  });\n-}\n-\n-// listen to keyboard events to move the snake\n-document.addEventListener('keydown', function(e) {\n-  // prevent snake from backtracking on itself by checking that it's\n-  // not already moving on the same axis (pressing left while moving\n-  // left won't do anything, and pressing right while moving left\n-  // shouldn't let you collide with your own body)\n-\n-  // left arrow key\n-  if (e.which === 37 && snake.dx === 0) {\n-    snake.dx = -grid;\n-    snake.dy = 0;\n-  }\n-  // up arrow key\n-  else if (e.which === 38 && snake.dy === 0) {\n-    snake.dy = -grid;\n-    snake.dx = 0;\n-  }\n-  // right arrow key\n-  else if (e.which === 39 && snake.dx === 0) {\n-    snake.dx = grid;\n-    snake.dy = 0;\n-  }\n-  // down arrow key\n-  else if (e.which === 40 && snake.dy === 0) {\n-    snake.dy = grid;\n-    snake.dx = 0;\n-  }\n-});\n-\n-// start the game\n-requestAnimationFrame(loop);\n-</script>\n-</body>\n-</html>\n\\ No newline at end of file"
+                },
+                {
+                    "sha": "cd4544957f24b05a98c39fc005a1c52f532a27e2",
+                    "filename": "snake.html",
+                    "status": "added",
+                    "additions": 12,
+                    "deletions": 0,
+                    "changes": 12,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/blob/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/snake.html",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-1/raw/675f49866306d8e773e65f2e97e5fb5ce3b8a44d/snake.html",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-1/contents/snake.html?ref=675f49866306d8e773e65f2e97e5fb5ce3b8a44d",
+                    "patch": "@@ -0,0 +1,12 @@\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+  <head>\n+    <title>HeadBodyScript || Snake</title>\n+    <link rel=\"stylesheet\" href=\"assets/css/snake.css\" />\n+    <meta charset=\"UTF-8\">\n+  </head>\n+  <body>\n+    <canvas width=\"400\" height=\"400\" id=\"game\"></canvas>\n+    <script src=\"assets/js/snake.js\"></script>\n+  </body>\n+</html>"
+                }
+            ]
+        },
+        {
+            "sha": "806f967620853ee48ba2420450de8fe6efe5cd50",
+            "node_id": "C_kwDOKSAAFdoAKDgwNmY5Njc2MjA4NTNlZTQ4YmEyNDIwNDUwZGU4ZmU2ZWZlNWNkNTA",
+            "commit": {
+                "author": {
+                    "name": "IHeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-22T12:50:40Z"
+                },
+                "committer": {
+                    "name": "IHeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-22T12:50:40Z"
+                },
+                "message": "Update",
+                "tree": {
+                    "sha": "bd7a2e9b0be2226b556bcec722a9b5c32216e5c6",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/git/trees/bd7a2e9b0be2226b556bcec722a9b5c32216e5c6"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/git/commits/806f967620853ee48ba2420450de8fe6efe5cd50",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/commits/806f967620853ee48ba2420450de8fe6efe5cd50",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/commit/806f967620853ee48ba2420450de8fe6efe5cd50",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/commits/806f967620853ee48ba2420450de8fe6efe5cd50/comments",
+            "author": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "14f6a9e835fc2b9d739f1302916cc16c2ca9118e",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/commits/14f6a9e835fc2b9d739f1302916cc16c2ca9118e",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/commit/14f6a9e835fc2b9d739f1302916cc16c2ca9118e"
+                }
+            ],
+            "stats": {
+                "total": 0,
+                "additions": 0,
+                "deletions": 0
+            },
+            "files": [
+                {
+                    "sha": "858123fbc824f363f9cefed2365695b721edd625",
+                    "filename": "Documentation/Opdracht-Tijl-Pleuger.txt",
+                    "status": "renamed",
+                    "additions": 0,
+                    "deletions": 0,
+                    "changes": 0,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/blob/806f967620853ee48ba2420450de8fe6efe5cd50/Documentation%2FOpdracht-Tijl-Pleuger.txt",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/raw/806f967620853ee48ba2420450de8fe6efe5cd50/Documentation%2FOpdracht-Tijl-Pleuger.txt",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/contents/Documentation%2FOpdracht-Tijl-Pleuger.txt?ref=806f967620853ee48ba2420450de8fe6efe5cd50",
+                    "previous_filename": "docs/Opdracht-Tijl-Pleuger.txt"
+                },
+                {
+                    "sha": "1c637933c4e777cded17583104a3cb7b5d0d02e5",
+                    "filename": "Documentation/mock-up-index.png",
+                    "status": "renamed",
+                    "additions": 0,
+                    "deletions": 0,
+                    "changes": 0,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/blob/806f967620853ee48ba2420450de8fe6efe5cd50/Documentation%2Fmock-up-index.png",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/raw/806f967620853ee48ba2420450de8fe6efe5cd50/Documentation%2Fmock-up-index.png",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/contents/Documentation%2Fmock-up-index.png?ref=806f967620853ee48ba2420450de8fe6efe5cd50",
+                    "previous_filename": "docs/mock-up-index.png"
+                },
+                {
+                    "sha": "563a565079989092fe157834e1e3853d4559a1c4",
+                    "filename": "Documentation/mock-up-store.png",
+                    "status": "renamed",
+                    "additions": 0,
+                    "deletions": 0,
+                    "changes": 0,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/blob/806f967620853ee48ba2420450de8fe6efe5cd50/Documentation%2Fmock-up-store.png",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-2/raw/806f967620853ee48ba2420450de8fe6efe5cd50/Documentation%2Fmock-up-store.png",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-2/contents/Documentation%2Fmock-up-store.png?ref=806f967620853ee48ba2420450de8fe6efe5cd50",
+                    "previous_filename": "docs/mock-up-store.png"
+                }
+            ]
+        },
+        {
+            "sha": "0c93d481a4a50df4cf679547b3e85147cdc0a56f",
+            "node_id": "C_kwDOKe0xJNoAKDBjOTNkNDgxYTRhNTBkZjRjZjY3OTU0N2IzZTg1MTQ3Y2RjMGE1NmY",
+            "commit": {
+                "author": {
+                    "name": "400927-VISTA",
+                    "email": "144672475+Tijl-Pleuger-Vista@users.noreply.github.com",
+                    "date": "2023-10-30T12:43:52Z"
+                },
+                "committer": {
+                    "name": "GitHub",
+                    "email": "noreply@github.com",
+                    "date": "2023-10-30T12:43:52Z"
+                },
+                "message": "readme",
+                "tree": {
+                    "sha": "7c752208e27c7a9347f5c996a18fa5b6c35d142f",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-3/git/trees/7c752208e27c7a9347f5c996a18fa5b6c35d142f"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-3/git/commits/0c93d481a4a50df4cf679547b3e85147cdc0a56f",
+                "comment_count": 0,
+                "verification": {
+                    "verified": true,
+                    "reason": "valid",
+                    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJlP6UICRBK7hj4Ov3rIwAA6mEIAG0l584ivEhSCmwQFK41Vhsz\nx2WBeDXRhySggRXcrgpd5wv7S38zk8NMeorq9b458oCxYmqQcKBx8sMNLWDSIkyx\nz0C4noo6C5/5OFZh8+cjUYjk0NWbuwyaoS0VaWcrJ20OqLej5kw0A6Krry18mUhX\novJd1AzH5fUIl/pYH0zhBiao1bFz4B1IvCq7Jt6WdPNd9BtuhFI0EQ/xzciOZk1+\nST5qyshcmHDH1n+rcZ1qO+XmpBC+yg8urTPsODUVoOiRbxxEGKYgcIFQLDJ0IJKK\nltv5qqvsUNbpG6OZ8A34kLBrgBe1/JhmlUkO/ulyhT89scVmYgV0d/cIfnQjBhc=\n=uC3U\n-----END PGP SIGNATURE-----\n",
+                    "payload": "tree 7c752208e27c7a9347f5c996a18fa5b6c35d142f\nparent 4e06ff544654f47d6e6e1be9cc949f81fb9ca785\nauthor 400927-VISTA <144672475+Tijl-Pleuger-Vista@users.noreply.github.com> 1698669832 +0100\ncommitter GitHub <noreply@github.com> 1698669832 +0100\n\nreadme"
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-3/commits/0c93d481a4a50df4cf679547b3e85147cdc0a56f",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-3/commit/0c93d481a4a50df4cf679547b3e85147cdc0a56f",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-3/commits/0c93d481a4a50df4cf679547b3e85147cdc0a56f/comments",
+            "author": {
+                "login": "Tijl-Pleuger-Vista",
+                "id": 144672475,
+                "node_id": "U_kgDOCJ-G2w",
+                "avatar_url": "https://avatars.githubusercontent.com/u/144672475?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/Tijl-Pleuger-Vista",
+                "html_url": "https://github.com/Tijl-Pleuger-Vista",
+                "followers_url": "https://api.github.com/users/Tijl-Pleuger-Vista/followers",
+                "following_url": "https://api.github.com/users/Tijl-Pleuger-Vista/following{/other_user}",
+                "gists_url": "https://api.github.com/users/Tijl-Pleuger-Vista/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/Tijl-Pleuger-Vista/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/Tijl-Pleuger-Vista/subscriptions",
+                "organizations_url": "https://api.github.com/users/Tijl-Pleuger-Vista/orgs",
+                "repos_url": "https://api.github.com/users/Tijl-Pleuger-Vista/repos",
+                "events_url": "https://api.github.com/users/Tijl-Pleuger-Vista/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/Tijl-Pleuger-Vista/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "web-flow",
+                "id": 19864447,
+                "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+                "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/web-flow",
+                "html_url": "https://github.com/web-flow",
+                "followers_url": "https://api.github.com/users/web-flow/followers",
+                "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+                "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+                "organizations_url": "https://api.github.com/users/web-flow/orgs",
+                "repos_url": "https://api.github.com/users/web-flow/repos",
+                "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/web-flow/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "4e06ff544654f47d6e6e1be9cc949f81fb9ca785",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-3/commits/4e06ff544654f47d6e6e1be9cc949f81fb9ca785",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-3/commit/4e06ff544654f47d6e6e1be9cc949f81fb9ca785"
+                }
+            ],
+            "stats": {
+                "total": 1,
+                "additions": 1,
+                "deletions": 0
+            },
+            "files": [
+                {
+                    "sha": "3af706638c36923f975c58ceef8e2a6501a0a45d",
+                    "filename": "README.md",
+                    "status": "added",
+                    "additions": 1,
+                    "deletions": 0,
+                    "changes": 1,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-3/blob/0c93d481a4a50df4cf679547b3e85147cdc0a56f/README.md",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-3/raw/0c93d481a4a50df4cf679547b3e85147cdc0a56f/README.md",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-3/contents/README.md?ref=0c93d481a4a50df4cf679547b3e85147cdc0a56f",
+                    "patch": "@@ -0,0 +1 @@\n+The last challenge + bonus content"
+                }
+            ]
+        },
+        {
+            "sha": "b2bfb0e864ed33eaa7db0ac70751d94c001e0c86",
+            "node_id": "C_kwDOKe06H9oAKGIyYmZiMGU4NjRlZDMzZWFhN2RiMGFjNzA3NTFkOTRjMDAxZTBjODY",
+            "commit": {
+                "author": {
+                    "name": "400927-VISTA",
+                    "email": "144672475+Tijl-Pleuger-Vista@users.noreply.github.com",
+                    "date": "2024-05-13T12:23:44Z"
+                },
+                "committer": {
+                    "name": "GitHub",
+                    "email": "noreply@github.com",
+                    "date": "2024-05-13T12:23:44Z"
+                },
+                "message": "Update README.md",
+                "tree": {
+                    "sha": "c377b57eef4e6ab0d2548f0e49eca84ee651b25d",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-4/git/trees/c377b57eef4e6ab0d2548f0e49eca84ee651b25d"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-4/git/commits/b2bfb0e864ed33eaa7db0ac70751d94c001e0c86",
+                "comment_count": 0,
+                "verification": {
+                    "verified": true,
+                    "reason": "valid",
+                    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJmQgZRCRC1aQ7uu5UhlAAAOL8QAGlJmfxwKlbVWqxjpPN0PSSh\nodsA01GuRuVI3o4EHb/FgTPd3GVvpN3CrKV2khD39CcBZj+L6ja7swKi64GVqtuS\nAOoqdqqmsWvz+oyhKgo4zfwf5JEsxU5IXA5kQNO8qQXtD1ytfE/pGjC9cUWciIgw\nqc+NOHt2B0dZb4Yp9wc102wKt5PwOTRPaN4BUww8be91/4D50ICp2UHMUGpnNVbU\ny4xLQiaPUYkPpdTfWmhpGxr2R/b36MKtFprdZDwJgmPsjCB2snMyjOrMzJ5qNg/J\nwoVt8TCy6bJ2/EDsOQskfidwYkRJ4a+ZyaGHHsRmoTylZbAhfxRpjibATFa7A9KS\nPpO9tBuUvuX17MPvOgB6RHcaCSluBfdLA5K6GpWQh6FoUmBuGEFEOJ0xmTGP2kUQ\npZLdIpM3HZO6t5KUyBwpdQ5W9tzHaZFX+rKyIaARH/TS1ZK6ib2jKEWUNXnzrnCx\nRe2R33ij8CReZST4BK+ejLRw0+s86pjEyoKQkQafZbCx8P/fb9yCxdo1sF1jlHvJ\nPrdQc9XDU7ynGbhUAbWogmO7Orw4mtyUuacrgu0qvMiiUcoafN4cfGdd3evklSLw\n46BCj6k2ZiyUc4hIWeo92obbUNa04vKQN/LYSI0TtVacKIvrzhWBzApL5EpZ0spT\nh1WaO3x+tG2NXk+QiJZt\n=ET+c\n-----END PGP SIGNATURE-----\n",
+                    "payload": "tree c377b57eef4e6ab0d2548f0e49eca84ee651b25d\nparent 3321cf85204001adbeba31217f208348738bea3e\nauthor 400927-VISTA <144672475+Tijl-Pleuger-Vista@users.noreply.github.com> 1715603024 +0200\ncommitter GitHub <noreply@github.com> 1715603024 +0200\n\nUpdate README.md"
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-4/commits/b2bfb0e864ed33eaa7db0ac70751d94c001e0c86",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-4/commit/b2bfb0e864ed33eaa7db0ac70751d94c001e0c86",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-4/commits/b2bfb0e864ed33eaa7db0ac70751d94c001e0c86/comments",
+            "author": {
+                "login": "Tijl-Pleuger-Vista",
+                "id": 144672475,
+                "node_id": "U_kgDOCJ-G2w",
+                "avatar_url": "https://avatars.githubusercontent.com/u/144672475?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/Tijl-Pleuger-Vista",
+                "html_url": "https://github.com/Tijl-Pleuger-Vista",
+                "followers_url": "https://api.github.com/users/Tijl-Pleuger-Vista/followers",
+                "following_url": "https://api.github.com/users/Tijl-Pleuger-Vista/following{/other_user}",
+                "gists_url": "https://api.github.com/users/Tijl-Pleuger-Vista/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/Tijl-Pleuger-Vista/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/Tijl-Pleuger-Vista/subscriptions",
+                "organizations_url": "https://api.github.com/users/Tijl-Pleuger-Vista/orgs",
+                "repos_url": "https://api.github.com/users/Tijl-Pleuger-Vista/repos",
+                "events_url": "https://api.github.com/users/Tijl-Pleuger-Vista/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/Tijl-Pleuger-Vista/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "web-flow",
+                "id": 19864447,
+                "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+                "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/web-flow",
+                "html_url": "https://github.com/web-flow",
+                "followers_url": "https://api.github.com/users/web-flow/followers",
+                "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+                "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+                "organizations_url": "https://api.github.com/users/web-flow/orgs",
+                "repos_url": "https://api.github.com/users/web-flow/repos",
+                "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/web-flow/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "3321cf85204001adbeba31217f208348738bea3e",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-4/commits/3321cf85204001adbeba31217f208348738bea3e",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-4/commit/3321cf85204001adbeba31217f208348738bea3e"
+                }
+            ],
+            "stats": {
+                "total": 20,
+                "additions": 3,
+                "deletions": 17
+            },
+            "files": [
+                {
+                    "sha": "5dd00feffd37b5b2f608eefd473f670acea5515b",
+                    "filename": "README.md",
+                    "status": "modified",
+                    "additions": 3,
+                    "deletions": 17,
+                    "changes": 20,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-4/blob/b2bfb0e864ed33eaa7db0ac70751d94c001e0c86/README.md",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-4/raw/b2bfb0e864ed33eaa7db0ac70751d94c001e0c86/README.md",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-4/contents/README.md?ref=b2bfb0e864ed33eaa7db0ac70751d94c001e0c86",
+                    "patch": "@@ -1,18 +1,4 @@\n-Project [4]\n-Create a portfolio\n+# Create a portfolio website\n+*Challenge 4*<br>\n \n-Must haves:\n-.Phone compatible\n-.All projects made at the education\n-\n-Should have:\n-.All projects stored on GitHub Repositories\n-.Dark / Light mode\n-\n-Could haves:\n-.github API int to display all Repositories dynamically using fetch\n-.Static version for browsers that do not use .js\n-.Use Local Storage to save API response for 30 minutes to reduce stress on the API and reduce risk of API blocking requests\n-\n-Wont haves:\n-.A boring site\n+Create a portfolio website that contains your work made at Vista"
+                }
+            ]
+        },
+        {
+            "sha": "1f2e8b145d7c5ef2dabf03df6e9bc774f836e222",
+            "node_id": "C_kwDOKj2jKtoAKDFmMmU4YjE0NWQ3YzVlZjJkYWJmMDNkZjZlOWJjNzc0ZjgzNmUyMjI",
+            "commit": {
+                "author": {
+                    "name": "400927-VISTA",
+                    "email": "144672475+Tijl-Pleuger-Vista@users.noreply.github.com",
+                    "date": "2024-05-13T12:37:00Z"
+                },
+                "committer": {
+                    "name": "GitHub",
+                    "email": "noreply@github.com",
+                    "date": "2024-05-13T12:37:00Z"
+                },
+                "message": "Update README.md",
+                "tree": {
+                    "sha": "0434630f2f0a6bb7e852329f764817e844b0e244",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-5/git/trees/0434630f2f0a6bb7e852329f764817e844b0e244"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-5/git/commits/1f2e8b145d7c5ef2dabf03df6e9bc774f836e222",
+                "comment_count": 0,
+                "verification": {
+                    "verified": true,
+                    "reason": "valid",
+                    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJmQglsCRC1aQ7uu5UhlAAAKcAQAChHQDxCLjyLNxg8eDn2Sp5l\n+DUAQ5gc95GWZRUU97YMbzM5RftE2kvUs6/kBHjbq4zrRfqY3TUQFX5S9yHxRGUu\nvbDI8cSPIhw742MbZBD6+XIT0lSUDZn0/2zPvHdDuuLFTJ9n9QPcxJJrghWj9cc3\n0QAAMP9Z9mFztElvMrJBFq5IKvtE5DIJycV/neqv3TbqfdFHY4Rp+sKLr6G0CVGA\nbQEn4kZ0mhz+Zs7L8BI4RbF333goBw+DYiZvA8PcGp53tRNc8XnRt5Nr2TkBqhvV\nQspHxRt8ppgh8NFUCgpa1LL9akfFZtbEDQs3MDT3f6mdrxS6HloXi/2+3Rl1hIQF\nrBYDcKf8mr22/dCcZ4QtiokPJ0KO4i1Kc8Ven2hMbJyKd7xKgtBrhzfZ35mFW1Pz\nQAiYOCe8lcGBHm+ue1PgxTukcrHhRYbdtyQdWYlCMTttzukgIOc68dOPV1YkrXnX\nX8+QdBrOH58FNMP4GX3iPgC7kJz/xvdd1rJRllbrj6MWx5gUbhDi/Zz/J9NfpC1T\nN75Lezckwj8O9oGjgmDkGvuM1IuErPAkhoMdBpKYbcc2su6ShBzn9r6uHYhnW/em\nR57Y2+VMRh7BK26FkE9k1/jOzHWK5uNolG2er85IaTHzSCA38cMZMb9JsShkEh3u\nRRrI8415tnbkA4MuHiL7\n=KxLS\n-----END PGP SIGNATURE-----\n",
+                    "payload": "tree 0434630f2f0a6bb7e852329f764817e844b0e244\nparent 77f5ced19cc6387ffe190f06e09bd6126318bc37\nauthor 400927-VISTA <144672475+Tijl-Pleuger-Vista@users.noreply.github.com> 1715603820 +0200\ncommitter GitHub <noreply@github.com> 1715603820 +0200\n\nUpdate README.md"
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-5/commits/1f2e8b145d7c5ef2dabf03df6e9bc774f836e222",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-5/commit/1f2e8b145d7c5ef2dabf03df6e9bc774f836e222",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-5/commits/1f2e8b145d7c5ef2dabf03df6e9bc774f836e222/comments",
+            "author": {
+                "login": "Tijl-Pleuger-Vista",
+                "id": 144672475,
+                "node_id": "U_kgDOCJ-G2w",
+                "avatar_url": "https://avatars.githubusercontent.com/u/144672475?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/Tijl-Pleuger-Vista",
+                "html_url": "https://github.com/Tijl-Pleuger-Vista",
+                "followers_url": "https://api.github.com/users/Tijl-Pleuger-Vista/followers",
+                "following_url": "https://api.github.com/users/Tijl-Pleuger-Vista/following{/other_user}",
+                "gists_url": "https://api.github.com/users/Tijl-Pleuger-Vista/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/Tijl-Pleuger-Vista/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/Tijl-Pleuger-Vista/subscriptions",
+                "organizations_url": "https://api.github.com/users/Tijl-Pleuger-Vista/orgs",
+                "repos_url": "https://api.github.com/users/Tijl-Pleuger-Vista/repos",
+                "events_url": "https://api.github.com/users/Tijl-Pleuger-Vista/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/Tijl-Pleuger-Vista/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "web-flow",
+                "id": 19864447,
+                "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+                "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/web-flow",
+                "html_url": "https://github.com/web-flow",
+                "followers_url": "https://api.github.com/users/web-flow/followers",
+                "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+                "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+                "organizations_url": "https://api.github.com/users/web-flow/orgs",
+                "repos_url": "https://api.github.com/users/web-flow/repos",
+                "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/web-flow/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "77f5ced19cc6387ffe190f06e09bd6126318bc37",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-5/commits/77f5ced19cc6387ffe190f06e09bd6126318bc37",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-5/commit/77f5ced19cc6387ffe190f06e09bd6126318bc37"
+                }
+            ],
+            "stats": {
+                "total": 66,
+                "additions": 30,
+                "deletions": 36
+            },
+            "files": [
+                {
+                    "sha": "a3356c1974094e90c2ff7d44c38b65d8e78d3497",
+                    "filename": "README.md",
+                    "status": "modified",
+                    "additions": 30,
+                    "deletions": 36,
+                    "changes": 66,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-5/blob/1f2e8b145d7c5ef2dabf03df6e9bc774f836e222/README.md",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-5/raw/1f2e8b145d7c5ef2dabf03df6e9bc774f836e222/README.md",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-5/contents/README.md?ref=1f2e8b145d7c5ef2dabf03df6e9bc774f836e222",
+                    "patch": "@@ -1,39 +1,33 @@\n-SD | Challenge Pokedex voor UrbanEats & Spirits\n-\n-Challenge: https://padlet.com/ictlyceum/sd-challenge-pokedex-voor-urbaneats-spirits-fzq9c288y3lfb4we\n-\n-What is the goal: Create a PokeDex\n-\n-What is a pokedex?\n-an electronic device designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game, anime and manga series\n-\n-\n-> Functions:\n-- Database protected by password so the user can access their own pokemon online\n-- See other users + their pokemon near your location\n-- Challenge users with your own pokemon\n-- A simple game where you can earn pokemon and fight other users\n-- Scan a card with an NFC to gain loot boxes (After a purchase you get loot boxes that contain a random item or pokemon) => small chance for shiny\n-- Read, edit and write on the database using an API + key\n-\n-> Components\n-- Login/out\n-- Database\n-- NFC\n-- API\n-\n-> Notes\n-The game -> old school pokemon turn based fighting\n-Customer gets card linked to an account\n-When a customer has ordered something they can give their card to gain loot boxes sent to their account\n-Loot boxes give a random pokemon after opening\n-Loot boxes look like pokeballs\n-Use crud to interact with mysql (create new pokemons. Give lootboxes to accounts)\n-Can use the pokeApi to gain info so we don't have to update our database : https://pokeapi.co/api/v2/pokemon/dipplin / https://pokeapi.co/\n-\n-User-database name + password + UUID + Key\n-Key is used to edit database information (For example your Display name, pokemon nicknames or such)\n-UUID is used to read Personal-Pokemon-database (List of all pokemon the user has)\n+# Create a portfolio website\n+*Challenge 4*<br>\n+\n+Create a portfolio website that contains your work made at Vista\n+![ICON](icon.png)<br>\n+[Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)<br>\n+[Padlet](https://padlet.com/ictlyceum/sd-challenge-pokedex-voor-urbaneats-spirits-fzq9c288y3lfb4we)<br>\n+\n+---\n+### Functions\n+- Password protected users (encrypted)\n+- Database so can access their own pokémon online (Local DB)\n+- See other users and their pokemon near your location (Location API)\n+- Challenge users with your own pokémon\n+- A way to earn Pokémon by playing a game\n+- Scan a card with an NFC to gain loot boxes (After a purchase at the store you earn loot boxes that contain a random item or pokemon. This may include a small chance for shiny Pokémon)\n+- Read, write and edit on the database using an API + key\n+\n+### Notes\n+- The game will be a turn-based RPG game played inside the browser\n+- Users recieve a lootbox at a purchase at the store\n+- Loot boxes contain a random pokemon after opening\n+- Loot boxes look like pokeballs\n+- Use crud to interact with mysql\n+- Use the pokeApi to gain info so we don't have to update our database\n+[Poké API](https://pokeapi.co/api/v2/pokemon/dipplin)<br>\n+\n+- DB_User $name + $password + $UUID + $Key\n+- The key is used to edit user information inside the database\n+- UUID is used to read Personal-Pokemon-database (List of all pokemon the user has)\n \n When a user clicks on a pokemon they get taken to an \"extra info\" screen where information will be displayed about the clicked on pokemon using the PokeAPI\n "
+                }
+            ]
+        },
+        {
+            "sha": "5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+            "node_id": "C_kwDOK16hYdoAKDVhZWFiYzQ1YTkzYWIyYmExMjE1ZGUxYzMyYzRhMGZjMWVjZDM5NWM",
+            "commit": {
+                "author": {
+                    "name": "HeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-23T17:10:42Z"
+                },
+                "committer": {
+                    "name": "HeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-23T17:10:42Z"
+                },
+                "message": "Update",
+                "tree": {
+                    "sha": "f996c4adf0be766fc1211cbad3c7ad4c4b05eb14",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/git/trees/f996c4adf0be766fc1211cbad3c7ad4c4b05eb14"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/git/commits/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/commits/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/commit/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/commits/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/comments",
+            "author": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "66283b3531e86b45fd19ac9cf6982b4e4e60103b",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/commits/66283b3531e86b45fd19ac9cf6982b4e4e60103b",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/commit/66283b3531e86b45fd19ac9cf6982b4e4e60103b"
+                }
+            ],
+            "stats": {
+                "total": 49,
+                "additions": 34,
+                "deletions": 15
+            },
+            "files": [
+                {
+                    "sha": "8c313fca75d22dc8c4fd7c79ff0e8ce6132d1fae",
+                    "filename": "app/assets/css/game/app.css",
+                    "status": "modified",
+                    "additions": 11,
+                    "deletions": 0,
+                    "changes": 11,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/blob/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fassets%2Fcss%2Fgame%2Fapp.css",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/raw/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fassets%2Fcss%2Fgame%2Fapp.css",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/contents/app%2Fassets%2Fcss%2Fgame%2Fapp.css?ref=5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+                    "patch": "@@ -378,4 +378,15 @@ circle {\n     margin-left: 10px;\n     text-decoration: underline;\n     /* text-decoration-color: green; */\n+}\n+\n+.bar{\n+    margin-top: 8px;\n+    width: 200px;\n+    height: 10px;\n+    border: 1px black solid;\n+}\n+.perc{\n+    height: 10px;\n+    background-color: aquamarine;\n }\n\\ No newline at end of file"
+                },
+                {
+                    "sha": "1f3ab5c38420cc670476a280daa80c65f5dca417",
+                    "filename": "app/assets/js/game/Fighter.js",
+                    "status": "modified",
+                    "additions": 3,
+                    "deletions": 1,
+                    "changes": 4,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/blob/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fassets%2Fjs%2Fgame%2FFighter.js",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/raw/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fassets%2Fjs%2Fgame%2FFighter.js",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/contents/app%2Fassets%2Fjs%2Fgame%2FFighter.js?ref=5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+                    "patch": "@@ -2,6 +2,8 @@ import Sprite from './Sprite.js'\n \n let checkJson = JSON.parse(localStorage.getItem(\"json\"));\n \n+var jsonLength = 100 / checkJson.questions.length\n+\n const canvas = document.querySelector('canvas');\n \n canvas.width = 350;\n@@ -46,7 +48,7 @@ class Fighter extends Sprite {\n             setTimeout(() => { this.attackCooldown = true }, 1000)\n             this.switchSprite('attack')\n             if (this.isHitting(antagonistFighter)) {\n-                antagonistFighter.health -= 10;\n+                antagonistFighter.health -= jsonLength;\n                 gsap.to('#' + antagonistFighter.name + 'Health', { width: antagonistFighter.health + '%' });\n                 antagonistFighter.switchSprite('takehit');\n                 antagonistFighter.isTakingHit = true;"
+                },
+                {
+                    "sha": "e4c7a0c13edecfc2afa3e2e85ab5a8a2532da35c",
+                    "filename": "app/assets/js/game/score.js",
+                    "status": "modified",
+                    "additions": 14,
+                    "deletions": 12,
+                    "changes": 26,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/blob/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fassets%2Fjs%2Fgame%2Fscore.js",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/raw/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fassets%2Fjs%2Fgame%2Fscore.js",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/contents/app%2Fassets%2Fjs%2Fgame%2Fscore.js?ref=5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+                    "patch": "@@ -13,30 +13,32 @@ let checkData = JSON.parse(localStorage.getItem(\"data\"));\n \n var amount = checkData.amount\n var total = checkData.total\n-\n+console.log(checkData)\n var amount = amount * 10\n var total = total * 10\n \n-var calc = (100 * amount) / total;\n-\n+var calcpre = 100 - ((100 * amount) / total);\n+var calc = Math.round(calcpre)\n document.getElementById(\"meow\").innerHTML = `<a href=\"${checkJson.init.href}\">Click here to learn more</a>`\n \n var userExperience = 471 - calc - calc\n root.style.setProperty('--experience', userExperience);\n \n-setInterval(() => {\n-    if(countExperience == calc){\n-        clearInterval();\n-    }else{\n-        countExperience += 1;\n-        displayExperience.innerHTML = countExperience + \"%\"; \n-    }\n-},20 );\n+displayExperience.innerHTML = calc + \"%\";\n+document.getElementById('perc').style.width = calc + \"%\"\n+// setInterval(() => {\n+//     if(countExperience == calc){\n+//         clearInterval();\n+//     }else{\n+//         countExperience += 1;\n+//         displayExperience.innerHTML = countExperience + \"%\"; \n+//     }\n+// },20 );\n \n if (calc <= 40) {\n     document.getElementById(\"performance\").innerHTML = `<div class=\"weak\">Weak</div>`\n } else if (calc <= 70){\n     document.getElementById(\"performance\").innerHTML = `<div class=\"strong\">Strong</div>`\n } else if (calc <= 100){\n-    document.getElementById(\"performance\").innerHTML = `<div class=\"very-strong\">Vey strong</div>`\n+    document.getElementById(\"performance\").innerHTML = `<div class=\"very-strong\">Very strong</div>`\n }"
+                },
+                {
+                    "sha": "d9a8d4cee67566779c638c78d7ee1d75b081cd1e",
+                    "filename": "app/game/post-game.html",
+                    "status": "modified",
+                    "additions": 6,
+                    "deletions": 2,
+                    "changes": 8,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/blob/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fgame%2Fpost-game.html",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/Challenge-6/raw/5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c/app%2Fgame%2Fpost-game.html",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/Challenge-6/contents/app%2Fgame%2Fpost-game.html?ref=5aeabc45a93ab2ba1215de1c32c4a0fc1ecd395c",
+                    "patch": "@@ -32,7 +32,8 @@\n     <div class=\"w h center column\">\n         <div id=\"score\"></div>\n         <div>\n-            <div class=\"skill\">\n+            <div id=\"displayExperience\">0%</div>\n+            <!-- <div class=\"skill\">\n                 <div class=\"outer\">\n                     <div class=\"inner column\">\n                         <div id=\"displayExperience\">0%</div>\n@@ -47,7 +48,10 @@\n                     </defs>\n                     <circle cx=\"40\" cy=\"40\" r=\"35\" stroke-linecap=\"round\" />\n                 </svg>\n-            </div>\n+            </div> -->\n+        </div>\n+        <div class=\"bar\">\n+            <div class=\"perc\" id=\"perc\"></div>\n         </div>\n         <div class=\"row mt-20\">\n             <div>Based on your performance your security is</div>"
+                }
+            ]
+        },
+        {
+            "sha": "3422b49c85805d793d650d054e669bb488ecc4c1",
+            "node_id": "C_kwDOKv0tWdoAKDM0MjJiNDljODU4MDVkNzkzZDY1MGQwNTRlNjY5YmI0ODhlY2M0YzE",
+            "commit": {
+                "author": {
+                    "name": "IHeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-23T12:38:53Z"
+                },
+                "committer": {
+                    "name": "IHeadBodyScript",
+                    "email": "106414989+HeadBodyScript@users.noreply.github.com",
+                    "date": "2024-05-23T12:38:53Z"
+                },
+                "message": "Update",
+                "tree": {
+                    "sha": "2b8af9be7630dae33e180968c3af5545c5297249",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/git/trees/2b8af9be7630dae33e180968c3af5545c5297249"
+                },
+                "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/git/commits/3422b49c85805d793d650d054e669bb488ecc4c1",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/commits/3422b49c85805d793d650d054e669bb488ecc4c1",
+            "html_url": "https://github.com/Tijl-Pleuger-Vista/website.github.io/commit/3422b49c85805d793d650d054e669bb488ecc4c1",
+            "comments_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/commits/3422b49c85805d793d650d054e669bb488ecc4c1/comments",
+            "author": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "HeadBodyScript",
+                "id": 106414989,
+                "node_id": "U_kgDOBlfDjQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/106414989?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/HeadBodyScript",
+                "html_url": "https://github.com/HeadBodyScript",
+                "followers_url": "https://api.github.com/users/HeadBodyScript/followers",
+                "following_url": "https://api.github.com/users/HeadBodyScript/following{/other_user}",
+                "gists_url": "https://api.github.com/users/HeadBodyScript/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/HeadBodyScript/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/HeadBodyScript/subscriptions",
+                "organizations_url": "https://api.github.com/users/HeadBodyScript/orgs",
+                "repos_url": "https://api.github.com/users/HeadBodyScript/repos",
+                "events_url": "https://api.github.com/users/HeadBodyScript/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/HeadBodyScript/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "27f31faf17857f77f198190d4848a777f1b2bb7c",
+                    "url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/commits/27f31faf17857f77f198190d4848a777f1b2bb7c",
+                    "html_url": "https://github.com/Tijl-Pleuger-Vista/website.github.io/commit/27f31faf17857f77f198190d4848a777f1b2bb7c"
+                }
+            ],
+            "stats": {
+                "total": 10,
+                "additions": 5,
+                "deletions": 5
+            },
+            "files": [
+                {
+                    "sha": "647b97025742ba762715ffbb2423b8b4143528ac",
+                    "filename": ".firebase/hosting.cHVibGlj.cache",
+                    "status": "modified",
+                    "additions": 4,
+                    "deletions": 4,
+                    "changes": 8,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/website.github.io/blob/3422b49c85805d793d650d054e669bb488ecc4c1/.firebase%2Fhosting.cHVibGlj.cache",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/website.github.io/raw/3422b49c85805d793d650d054e669bb488ecc4c1/.firebase%2Fhosting.cHVibGlj.cache",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/contents/.firebase%2Fhosting.cHVibGlj.cache?ref=3422b49c85805d793d650d054e669bb488ecc4c1",
+                    "patch": "@@ -8,12 +8,12 @@ assets/js/user.js,1716401359236,6a6feb61f333e51d0fc7a723c64212d4c57b589037014a0f\n assets/js/game/Fighter.js,1716401359236,e2da83434f55bc9ceb6e590e824b326bdadfabe72493950578b3914393f6987f\n assets/js/game/index.js,1716401359242,dedb6202b28c39214d342c648470a24513b4563e929f3c2377564489cfaf7f9c\n assets/js/game/score.js,1716401359244,8adb7cd46ed41b86482d1c488b6873c0d3be192be2e67c8bacc2173956cad738\n-assets/js/game/Sprite.js,1716401359236,5d2744448556f510ed272e9ab30a44da8d6eb8372c41ac325d87c364994c37bd\n+assets/js/game/selector.js,1716455719443,633beeaa0b49b015b89e17d95378067282bb278357079631c9c17e8a043703c8\n assets/js/handbook/web.js,1716408214916,a4084f35977b00cacfc908dd0f4f3b88ceeb7c468fa8c9becd9b3f60607f54a3\n assets/js/index/app.js,1716410751014,54805aaaeb54dba1b2312c49fb5ee2333283f52fc801940da35e40e63a8eedc9\n assets/js/index/user.js,1716401359247,0f073fee727d3b7c733fa2847e0f0ea89b2f6f47c1ff5032174f32e54828407b\n-handbook/index.html,1716448160444,45576faebfd4ed4190c5c74527d7c1f3a9d1562508ccae98c5f0e9930257f53f\n game/game.html,1716449065747,503d4c6b286968ab2c2ed47d8594f6c11041c24a04ab38f7a789d8774af2a976\n-game/post-game.html,1716449097413,dd378c43bd758277b692ba3f1fe5d6de7e7aeb26f0950952af3ab11aad74ed19\n game/index.html,1716456355780,47fb693ba8c0bf87301414ce0fdcca5eafe633962bc850125788f24ae08a5ff7\n-assets/js/game/selector.js,1716455719443,633beeaa0b49b015b89e17d95378067282bb278357079631c9c17e8a043703c8\n+game/post-game.html,1716449097413,dd378c43bd758277b692ba3f1fe5d6de7e7aeb26f0950952af3ab11aad74ed19\n+handbook/index.html,1716448160444,45576faebfd4ed4190c5c74527d7c1f3a9d1562508ccae98c5f0e9930257f53f\n+assets/js/game/Sprite.js,1716456682294,58f0437ef06a4ed656859f2a5ea093517d707cba9d2049696e913429ce77ce0c"
+                },
+                {
+                    "sha": "915b45c6be3c841764741b0cc0baaccdf8301e24",
+                    "filename": "public/assets/js/game/Sprite.js",
+                    "status": "modified",
+                    "additions": 1,
+                    "deletions": 1,
+                    "changes": 2,
+                    "blob_url": "https://github.com/Tijl-Pleuger-Vista/website.github.io/blob/3422b49c85805d793d650d054e669bb488ecc4c1/public%2Fassets%2Fjs%2Fgame%2FSprite.js",
+                    "raw_url": "https://github.com/Tijl-Pleuger-Vista/website.github.io/raw/3422b49c85805d793d650d054e669bb488ecc4c1/public%2Fassets%2Fjs%2Fgame%2FSprite.js",
+                    "contents_url": "https://api.github.com/repos/Tijl-Pleuger-Vista/website.github.io/contents/public%2Fassets%2Fjs%2Fgame%2FSprite.js?ref=3422b49c85805d793d650d054e669bb488ecc4c1",
+                    "patch": "@@ -44,6 +44,6 @@ export const background = new Sprite({\n         y: 0\n     },\n     imageSrc: checkJson.sprites.background,\n-    scale: 0.585,\n+    scale: 1.58,\n })\n export default Sprite;\n\\ No newline at end of file"
+                }
+            ]
+        }
+    ]
+}

@@ -245,14 +245,14 @@ body::-webkit-scrollbar-thumb {
   top: 71px;
 }
 
-.user-icon{
+#user-icon{
   position: relative;
   top: 4px;
   width: 30px;
   height: 30px;
-  background-image: url(../img/user.png);
+  /* background-image: url(../img/user.png); */
   background-size: contain;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
 /* BOXES */
 .box-container div{

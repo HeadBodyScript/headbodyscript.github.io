@@ -61,11 +61,19 @@ function githubLogin(){
 }
 
 // check
-function mew(){
-  let user = JSON.parse(localStorage.getItem("user"));
+object.onload = function(){
+  let userCreds = JSON.parse(localStorage.getItem("user"));
   document.getElementById("user-icon").src=user.providerData[0].photoURL;
-  document.getElementById("login").innerHTML=user.providerData[0].displayName;
-  document.getElementById("login").id="user";
-  console.log("test")
+
+};
+
+
+userLogout.addEventListener('click', logout)
+function logout(){
+  const auth = getAuth();
+signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
 }
-mew()

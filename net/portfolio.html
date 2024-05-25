@@ -44,19 +44,19 @@
         </div>
         <div class="user float-right">
           <ul class="row center">
-            <li class="reset"><button id="login" onclick="btnMenu(this.id)">LOGIN</button></li>
+            <li class="reset"><button id="login" onclick="sectionSelect(this.id)">LOGIN</button></li>
             <li class="reset">
-              <div class="user-icon"></div>
+              <img id="user-icon" src="assets/img/user.png" alt="user-icon">
             </li>
           </ul>
         </div>
       </div>
       <div>
         <ul class="select row">
-          <li><i class="bi bi-code"></i><button id="home" onclick="btnMenu(this.id)">Home</button></li>
-          <li><i class="bi bi-code"></i><button id="information" onclick="btnMenu(this.id)">About Me</button></li>
-          <li><i class="bi bi-code"></i><button id="portfolio" onclick="btnMenu(this.id)">Challenges</button></li>
-          <li><i class="bi bi-code"></i><button id="comment" onclick="btnMenu(this.id)">Chat Room</button></li>
+          <li><i class="bi bi-code"></i><button id="home" onclick="sectionSelect(this.id)">Home</button></li>
+          <li><i class="bi bi-code"></i><button id="information" onclick="sectionSelect(this.id)">About Me</button></li>
+          <li><i class="bi bi-code"></i><button id="portfolio" onclick="sectionSelect(this.id)">Challenges</button></li>
+          <li><i class="bi bi-code"></i><button id="comment" onclick="sectionSelect(this.id)">Chat Room</button></li>
         </ul>
       </div>
   </header>
@@ -132,6 +132,11 @@
 
     </div>
   </section>
+
+  <section id="USER">
+
+  </section>
+
   <script type="module" src="/assets/js/auth.js"></script>
   <script src="/assets/js/portfolio.js"></script>
   </body>
