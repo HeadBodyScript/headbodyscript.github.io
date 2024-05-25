@@ -1,90 +1,60 @@
-var gitUser = "HeadBodyScript", gitFetch = false;
+var userGitHub = "Tijl-Pleuger-Vista"
 
-async function wait(gitRepoName, gitUser, gitCategories, i) {
-  var response = await fetch(`https://raw.githubusercontent.com/${gitUser}/${gitRepoName}/main/README.md`);
-  var gitReadMe = await response.text();
-  var response = await fetch(`https://api.github.com/repos/${gitUser}/${gitRepoName}/commits/main`)
-  var gitRepoInfo = await response.json();
-  var gitRepoName = gitCategories[i].name, gitRepoDesc = gitCategories[i].description, gitTime = gitRepoInfo.commit.author.date, gitName = gitRepoInfo.commit.author.name, gitSummary = gitRepoInfo.commit.message, gitIcon = gitRepoInfo.committer.avatar_url
-  console.log(gitRepoInfo)
-  // console.log(gitReadMe)
-  Form.innerHTML +=
-  `
-  <div class="card">
-    <div class="card-container">
-        <ul>
-            <li class="card-header"><strong>${gitRepoName}</strong></li>
-            <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
-            <li class="border sub"><i class="bi bi-dot"></i>${gitRepoDesc}</li>
-            <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
-            <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>
-            <pre>${gitReadMe}</pre>
-            </li>
-            <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
-            <li class="border"><i class="bi bi-dot"></i>Date: ${gitTime}</li>
-            <li class="border"><i class="bi bi-dot"></i>By: ${gitName}<img class="icon" src="${gitIcon}" alt=""></li>
-            <li class="border"><i class="bi bi-dot"></i>Note: ${gitSummary}</li>
-            <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${gitUser}/${gitRepoName}">Visit the repository</a></li>
-        </ul>
-    </div>
-  </div>
-  `
+async function wait(userGitHub, response, i) {
+    var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`)
+    var repository = await repository.json();
+    var GitHub = {
+        "repository":response[i].name,
+        "description":response[i].description,
+        "commitDate":repository.commit.author.date,
+        "commitAuthor":repository.commit.author.name,
+        "commitMessage":repository.commit.message,
+        "avatar":repository.author.avatar_url
+    };
+    localStorage.setItem(i, JSON.stringify(GitHub));
+    createCard(userGitHub, i)
 }
-let getGitRepo = () => {
-  var gitUser = "Tijl-Pleuger-Vista"
-  fetch(`https://api.github.com/users/${gitUser}/repos`).then(gitCategories => gitCategories.json()).then(gitCategories => {
-    for (let i = 0; i < gitCategories.length; i++) {
-        var gitRepoName = gitCategories[i].name
-        wait(gitRepoName, gitUser, gitCategories, i)
-    }
-  }
-)
-  // intro splash transition
-  
-  let intro = document.querySelector('.splash-intro');
-  let logoSpan = document.querySelectorAll('.splash-logo');
-  window.addEventListener('DOMContentLoaded', () => {
-    if (sessionStorage.getItem("splash") === null) {
-      setTimeout(() => {
-        logoSpan.forEach((span, idx) => {
-        setTimeout(() => {
-          span.classList.add('active');
-        }, (idx + 1) * 400)
-        });
-        setTimeout(() => {
-        logoSpan.forEach((span, idx) => {
-            setTimeout(() => {
-            span.classList.remove('active');
-            span.classList.add('fade');
-            }, (idx + 1) * 50)
-        })
-        }, 2000);
-        setTimeout(() => {
-        intro.style.top = '-100vh';
-        },2300)
-        sessionStorage.setItem("splash", "true");
-      })
-    }
-    else {
-      intro.style.top = '-100vh';
-    }
-  })
-};
 
-let jsonGitRepo = () => {
-  (async()=>{let response=await(await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/net/assets/json/repo.json")).json();
-  console.log(response)
-setInterval(change,500);
-function change(){
-    setTimeout(function(){
-      
-    },500);
-}})();}
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem("GitHub") === null) {
+        fetch(`https://api.github.com/users/${userGitHub}/repos`)
+        .then(response => response.json())
+        .then(response => {
+            localStorage.setItem("GitHub", response.length);
+            for (let i = 0; i < response.length; i++) {
+                wait(userGitHub, response, i)
+        }})
+    } else {
+        let GitHub = (localStorage.getItem("GitHub"));
+        for (let i = 0; i < GitHub; i++) {
+            createCard(userGitHub, i)
+}}})
 
-if(gitFetch === true){
-  getGitRepo();
-}else{
-  jsonGitRepo();
+async function createCard(userGitHub, i){
+    let GitHub = JSON.parse(localStorage.getItem(i));
+    var README = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${GitHub.repository}/main/README.md`);
+    var README = await README.text();
+    Form.innerHTML +=
+    `
+    <div class="card">
+      <div class="card-container">
+          <ul>
+              <li class="card-header"><strong>${GitHub.repository}</strong></li>
+              <li class="border"><i class="bi bi-caret-right-fill"></i>Description</li>
+              <li class="border sub"><i class="bi bi-dot"></i>${GitHub.description}</li>
+              <li class="border"><i class="bi bi-caret-right-fill"></i>ReadMe.MD</li>
+              <li class="border readme scrollbar sub"><i class="bi bi-dot"></i>
+              <pre>${README}</pre>
+              </li>
+              <li class="border"><i class="bi bi-caret-right-fill"></i>Latest Update</li>
+              <li class="border"><i class="bi bi-dot"></i>Date: ${GitHub.commitDate}</li>
+              <li class="border"><i class="bi bi-dot"></i>By: ${GitHub.commitAuthor}<img class="icon" src="${GitHub.avatar}" alt=""></li>
+              <li class="border"><i class="bi bi-dot"></i>Note: ${GitHub.commitMessage}</li>
+              <li class="border card-footer"><i class="bi bi-link"></i><a style="color: blueviolet;" class="link" href="https://github.com/${userGitHub}/${GitHub.repository}">Visit the repository</a></li>
+          </ul>
+      </div>
+    </div>
+    `
 }
 
 function sectionSelect(id) {
@@ -114,3 +84,9 @@ function change(){
         if (i >= 4) {i = 0;}
     },1000);
 }})();
+
+let audio = document.getElementById("myAudio");
+play.addEventListener('click', playAudio)
+pause.addEventListener('click', pauseAudio)
+function playAudio() {audio.play();}
+function pauseAudio() {audio.pause();}

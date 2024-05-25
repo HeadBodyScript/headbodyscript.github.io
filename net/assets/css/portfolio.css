@@ -310,6 +310,8 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--backgound-color-inner);
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  margin: 0;
+  padding: 0;
 }
 .link{
   color: var(--link);
