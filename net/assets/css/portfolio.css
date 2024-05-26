@@ -434,7 +434,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 2px;
 }
 .border {
-  height: 40px;
+  min-height: 40px;
   border: 1px;
   border-top-style: solid;
   border-top-color: var(--sub-divider);
@@ -451,7 +451,7 @@ body::-webkit-scrollbar-thumb {
 }
 .readme {
   height: auto;
-  min-height: 30px;
+  min-height: 60px;
   max-height: 200px;
   word-wrap: break-word;
   overflow: auto;
@@ -467,6 +467,9 @@ body::-webkit-scrollbar-thumb {
   height: 20px;
   margin-left: 16px;
 }
+.git-button{
+  width: 100%;
+}
 .git-icon{
   margin-left: 18px;
   margin-bottom: 6px;
@@ -478,6 +481,10 @@ body::-webkit-scrollbar-thumb {
   left: 10px;
   margin: 0;
   font-size: small;
+}
+.git-img{
+  display: none;
+  width: 100%;
 }
 .git-contributions{
   position: relative;
@@ -512,18 +519,23 @@ body::-webkit-scrollbar-thumb {
   padding: 2px 6px;
 }
 .inner-readme{
-  width: calc(100% - 12px);
+  position: relative;
+  left: 10px;
+  top: 10px;
+  width: calc(100% - 10px);
   min-height: 50px;
-  display: inline;
   
-  margin: 4px;
+  margin: 0;
   overflow-wrap: break-word;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap !important;
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-
+}
+.bi-cursor{
+  top: 0px !important;
+  right: 8px;
 }
 /* ANIMATION */
 @keyframes animatedgradient {
