@@ -71,7 +71,7 @@ mew()
 function setUserDisplay(){
   let user = JSON.parse(localStorage.getItem("user"));
     document.getElementById("user-icon").src=user.providerData[0].photoURL;
-    document.getElementById("login").innerHTML=user.providerData[0].displayName;
-    document.getElementById("login").id="user";
+    document.getElementById("user-name").innerHTML=user.providerData[0].displayName;
+    document.getElementById("user-name").id="user";
     console.log("test")
 }

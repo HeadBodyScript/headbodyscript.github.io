@@ -2,14 +2,24 @@ var userGitHub = "Tijl-Pleuger-Vista"
 
 async function wait(userGitHub, response, i) {
   var box = []
-    var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`)
+    var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`,{
+      method: "GET",
+      headers: {
+        Authorization: `key` 
+      }
+    })
     var repository = await repository.json();
     var repositoryIgnore = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${response[i].name}/main/ignore.json`)
     if (repositoryIgnore.ok == true){
       var repositoryIgnore = await repositoryIgnore.json();
       Array.prototype.push.apply(box, [repositoryIgnore]);
     }
-    var repositoryContributors = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/contributors`)
+    var repositoryContributors = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/contributors`,{
+      method: "GET",
+      headers: {
+        Authorization: `key` 
+      }
+    })
     var repositoryContributors = await repositoryContributors.json();
 
     for (let i = 0; i < repositoryContributors.length; i++) {
@@ -38,7 +48,12 @@ async function wait(userGitHub, response, i) {
 
 function newGitHubRequest(){
   localStorage.setItem("check" , new Date().getDay())
-  fetch(`https://api.github.com/users/${userGitHub}/repos`)
+  fetch(`https://api.github.com/users/${userGitHub}/repos`,{
+    method: "GET",
+    headers: {
+      Authorization: `key` 
+    }
+  })
   .then(response => response.json())
   .then(response => {
       localStorage.setItem("GitHub", response.length);
@@ -51,9 +66,8 @@ window.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem("GitHub") === null) {
       newGitHubRequest()
     } else {
-        let check = (localStorage.getItem("check"));
         let GitHub = (localStorage.getItem("GitHub"));
-        if (check === new Date().getDay()){
+        if (localStorage.getItem("check") == new Date().getDay()){
           for (let i = 0; i < GitHub; i++) {
             createCard(userGitHub, i)
           }
@@ -188,91 +202,18 @@ pause.addEventListener('click', pauseAudio)
 function playAudio() {audio.play();}
 function pauseAudio() {audio.pause();}
 
-// var mew = [
-//   {"test":"1"},
-//   {"mew":"2"},
-//   {"bla":"3"},
-//   {"qwerty":"4"}
-// ]
-// console.log(mew)
-
-// function mewmew(mew){
-// var mewl = mew.length
-// var allmew = []
-// var arrr = []
-// for (let i = 0; i < mewl; i++) {
-//       var allmew = [{
-//         "user":mew[i].login,
-//         "url":mew[i].url,
-//         "ico":mew[i].login
-//       }]
-
-//       console.log(allmew)
-
-//       // var test = {test, allmew}
-//       Array.prototype.push.apply(arrr, allmew);
-//       console.log(arrr)
-
-// }
-
-//   // mew.forEach(mew =>
-//   //   {
-//   //     var allmew =+ mew.login
-//   //     console.log(allmew)
-//   //   }
-//   // )
-// }
-// mewmew(mew)
-
-// async function meow(){
-//   var box = [{"test":"mew"}]
-//   var msc = {}
-//   var repositoryIgnore = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-5/main/ignore.json`)
-//   if (repositoryIgnore.ok == true){
-//     var repositoryIgnore = await repositoryIgnore.json();
-//     Array.prototype.push.apply(msc, [repositoryIgnore]);
-
-//     Array.prototype.push.apply(box, msc);
-//     console.log(box)
-//   }
-// }
-
-// meow()
-
-// var slideIndex = 1;
-// showDivs(slideIndex);
-
-// function plusDivs(n) {
-//   showDivs(slideIndex += n);
-// }
-
-// function showDivs(n) {
-//   var i;
-//   var images = document.getElementsByClassName("git-img");
-
-//   if (n > images.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = images.length}
-
-//   for (i = 0; i < images.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-
-//   images[slideIndex-1].style.display = "block";  
-// }
-
-// var imgs = document.getElementById("4")
-// console.log(imgs)
-// imgs.innerHTML[1].style.display = "none"; 
-
-// let elements = document.querySelectorAll('button.git-button > img:last-child').innerHTML.style.display = "none";
-// console.log(elements  )
-
+sessionStorage.clear("init")
 function loadGitHub(){
-  let GitHub = (localStorage.getItem("GitHub"));
+  if (sessionStorage.getItem("init") == undefined){
+    console.log("if true")
+    let GitHub = (localStorage.getItem("GitHub"));
     for (i = 0; i < GitHub; i++) {
       var x = document.getElementById(i).querySelectorAll(".git-img");
       x[0].style.display = "block"
     } 
+    sessionStorage.setItem("init", "true");
+  }
+
 }
 
 function nextGitHub(id) {
