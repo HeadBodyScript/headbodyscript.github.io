@@ -1,11 +1,90 @@
-var userGitHub = "Tijl-Pleuger-Vista"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getAuth, signInWithPopup, GithubAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
-async function wait(userGitHub, response, i) {
+// import { initializeApp } from "firebase/app";
+// import { GithubAuthProvider } from "firebase/auth";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyD6i1H967AaI7mmIh8DvAR_GRI3U6O3qdA",
+  authDomain: "headbodyscript.firebaseapp.com",
+  projectId: "headbodyscript",
+  storageBucket: "headbodyscript.appspot.com",
+  messagingSenderId: "561751453459",
+  appId: "1:561751453459:web:8daaf437c21f3841cff4e6"
+};
+
+// Initialize Firebase
+var userGitHub = "Tijl-Pleuger-Vista"
+const app = initializeApp(firebaseConfig);
+const provider = new GithubAuthProvider();
+const auth = getAuth();
+const db = getDatabase();
+const dbref = ref(db);
+
+github.addEventListener('click', githubLogin)
+function githubLogin(){
+    // var auth was here <-
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        const credential = GithubAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+    
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+        // console.log(credential)
+        // console.log(token)
+
+        // This one is the one you want "user.uid" "user.providerData[0].displayName" ".providerData[0].photoURL"
+        // console.log(user)
+
+        localStorage.setItem("user-credential", JSON.stringify(credential));
+        localStorage.setItem("user-token", JSON.stringify(token));
+        localStorage.setItem("user", JSON.stringify(user));
+        setUserDisplay()
+
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GithubAuthProvider.credentialFromError(error);
+        // ...
+      });
+}
+
+// check
+function mew(){
+  if (localStorage.hasOwnProperty("user") === !null) {
+    setUserDisplay()
+  }
+
+}
+mew()
+function setUserDisplay(){
+  let user = JSON.parse(localStorage.getItem("user"));
+    document.getElementById("user-icon").src=user.providerData[0].photoURL;
+    document.getElementById("user-name").innerHTML=user.providerData[0].displayName;
+    document.getElementById("user-name").id="user";
+}
+
+// auth
+async function wait(userGitHub, response, i, git) {
   var box = []
     var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`,{
       method: "GET",
       headers: {
-        Authorization: `key` 
+        Authorization: `${git}` 
       }
     })
     var repository = await repository.json();
@@ -17,7 +96,7 @@ async function wait(userGitHub, response, i) {
     var repositoryContributors = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/contributors`,{
       method: "GET",
       headers: {
-        Authorization: `key` 
+        Authorization: `${git}` 
       }
     })
     var repositoryContributors = await repositoryContributors.json();
@@ -40,31 +119,34 @@ async function wait(userGitHub, response, i) {
         "avatar":repository.author.avatar_url
     }]
     Array.prototype.push.apply(GitHub, box);
-    console.log(GitHub)
-
     localStorage.setItem(i, JSON.stringify(GitHub));
     createCard(userGitHub, i)
 }
 
-function newGitHubRequest(){
+function newGitHubRequest(git){
   localStorage.setItem("check" , new Date().getDay())
   fetch(`https://api.github.com/users/${userGitHub}/repos`,{
     method: "GET",
     headers: {
-      Authorization: `key` 
+      Authorization: `${git}` 
     }
   })
   .then(response => response.json())
   .then(response => {
       localStorage.setItem("GitHub", response.length);
       for (let i = 0; i < response.length; i++) {
-          wait(userGitHub, response, i)
+          wait(userGitHub, response, i, git)
   }})
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  get(child(dbref, 'api')).then((snapshot)=>{
+    if(snapshot.exists){
+        var git = snapshot._node.value_
+    }
+    sessionStorage.clear("init")
     if (localStorage.getItem("GitHub") === null) {
-      newGitHubRequest()
+      newGitHubRequest(git)
     } else {
         let GitHub = (localStorage.getItem("GitHub"));
         if (localStorage.getItem("check") == new Date().getDay()){
@@ -77,9 +159,11 @@ window.addEventListener('DOMContentLoaded', () => {
           }
           localStorage.removeItem("GitHub");
           localStorage.removeItem("check");
-          newGitHubRequest()
+          newGitHubRequest(git)
         }
-}})
+}
+  })
+})
 
 async function createCard(userGitHub, i){
     let GitHub = JSON.parse(localStorage.getItem(i));
@@ -163,85 +247,4 @@ var newDiv = newDiv +=
   </div>
     `
     Form.innerHTML += newDiv
-}
-
-function sectionSelect(id) {
-  id = id.toUpperCase()
-  if (id === "PORTFOLIO"){
-    loadGitHub()
-  }
-  var fade = document.getElementById("transition");
-  fade.style.zIndex = "256", fade.classList.replace("transition-true", "transition-false"), setTimeout(() => {
-    document.querySelectorAll(".visible").forEach(newSection => {
-      newSection.classList.remove("visible")
-    }), document.getElementById(id).classList.add("visible"), fade.classList.replace("transition-false", "transition-true")
-  }, 1e3), setTimeout(() => {
-    fade.style.zIndex = "-256"
-  }, 1e3)
-}
-
-(async()=>{let response=await(await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/net/assets/json/quotes.json")).json();
-var i = 0, quoteList = document.querySelectorAll('#t-primary, #t-secondary, #b-primary, #b-secondary');
-setInterval(change,5000);
-function change(){
-  quoteList.forEach(c=>c.classList.add('fade'))
-    setTimeout(function(){
-      quoteList[0].innerText = response.t.primary[i].quote
-      quoteList[1].innerText = response.t.secondary[i].quote
-      quoteList[2].innerText = response.b.primary[i].quote
-      quoteList[3].innerText = response.b.secondary[i].quote
-      quoteList.forEach(c => c.classList.remove('fade'))
-        i++;
-        if (i >= 4) {i = 0;}
-    },1000);
-}})();
-
-let audio = document.getElementById("myAudio");
-play.addEventListener('click', playAudio)
-pause.addEventListener('click', pauseAudio)
-function playAudio() {audio.play();}
-function pauseAudio() {audio.pause();}
-
-sessionStorage.clear("init")
-function loadGitHub(){
-  if (sessionStorage.getItem("init") == undefined){
-    console.log("if true")
-    let GitHub = (localStorage.getItem("GitHub"));
-    for (i = 0; i < GitHub; i++) {
-      var x = document.getElementById(i).querySelectorAll(".git-img");
-      x[0].style.display = "block"
-    } 
-    sessionStorage.setItem("init", "true");
-  }
-
-}
-
-function nextGitHub(id) {
-  var _gitimg = document.getElementById(id).querySelectorAll(".git-img");
-  if(_gitimg.length > 1){
-    if(_gitimg.length === 2){
-      var _container = document.getElementById(id)
-      var _data = document.getElementById(id).getAttribute("data")
-      _gitimg[_data].style.display = "none"
-      _data++
-      if (_data === 2){var _data = 0}
-      _gitimg[_data].style.display = "block"
-      _container.setAttribute("data", _data)
-    }
-  else{
-      var _container = document.getElementById(id)
-      var _data = document.getElementById(id).getAttribute("data")
-      var gitLength = _gitimg.length - 1
-      _gitimg[_data].style.display = "none"
-      _data++
-      if (_data === gitLength){
-        _gitimg[_data].style.display = "none"
-        var _data = 0
-        _container.setAttribute("data", _data)
-      }
-      _gitimg[_data].style.display = "block"
-      _container.setAttribute("data", _data)
-    
-    }
-  }
 }

@@ -613,4 +613,13 @@ body::-webkit-scrollbar-thumb {
   h5 {
     font-size: 100%;
   }
+  .master-cover{
+    height: 40%;
+  }
+  #box{
+    height: 40%;
+  }
+  .master-img{
+    width: 40vh;
+  }
 }
