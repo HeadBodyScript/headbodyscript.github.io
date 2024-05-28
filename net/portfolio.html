@@ -37,9 +37,9 @@
     <header class="header column">
       <div></div>
       <div class="container row">
-        <div class="float-center">
+        <div class="desktop float-center">
           <div class="headbodyscript">
-            <p class="bottom">headbodyscript</p>
+            <p>headbodyscript</p>
           </div>
         </div>
         <div class="user float-right">
@@ -53,12 +53,23 @@
       </div>
       <div>
         <ul class="select row">
-          <li><i class="bi bi-code"></i><button id="home" onclick="sectionSelect(this.id)">Home</button></li>
-          <!-- <li><i class="bi bi-code"></i><button id="information" onclick="sectionSelect(this.id)">About Me</button></li> -->
-          <li><i class="bi bi-code"></i><button id="repository" onclick="sectionSelect(this.id)">Challenges</button></li>
-          <!-- <li><i class="bi bi-code"></i><button id="comment" onclick="sectionSelect(this.id)">Chat Room</button></li> -->
-          <!-- <li><i class="bi bi-code"></i><button id="repo" onclick="sectionSelect(this.id)">Your Repositories</button></li> -->
+          <li class="phone">MENU</li>
+          <li><button class="menu-btn" id="home" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Home</button></li>
+          <li><button class="menu-btn" id="information" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>About Me</button></li>
+          <li><button class="menu-btn" id="repository" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Challenges</button></li>
+          <li><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li>
+          <li><button class="menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Your Repositories</button></li>
         </ul>
+      </div>
+      <div class="phone">
+        <div class="menu w center">
+          <div class="headbodyscript">
+            <p style="top: 15px;">headbodyscript</p>
+          </div>
+        </div>
+        <div class="menu user float-right">
+          <button type="button" class="center" style="height: 100%;" onclick="menu()"><i class="bi bi-list"></i></button>
+        </div>
       </div>
   </header>
   <section id="HOME" class="visible">

@@ -1,4 +1,9 @@
 function sectionSelect(id) {
+  document.querySelectorAll(".active").forEach(d => {
+    d.classList.remove("active")
+  })
+  document.getElementById(id).classList.add("active")
+  menu()
   id = id.toUpperCase()
   if (id === "REPOSITORY"){
     loadGitHub()
@@ -74,5 +79,23 @@ function nextGitHub(id) {
       _container.setAttribute("data", _data)
     
     }
+  }
+}
+
+sessionStorage.removeItem ("m")
+function menu(){
+  var root = document.querySelector(':root');
+  var m = sessionStorage.getItem("m");
+  switch (m) {
+    case null:
+      sessionStorage.setItem("m", true)
+      root.style.setProperty('--menu', "calc(0px + 0dvh)");
+      break;
+    case "true":
+      sessionStorage.removeItem ("m")
+      root.style.setProperty('--menu', "calc(-100dvh + 50px)");
+      break;
+    default:
+      break;
   }
 }
