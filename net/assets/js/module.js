@@ -60,7 +60,7 @@ function githubLogin(){
         // ...
       });
 }
-githubLogoutID.addEventListener('click', githubLogout)
+document.getElementById("logout").addEventListener('click', githubLogout)
 function githubLogout(){
   console.log("check 1")
 const auth = getAuth();
@@ -77,11 +77,11 @@ signOut(auth).then(() => {
 // check
 function mew(){
   if (localStorage.hasOwnProperty("user") === !null) {
-    document.getElementById("githubLoginID").style.display = "none"
+    document.getElementById("LOGin").style.display = "none"
     setUserDisplay()
   }
   else {
-    document.getElementById("githubLogoutID").style.display = "none"
+    document.getElementById("LOgin").style.display = "none"
   }
 }
 mew()

@@ -318,6 +318,10 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   right     : 0;
 }
+.float-right-login{
+  position: absolute;
+  right     : 0;
+}
 .bottom{
   position: relative;
   top: 20px;
@@ -645,6 +649,10 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 800px) {
   /* head */
+  .float-right-login{
+    position: absolute;
+    left     : 0;
+  }
   .phone-center{
     text-align: center;
   }

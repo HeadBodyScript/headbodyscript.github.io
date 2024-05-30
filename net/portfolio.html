@@ -42,7 +42,7 @@
             <p>headbodyscript</p>
           </div>
         </div>
-        <div class="desktop user float-right">
+        <div class="user float-right-login">
           <ul class="row center">
             <li class="reset"><button id="login" type="button" onclick="sectionSelect(this.id)"><p id="user-name" class="user-name">LOGIN</p></button></li>
             <li class="reset">
@@ -60,8 +60,8 @@
           <!-- <li class="phone-center"><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li> -->
           <li class="phone-center"><button class="menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Your Repositories</button></li>
           <li class="phone" style="height: 10px; margin-top: 14px;"><div class="divider"></div></li>
-          <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="githubLoginID" onclick=""><i class="bi bi-code"></i>Login</button></li>
-          <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="githubLogoutID" onclick=""><i class="bi bi-code"></i>Logout</button></li>
+          <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="LOGin" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Login</button></li>
+          <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="LOgin" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Logout</button></li>
         </ul>
       </div>
       <div class="phone">
@@ -138,8 +138,10 @@
             <span style="display: none;">Continue with GitHub</span>
           </div>
         </button>
+        <button style="margin-top: 24px;" class="menu-btn phone-inline visit pad" id="logout" onclick="githubLogout(this.id)"><i class="bi bi-code"></i>Logout</button>
       </div>
     </div>
+    
   </section>
 
   <section id="USER">
