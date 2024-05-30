@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getAuth, signInWithPopup, GithubAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 // import { initializeApp } from "firebase/app";
 // import { GithubAuthProvider } from "firebase/auth";
@@ -48,8 +48,7 @@ function githubLogin(){
         localStorage.setItem("user-credential", JSON.stringify(credential));
         localStorage.setItem("user-token", JSON.stringify(token));
         localStorage.setItem("user", JSON.stringify(user));
-        setUserDisplay()
-
+        location.reload()
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -61,13 +60,29 @@ function githubLogin(){
         // ...
       });
 }
-
+githubLogoutID.addEventListener('click', githubLogout)
+function githubLogout(){
+  console.log("check 1")
+const auth = getAuth();
+signOut(auth).then(() => {
+  console.log("check 2")
+  localStorage.removeItem("user");
+  localStorage.removeItem("user-credential");
+  localStorage.removeItem("user-token");
+  location.reload()
+}).catch((error) => {
+  console.log("check failed")
+});
+}
 // check
 function mew(){
   if (localStorage.hasOwnProperty("user") === !null) {
+    document.getElementById("githubLoginID").style.display = "none"
     setUserDisplay()
   }
-
+  else {
+    document.getElementById("githubLogoutID").style.display = "none"
+  }
 }
 mew()
 function setUserDisplay(){
@@ -75,6 +90,7 @@ function setUserDisplay(){
     document.getElementById("user-icon").src=user.providerData[0].photoURL;
     document.getElementById("user-name").innerHTML=user.providerData[0].displayName;
     document.getElementById("user-name").id="user";
+
 }
 
 // auth

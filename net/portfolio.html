@@ -42,7 +42,7 @@
             <p>headbodyscript</p>
           </div>
         </div>
-        <div class="user float-right">
+        <div class="desktop user float-right">
           <ul class="row center">
             <li class="reset"><button id="login" type="button" onclick="sectionSelect(this.id)"><p id="user-name" class="user-name">LOGIN</p></button></li>
             <li class="reset">
@@ -53,17 +53,15 @@
       </div>
       <div>
         <ul class="select row">
-          <li class="phone">MENU</li>
-          <li class="phone" style="height: 10px;"><div class="divider"></div></li>
-          <li><button class="menu-btn" id="home" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Home</button></li>
-          <li><button class="menu-btn" id="information" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>About Me</button></li>
-          <li><button class="menu-btn" id="repository" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Challenges</button></li>
-          <li><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li>
-          <li><button class="menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Your Repositories</button></li>
-          <li><button class="phone menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Profile</button></li>
-          <li class="phone" style="height: 10px;"><div class="divider"></div></li>
-          <li><button class="phone menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Logout</button></li>
-
+          <li class="phone phone-center" style="color: var(--sub-text); margin-bottom: 8px;">MENU</li>
+          <li class="phone-center"><button class="menu-btn" id="home" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Home</button></li>
+          <li class="phone-center"><button class="menu-btn" id="information" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>About Me</button></li>
+          <li class="phone-center"><button class="menu-btn" id="repository" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Challenges</button></li>
+          <li class="phone-center"><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li>
+          <li class="phone-center"><button class="menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Your Repositories</button></li>
+          <li class="phone" style="height: 10px; margin-top: 14px;"><div class="divider"></div></li>
+          <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="githubLoginID" onclick=""><i class="bi bi-code"></i>Login</button></li>
+          <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="githubLogoutID" onclick=""><i class="bi bi-code"></i>Logout</button></li>
         </ul>
       </div>
       <div class="phone">
@@ -98,11 +96,22 @@
   </section>
 
   <section id="INFORMATION">
-      <audio id="myAudio">
-        <source src="/assets/theme.mp3" type="audio/mpeg">
-      </audio>
-      <button type="button" id="play">play</button>
-      <button type="button" id="pause">pause</button>
+    <div id="terminal">
+      <p class="terminal">Windows PowerShell</p>
+      <p class="terminal">Copyright (C) Microsoft Corporation. All rights reserved.</p><br>  
+      <p class="terminal">Install the latest PowerShell for new features and improvements! <a class="color" href="https://aka.ms/PSWindows">https://aka.ms/PSWindows</a></p><br>
+      <div class="row"><p>PS C:/Users/admin></p><p class="code">import user -admin</p></div><br>
+      <p class="terminal">User. . . . . . . . . . . . . . : Tijl Pleuger</p>
+      <p class="terminal">Location. . . . . . . . . . . . : Nederland, Limburg</p>
+      <p class="terminal">Goal. . . . . . . . . . . . . . : Become educated in scripting and networking</p>
+      <p class="terminal">Skills. . . . . . . . . . . . . : Front-end + back-end (JavaScript, HTML, CSS), Google Services such as Firebase and API</p>
+      <p class="terminal">Interests . . . . . . . . . . . : Cyberpunk aesthetic, Down To Earth, The lotus algorithm</p><br>
+
+      <p class="terminal">For all available commands type "help"</p><br>
+      <div class="row">
+          <p class="terminal" style="margin-right: 4px;">PS C:/Users/admin></p><pre class="terminal code" id="log"></pre><p class="terminal underscore">_</p>
+      </div>
+    </div>
   </section>
 
   <section id="REPOSITORY">
@@ -167,5 +176,6 @@
   <script type="module" src="/assets/js/module.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/that.js"></script>
+  <script src="/assets/js/terminal.js"></script>
   </body>
 </html>

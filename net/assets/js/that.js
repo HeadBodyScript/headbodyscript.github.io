@@ -1,6 +1,5 @@
 function that(){
     document.getElementById("userFormVisible").style.display = "none"
-
     var userGitHub = JSON.parse(localStorage.getItem("user"))
     var userGitHub = userGitHub.displayName
     fetch(`https://api.github.com/users/${userGitHub}/repos`)
@@ -9,10 +8,7 @@ function that(){
           for (let i = 0; i < response.length; i++) {
               wait(userGitHub, response, i)
       }})
-
 }
-
-
 async function wait(userGitHub, response, i) {
       var GitHub = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`)
       var GitHub = await GitHub.json();
@@ -20,12 +16,6 @@ async function wait(userGitHub, response, i) {
       var repositoryContributors = await repositoryContributors.json();
       var README = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${response[i].name}/main/README.md`);
       var README = await README.text();
-        console.log(response)
-        console.log(GitHub)
-        console.log(repositoryContributors)
-        console.log(README)
-
-
       var newDiv = 
     `
     <div class="card">
@@ -60,14 +50,14 @@ async function wait(userGitHub, response, i) {
         <p class="git-content">Contributors:</p>
       </li>
         `
-//         for (let i = 2; i < GitHub.length; i++) {
-// var newDiv = newDiv += 
-//           `
-//           <li>
-//             <a class="color row" href="${GitHub[i].url}" target="_blank"><img class="git-icon" src="${GitHub[i].ico}" alt="icon"><p class="git-text">${GitHub[i].user}</p><p class="git-contributions">${GitHub[i].contributions}</p></a>
-//           </li>
-//           `
-//       }
+        for (let i = 0; i < repositoryContributors.length; i++) {
+var newDiv = newDiv += 
+          `
+          <li>
+            <a class="color row" href="${repositoryContributors[i].html_url}" target="_blank"><img class="git-icon" src="${repositoryContributors[i].avatar_url}" alt="icon"><p class="git-text">${repositoryContributors[i].login}</p><p class="git-contributions">${repositoryContributors[i].contributions}</p></a>
+          </li>
+          `
+      }
 var newDiv = newDiv +=
         `
       </ul>

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: terminal;
+  src: url(../font/terminal.ttf);
+}
 :root {
   --sidebar: #010409;
   --backgound-color: #0d1117;
@@ -10,6 +14,8 @@
   --hover: rgba(185, 160, 106, 0.333);
   --borderWidth: 3px;
   --menu: calc(-100dvh + 50px);
+  --input: #F9F1A5;
+  --error: #E74856;
 }
 body {
   background-color: var(--backgound-color);
@@ -216,6 +222,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* HOME */
+
 .headbodyscript{
   width: fit-content;
   font-size: x-small;
@@ -638,6 +645,9 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 800px) {
   /* head */
+  .phone-center{
+    text-align: center;
+  }
   header{
     top: var(--menu);
     height: 100dvh;
@@ -672,6 +682,9 @@ body::-webkit-scrollbar-thumb {
   .phone{
     display: block;
   }
+  .phone-inline{
+    display: inline-block;
+  }
   .desktop{
     display: none;
   }
@@ -696,9 +709,9 @@ body::-webkit-scrollbar-thumb {
     left     : 10px;
     transform : translate(0, 0);
   }
-  /* .bi-code{
+  .bi-code{
     display: none;
-  } */
+  }
   li {
     margin: 0 8px;
   }
@@ -731,3 +744,37 @@ body::-webkit-scrollbar-thumb {
   border-top: 1px solid var(--divider);
 
 }
+.pad{
+  margin: 0;
+  padding: 10px 20px;
+  width: 160px !important;
+}
+.terminal{
+  font-family: terminal;
+  margin: 0;
+  width: fit-content;
+}
+.code {
+  margin-left: 8px;
+  color: var(--input);
+}
+.code-spacebar {
+  margin-left: 8px;
+  color: var(--input);
+  margin-right: 18px;
+}
+.error {
+  color: var(--error);
+  margin: 0;
+}
+.blank {
+  opacity: 0;
+  }
+  .underscore {
+    animation: blinker 1s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

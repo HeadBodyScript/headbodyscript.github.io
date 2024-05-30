@@ -34,12 +34,6 @@ function change(){
     },1000);
 }})();
 
-let audio = document.getElementById("myAudio");
-play.addEventListener('click', playAudio)
-pause.addEventListener('click', pauseAudio)
-function playAudio() {audio.play();}
-function pauseAudio() {audio.pause();}
-
 function loadGitHub(){
   if (sessionStorage.getItem("init") == undefined){
     let GitHub = (localStorage.getItem("GitHub"));
