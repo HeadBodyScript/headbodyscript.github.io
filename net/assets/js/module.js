@@ -20,7 +20,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-var userGitHub = "Tijl-Pleuger-Vista"
 const app = initializeApp(firebaseConfig);
 const provider = new GithubAuthProvider();
 const auth = getAuth();
@@ -123,7 +122,7 @@ async function wait(userGitHub, response, i, git) {
     createCard(userGitHub, i)
 }
 
-function newGitHubRequest(git){
+function newGitHubRequest(git, userGitHub){
   localStorage.setItem("check" , new Date().getDay())
   fetch(`https://api.github.com/users/${userGitHub}/repos`,{
     method: "GET",
@@ -140,13 +139,14 @@ function newGitHubRequest(git){
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  var userGitHub = "Tijl-Pleuger-Vista"
   get(child(dbref, 'api')).then((snapshot)=>{
     if(snapshot.exists){
         var git = snapshot._node.value_
     }
     sessionStorage.clear("init")
     if (localStorage.getItem("GitHub") === null) {
-      newGitHubRequest(git)
+      newGitHubRequest(git, userGitHub)
     } else {
         let GitHub = (localStorage.getItem("GitHub"));
         if (localStorage.getItem("check") == new Date().getDay()){
@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
           }
           localStorage.removeItem("GitHub");
           localStorage.removeItem("check");
-          newGitHubRequest(git)
+          newGitHubRequest(git, userGitHub)
         }
 }
   })

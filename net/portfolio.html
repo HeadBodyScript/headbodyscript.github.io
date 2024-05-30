@@ -54,11 +54,16 @@
       <div>
         <ul class="select row">
           <li class="phone">MENU</li>
+          <li class="phone" style="height: 10px;"><div class="divider"></div></li>
           <li><button class="menu-btn" id="home" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Home</button></li>
           <li><button class="menu-btn" id="information" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>About Me</button></li>
           <li><button class="menu-btn" id="repository" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Challenges</button></li>
           <li><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li>
           <li><button class="menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Your Repositories</button></li>
+          <li><button class="phone menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Profile</button></li>
+          <li class="phone" style="height: 10px;"><div class="divider"></div></li>
+          <li><button class="phone menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Logout</button></li>
+
         </ul>
       </div>
       <div class="phone">
@@ -101,9 +106,21 @@
   </section>
 
   <section id="REPOSITORY">
+    <div class="column">
+      <div class="menu-repo">
+        <label>
+          <select class="ice-cream" name="ice-cream">
+            <option value="">Search a repository</option>
+            <option value="chocolate">Challenge-1</option>
+            <option value="sardine">Challenge-2</option>
+            <option value="vanilla">Challenge-3</option>
+          </select>
+        </label>
+      </div>
       <div id="Form" class="row">
        
       </div>
+    </div>
   </section>
   <section id="COMMENT">
 
@@ -134,12 +151,21 @@
 
   <section id="REPO">
     <div class="center column">
-      <p>You must be logged in to use this feature</p>
-      <button class="visit" id="login" type="button" onclick="sectionSelect(this.id)">Login here</button>
+      <div id="userFormVisible">
+        <p>You must be logged in to use this feature</p>
+        <button class="visit" id="login" type="button" onclick="sectionSelect(this.id)">Login here</button>
+        <button class="visit" id="login" type="button" onclick="that()">test</button>
+        <p>NOTE: This api has limited</p>
+        <p>If the cards don't fully fill or wont load the API hourly limit has been reached</p>
+      </div>
+      <div id="userForm" class="row">
+
+      </div>
     </div>
   </section>
 
   <script type="module" src="/assets/js/module.js"></script>
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/that.js"></script>
   </body>
 </html>

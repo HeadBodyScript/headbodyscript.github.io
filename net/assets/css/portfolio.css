@@ -718,3 +718,16 @@ body::-webkit-scrollbar-thumb {
     width: 40vh;
   }
 }
+
+.menu-repo{
+  display: none;
+  height: 50px;
+  width: 100%;
+  background-color: #07b39b;
+  margin-bottom: 12px;
+}
+
+.divider{
+  border-top: 1px solid var(--divider);
+
+}

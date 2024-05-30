@@ -49,7 +49,6 @@ function loadGitHub(){
     } 
     sessionStorage.setItem("init", "true");
   }
-
 }
 
 function nextGitHub(id) {
