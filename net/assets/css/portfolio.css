@@ -731,7 +731,6 @@ body::-webkit-scrollbar-thumb {
     width: 40vh;
   }
 }
-
 .menu-repo{
   display: none;
   height: 50px;
@@ -739,10 +738,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #07b39b;
   margin-bottom: 12px;
 }
-
 .divider{
   border-top: 1px solid var(--divider);
-
 }
 .pad{
   margin: 0;
@@ -769,12 +766,12 @@ body::-webkit-scrollbar-thumb {
 }
 .blank {
   opacity: 0;
+}
+.underscore {
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
-  .underscore {
-    animation: blinker 1s linear infinite;
-  }
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
+}

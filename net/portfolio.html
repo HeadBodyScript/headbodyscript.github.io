@@ -57,7 +57,7 @@
           <li class="phone-center"><button class="menu-btn" id="home" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Home</button></li>
           <li class="phone-center"><button class="menu-btn" id="information" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>About Me</button></li>
           <li class="phone-center"><button class="menu-btn" id="repository" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Challenges</button></li>
-          <li class="phone-center"><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li>
+          <!-- <li class="phone-center"><button class="menu-btn" id="comment" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Chat Room</button></li> -->
           <li class="phone-center"><button class="menu-btn" id="repo" onclick="sectionSelect(this.id)"><i class="bi bi-code"></i>Your Repositories</button></li>
           <li class="phone" style="height: 10px; margin-top: 14px;"><div class="divider"></div></li>
           <li class="phone phone-center"><button class="menu-btn phone-inline visit pad" id="githubLoginID" onclick=""><i class="bi bi-code"></i>Login</button></li>
@@ -115,20 +115,8 @@
   </section>
 
   <section id="REPOSITORY">
-    <div class="column">
-      <div class="menu-repo">
-        <label>
-          <select class="ice-cream" name="ice-cream">
-            <option value="">Search a repository</option>
-            <option value="chocolate">Challenge-1</option>
-            <option value="sardine">Challenge-2</option>
-            <option value="vanilla">Challenge-3</option>
-          </select>
-        </label>
-      </div>
-      <div id="Form" class="row">
+    <div id="Form" class="row">
        
-      </div>
     </div>
   </section>
   <section id="COMMENT">
@@ -164,7 +152,7 @@
         <p>You must be logged in to use this feature</p>
         <button class="visit" id="login" type="button" onclick="sectionSelect(this.id)">Login here</button>
         <button class="visit" id="login" type="button" onclick="that()">test</button>
-        <p>NOTE: This api has limited</p>
+        <p>NOTE: This api has limited calls</p>
         <p>If the cards don't fully fill or wont load the API hourly limit has been reached</p>
       </div>
       <div id="userForm" class="row">
