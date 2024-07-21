@@ -4,34 +4,52 @@ body{
     background-image: url(../img/background.jpg);
     overflow: hidden;
 }
+:root{
+    --main: 720px;
+    --img: 120px
+}
+@media only screen and (max-width: 800px) {
+    :root{
+        --calc: 100dvw;
+        --main: calc(var(--calc) - 32px);
+    }
+}
 .app{
     position: sticky;
     height: 100dvh; width: 100dvw;
     background-color: rgba(46, 46, 46, .45);
 }
 .main{
-    min-width: 100dvw;
-    max-width: 860px;
+    max-width: var(--main);
 }
 .icon{
     height: 256px; width: 256px;
     margin-bottom: 32px;
 }
+/* CARD */
 .card{
-    width: 860px; height: 140px;
+    width: var(--main);
+    padding: 8px;
 }
 .picture img{
-    width: 120px; height: 120px;
+    width: var(--img); height: var(--img);
 }
 .picture{
-    width: 120px; height: 120px;
+    width: var(--img); height: var(--img);
     border: solid 1px;
     margin-right: 12px;
 }
 .text{
-    height: 120px; width: 576px;
+    height: 122px; width: calc(var(--main) - var(--img) - 14px);
+    /* 14px = margin + border */
     background-color: white;
     clip-path: polygon(0 0, 100% 0, 100% 88px, 544px 100%, 0 100%);
+}
+@media only screen and (max-width: 800px) {
+    .text{
+
+        clip-path:none;
+    }
 }
 p{
     margin: 0;
