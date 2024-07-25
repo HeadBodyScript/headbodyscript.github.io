@@ -1,16 +1,59 @@
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
+:root{
+    --main: 720px;
+    --img: 120px
+}
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/card/background.webp); */
     background-image: url(../img/wallpaper.jpg);
     /* background-size: cover; */
     background-size: 100% 100%;
+    margin: 0;
+    color: white;
+}
+a:active,
+a:hover,
+a:visited,
+a:link,
+a {text-decoration: none; color: white;}
 
+ul{
+    margin: 0;
+    padding: 0;
 }
-:root{
-    --main: 720px;
-    --img: 120px
+li{
+    list-style: none;
+    margin: 0;
+    margin-left: 8px;
+    margin-bottom: 4px;
 }
+/* */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-vertical{
+    display: flex;
+    align-items: center;
+}
+.center-horizontal{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+/*  */
+
 @media only screen and (max-width: 800px) {
     :root{
         --calc: 100dvw;
@@ -28,31 +71,17 @@ body{
     background-color: rgba(46, 46, 46, .45);
 }
 .main{
-    max-width: var(--main);
+    margin-top: 60px;
+    width: 440px;
 }
-.icon{
-    height: 256px; width: 256px;
-    margin-bottom: 32px;
-    margin-top: 32px;
+.list-title{
+    margin-top: 12px;
 }
-/* CARD */
-.card{
-    width: var(--main);
-    padding: 8px;
+.list{
+    margin-left: 18px;
 }
-.picture img{
-    width: var(--img); height: var(--img);
-}
-.picture{
-    width: var(--img); height: var(--img);
-    border: solid 1px;
-    margin-right: 12px;
-}
-.text{
-    height: 122px; width: calc(var(--main) - var(--img) - 14px);
-    /* 14px = margin + border */
-    background-color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 88px, 544px 100%, 0 100%);
+.list li{
+    list-style: disc;
 }
 @media only screen and (max-width: 800px) {
     .text{
@@ -69,14 +98,20 @@ p{
 .bi{
     font-size: xx-large;
     margin: 0 8px;
+    height: 32px; width: 32px;
 }
 .links{
     margin-bottom: 32px;
 }
-#rain{
-    background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/card/rain.webm);
-    background-position: center;
+.links a{
+    position: relative;
+    bottom: 0;
+    transition: 0.3s;
 }
+.links a:hover{
+    bottom: 8px;
+}
+
 
 .ico{
     position: relative;
