@@ -3,7 +3,7 @@ var audio = new Audio("../net/assets/theme.mp3");
 
 function btnMenu(_id) {
 switch (_id) {
-    case "0":
+    case "A0":
         location.href = 'https://headbodyscript.nl/assets/me.vcf';
     break;
     case "1":
@@ -15,18 +15,15 @@ switch (_id) {
                 {var id = "settingsExit";btnExit(id)}
     break
     case "2":
-        console.log("meow")
         var divVolumeOn = document.getElementById("volumeOn")
         var divVolumeOff = document.getElementById("volumeOff")
         if(divVolumeOn.getAttribute("data") === "init"){
-            console.log("meow1")
             {divVolumeOn.setAttribute("data","hidden")}
             {divVolumeOff.setAttribute("data","init")}
             audio.pause();
             break;
         }
         else{
-            console.log("meow2")
             {divVolumeOn.setAttribute("data","init")}
             {divVolumeOff.setAttribute("data","hidden")}
             audio.play()
@@ -41,7 +38,6 @@ switch (_id) {
 
 function btnExit(id){
     var _id = id.slice(0, -4)
-    // console.log(_id)
     var settings = document.getElementById(_id)
     settings.setAttribute("data","hidden")
 }
