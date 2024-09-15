@@ -1,47 +1,157 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
-@font-face {
-    font-family: headbodyscript;
-    src: url(../font/headbodyscript.woff2) format('woff2')
+:root{
+    --main: #363442;
+    --main-hover: #1f1f23;
+    --selected: #afb7e8;
+    --color: white;
 }
-@font-face {
-    font-family: cyberpunk;
-    src: url(../font/cyberpunk.ttf);
+[data=hidden]{
+    visibility: hidden;
+    display: none;
+}
+[data=initial]{
+    visibility: initial;
+    display: initial;
 }
 body{
+    color: var(--color);
+}
+#app{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    /* background-size: 100% 100%; */
+}
+#settings{
+    position: absolute;
+    top: 80px;
+    left: 110px;
+    padding: 24px;
+    background-color: var(--main);
+    border-radius: 8px;
+    min-width: 300px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+
+header{
+    position: absolute;
+    top: 22px;
+    width: calc(100% - 200px);
+    height: 42px;
+    background-color: var(--main);
+    margin: 0 100px;
+    border-radius: 420px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+@media only screen and (max-width: 1600px) {
+    header{
+        width: calc(100% - 24px);
+        margin: 0 12px;
+    }
+}
+p{
     margin: 0;
-    min-height: 100%;
-    min-width: 100%;
+    color: var(--color);
 }
-a:active,
-a:hover,
-a:visited,
-a:link,
-a {text-decoration: none; color: white;}
-button {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+header div{
+    height: 100%;
+    width: fit-content;
 }
-/* FLEX */
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.bi{
+    color: var(--color);
 }
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.bi-x{
+    position: relative;
+    top: 2px;
 }
-.column{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.bi-three-dots-vertical{
+    font-size: large;
 }
-/*  */
-.headbodyscript{
-    font-family: headbodyscript;
-  }
+.bi-volume-mute-fill,
+.bi-volume-down-fill{
+    font-size: x-large;
+}
+/* MARGIN */
+.ml-8{
+    margin-left: 8px;
+}
+.mr-8{
+    margin-right: 8px;
+}
+.mr-18{
+    margin-right: 18px;
+}
+.mb-8{
+    margin-bottom: 8px;
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+/* PADDING */
+.pl-12{
+    padding-left: 12px;
+}
+/* FLOAT */
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+section{
+    position: absolute;
+    padding: 120px 60px;
+}
+.app-icon{
+    margin: 18px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.save{
+    color: var(--main);
+    margin-top: 8px;
+    background-color: var(--selected);
+    width: 100%;
+    padding-left: 12px;
+    text-align: start;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.save p{
+    position: relative;
+    bottom: 1px;
+    font-weight: bold;
+}
+.menu-bar{
+    padding: 0 6px;
+}
+.menu-bar:hover{
+    background-color: var(--main-hover);
+}
+.volume .volume-slider{
+    visibility: hidden;
+    display: none;
+    width: 0;
+}
+.volume:hover > .volume-slider{
+    visibility: initial;
+    display: initial;
+    width: fit-content;
+}    
+input{
+    height: 100%;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+.temp{
+    width: 85px;
+}
