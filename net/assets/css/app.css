@@ -16,7 +16,7 @@ body{
     color: var(--color);
 }
 #app{
-    background-image: url(../img/bg.jpg);
+    background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
     background-size: cover;
     /* background-size: 100% 100%; */
 }
@@ -41,12 +41,7 @@ header{
     border-radius: 420px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
-@media only screen and (max-width: 1600px) {
-    header{
-        width: calc(100% - 24px);
-        margin: 0 12px;
-    }
-}
+
 p{
     margin: 0;
     color: var(--color);
@@ -100,7 +95,7 @@ header div{
 
 section{
     position: absolute;
-    padding: 120px 60px;
+    padding: 120px 40px;
 }
 .app-icon{
     margin: 18px;
@@ -123,16 +118,18 @@ section{
     bottom: 1px;
     font-weight: bold;
 }
-.menu-bar{
+.taskbar{
     padding: 0 6px;
 }
-.menu-bar:hover{
+.taskbar:hover{
     background-color: var(--main-hover);
 }
 .volume .volume-slider{
     visibility: hidden;
     display: none;
     width: 0;
+    transition: .5s ease;
+
 }
 .volume:hover > .volume-slider{
     visibility: initial;
@@ -144,14 +141,45 @@ input{
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-.temp{
+.input-settings{
     width: 85px;
+}
+/* ALL TASKBAR */
+#A2 .bi{
+    visibility: hidden;
+    display: none;
+}
+#A2 .true{
+    visibility: initial;
+    display: initial; 
+}
+.taskbar-chevron div{
+    top: -300px;
+    right: 150px;
+    position: absolute;
+    background-color: var(--main);
+    overflow: hidden;
+    transition: .5s ease;
+    border-radius: 8px;
+    padding: 12px 6px;
+    height: fit-content;
+}
+.taskbar-chevron div .bi{
+    font-size: medium;
+    padding: 0px 6px;
+}
+.taskbar-chevron .true {
+    top: 80px;
+}
+
+/* MEDIA */
+@media only screen and (max-width: 1600px) {
+    header{
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+    section{
+        position: absolute;
+        padding: 120px 0px;
+    }
 }
