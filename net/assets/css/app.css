@@ -19,7 +19,6 @@ body{
     background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
     background-size: cover;
     background-position: center;
-    /* background-size: 100% 100%; */
 }
 #settings{
     position: absolute;
