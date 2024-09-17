@@ -10,13 +10,13 @@ function btnMenu(_id) {
             btnSwitch(_id)
         break
         case "A2":
-            document.getElementById(_id).classList.toggle("true")
-            if(document.getElementById(_id).classList[0] !== "true"){
+            document.getElementById(_id).classList.toggle("playing")
+            if(document.getElementById(_id).classList[1] !== "playing"){
                 audio.pause();
                 break;
             }
                 audio.play()
-                audio.volume = 0.2;
+                audio.volume = document.getElementById("volume").value / 100;
                 break;
         case "A3":
             btnSwitch(_id)
@@ -37,11 +37,19 @@ document.addEventListener("click", function(e){
     if(e.target.classList == "desktop-programs"){
         document.querySelectorAll('.true').forEach(el => el.classList.remove('true'))
     }     
-   });
+});
 
+// INIT
 var insertTime = document.getElementById("insertTime")
 insertTime.innerHTML =
 `
 <div style="height: fit-content; font-size: small;">${new Date().getUTCHours()}:${new Date().getUTCMinutes()} UTC</div>
 <div style="height: fit-content; font-size: small;">${new Date().getUTCMonth() + 1}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}</div>
 `
+
+var slider = document.getElementById("volume")
+slider.value = localStorage.getItem("volume")
+slider.addEventListener('change', function() {
+    audio.volume = document.getElementById("volume").value / 100;
+    localStorage.setItem("volume",slider.value)
+});

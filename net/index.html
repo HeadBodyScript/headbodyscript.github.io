@@ -54,21 +54,17 @@
         </div>
         <div class="float-right mr-18">
           <div class="center center">
-            <div class="taskbar center">             
-              <button id="A3" onclick="btnMenu(this.id)"><i class="bi bi-chevron-down"></i></button>
-            </div>
-            <div class="taskbar center"><button id="language" onclick="btnMenu(this.id)"><p>ENG</p></button></div>
-            <div class="taskbar center">
+            <div class="center"><button class="taskbar" id="A3" onclick="btnMenu(this.id)"><i class="bi bi-chevron-down"></i></button></div>
+            <div class="center"><button class="taskbar" id="language" onclick="btnMenu(this.id)"><p>ENG</p></button></div>
+            <div class="center">
               <div class="center volume">
-                <div class="center volume-slider mr-8">
-                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="accent-color: var(--selected)">
-                </div>
-                <button id="A2" onclick="btnMenu(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
+                <div class="center volume-slider mr-8"><input type="range" min="1" max="100" value="50" class="slider" id="volume" style="accent-color: var(--selected)"></div>
+                <button class="taskbar" id="A2" onclick="btnMenu(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
               </div>
             </div>
             <div class="taskbar column center" id="insertTime"  style="background-color: var(--main);">
             </div>
-            <div class="taskbar center"><button id="A1" onclick="btnMenu(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
+            <div class="center"><button class="taskbar" id="A1" onclick="btnMenu(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
           </div>
         </div>
       </div>
