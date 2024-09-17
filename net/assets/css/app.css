@@ -4,34 +4,14 @@
     --selected: #afb7e8;
     --color: white;
 }
-[data=hidden]{
-    visibility: hidden;
-    display: none;
-}
-[data=initial]{
-    visibility: initial;
-    display: initial;
-}
 body{
     color: var(--color);
 }
-#app{
-    background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
-    background-size: cover;
-    background-position: center;
-}
-#settings{
-    position: absolute;
-    top: 80px;
-    left: 110px;
-    padding: 24px;
-    background-color: var(--main);
-    border-radius: 8px;
-    min-width: 300px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
-}
-
 header{
+    width: 100%;
+    height: 90px;
+}
+.header{
     position: absolute;
     top: 22px;
     width: calc(100% - 200px);
@@ -41,16 +21,59 @@ header{
     border-radius: 420px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
-
+.header div{
+    height: 100%;
+    width: fit-content;
+}
+section{
+    width: calc(100% - 80px);
+    height: calc(100% - 90px);
+    position: absolute;
+    padding: 0 40px 0 40px;
+}
 p{
     margin: 0;
     color: var(--color);
 }
-header div{
+h1{
+    margin: 0;
+}
+input{
     height: 100%;
-    width: fit-content;
+    margin: 0;
+}
+#app{
+    background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
+    background-size: cover;
+    background-position: center;
 }
 
+.button{
+    color: var(--main);
+    margin-top: 8px;
+    background-color: var(--selected);
+    width: 100%;
+    padding-left: 12px;
+    text-align: start;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.button p{
+    position: relative;
+    bottom: 1px;
+    font-weight: bold;
+}
+
+/* BOOTSTRAP */
+button .bi-volume-mute-fill,
+.true .bi-volume-down-fill{
+    visibility: initial;
+    display: initial;
+}
+button .bi-volume-down-fill,
+.true .bi-volume-mute-fill{
+    visibility: hidden;
+    display: none;
+}
 .bi{
     color: var(--color);
 }
@@ -92,32 +115,7 @@ header div{
 .float-right{
     float: right;
 }
-
-section{
-    position: absolute;
-    padding: 120px 40px;
-}
-.app-icon{
-    margin: 18px;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
-}
-.save{
-    color: var(--main);
-    margin-top: 8px;
-    background-color: var(--selected);
-    width: 100%;
-    padding-left: 12px;
-    text-align: start;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
-}
-.save p{
-    position: relative;
-    bottom: 1px;
-    font-weight: bold;
-}
+    /* TASKBAR */
 .taskbar{
     padding: 0 6px;
 }
@@ -129,57 +127,94 @@ section{
     display: none;
     width: 0;
     transition: .5s ease;
-
 }
 .volume:hover > .volume-slider{
     visibility: initial;
     display: initial;
     width: fit-content;
 }    
-input{
-    height: 100%;
-    margin: 0;
-}
-
-.input-settings{
-    width: 85px;
-}
-/* ALL TASKBAR */
-#A2 .bi{
-    visibility: hidden;
-    display: none;
-}
-#A2 .true{
-    visibility: initial;
-    display: initial; 
+.taskbar-chevron{
+    height: 45px;
+    width: fit-content;
+    z-index: 16;
 }
 .taskbar-chevron div{
-    top: -300px;
-    right: 150px;
-    position: absolute;
+    top: -1000px;
+    right: 170px;
+    position: relative;
     background-color: var(--main);
     overflow: hidden;
     transition: .5s ease;
     border-radius: 8px;
     padding: 12px 6px;
-    height: fit-content;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
 .taskbar-chevron div .bi{
     font-size: medium;
     padding: 0px 6px;
 }
 .taskbar-chevron .true {
-    top: 80px;
+    top: 0px;
 }
-
+.taskbar-settings{
+    z-index: 16;
+}
+.taskbar-settings #A1ID{
+    top: -1000px;
+    position: relative;
+    padding: 24px;
+    background-color: var(--main);
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+    transition: .5s ease;
+}
+.taskbar-settings .true{
+    top: 0px !important; 
+}
+.taskbar-settings #A2 .true{
+    visibility: initial;
+    display: initial; 
+}
+.taskbar-settings ul{
+    margin: 0;
+    padding: 0;
+    height: 24px;
+}
+.taskbar-settings li{
+    list-style: none;
+}
+.taskbar-settings li:first-child{
+    float: left;
+}
+.taskbar-settings li:last-child{
+    float: right;
+}
+.taskbar-settings input{
+    width: 85px;
+}
+    /* DESKTOP */
+.app-icon{
+    margin: 18px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.desktop-programs{
+    min-height: 100%;
+}
+.desktop-apps{
+    position: absolute;
+    top: 0;
+}
 /* MEDIA */
 @media only screen and (max-width: 1600px) {
-    header{
+    .header{
         width: calc(100% - 40px);
         margin: 0 20px;
     }
-    section{
-        position: absolute;
-        padding: 120px 0px;
+    .taskbar-chevron div{
+        right: 90px;
     }
 }

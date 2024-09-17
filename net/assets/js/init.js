@@ -1,54 +1,43 @@
 (()=>{var edit=document.getElementById("app");"true"==(localStorage.getItem("theme"))?edit.setAttribute("data", "true"):edit.setAttribute("data", "false")})();
-var audio = new Audio("../net/assets/theme.mp3");
+var audio = new Audio("https://github.com/HeadBodyScript/headbodyscript.github.io/raw/main/static/theme.mp3");
 
 function btnMenu(_id) {
-    var deleteClass = document.getElementsByClassName("true")
-    console.log(deleteClass)
-    // deleteClass.classList.remove("")
-switch (_id) {
-    case "A0":
-        location.href = 'https://headbodyscript.nl/assets/me.vcf';
-    break;
-    case "A1":
-            var settings = document.getElementById("settings")
-            var data = settings.getAttribute("data")
-            if(data === "hidden")
-                {settings.setAttribute("data","init")}
-            if(data === "init")
-                {var id = "settingsExit";btnExit(id)}
-    break
-    case "A2":
-        var divVolumeOn = document.getElementById("volumeOn")
-        var divVolumeOff = document.getElementById("volumeOff")
-        if(divVolumeOn.getAttribute("data") === "init"){
-            {divVolumeOn.setAttribute("data","hidden")}
-            {divVolumeOff.setAttribute("data","init")}
-            audio.pause();
-            break;
-        }
-        else{
-
-            {divVolumeOn.setAttribute("data","init")}
-            {divVolumeOff.setAttribute("data","hidden")}
-            audio.play()
-            audio.volume = 0.2;
-            break;
-        }
-    case "A3":
-        document.getElementById(_id + "ID").classList.toggle("true");
-    break;
-    default:
-    break;
+    switch (_id) {
+        case "D0":
+            location.href = 'https://headbodyscript.nl/assets/me.vcf';
+        break;
+        case "A1":
+            btnSwitch(_id)
+        break
+        case "A2":
+            document.getElementById(_id).classList.toggle("true")
+            if(document.getElementById(_id).classList[0] !== "true"){
+                audio.pause();
+                break;
+            }
+                audio.play()
+                audio.volume = 0.2;
+                break;
+        case "A3":
+            btnSwitch(_id)
+        break;
+        default:
+        break;
+    }
 }
+function btnSwitch(_id){
+    var checkiftrue = document.getElementById(_id + "ID");
+    if (checkiftrue.classList[0] !== "true") {checkiftrue.classList.toggle("temp")}
+    document.querySelectorAll('.true').forEach(el => el.classList.remove('true'))
+    document.getElementById(_id + "ID").classList.replace("temp","true")
 }
-
-function btnExit(id){
-    var _id = id.slice(0, -4)
-    var settings = document.getElementById(_id)
-    settings.setAttribute("data","hidden")
-}
-
-
+// This function is kinda bad
+// Close all taskbar apps when clicking off it
+document.addEventListener("click", function(e){
+    if(e.target.classList == "desktop-programs"){
+        document.querySelectorAll('.true').forEach(el => el.classList.remove('true'))
+    }     
+   });
 
 var insertTime = document.getElementById("insertTime")
 insertTime.innerHTML =

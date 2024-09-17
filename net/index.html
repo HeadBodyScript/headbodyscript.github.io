@@ -44,74 +44,82 @@
   </head>
 
   <body id="app" data="false">
+
     <header>
-      <div class="float-left">
-        <div class="ml-8 center">
-          <img class="ico" src="assets/icon/favicon-32x32.png" alt="">
+      <div class="header">
+        <div class="float-left">
+          <div class="ml-8 center">
+            <img class="ico" src="assets/icon/favicon-32x32.png" alt="">
+          </div>
         </div>
-      </div>
-      <div class="float-right mr-18">
-        <div class="center center">
-          <div class="taskbar center">
-            <button id="A3" onclick="btnMenu(this.id)"><i class="bi bi-chevron-down"></i>
-            </button>
-          </div>
-          <div class="taskbar center"><button id="language" onclick="btnMenu(this.id)"><p>ENG</p></button></div>
-          <div class="taskbar center">
-            <div class="center volume">
-              <div class="center volume-slider mr-8">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="accent-color: var(--selected)">
-              </div>
-              <button id="A2" onclick="btnMenu(this.id)"><i id="volumeOn" data="hidden" class="bi bi-volume-down-fill"></i><i id="volumeOff" data="init" class="bi bi-volume-mute-fill"></i></button>
+        <div class="float-right mr-18">
+          <div class="center center">
+            <div class="taskbar center">             
+              <button id="A3" onclick="btnMenu(this.id)"><i class="bi bi-chevron-down"></i></button>
             </div>
+            <div class="taskbar center"><button id="language" onclick="btnMenu(this.id)"><p>ENG</p></button></div>
+            <div class="taskbar center">
+              <div class="center volume">
+                <div class="center volume-slider mr-8">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="accent-color: var(--selected)">
+                </div>
+                <button id="A2" onclick="btnMenu(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
+              </div>
+            </div>
+            <div class="taskbar column center" id="insertTime"  style="background-color: var(--main);">
+            </div>
+            <div class="taskbar center"><button id="A1" onclick="btnMenu(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
           </div>
-          <div class="taskbar column center" id="insertTime"  style="background-color: var(--main);">
-          </div>
-          <div class="taskbar center"><button id="A1" onclick="btnMenu(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
         </div>
       </div>
     </header>
+
     <section>
-      <div><button id="A2" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
-      <div><button id="A1" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
-      <div><button id="A0" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
-    </section>
-    <div></div>
-    <div id="settings" data="hidden" class="column">
-        <div class="mb-16">
-          <div class="float-left">Settings</div>
-          <div class="float-right"><button id="settingsExit" onclick="btnExit(this.id)"><i class="bi bi-x"></i></button></div>
+      <div class="desktop-programs">
+        <div class="taskbar-chevron float-right">
+          <div id="A3ID" class="">
+            <i class="bi bi-bug"></i>
+            <i class="bi bi-c-circle"></i>
+            <i class="bi bi-chat-left-dots"></i>
+            <i class="bi bi-filetype-mp3"></i>
+            <i class="bi bi-person-bounding-box"></i>
+          </div>
         </div>
-      <div>
-        <div class="float-left"><p class="pl-12">Text Color:</p></div>
-        <div class="float-right"><input class="input-settings" type="text"></div>
+
+        <div class="taskbar-settings float-right column">
+          <div id="A1ID" class="">
+            <h1>Settings</h1>
+            <ul>
+              <li>Text Color:</li>
+              <li><input class="input-settings" type="text"></li>
+            </ul>
+            <ul>
+              <li>Taskbar Color:</li>
+              <li><input class="input-settings" type="text"></li>
+            </ul>
+            <ul>
+              <li>Selected Color:</li>
+              <li><input class="input-settings" type="text"></li>
+            </ul>
+            <ul>
+              <li>Background Color:</li>
+              <li><input class="input-settings" type="text"></li>
+            </ul>
+            <button class="button">SAVE</button>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="float-left"><p class="pl-12">Taskbar Color:</p></div>
-        <div class="float-right"><input class="input-settings" type="text"></div>
+
+      <div class="desktop-apps">
+        <div><button id="D2" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
+        <div><button id="D1" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
+        <div><button id="D0" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
       </div>
-      <div>
-        <div class="float-left"><p class="pl-12">Selected Color:</p></div>
-        <div class="float-right"><input class="input-settings" type="text"></div>
-      </div>
-      <div>
-        <div class="float-left"><p class="pl-12">Background Link:</p></div>
-        <div class="float-right"><input class="input-settings" type="text"></div>
-      </div>
-      <div><button class="save"><p>Save</p></button></div>
-    </div>
-    <div class="taskbar-chevron">
-      <div id="A3ID" class="">
-        <i class="bi bi-bug"></i>
-        <i class="bi bi-c-circle"></i>
-        <i class="bi bi-chat-left-dots"></i>
-        <i class="bi bi-filetype-mp3"></i>
-        <i class="bi bi-person-bounding-box"></i>
-      </div>
-    </div>
+    </section>
+
+
+
     <footer></footer>
     <script src="assets/js/init.js"></script>
-    <!-- <script src="assets/js/divs.js"></script> -->
   </body>
-  <!-- <script src="assets/js/temp.js"></script> -->
 </html>
