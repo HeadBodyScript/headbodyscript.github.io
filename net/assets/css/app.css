@@ -134,12 +134,14 @@ button .bi-volume-down-fill,
     width: fit-content;
 }    
 .taskbar-chevron{
+    position: relative;
+    top: -1000px;
     height: 45px;
     width: fit-content;
     z-index: 16;
 }
 .taskbar-chevron div{
-    top: -1000px;
+    top: 0px;
     right: 170px;
     position: relative;
     background-color: var(--main);
@@ -154,14 +156,17 @@ button .bi-volume-down-fill,
     padding: 0px 6px;
 }
 .taskbar-chevron .true {
-    top: 0px;
+    top: 1000px;
 }
 .taskbar-settings{
+    position: relative;
     z-index: 16;
+    top: -1000px;
 }
 .taskbar-settings #A1ID{
-    top: -1000px;
+    
     position: relative;
+    top: 0px;
     padding: 24px;
     background-color: var(--main);
     border-radius: 8px;
@@ -170,7 +175,8 @@ button .bi-volume-down-fill,
     transition: .5s ease;
 }
 .taskbar-settings .true{
-    top: 0px !important; 
+    position: relative;
+    top: 1000px !important; 
 }
 .taskbar-settings #A2 .true{
     visibility: initial;
@@ -216,5 +222,8 @@ button .bi-volume-down-fill,
     }
     .taskbar-chevron div{
         right: 90px;
+    }
+    .taskbar-settings{
+        right: -26px;
     }
 }
