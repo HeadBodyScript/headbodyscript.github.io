@@ -47,6 +47,7 @@ input{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .button{
@@ -221,6 +222,7 @@ button .bi-volume-down-fill,
 }
 .desktop-apps{
     width: calc(100% - 80px);
+    height: 100%;
     position: absolute;
     top: 0;
 }
