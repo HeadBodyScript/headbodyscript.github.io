@@ -5,3 +5,4 @@ firebase.json
 .github/
 .firebaserc
 firebase-new.exe
+node_modules/

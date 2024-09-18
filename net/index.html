@@ -23,7 +23,7 @@
     <meta name="language" content="EN">
     
     <link rel="stylesheet" href="assets/css/init.css">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/index/app.css">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="assets/icon/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -107,15 +107,41 @@
       </div>
 
       <div class="desktop-apps">
-        <div><button id="D2" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
-        <div><button id="D1" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
-        <div><button id="D0" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
+        <div class="row">
+          <div><button id="D2" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
+          <div><button id="D1" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
+          <div><button id="D0" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
+  
+        </div>
+        <div class="float-right">
+          <div class="widget column">
+            <div class=""><i class="bi bi-github"></i></div>
+            <p>Repositories</p>
+            <p>#Number</p>
+        </div>
+        <div class="widget column">
+          <div class=""><i class="bi bi-youtube"></i></div>
+          <p>YouTube Subscribers</p>
+          <p>#Number</p>
+        </div>
+        <div class="widget column">
+          <div class=""><i class="bi bi-people-fill"></i></div>
+          <p>Github Followers</p>
+          <p>#Number</p>
+        </div>
+        <div class="widget column">
+          <div class=""><i class="bi bi-git"></i></div>
+          <p>Total Projects</p>
+          <p>#Number</p>
+        </div>
+        </div>
+
       </div>
     </section>
 
 
 
     <footer></footer>
-    <script src="assets/js/init.js"></script>
+    <script src="assets/js/index/init.js"></script>
   </body>
 </html>

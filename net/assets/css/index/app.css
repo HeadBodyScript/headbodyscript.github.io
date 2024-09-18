@@ -46,6 +46,7 @@ input{
     background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .button{
@@ -80,6 +81,12 @@ button .bi-volume-down-fill,
 .bi-x{
     position: relative;
     top: 2px;
+}
+.bi-github,
+.bi-git,
+.bi-people-fill,
+.bi-youtube{
+    font-size: xx-large;
 }
 .bi-three-dots-vertical{
     font-size: large;
@@ -213,8 +220,20 @@ button .bi-volume-down-fill,
     min-height: 100%;
 }
 .desktop-apps{
+    width: calc(100% - 80px);
     position: absolute;
     top: 0;
+}
+.desktop-apps div{
+    width: fit-content;
+}
+.widget{
+    width: 200px !important;
+    margin: 18px;
+    background-color: var(--main);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
 /* MEDIA */
 @media only screen and (max-width: 1600px) {
@@ -229,7 +248,7 @@ button .bi-volume-down-fill,
         right: -26px;
     }
     section{
-        width: calc(100% - 40px);
+        width: 100%;
         padding: 0;
     }
 }
