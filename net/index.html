@@ -42,9 +42,7 @@
     </script>
     <!-- Google tag (gtag.js) -->
   </head>
-
   <body id="app" data="false">
-
     <header>
       <div class="header">
         <div class="float-left">
@@ -53,7 +51,7 @@
           </div>
         </div>
         <div class="float-right mr-18">
-          <div class="center center">
+          <div class="center">
             <div class="center"><button class="taskbar" id="A3" onclick="btnMenu(this.id)"><i class="bi bi-chevron-down"></i></button></div>
             <div class="center"><button class="taskbar" id="language" onclick="btnMenu(this.id)"><p>ENG</p></button></div>
             <div class="center">
@@ -69,7 +67,6 @@
         </div>
       </div>
     </header>
-
     <section>
       <div class="desktop-programs">
         <div class="taskbar-chevron float-right">
@@ -81,9 +78,10 @@
             <i class="bi bi-person-bounding-box"></i>
           </div>
         </div>
-
         <div class="taskbar-settings float-right column">
           <div id="A1ID" class="">
+            <h1>User</h1>
+              <button class="button" style="margin-bottom: 22px;">LOGIN</button>
             <h1>Settings</h1>
             <ul>
               <li>Text Color:</li>
@@ -105,13 +103,12 @@
           </div>
         </div>
       </div>
-
       <div class="desktop-apps">
         <div class="row">
-          <div><button id="D2" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
-          <div><button id="D1" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
-          <div><button id="D0" onclick="btnMenu(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
-  
+          <div><button id="D2" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
+          <div><button id="D1" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
+          <div><button id="D0" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
+          <div><button id="D3" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/portfolio.webp" alt=""></button></div>
         </div>
         <div class="float-right">
           <div class="widget column">
@@ -135,12 +132,8 @@
           <p>#Number</p>
         </div>
         </div>
-
       </div>
     </section>
-
-
-
     <footer></footer>
     <script src="assets/js/index/init.js"></script>
   </body>

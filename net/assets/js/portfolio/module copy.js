@@ -1,8 +1,6 @@
-// add new 404 picture
-// Maybe add 404 for all other stuff
 import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 // import { GithubAuthProvider } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -28,18 +26,14 @@ const dbref = ref(db);
 
 // auth
 async function wait(userGitHub, response, i, git) {
-  try {
-    
-  } catch (error) {
-    
-  }
   var box = []
     var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`,{
       method: "GET",
       headers: {
         Authorization: `${git}` 
       }
-    }).json();
+    })
+    var repository = await repository.json();
     var repositoryIgnore = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${response[i].name}/main/ignore.json`)
     if (repositoryIgnore.ok == true){
       var repositoryIgnore = await repositoryIgnore.json();
@@ -50,7 +44,8 @@ async function wait(userGitHub, response, i, git) {
       headers: {
         Authorization: `${git}` 
       }
-    }).json();
+    })
+    var repositoryContributors = await repositoryContributors.json();
 
     for (let i = 0; i < repositoryContributors.length; i++) {
       var addToBox = [{
@@ -81,7 +76,8 @@ function newGitHubRequest(git, userGitHub){
     headers: {
       Authorization: `${git}` 
     }
-  }).json()
+  })
+  .then(response => response.json())
   .then(response => {
       localStorage.setItem("GitHub", response.length);
       for (let i = 0; i < response.length; i++) {
@@ -117,8 +113,14 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 async function createCard(userGitHub, i){
-  let GitHub = JSON.parse(localStorage.getItem(i));
-  let README = await (await fetch(`https://raw.githubusercontent.com/${userGitHub}/${GitHub[0].repository}/main/README.md`)).text();
+  try {
+    var README = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${GitHub[0].repository}/main/README.md`);
+    var README = await README.text();
+  } catch (error) {
+    var README = "No README.md found"
+  }
+    let GitHub = JSON.parse(localStorage.getItem(i));
+
 var newDiv = 
     `
     <div class="card">

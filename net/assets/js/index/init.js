@@ -1,11 +1,8 @@
 (()=>{var edit=document.getElementById("app");"true"==(localStorage.getItem("theme"))?edit.setAttribute("data", "true"):edit.setAttribute("data", "false")})();
-var audio = new Audio("https://github.com/HeadBodyScript/headbodyscript.github.io/raw/main/static/theme.mp3");
+const audio = new Audio("https://github.com/HeadBodyScript/headbodyscript.github.io/raw/main/static/theme.mp3");
 
 function btnMenu(_id) {
     switch (_id) {
-        case "D0":
-            location.href = 'https://headbodyscript.nl/assets/me.vcf';
-        break;
         case "A1":
             btnSwitch(_id)
         break
@@ -25,6 +22,29 @@ function btnMenu(_id) {
         break;
     }
 }
+
+function btnApp(_id){
+    switch (_id) {
+        case "D0":
+            // phone
+            location.href = 'https://headbodyscript.nl/assets/me.vcf';
+        break;
+        case "D1":
+            // github
+            window.location.href = "https://github.com/HeadBodyScript";
+        break;
+        case "D2":
+            // Minecraft
+            window.location.href = "https://headbodyscript.nl/minecraft/";
+        break;
+        case "D3":
+            // Portfolio
+            window.location.href = "https://headbodyscript.nl/portfolio/";
+        break;
+        default:
+            break;
+    }
+}
 function btnSwitch(_id){
     var checkiftrue = document.getElementById(_id + "ID");
     if (checkiftrue.classList[0] !== "true") {checkiftrue.classList.toggle("temp")}
@@ -40,14 +60,11 @@ document.addEventListener("click", function(e){
 });
 
 // INIT
-var insertTime = document.getElementById("insertTime")
-insertTime.innerHTML =
-`
-<div style="height: fit-content; font-size: small;">${new Date().getUTCHours()}:${new Date().getUTCMinutes()} UTC</div>
-<div style="height: fit-content; font-size: small;">${new Date().getUTCMonth() + 1}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}</div>
-`
+const insertTime = document.getElementById("insertTime").innerHTML =
+`<div style="height: fit-content; font-size: small;">${new Date().getUTCHours()}:${new Date().getUTCMinutes()} UTC</div>
+<div style="height: fit-content; font-size: small;">${new Date().getUTCMonth() + 1}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}</div>`
 
-var slider = document.getElementById("volume")
+const slider = document.getElementById("volume")
 slider.value = localStorage.getItem("volume")
 slider.addEventListener('change', function() {
     audio.volume = document.getElementById("volume").value / 100;
