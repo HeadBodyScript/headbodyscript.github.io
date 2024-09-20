@@ -1,72 +1,69 @@
-(()=>{var edit=document.getElementById("app");"true"==(localStorage.getItem("theme"))?edit.setAttribute("data", "true"):edit.setAttribute("data", "false")})();
+// (()=>{var edit=document.getElementById("app");"true"==(localStorage.getItem("theme"))?edit.setAttribute("data", "true"):edit.setAttribute("data", "false")})();
 const audio = new Audio("https://github.com/HeadBodyScript/headbodyscript.github.io/raw/main/static/theme.mp3");
 
-function btnMenu(_id) {
-    switch (_id) {
-        case "A1":
-            btnSwitch(_id)
+function BTN(ID) {
+    switch (ID) {
+        case "DESKTOP0":
+            // settings
+            toggleClass(ID, document.getElementById(ID + "ID"))
         break
-        case "A2":
-            document.getElementById(_id).classList.toggle("playing")
-            if(document.getElementById(_id).classList[1] !== "playing"){
+        case "DESKTOP1":
+            // sound
+            document.getElementById(ID).classList.toggle("audio-playing")
+            if(document.getElementById(ID).classList[1] !== "audio-playing"){
                 audio.pause();
                 break;
             }
                 audio.play()
-                audio.volume = document.getElementById("volume").value / 100;
+                audio.volume = document.getElementById("VOLUMESLIDER").value / 100;
                 break;
-        case "A3":
-            btnSwitch(_id)
+        case "DESKTOP3":
+            // cheveron
+            toggleClass(ID, document.getElementById(ID + "ID"))
         break;
-        default:
-        break;
-    }
-}
-
-function btnApp(_id){
-    switch (_id) {
-        case "D0":
+        case "APP0":
             // phone
             location.href = 'https://headbodyscript.nl/assets/me.vcf';
         break;
-        case "D1":
+        case "APP1":
             // github
             window.location.href = "https://github.com/HeadBodyScript";
         break;
-        case "D2":
+        case "APP2":
             // Minecraft
-            window.location.href = "https://headbodyscript.nl/minecraft/";
+            window.location.href = "https://headbodyscript.nl/minecraft";
         break;
-        case "D3":
+        case "APP3":
             // Portfolio
-            window.location.href = "https://headbodyscript.nl/portfolio/";
+            window.location.href = "https://headbodyscript.nl/portfolio";
         break;
         default:
-            break;
+            console.log("ERROR")
+        break;
     }
 }
-function btnSwitch(_id){
-    var checkiftrue = document.getElementById(_id + "ID");
-    if (checkiftrue.classList[0] !== "true") {checkiftrue.classList.toggle("temp")}
+function toggleClass(ID, VAR_class){
+    // var checkiftrue = document.getElementById(ID + "ID");
+    if (VAR_class.classList[0] !== "true") {VAR_class.classList.toggle("temp")}
     document.querySelectorAll('.true').forEach(el => el.classList.remove('true'))
-    document.getElementById(_id + "ID").classList.replace("temp","true")
+    document.getElementById(ID + "ID").classList.replace("temp","true")
 }
 // This function is kinda bad
 // Close all taskbar apps when clicking off it
 document.addEventListener("click", function(e){
-    if(e.target.classList == "desktop-programs"){
+    if(e.target.classList == "desktop-apps"){
         document.querySelectorAll('.true').forEach(el => el.classList.remove('true'))
     }     
 });
 
 // INIT
-const insertTime = document.getElementById("insertTime").innerHTML =
+const DIV_date = document.getElementById("INSERTDATE").innerHTML =
 `<div style="height: fit-content; font-size: small;">${new Date().getUTCHours()}:${new Date().getUTCMinutes()} UTC</div>
 <div style="height: fit-content; font-size: small;">${new Date().getUTCMonth() + 1}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}</div>`
 
-const slider = document.getElementById("volume")
-slider.value = localStorage.getItem("volume")
-slider.addEventListener('change', function() {
-    audio.volume = document.getElementById("volume").value / 100;
-    localStorage.setItem("volume",slider.value)
+const DIV_volume_slider = document.getElementById("VOLUMESLIDER")
+DIV_volume_slider.value = localStorage.getItem("INT_VOLUMESLIDER")
+DIV_volume_slider.addEventListener('change', function() {
+    audio.volume = DIV_volume_slider.value / 100;
+    localStorage.setItem("INT_VOLUMESLIDER",DIV_volume_slider.value)
 });

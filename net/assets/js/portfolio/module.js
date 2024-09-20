@@ -39,7 +39,8 @@ async function wait(userGitHub, response, i, git) {
       headers: {
         Authorization: `${git}` 
       }
-    }).json();
+    });
+    var repository = await repository.json();
     var repositoryIgnore = await fetch(`https://raw.githubusercontent.com/${userGitHub}/${response[i].name}/main/ignore.json`)
     if (repositoryIgnore.ok == true){
       var repositoryIgnore = await repositoryIgnore.json();
@@ -50,7 +51,8 @@ async function wait(userGitHub, response, i, git) {
       headers: {
         Authorization: `${git}` 
       }
-    }).json();
+    });
+    var repositoryContributors = await repositoryContributors.json();
 
     for (let i = 0; i < repositoryContributors.length; i++) {
       var addToBox = [{
@@ -81,7 +83,7 @@ function newGitHubRequest(git, userGitHub){
     headers: {
       Authorization: `${git}` 
     }
-  }).json()
+  })
   .then(response => {
       localStorage.setItem("GitHub", response.length);
       for (let i = 0; i < response.length; i++) {

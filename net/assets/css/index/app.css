@@ -8,26 +8,21 @@ body{
     color: var(--color);
 }
 header{
-    width: 100%;
-    height: 90px;
+    width: 100%; height: 90px;
 }
 .header{
-    position: absolute;
-    top: 22px;
-    width: calc(100% - 200px);
-    height: 42px;
+    position: absolute; top: 22px;
+    width: calc(100% - 200px); height: 42px;
     background-color: var(--main);
     margin: 0 100px;
     border-radius: 420px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
 .header div{
-    height: 100%;
-    width: fit-content;
+    width: fit-content; height: 100%;
 }
 section{
-    width: calc(100% - 80px);
-    height: calc(100% - 90px);
+    width: calc(100% - 80px); height: calc(100% - 90px);
     position: absolute;
     padding: 0 40px 0 40px;
 }
@@ -44,17 +39,16 @@ input{
 }
 #app{
     background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
 }
-
+#INSERTDATE{
+    background-color: var(--main);
+}
 .button{
+    width: 100%;
     color: var(--main);
     margin-top: 8px;
     background-color: var(--selected);
-    width: 100%;
     padding-left: 12px;
     text-align: start;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
@@ -67,12 +61,12 @@ input{
 
 /* BOOTSTRAP */
 button .bi-volume-mute-fill,
-.playing .bi-volume-down-fill{
+.audio-playing .bi-volume-down-fill{
     visibility: initial;
     display: initial;
 }
 button .bi-volume-down-fill,
-.playing .bi-volume-mute-fill{
+.audio-playing .bi-volume-mute-fill{
     visibility: hidden;
     display: none;
 }
@@ -80,8 +74,7 @@ button .bi-volume-down-fill,
     color: var(--color);
 }
 .bi-x{
-    position: relative;
-    top: 2px;
+    position: relative; top: 2px;
 }
 .bi-github,
 .bi-git,
@@ -96,33 +89,7 @@ button .bi-volume-down-fill,
 .bi-volume-down-fill{
     font-size: x-large;
 }
-/* MARGIN */
-.ml-8{
-    margin-left: 8px;
-}
-.mr-8{
-    margin-right: 8px;
-}
-.mr-18{
-    margin-right: 18px;
-}
-.mb-8{
-    margin-bottom: 8px;
-}
-.mb-16{
-    margin-bottom: 16px;
-}
-/* PADDING */
-.pl-12{
-    padding-left: 12px;
-}
-/* FLOAT */
-.float-left{
-    float: left;
-}
-.float-right{
-    float: right;
-}
+
     /* TASKBAR */
 .taskbar{
     padding: 0 6px;
@@ -143,6 +110,9 @@ button .bi-volume-down-fill,
     display: initial;
     width: fit-content;
 }    
+.slider{
+    accent-color: var(--selected)
+}
 .taskbar-chevron{
     position: relative;
     top: -1000px;
@@ -173,7 +143,7 @@ button .bi-volume-down-fill,
     z-index: 16;
     top: -1000px;
 }
-.taskbar-settings #A1ID{
+.taskbar-settings div{
     
     position: relative;
     top: 0px;
@@ -247,10 +217,14 @@ button .bi-volume-down-fill,
         right: 90px;
     }
     .taskbar-settings{
-        right: -26px;
+        width: 100%;
     }
     section{
         width: 100%;
         padding: 0;
+    }
+    .desktop-programs,
+    .desktop-apps{
+        width: 100%;
     }
 }

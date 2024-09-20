@@ -50,19 +50,19 @@
             <img class="ico" src="assets/icon/favicon-32x32.png" alt="">
           </div>
         </div>
-        <div class="float-right mr-18">
+        <div class="float-right mr-16">
           <div class="center">
-            <div class="center"><button class="taskbar" id="A3" onclick="btnMenu(this.id)"><i class="bi bi-chevron-down"></i></button></div>
-            <div class="center"><button class="taskbar" id="language" onclick="btnMenu(this.id)"><p>ENG</p></button></div>
+            <div class="center"><button class="taskbar" id="DESKTOP3" onclick="BTN(this.id)"><i class="bi bi-chevron-down"></i></button></div>
+            <div class="center"><button class="taskbar" id="LANGUAGE" onclick="BTN(this.id)"><p>ENG</p></button></div>
             <div class="center">
               <div class="center volume">
-                <div class="center volume-slider mr-8"><input type="range" min="1" max="100" value="50" class="slider" id="volume" style="accent-color: var(--selected)"></div>
-                <button class="taskbar" id="A2" onclick="btnMenu(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
+                <div class="center volume-slider mr-8"><input type="range" min="1" max="100" value="50" class="slider" id="VOLUMESLIDER"></div>
+                <button class="taskbar" id="DESKTOP1" onclick="BTN(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
               </div>
             </div>
-            <div class="taskbar column center" id="insertTime"  style="background-color: var(--main);">
+            <div class="taskbar column center" id="INSERTDATE">
             </div>
-            <div class="center"><button class="taskbar" id="A1" onclick="btnMenu(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
+            <div class="center"><button class="taskbar" id="DESKTOP0" onclick="BTN(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
     <section>
       <div class="desktop-programs">
         <div class="taskbar-chevron float-right">
-          <div id="A3ID" class="">
+          <div id="DESKTOP3ID" class="">
             <i class="bi bi-bug"></i>
             <i class="bi bi-c-circle"></i>
             <i class="bi bi-chat-left-dots"></i>
@@ -78,10 +78,10 @@
             <i class="bi bi-person-bounding-box"></i>
           </div>
         </div>
-        <div class="taskbar-settings float-right column">
-          <div id="A1ID" class="">
+        <div class="taskbar-settings center column">
+          <div id="DESKTOP0ID" class="">
             <h1>User</h1>
-              <button class="button" style="margin-bottom: 22px;">LOGIN</button>
+              <button id="LOGIN" class="button mb-16" onclick="BTN(this.id)">LOGIN</button>
             <h1>Settings</h1>
             <ul>
               <li>Text Color:</li>
@@ -105,10 +105,10 @@
       </div>
       <div class="desktop-apps">
         <div class="row">
-          <div><button id="D2" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
-          <div><button id="D1" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
-          <div><button id="D0" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
-          <div><button id="D3" onclick="btnApp(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/portfolio.webp" alt=""></button></div>
+          <div><button id="D2" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
+          <div><button id="D1" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
+          <div><button id="D0" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
+          <div><button id="D3" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/portfolio.webp" alt=""></button></div>
         </div>
         <div class="float-right">
           <div class="widget column">
