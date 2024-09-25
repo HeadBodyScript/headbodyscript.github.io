@@ -28,11 +28,6 @@ const dbref = ref(db);
 
 // auth
 async function wait(userGitHub, response, i, git) {
-  try {
-    
-  } catch (error) {
-    
-  }
   var box = []
     var repository = await fetch(`https://api.github.com/repos/${userGitHub}/${response[i].name}/commits/main`,{
       method: "GET",

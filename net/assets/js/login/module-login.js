@@ -21,6 +21,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const provider = new GithubAuthProvider();
 const auth = getAuth();
 const db = getDatabase();
@@ -37,18 +38,11 @@ function githubLogin(){
     
         // The signed-in user info.
         const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-        // console.log(credential)
-        // console.log(token)
-
-        // This one is the one you want "user.uid" "user.providerData[0].displayName" ".providerData[0].photoURL"
-        // console.log(user)
 
         localStorage.setItem("user-credential", JSON.stringify(credential));
         localStorage.setItem("user-token", JSON.stringify(token));
         localStorage.setItem("user", JSON.stringify(user));
-        location.reload()
+        history.back()
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;

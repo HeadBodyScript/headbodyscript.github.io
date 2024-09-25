@@ -2,29 +2,30 @@
     --main: #363442;
     --main-hover: #1f1f23;
     --selected: #afb7e8;
-    --color: white;
+    --bg: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
 }
 body{
-    color: var(--color);
+    position: absolute; top: 0; min-height: 100dvh;
+    background-image: var(--bg);
+    background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
 }
 header{
-    width: 100%; height: 90px;
+    width: calc(100% - 36px);
+    margin: 18px;
+
 }
-.header{
-    position: absolute; top: 22px;
-    width: calc(100% - 200px); height: 42px;
+header .wrapper{
+    width: calc(100%); height: 42px;
     background-color: var(--main);
-    margin: 0 100px;
     border-radius: 420px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
-.header div{
+header .wrapper div{
     width: fit-content; height: 100%;
 }
 section{
-    width: calc(100% - 80px); height: calc(100% - 90px);
-    position: absolute;
-    padding: 0 40px 0 40px;
+    position: relative;
+    width: 100%; min-height: calc(100dvh - 42px - 36px);
 }
 p{
     margin: 0;
@@ -37,10 +38,10 @@ input{
     height: 100%;
     margin: 0;
 }
-#app{
+/* #app{
     background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
     background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
-}
+} */
 #INSERTDATE{
     background-color: var(--main);
 }
@@ -60,6 +61,9 @@ input{
 }
 
 /* BOOTSTRAP */
+.bi-arrow-counterclockwise{
+    height: 24px;
+}
 button .bi-volume-mute-fill,
 .audio-playing .bi-volume-down-fill{
     visibility: initial;
@@ -96,6 +100,11 @@ button .bi-volume-down-fill,
     width: 40px;
     height: 100%;
 }
+.taskbar-chevron button{
+    height: 28px; width: 28px;
+    border-radius: 8px;
+}
+.taskbar-chevron button:hover,
 .taskbar:hover{
     background-color: var(--main-hover);
 }
@@ -128,7 +137,7 @@ button .bi-volume-down-fill,
     overflow: hidden;
     transition: .5s ease;
     border-radius: 8px;
-    padding: 12px 6px;
+    padding: 6px 6px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
 .taskbar-chevron div .bi{
@@ -154,6 +163,10 @@ button .bi-volume-down-fill,
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
     transition: .5s ease;
 }
+.input-settings-color{
+    width: 40px !important;
+    padding: 1px;
+}
 .taskbar-settings .true{
     position: relative;
     top: 1000px !important; 
@@ -169,6 +182,7 @@ button .bi-volume-down-fill,
 }
 .taskbar-settings li{
     list-style: none;
+    height: 24px;
 }
 .taskbar-settings li:first-child{
     float: left;
@@ -178,6 +192,17 @@ button .bi-volume-down-fill,
 }
 .taskbar-settings input{
     width: 85px;
+}
+/* .taskbar-end{
+    padding-right: 16px;
+} */
+.taskbar-end .taskbar{
+    width: 50px;
+    padding-right: 16px;
+}
+.taskbar-end .taskbar:hover{
+    border-top-right-radius: 420px;
+    border-bottom-right-radius: 420px;
 }
     /* DESKTOP */
 .app-icon{
@@ -189,15 +214,20 @@ button .bi-volume-down-fill,
 }
 .desktop-programs{
     min-height: 100%;
-}
-.desktop-apps{
-    width: calc(100% - 80px);
-    height: 100%;
     position: absolute;
     top: 0;
 }
+.desktop-apps{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
+}
 .desktop-apps div{
     width: fit-content;
+}
+.desktop-apps .wrapper{
+    width: 440px;
 }
 .widget{
     width: 200px !important;
@@ -207,24 +237,29 @@ button .bi-volume-down-fill,
     border-radius: 8px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
+.row-to-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 /* MEDIA */
 @media only screen and (max-width: 1600px) {
-    .header{
-        width: calc(100% - 40px);
-        margin: 0 20px;
-    }
     .taskbar-chevron div{
         right: 90px;
     }
     .taskbar-settings{
         width: 100%;
     }
-    section{
-        width: 100%;
-        padding: 0;
-    }
     .desktop-programs,
     .desktop-apps{
         width: 100%;
+    }
+}
+@media only screen and (max-width: 1325px) {
+    .desktop-apps .wrapper{
+        width: 100%;
+    }
+    .row-to-column{
+        flex-direction: column;
     }
 }

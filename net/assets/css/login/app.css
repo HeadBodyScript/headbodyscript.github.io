@@ -12,9 +12,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
-
 #app{
     background: rgba(46, 46, 46, 0.5);
     height: 100dvh;
@@ -37,7 +35,7 @@ body{
     width: 100%;
 }
 .w-33{
-    width: 33.33%;
+    width: 33%;
 }
 p,
 .bi-chevron-left,
