@@ -263,3 +263,10 @@ button .bi-volume-down-fill,
         flex-direction: column;
     }
 }
+@media only screen and (max-width: 470px) {
+    .volume:hover > .volume-slider{
+        visibility: hidden;
+        display: none;
+        width: 0;
+    } 
+}
