@@ -1,5 +1,20 @@
 ## INFO
 Predicates use less recources aka computing power
+NEW
+   tags
+      entity_type
+         * boss
+         * ability_immune
+         * magic_damage_immune
+         * physical_damage_immune
+         * fire_damage_immune
+         * freeze_damage_immune
+         * wither_damage_immune
+         * bleeding_damage_immune
+         * slow_immune
+         * knock_up_immune
+         * cc_immune
+
 
 ## MULTIPLAYER BUGS
 - [x] Item stats would re-apply on everyones main hand when a player would hold an item that didn't have stats prior
@@ -48,6 +63,8 @@ Predicates use less recources aka computing power
    - [ ] make it not work on bosses
 
 # ENCHANTMENTS
+- [ ] TESTING light wave
+- [ ] TESTING Bonecaller
 - [x] TESTING exp boost 
 - [x] TESTING bleeding
 - [x] TESTING magma walker
@@ -83,9 +100,7 @@ TESTING adreenaline boost
 #       TODO:
 * replant
 * horse 1-3 - Ice doesnt decay
-* Bonecaller
 * fire burst
-* light wave
 
 # IDEAS
 * Enchantment that stores up a Node buff that triggers when you take a large amout of damage
