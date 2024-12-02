@@ -27,25 +27,25 @@ Predicates use less recources aka computing power
 - [x] make all dialog into mine
 - [x] better rng system
 - [x] stat pitty system
-- [] do all the entity stuff
+- [ ] do all the entity stuff
 - [x] Nerf base mana regen
 - [x] Fix arcane = mana regen
 
 - [ ] Companions
-        - [ ] companions can be summoned by anyone, 1 at the time
-        - [ ] some companions are class exclusive but can be traded
+   - [ ] companions can be summoned by anyone, 1 at the time
+   - [ ] some companions are class exclusive but can be traded
 - [x] BUG Bow and Cross bow would not get stats
 - [ ] Teleportation spell
 - [x] Now shows and applies the base stats of each item (Post stats)
 - [ ] init_players.mcfunction doesn't execute sometimes
 - [x] horse tellraw wrong words fix
 - [ ] fix the runes
-        - [ ] Can now go negative 
+   - [ ] Can now go negative 
 
 - [x] When entering a new dungeon, show title of the dungeon
 - [ ] tranforming arrow
-        - [ ] on a player: Turn into a random passive animal for X amount of seconds
-        - [ ] make it not work on bosses
+   - [ ] on a player: Turn into a random passive animal for X amount of seconds
+   - [ ] make it not work on bosses
 
 # ENCHANTMENTS
 - [x] TESTING exp boost 
@@ -63,22 +63,22 @@ Predicates use less recources aka computing power
 - [x] TESTING deflect projectiles
 - [x] TESTING telekenesis
 - [x] TESTING levetation 
-        - [ ] (make the sound lower)
+   - [ ] (make the sound lower)
 - [x] TESTING star shower
-        - [ ] (glowstone? sound is too much, particles of a summoning circle to item thing, summon more fire sparks?)
+   - [ ] (glowstone? sound is too much, particles of a summoning circle to item thing, summon more fire sparks?)
 - [x] TESTING star shard
-        - [ ] (maybe less damage, solo a wither) - [x] # rename to Vengence or Soul Flame or Something with Soul
+   - [ ] (maybe less damage, solo a wither) - [x] # rename to Vengence or Soul Flame or Something with Soul
 - [x] TESTING void sphere
 - [x] TESTING veil of shadows
 - [x] TESTING warpstrike || FINISHED
 - [x] TESTING tongue of fire
 - [x] TESTING blessing
-        - [ ] (particles don't work)
+   - [ ] (particles don't work)
 - [x] TESTING disarming
 - [x] TESTING withering
-        - [ ] (finger doesn't disapear)
+   - [ ] (finger doesn't disapear)
 TESTING adreenaline boost
-        - [ ] (add a cooldown - lower duration - lower stats)
+   - [ ] (add a cooldown - lower duration - lower stats)
 
 #       TODO:
 * replant
