@@ -55,12 +55,35 @@ NEW
 - [ ] init_players.mcfunction doesn't execute sometimes
 - [x] horse tellraw wrong words fix
 - [ ] fix the runes
-   - [ ] Can now go negative 
+   - [ ] Can now go negative
+   - [ ] Put the animation on players when consuming a rune
 
-- [x] When entering a new dungeon, show title of the dungeon
+- [x] When entering a new dungeon, show title of the dungeon [can be toggled]
 - [ ] tranforming arrow
    - [ ] on a player: Turn into a random passive animal for X amount of seconds
    - [ ] make it not work on bosses
+
+## OTHER BUGS
+- [x] companions attack other companions
+- [x] companions summon animation would break if you tried to summon multiple
+- [x] companions duration would break if there are multiple players
+- [x] companions now count as an individual
+
+- [ ] spells cooldown
+- [x] Thunder/lightning spell only hits once per new target
+- [ ] Protection spell sometimes tp mob into block
+- [x] Fire spell
+- [x] Ice spell
+- [ ] teleport spell
+- [x] protection spell
+
+## DIALOG
+- [x] Ysembert should only talk to the person that clicked him
+- [x] Ysember "questions" should now be survival compatible
+- [x] Created a mechanic that allowes for every villager to have a "passive" and "active" dialog
+
+## OTHER FIXES
+- [x] new players will run init_player.mcfunction that enables every stat that the player needs to function
 
 # ENCHANTMENTS
 - [ ] TESTING light wave
@@ -116,7 +139,8 @@ TESTING adreenaline boost
 * Make the stats into the black smith ability 
 * Change the new enchantments to blacksmith/mage
 * Change some classes to mini classes
-* Regen only out of combat 
+* Regen only out of combat
+* make custom music into disks
 
 # SUGGESTIONS
         Custom damage
@@ -135,3 +159,9 @@ TESTING adreenaline boost
 SCRAPPED STUFF
 save arrows in scoreboard switch between arrows in quiver (dont think this is possible)
         Damage immune tags
+
+
+
+How to fix runes
+When you click a rune check how many bonus hearts the player already has = X
+Set amount X + new amount
