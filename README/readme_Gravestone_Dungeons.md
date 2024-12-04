@@ -1,4 +1,41 @@
 ## INFO
+
+Cooldown
+Player set cooldown from scoreboard cooldown
+Cooldown remove 1
+
+Player set effect from scoreboard cooldown
+effect remove 1
+
+- [x] bleeding          on-hit
+- [x] blessing          on-hit
+- [x] freezing          on-hit
+- [x] lightning         on-hit
+- [x] floating on-hit
+poisoning         on-hit
+tongue of fire    on-hit
+- [x] adrenaline boost  cooldown
+- [x] illumination      cooldown
+- [x] knife pouch       cooldown
+light wave        cooldown
+void sphere       cooldown
+- [x] disarming         cooldown
+- [x] evoker fangs      cooldown
+- [x] bonecaller           cooldown + duration
+- [x] deflect projectiles  cooldown + duration
+star shard           cooldown + duration
+star shower          cooldown + duration
+fireburst?
+levetation
+potionbag
+quiver
+replant
+telekinesis
+veil of shadows
+warpsrike
+withering
+
+
 Predicates use less recources aka computing power
 NEW
    tags
@@ -59,9 +96,7 @@ NEW
    - [ ] Put the animation on players when consuming a rune
 
 - [x] When entering a new dungeon, show title of the dungeon [can be toggled]
-- [ ] tranforming arrow
-   - [ ] on a player: Turn into a random passive animal for X amount of seconds
-   - [ ] make it not work on bosses
+
 
 ## OTHER BUGS
 - [x] companions attack other companions
@@ -76,6 +111,7 @@ NEW
 - [x] Ice spell
 - [ ] teleport spell
 - [x] protection spell
+- [x] transoforming arros places a structure on the target, this structure is made out of a few grass blocks and other nature blocks [Zacc change it to what you want, what I have is a placeholder]
 
 ## DIALOG
 - [x] Ysembert should only talk to the person that clicked him
@@ -160,7 +196,9 @@ SCRAPPED STUFF
 save arrows in scoreboard switch between arrows in quiver (dont think this is possible)
         Damage immune tags
 
-
+- [ ] tranforming arrow
+   - [ ] on a player: Turn into a random passive animal for X amount of seconds
+   - [ ] make it not work on bosses
 
 How to fix runes
 When you click a rune check how many bonus hearts the player already has = X
