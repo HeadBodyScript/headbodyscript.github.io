@@ -1,43 +1,65 @@
-## INFO
+## List of multiplayer / fixed 
 
-Cooldown
-Player set cooldown from scoreboard cooldown
-Cooldown remove 1
-
-Player set effect from scoreboard cooldown
-effect remove 1
-
+### enchantments
 - [x] bleeding          on-hit
 - [x] blessing          on-hit
 - [x] freezing          on-hit
 - [x] lightning         on-hit
 - [x] floating on-hit
-poisoning         on-hit
-tongue of fire    on-hit
+- [x] poisoning         on-hit
+- [x] tongue of fire    on-hit
 - [x] adrenaline boost  cooldown
 - [x] illumination      cooldown
 - [x] knife pouch       cooldown
-light wave        cooldown
-void sphere       cooldown
+- [x] light wave        cooldown
+- [x] void sphere       cooldown
 - [x] disarming         cooldown
 - [x] evoker fangs      cooldown
 - [x] bonecaller           cooldown + duration
 - [x] deflect projectiles  cooldown + duration
-star shard           cooldown + duration
-star shower          cooldown + duration
-fireburst?
-levetation
-potionbag
-quiver
-replant
-telekinesis
-veil of shadows
-warpsrike
-withering
+- [x] star shard           cooldown + duration
+- [x] star shower          cooldown + duration
+- [x] levetation
+- [x] potionbag
+- [x] quiver
+- [x] telekinesis
+- [x] veil of shadows
+- [x] warpsrike
+- [x] withering
+- [ ] fireburst
+- [ ] replant
+- [ ] horse
+
+### arrows
+- [x] bonefire
+- [x] cursed
+- [ ] ender
+- [x] fire
+- [x] freezing
+- [x] hypno
+- [x] thunder
+- [x] transform
+- [x] weaving
+
+### spells
+- [x] ember
+- [x] frost
+- [x] shield
+- [x] thunder
+- [ ] warp
 
 
-Predicates use less recources aka computing power
-NEW
+namespace
+   enchantment
+      *NAME*
+         using_item        active enchant
+         tick              passive enchant
+         post_attack       on-hit enchant
+         success           if player has the required resources
+         fail              if the player does not ^
+         result            if the applied effect is a DOT
+         stat              Modify item
+      
    tags
       entity_type
          * boss
@@ -113,55 +135,17 @@ NEW
 - [x] protection spell
 - [x] transoforming arros places a structure on the target, this structure is made out of a few grass blocks and other nature blocks [Zacc change it to what you want, what I have is a placeholder]
 
-## DIALOG
+## DIALOG CHANGES
 - [x] Ysembert should only talk to the person that clicked him
 - [x] Ysember "questions" should now be survival compatible
 - [x] Created a mechanic that allowes for every villager to have a "passive" and "active" dialog
 
 ## OTHER FIXES
 - [x] new players will run init_player.mcfunction that enables every stat that the player needs to function
+- [ ] remove my own class system -> build the class system that Zacc explained
 
-# ENCHANTMENTS
-- [ ] TESTING light wave
-- [ ] TESTING Bonecaller
-- [x] TESTING exp boost 
-- [x] TESTING bleeding
-- [x] TESTING magma walker
-- [x] TESTING lightning
-- [x] TESTING evoker fangs
-- [x] TESTING illumination
-- [x] TESTING quiver
-- [x] TESTING floating
-- [x] TESTING poisoning
-- [x] TESTING freezing
-- [x] TESTING knife pouch [now does damage based on the damage of the sword]
-- [x] TESTING potion bag
-- [x] TESTING deflect projectiles
-- [x] TESTING telekenesis
-- [x] TESTING levetation 
-   - [ ] (make the sound lower)
-- [x] TESTING star shower
-   - [ ] (glowstone? sound is too much, particles of a summoning circle to item thing, summon more fire sparks?)
-- [x] TESTING star shard
-   - [ ] (maybe less damage, solo a wither) - [x] # rename to Vengence or Soul Flame or Something with Soul
-- [x] TESTING void sphere
-- [x] TESTING veil of shadows
-- [x] TESTING warpstrike || FINISHED
-- [x] TESTING tongue of fire
-- [x] TESTING blessing
-   - [ ] (particles don't work)
-- [x] TESTING disarming
-- [x] TESTING withering
-   - [ ] (finger doesn't disapear)
-TESTING adreenaline boost
-   - [ ] (add a cooldown - lower duration - lower stats)
 
-#       TODO:
-* replant
-* horse 1-3 - Ice doesnt decay
-* fire burst
-
-# IDEAS
+## IDEAS
 * Enchantment that stores up a Node buff that triggers when you take a large amout of damage
 * ability "Respawn Point": One time use spawn point
 * ability "Short Range Teleport": create a check point you can tp to when ability is re-casted. Checkpoint lasts a short time
@@ -187,7 +171,7 @@ TESTING adreenaline boost
         Custom amount of projectiles that spawn [example: star shower]
         New file error.mcfunction => for when the user tries to cast the spell but doesn't have the recources
 
-# FIX
+# FIXes 
         Disable for companions
         Disable for bosses
 
