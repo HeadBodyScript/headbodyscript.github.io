@@ -52,6 +52,16 @@ NEW
          * knock_up_immune
          * cc_immune
 
+   Boss stuff
+   Grimmgar
+      marker.boss
+      marker.grimgar
+      UUID [scoreboard]
+      tag on/off [true / false]
+      team [bossGrimgar]
+
+      marker.summon_minion
+
 
 ## MULTIPLAYER BUGS
 - [x] Item stats would re-apply on everyones main hand when a player would hold an item that didn't have stats prior
