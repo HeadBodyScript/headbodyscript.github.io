@@ -1,52 +1,52 @@
-## List of multiplayer / fixed 
+## REWORK
 
-### enchantments
-- [x] bleeding          on-hit
-- [x] blessing          on-hit
-- [x] freezing          on-hit
-- [x] lightning         on-hit
-- [x] floating on-hit
-- [x] poisoning         on-hit
-- [x] tongue of fire    on-hit
-- [x] adrenaline boost  cooldown
-- [x] illumination      cooldown
-- [x] knife pouch       cooldown
-- [x] light wave        cooldown
-- [x] void sphere       cooldown
-- [x] disarming         cooldown
-- [x] evoker fangs      cooldown
-- [x] bonecaller           cooldown + duration
-- [x] deflect projectiles  cooldown + duration
-- [x] star shard           cooldown + duration
-- [x] star shower          cooldown + duration
-- [x] levetation
-- [x] potionbag
-- [x] quiver
-- [x] telekinesis
-- [x] veil of shadows
-- [x] warpsrike
-- [x] withering
-- [ ] fireburst
-- [ ] replant
-- [ ] horse
+### ENCHANTMENT
+- [x] Bleeding          on-hit
+- [x] Blessing          on-hit
+- [x] Freezing          on-hit
+- [x] Lightning         on-hit
+- [x] Floating on-hit
+- [x] Poisoning         on-hit
+- [x] Tongue of Fire    on-hit
+- [x] Adrenaline Boost  cooldown
+- [x] Illumination      cooldown
+- [x] Knife Pouch       cooldown
+- [x] Light Wave        cooldown
+- [x] Void Sphere       cooldown
+- [x] Disarming         cooldown
+- [x] Evoker Fangs      cooldown
+- [x] Bonecaller           cooldown + duration
+- [x] Deflect Projectiles  cooldown + duration
+- [x] Star Shard           cooldown + duration
+- [x] Star Shower          cooldown + duration
+- [x] Levetation
+- [x] Potionbag
+- [x] Quiver
+- [x] Telekinesis
+- [x] Veil of Shadows
+- [x] Warpsrike
+- [x] Withering
+- [ ] Fireburst
+- [ ] Replant
+- [ ] Horse
 
-### arrows
-- [x] bonefire
-- [x] cursed
-- [ ] ender
-- [x] fire
-- [x] freezing
-- [x] hypno
-- [x] thunder
-- [x] transform
-- [x] weaving
+### ARROW
+- [x] Bonfire
+- [x] Cursed
+- [x] Fire
+- [x] Freezing
+- [x] Hypno
+- [x] Thunder
+- [x] Transform
+- [x] Weaving
+- [ ] Ender
 
-### spells
-- [x] ember
-- [x] frost
-- [x] shield
-- [x] thunder
-- [ ] warp
+### SPELL
+- [x] Ember
+- [x] Frost
+- [x] Shield
+- [x] Thunder
+- [ ] Warp
 
 
 namespace
@@ -74,37 +74,55 @@ namespace
          * knock_up_immune
          * cc_immune
 
-   Boss stuff
-   Grimmgar
-      marker.boss
-      marker.grimgar
-      UUID [scoreboard]
-      tag on/off [true / false]
-      team [bossGrimgar]
-
-      marker.summon_minion
+   function
+      boss
+      [INFO]
+         marker.boss
+         marker.grimgar
+         marker.minion
+         team [ENEMY]
+         UUID [scoreboard]
+         tag [true / false] (Defines if a boss is active or defeated)
 
 
 ## MULTIPLAYER BUGS
+### BOSS
+- [x] Boss fight would reset after 1 player would die in a boss fight
+* FIX: Local player counter. If the counter = 0, the boss will reset
+- [x] Boss would run functions (ticks) without the boss being active
+* now only ticks boss functions if the boss fight is active
+
+### STAT
 - [x] Item stats would re-apply on everyones main hand when a player would hold an item that didn't have stats prior
 * NOTE: This allowed for items such as food or blocks to have stats
 * FIX: Now executes as a player on itself + changed the item_modifier to replace the stat [This migh be useful for when you make an option to re-apply the stats]
 
+### ENCHANTMENT
+### ARROW
+### SPELL
+- [x] spell particles would only display on 1 spell at the time dispite multiple spells being placed
+
+### COMPANION
+- [ ] companions can be summoned by anyone, 1 at the time
+   
+### INIT PLAYER
 - [x] Ysembert talks to everyone on the server + it spawns multiple times in an area
 * FIX: Ysembert only spawns once per 32 blocks + only talks to the player that is talking to him [makes use of predicate looking_at]
 
 - [x] Ysembert leaves early
 * FIX: Now sets the timer back to 500t each time you ask a question
 
+- [ ] Make Ysembert leave is no players are near him
+
 - [x] Ysembert doesn't work in survival
 * FIX: Uses trigger instead of function so it is survival friendly + only executes as the player
 
+# RUNE
 - [x] Rune will be consumed even if the player already has a rune active that is the same or greater
 * Fix: Now only executes if the player has a weaker version
 * Fix: Also added a dynamic limit per player
 * Fix: If the max_health rune has a max of 5, a player can combine 5x1 or 2x2 + 1x1 
 
-- [x] spell particles would only display on 1 spell at the time dispite multiple spells being placed
 - [ ] Check if mystical heart works (I could not find the item in the cheat room)
 
 
@@ -115,9 +133,6 @@ namespace
 - [x] Nerf base mana regen
 - [x] Fix arcane = mana regen
 
-- [ ] Companions
-   - [ ] companions can be summoned by anyone, 1 at the time
-   - [ ] some companions are class exclusive but can be traded
 - [x] BUG Bow and Cross bow would not get stats
 - [ ] Teleportation spell
 - [x] Now shows and applies the base stats of each item (Post stats)
@@ -172,21 +187,17 @@ namespace
 * Regen only out of combat
 * make custom music into disks
 
-# SUGGESTIONS
-        Custom damage
-        Custom cooldowns
-        Custom ability duration
+## SUGGESTIONS
+        Custom damage [spells, arrow, companion, enchantment]
+        Custom cooldowns [spells, arrow, companion, enchantment]
+        Custom duration [spells, arrow, companion, enchantment]
         Announce cooldown complete in chat?
-        Custom Mana ussage
+        Custom Mana ussage [spells, enchantment]
         Custom amount of projectiles that spawn [example: star shower]
         New file error.mcfunction => for when the user tries to cast the spell but doesn't have the recources
 
-# FIXes 
-        Disable for companions
-        Disable for bosses
 
-<!-- Scrapped stuff -->
-SCRAPPED STUFF
+## SCRAPPED
 save arrows in scoreboard switch between arrows in quiver (dont think this is possible)
         Damage immune tags
 
