@@ -1,54 +1,5 @@
 ## REWORK
 
-### ENCHANTMENT
-- [x] Bleeding          on-hit
-- [x] Blessing          on-hit
-- [x] Freezing          on-hit
-- [x] Lightning         on-hit
-- [x] Floating on-hit
-- [x] Poisoning         on-hit
-- [x] Tongue of Fire    on-hit
-- [x] Adrenaline Boost  cooldown
-- [x] Illumination      cooldown
-- [x] Knife Pouch       cooldown
-- [x] Light Wave        cooldown
-- [x] Void Sphere       cooldown
-- [x] Disarming         cooldown
-- [x] Evoker Fangs      cooldown
-- [x] Bonecaller           cooldown + duration
-- [x] Deflect Projectiles  cooldown + duration
-- [x] Star Shard           cooldown + duration
-- [x] Star Shower          cooldown + duration
-- [x] Levetation
-- [x] Potionbag
-- [x] Quiver
-- [x] Telekinesis
-- [x] Veil of Shadows
-- [x] Warpsrike
-- [x] Withering
-- [ ] Fireburst
-- [ ] Replant
-- [ ] Horse
-
-### ARROW
-- [x] Bonfire
-- [x] Cursed
-- [x] Fire
-- [x] Freezing
-- [x] Hypno
-- [x] Thunder
-- [x] Transform
-- [x] Weaving
-- [ ] Ender
-
-### SPELL
-- [x] Ember
-- [x] Frost
-- [x] Shield
-- [x] Thunder
-- [ ] Warp
-
-
 namespace
    enchantment
       *NAME*
@@ -84,6 +35,53 @@ namespace
          UUID [scoreboard]
          tag [true / false] (Defines if a boss is active or defeated)
 
+### ENCHANTMENT
+- [x] Bleeding             on hit
+- [x] Blessing             on-hit
+- [x] Freezing             on-hit
+- [x] Lightning            on-hit
+- [x] Floating             on-hit
+- [x] Poisoning            on-hit
+- [x] Tongue of Fire       on-hit
+- [x] Adrenaline Boost     cooldown
+- [x] Illumination         cooldown
+- [x] Knife Pouch          cooldown
+- [x] Light Wave           cooldown
+- [x] Void Sphere          cooldown
+- [x] Disarming            cooldown
+- [x] Evoker Fangs         cooldown
+- [x] Bonecaller           cooldown + duration
+- [x] Deflect Projectiles  cooldown + duration
+- [x] Star Shard           cooldown + duration
+- [x] Star Shower          cooldown + duration
+- [x] Levetation
+- [x] Potionbag
+- [x] Quiver
+- [x] Telekinesis
+- [x] Veil of Shadows
+- [x] Warpsrike
+- [x] Withering
+- [x] Fireburst
+- [ ] Replant
+- [ ] Horse
+
+### ARROW
+- [x] Bonfire
+- [x] Cursed
+- [x] Fire
+- [x] Freezing
+- [x] Hypno
+- [x] Thunder
+- [x] Transform
+- [x] Weaving
+- [ ] Ender
+
+### SPELL
+- [x] Ember
+- [x] Frost
+- [x] Shield
+- [x] Thunder
+- [ ] Warp
 
 ## MULTIPLAYER BUGS
 ### BOSS
@@ -156,7 +154,8 @@ namespace
 
 ## OTHER FIXES
 - [x] new players will run init_player.mcfunction that enables every stat that the player needs to function
-- [ ] remove my own class system -> build the class system that Zacc explained
+- [x] remove my own class system
+- [ ] build the class system that Zacc explained
 
 
 ## IDEAS
