@@ -1,0 +1,272 @@
+:root{
+    --main: #363442;
+    --main-hover: #1f1f23;
+    --selected: #afb7e8;
+    --bg: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
+}
+body{
+    position: absolute; top: 0; min-height: 100dvh;
+    background-image: var(--bg);
+    background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
+}
+header{
+    width: calc(100% - 36px);
+    margin: 18px;
+
+}
+header .wrapper{
+    width: calc(100%); height: 42px;
+    background-color: var(--main);
+    border-radius: 420px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+header .wrapper div{
+    width: fit-content; height: 100%;
+}
+section{
+    position: relative;
+    width: 100%; min-height: calc(100dvh - 42px - 36px);
+}
+p{
+    margin: 0;
+    color: var(--color);
+}
+h1{
+    margin: 0;
+}
+input{
+    height: 100%;
+    margin: 0;
+}
+/* #app{
+    background-image: url(https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/bg.webp);
+    background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
+} */
+#INSERTDATE{
+    background-color: var(--main);
+}
+.button{
+    width: 100%;
+    color: var(--main);
+    margin-top: 8px;
+    background-color: var(--selected);
+    padding-left: 12px;
+    text-align: start;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.button p{
+    position: relative;
+    bottom: 1px;
+    font-weight: bold;
+}
+
+/* BOOTSTRAP */
+.bi-arrow-counterclockwise{
+    height: 24px;
+}
+button .bi-volume-mute-fill,
+.audio-playing .bi-volume-down-fill{
+    visibility: initial;
+    display: initial;
+}
+button .bi-volume-down-fill,
+.audio-playing .bi-volume-mute-fill{
+    visibility: hidden;
+    display: none;
+}
+.bi{
+    color: var(--color);
+}
+.bi-x{
+    position: relative; top: 2px;
+}
+.bi-github,
+.bi-git,
+.bi-people-fill,
+.bi-youtube{
+    font-size: xx-large;
+}
+.bi-three-dots-vertical{
+    font-size: large;
+}
+.bi-volume-mute-fill,
+.bi-volume-down-fill{
+    font-size: x-large;
+}
+
+    /* TASKBAR */
+.taskbar{
+    padding: 0 6px;
+    width: 40px;
+    height: 100%;
+}
+.taskbar-chevron button{
+    height: 28px; width: 28px;
+    border-radius: 8px;
+}
+.taskbar-chevron button:hover,
+.taskbar:hover{
+    background-color: var(--main-hover);
+}
+.volume .volume-slider{
+    visibility: hidden;
+    display: none;
+    width: 0;
+    transition: .5s ease;
+}
+.volume:hover > .volume-slider{
+    visibility: initial;
+    display: initial;
+    width: fit-content;
+}    
+.slider{
+    accent-color: var(--selected)
+}
+.taskbar-chevron{
+    position: relative;
+    top: -1000px;
+    height: 45px;
+    width: fit-content;
+    z-index: 16;
+}
+.taskbar-chevron div{
+    top: 0px;
+    right: 170px;
+    position: relative;
+    background-color: var(--main);
+    overflow: hidden;
+    transition: .5s ease;
+    border-radius: 8px;
+    padding: 6px 6px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.taskbar-chevron div .bi{
+    font-size: medium;
+    padding: 0px 6px;
+}
+.taskbar-chevron .true {
+    top: 1000px;
+}
+.taskbar-settings{
+    position: relative;
+    z-index: 16;
+    top: -1000px;
+}
+.taskbar-settings div{
+    
+    position: relative;
+    top: 0px;
+    padding: 24px;
+    background-color: var(--main);
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+    transition: .5s ease;
+}
+.input-settings-color{
+    width: 40px !important;
+    padding: 1px;
+}
+.taskbar-settings .true{
+    position: relative;
+    top: 1000px !important; 
+}
+.taskbar-settings #A2 .true{
+    visibility: initial;
+    display: initial; 
+}
+.taskbar-settings ul{
+    margin: 0;
+    padding: 0;
+    height: 24px;
+}
+.taskbar-settings li{
+    list-style: none;
+    height: 24px;
+}
+.taskbar-settings li:first-child{
+    float: left;
+}
+.taskbar-settings li:last-child{
+    float: right;
+}
+.taskbar-settings input{
+    width: 85px;
+}
+/* .taskbar-end{
+    padding-right: 16px;
+} */
+.taskbar-end .taskbar{
+    width: 50px;
+    padding-right: 16px;
+}
+.taskbar-end .taskbar:hover{
+    border-top-right-radius: 420px;
+    border-bottom-right-radius: 420px;
+}
+    /* DESKTOP */
+.app-icon{
+    margin: 18px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.desktop-programs{
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+}
+.desktop-apps{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
+}
+.desktop-apps div{
+    width: fit-content;
+}
+.desktop-apps .wrapper{
+    width: 440px;
+}
+.widget{
+    width: 200px !important;
+    margin: 18px;
+    background-color: var(--main);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+.row-to-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/* MEDIA */
+@media only screen and (max-width: 1600px) {
+    .taskbar-chevron div{
+        right: 90px;
+    }
+    .taskbar-settings{
+        width: 100%;
+    }
+    .desktop-programs,
+    .desktop-apps{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1325px) {
+    .desktop-apps .wrapper{
+        width: 100%;
+    }
+    .row-to-column{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .volume:hover > .volume-slider{
+        visibility: hidden;
+        display: none;
+        width: 0;
+    } 
+}

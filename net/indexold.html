@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HeadBodyScript</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HeadBodyScript">
+    <meta name="twitter:description" content="Just code it">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HeadBodyScript">
+    <meta property="og:url" content="https://headbodyscript.nl/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/HeadBodyScript/HeadBodyScript/main/user-interface/twitter-icon.png">
+    <meta property="og:description" content="Just code it">
+
+    <meta name="description" content="Just code it">
+    <meta name="keywords" content="Minecraft, Datapacks, Texturepack, Maps, HeadBodyScript">
+    <meta name="author" content="HeadBodyScript">
+    <meta name="language" content="EN">
+    
+    <link rel="stylesheet" href="assets/css/init.css">
+    <link rel="stylesheet" href="assets/css/indexold/app.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="assets/icon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/icon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="assets/icon/site.webmanifest">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BCEYTZM4F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2BCEYTZM4F');
+    </script>
+    <!-- Google tag (gtag.js) -->
+  </head>
+  <body id="app" data="false">
+    <header>
+      <div class="wrapper">
+        <div class="float-left">
+          <div class="ml-8 center">
+            <img class="ico" src="assets/icon/favicon-32x32.png" alt="">
+          </div>
+        </div>
+        <div class="float-right">
+          <div class="center">
+            <div class="center"><button class="taskbar" id="DESKTOP3" onclick="BTN(this.id)"><i class="bi bi-chevron-down"></i></button></div>
+            <div class="center"><button class="taskbar" id="LANGUAGE" onclick="BTN(this.id)"><p>ENG</p></button></div>
+            <div class="center">
+              <div class="center volume">
+                <div class="center volume-slider mr-8"><input type="range" min="1" max="100" value="50" class="slider" id="VOLUMESLIDER"></div>
+                <button class="taskbar" id="DESKTOP1" onclick="BTN(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
+              </div>
+            </div>
+            <div class="taskbar column center" id="INSERTDATE">
+            </div>
+            <div class="center taskbar-end"><button class="taskbar" id="DESKTOP0" onclick="BTN(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="desktop-programs">
+        <div class="taskbar-chevron float-right">
+          <div id="DESKTOP3ID" class="">
+            <button><i class="bi bi-bug"></i></button>
+            <button><i class="bi bi-c-circle"></i></button>
+            <button><i class="bi bi-chat-left-dots"></i></button>
+            <button><i class="bi bi-filetype-mp3"></i></button>
+            <button><i class="bi bi-person-bounding-box"></i></button>
+          </div>
+        </div>
+        <div class="taskbar-settings center column">
+          <div id="DESKTOP0ID" class="">
+            <h1 class="ml-12">User</h1>
+              <button id="LOGIN" class="button mb-16" onclick="BTN(this.id)">LOGIN</button>
+            <h1 class="ml-12">Settings</h1>
+            <ul>
+              <li>Text Color:</li>
+              <li class="row">
+                <!-- <input id="COLORTEXTID" class="input-settings" type="text"> -->
+                <input class="input-settings-color" type="color" onchange="clickColor(0, -1, -1, 5)" value="#ff0000">
+                <button><i class="bi bi-arrow-counterclockwise"></i></button></li>
+            </ul>
+            <ul>
+              <li>Taskbar Color:</li>
+              <li><input id="COLORTASKBARID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
+            </ul>
+            <ul>
+              <li>Selected Color:</li>
+              <li><input id="COLORHOVERID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
+            </ul>
+            <ul>
+              <li>Button Color:</li>
+              <li><input id="COLORBUTTONID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
+            </ul>
+            <ul>
+              <li>Background Color:</li>
+              <li><input id="BACKGROUNDID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
+            </ul>
+            <button id="SAVE" onclick="BTN(this.id)" class="button">SAVE</button>
+            <button onclick="localStorage.clear(`userPref`); window.location.reload();" class="button">RESET</button>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-apps row-to-column">
+        <div class="wrapper">
+          <div class="row">
+            <div><button id="D2" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
+            <div><button id="D1" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
+            <div><button id="D0" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
+            <div><button id="D3" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/portfolio.webp" alt=""></button></div>
+          </div>
+        </div>
+        <div class="wrapper"></div>
+        <div class="wrapper">
+          <div class="float-right">
+            <div class="widget column">
+              <div class=""><i class="bi bi-github"></i></div>
+              <p>Youtube Views</p>
+              <p id="INSERTYTVIEWS">#Number</p>
+            </div>
+            <div class="widget column">
+              <div class=""><i class="bi bi-youtube"></i></div>
+              <p>YouTube Subscribers</p>
+              <p id="INSERTYTSUB">#Number</p>
+            </div>
+            <div class="widget column">
+              <div class=""><i class="bi bi-people-fill"></i></div>
+              <p>Github Followers</p>
+              <p id="INSERTGITFOLLOWERS">#Number</p>
+            </div>
+            <div class="widget column">
+              <div class=""><i class="bi bi-git"></i></div>
+              <p>Total Projects</p>
+              <p id="INSERTGITPROJECTS">#Number</p>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/index/init.js"></script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
     src: url(../font/cyberpunk.ttf);
 }
 :root{
-    --color: white;
+    --color: black;
 }
 body{
     margin: 0;
@@ -20,7 +20,7 @@ a:active,
 a:hover,
 a:visited,
 a:link,
-a {text-decoration: none; color: white;}
+a {text-decoration: none; color: var(--color);}
 button {
     background: none;
     border: none;
@@ -89,3 +89,32 @@ button {
 .float-right{
     float: right;
 }
+
+p, ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: fit-content;
+}
+.justify-content-between{
+    justify-content: space-between;;
+}
+.justify-content-evenly{
+    justify-content: space-evenly;;
+} 
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

@@ -42,110 +42,73 @@
     <!-- Google tag (gtag.js) -->
   </head>
   <body id="app" data="false">
-    <header>
+    <header class="center">
       <div class="wrapper">
-        <div class="float-left">
-          <div class="ml-8 center">
-            <img class="ico" src="assets/icon/favicon-32x32.png" alt="">
-          </div>
-        </div>
-        <div class="float-right">
-          <div class="center">
-            <div class="center"><button class="taskbar" id="DESKTOP3" onclick="BTN(this.id)"><i class="bi bi-chevron-down"></i></button></div>
-            <div class="center"><button class="taskbar" id="LANGUAGE" onclick="BTN(this.id)"><p>ENG</p></button></div>
-            <div class="center">
-              <div class="center volume">
-                <div class="center volume-slider mr-8"><input type="range" min="1" max="100" value="50" class="slider" id="VOLUMESLIDER"></div>
-                <button class="taskbar" id="DESKTOP1" onclick="BTN(this.id)"><i class="bi bi-volume-down-fill"></i><i class="bi bi-volume-mute-fill"></i></button>
-              </div>
+        <ul class="center row justify-content-evenly">
+          <li class="center"><div>
+            <a class="logo" href="">HEADBODYSCRIPT</a>
+            <!-- <img class="logo" src="assets/icon/logo.png" alt="HeadBodyScript"> -->
+          </div></li>
+          <li class="center row">
+            <div>
+              <a href="">HOME</a>
             </div>
-            <div class="taskbar column center" id="INSERTDATE">
+            <div>
+              <a href="">PROJECTS</a>
             </div>
-            <div class="center taskbar-end"><button class="taskbar" id="DESKTOP0" onclick="BTN(this.id)"><i class="bi bi-three-dots-vertical"></i></button></div>
-          </div>
-        </div>
+            <div>
+              <a href="">DONATE</a>
+            </div>
+          </li>
+          <li class="center">
+            <a class="column" href="">
+              <p class="login">LOGIN</p>
+              <div class="visit"></div>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <section>
-      <div class="desktop-programs">
-        <div class="taskbar-chevron float-right">
-          <div id="DESKTOP3ID" class="">
-            <button><i class="bi bi-bug"></i></button>
-            <button><i class="bi bi-c-circle"></i></button>
-            <button><i class="bi bi-chat-left-dots"></i></button>
-            <button><i class="bi bi-filetype-mp3"></i></button>
-            <button><i class="bi bi-person-bounding-box"></i></button>
-          </div>
-        </div>
-        <div class="taskbar-settings center column">
-          <div id="DESKTOP0ID" class="">
-            <h1 class="ml-12">User</h1>
-              <button id="LOGIN" class="button mb-16" onclick="BTN(this.id)">LOGIN</button>
-            <h1 class="ml-12">Settings</h1>
-            <ul>
-              <li>Text Color:</li>
-              <li class="row">
-                <!-- <input id="COLORTEXTID" class="input-settings" type="text"> -->
-                <input class="input-settings-color" type="color" onchange="clickColor(0, -1, -1, 5)" value="#ff0000">
-                <button><i class="bi bi-arrow-counterclockwise"></i></button></li>
-            </ul>
-            <ul>
-              <li>Taskbar Color:</li>
-              <li><input id="COLORTASKBARID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
-            </ul>
-            <ul>
-              <li>Selected Color:</li>
-              <li><input id="COLORHOVERID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
-            </ul>
-            <ul>
-              <li>Button Color:</li>
-              <li><input id="COLORBUTTONID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
-            </ul>
-            <ul>
-              <li>Background Color:</li>
-              <li><input id="BACKGROUNDID" class="input-settings" type="text"><button><i class="bi bi-arrow-counterclockwise"></i></button></li>
-            </ul>
-            <button id="SAVE" onclick="BTN(this.id)" class="button">SAVE</button>
-            <button onclick="localStorage.clear(`userPref`); window.location.reload();" class="button">RESET</button>
+      <div class="section-1">
+        <div></div>
+        <div class="sub-section-1 float-right center column">
+          <h1>Cyberpunk <i class="bi bi-x"></i> Minecraft</h1>
+          <p>Start a new adventure with new weapons and armor</p>
+          <p>Upgrade your cyberware</p>
+          <p>Explore the new dungeons</p>
+          <p>Defeat new enemies</p>
+          <p>Are you ready for a challenge</p>
+          <div class="row" style="width: 100%; justify-content: space-between;">
+            <a class="visit center" href=""><p><i class="bi bi-cloud-arrow-down"></i> Download</p></a>
+            <a class="visit-black center" href=""><p><i class="bi bi-play-fill"></i> Watch video</p></a>
+
           </div>
         </div>
       </div>
-      <div class="desktop-apps row-to-column">
-        <div class="wrapper">
-          <div class="row">
-            <div><button id="D2" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/minecraft.webp" alt=""></button></div>
-            <div><button id="D1" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/github.webp" alt=""></button></div>
-            <div><button id="D0" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/phone.webp" alt=""></button></div>
-            <div><button id="D3" onclick="BTN(this.id)"><img class="app-icon" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/main/static/img/portfolio.webp" alt=""></button></div>
+       
+      <div class="section-2 row justify-content-evenly">
+        <div class="box">
+          <div class="sub-section-2">
+            <!-- <img src="assets/img/songbird.png" alt=""> -->
+             <div class="img" id="ID1"></div>
           </div>
         </div>
-        <div class="wrapper"></div>
-        <div class="wrapper">
-          <div class="float-right">
-            <div class="widget column">
-              <div class=""><i class="bi bi-github"></i></div>
-              <p>Youtube Views</p>
-              <p id="INSERTYTVIEWS">#Number</p>
-            </div>
-            <div class="widget column">
-              <div class=""><i class="bi bi-youtube"></i></div>
-              <p>YouTube Subscribers</p>
-              <p id="INSERTYTSUB">#Number</p>
-            </div>
-            <div class="widget column">
-              <div class=""><i class="bi bi-people-fill"></i></div>
-              <p>Github Followers</p>
-              <p id="INSERTGITFOLLOWERS">#Number</p>
-            </div>
-            <div class="widget column">
-              <div class=""><i class="bi bi-git"></i></div>
-              <p>Total Projects</p>
-              <p id="INSERTGITPROJECTS">#Number</p>
-            </div>
-            </div>
+        <div class="box">
+          <div class="sub-section-2"></div>
+        </div>
+        <div class="box">
+          <div class="sub-section-2"></div>
         </div>
       </div>
     </section>
-    <script src="assets/js/index/init.js"></script>
+    <footer>
+      <ul class="row">
+        <li>Cookies</li>
+        <li>TOS</li>
+        <li class="row"><a href=""><i class="bi bi-twitter"></i></a> <a href=""><i class="bi bi-discord"></i></a> <a href=""><i class="bi bi-globe-americas"></i></a></li>
+      </ul>
+    </footer>
+    <script src="assets/js/index/app.js"></script>
   </body>
 </html>
