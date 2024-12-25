@@ -1,14 +1,14 @@
 {
     "card": [
       {
-        "img": "https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/net/assets/img/card-cyberpunk.png",
+        "img": "https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card-cyberpunk.png",
         "title": "Cyberpunk",
         "txt": "Updates Weapons, Tacticals, And Buildings.<br> New Boss",
         "url": "https://headbodyscript.nl/ref/packs/cyberpunk/",
         "type": "basic"
       },
       {
-        "img": "https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/net/assets/img/card-cyberpunk.png",
+        "img": "https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card-cyberpunk.png",
         "title": "Cyberpunk",
         "txt": "Updates Weapons, Tacticals, And Buildings.<br> New Boss",
         "url": "https://headbodyscript.nl/ref/packs/cyberpunk/",
