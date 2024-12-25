@@ -6,3 +6,4 @@ firebase.json
 .firebaserc
 firebase-new.exe
 node_modules/
+firebase-debug.log
