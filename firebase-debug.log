@@ -1,0 +1,61 @@
+[debug] [2024-12-25T03:19:49.891Z] ----------------------------------------------------------------------
+[debug] [2024-12-25T03:19:49.893Z] Command:       C:\Users\HeadB\DOCUME~1\GitHub\HEADBO~1.IO\firebase.exe C:\Users\HeadB\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase init
+[debug] [2024-12-25T03:19:49.895Z] CLI Version:   12.5.4
+[debug] [2024-12-25T03:19:49.897Z] Platform:      win32
+[debug] [2024-12-25T03:19:49.898Z] Node Version:  v16.16.0
+[debug] [2024-12-25T03:19:49.900Z] Time:          Wed Dec 25 2024 04:19:49 GMT+0100 (Central European Standard Time)
+[debug] [2024-12-25T03:19:49.900Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-25T03:19:49.908Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-25T03:19:49.909Z] > authorizing via signed-in user (headbodyscript@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HeadB\Documents\GitHub\headbodyscript.github.io
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-12-25T03:20:22.859Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-12-25T03:20:23.411Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-12-25T03:20:23.411Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project headbodyscript (HeadBodyScript) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-12-25T03:20:26.723Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/headbodyscript/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-12-25T03:20:26.723Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/headbodyscript/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/headbodyscript
+[debug] [2024-12-25T03:20:27.630Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/headbodyscript/services/firebasedatabase.googleapis.com 200
+[debug] [2024-12-25T03:20:27.630Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/headbodyscript/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-12-25T03:20:27.631Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/headbodyscript/locations/-/instances/headbodyscript-default-rtdb [none]
+[debug] [2024-12-25T03:20:28.386Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/headbodyscript/locations/-/instances/headbodyscript-default-rtdb 200
+[debug] [2024-12-25T03:20:28.386Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/headbodyscript/locations/-/instances/headbodyscript-default-rtdb {"name":"projects/561751453459/locations/us-central1/instances/headbodyscript-default-rtdb","project":"projects/561751453459","databaseUrl":"https://headbodyscript-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-12-25T03:20:32.277Z] >>> [apiv2][query] GET https://headbodyscript-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-12-25T03:20:32.641Z] <<< [apiv2][status] GET https://headbodyscript-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-12-25T03:20:32.642Z] <<< [apiv2][body] GET https://headbodyscript-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for headbodyscript-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

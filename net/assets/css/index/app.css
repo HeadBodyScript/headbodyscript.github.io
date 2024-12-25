@@ -111,7 +111,7 @@ section{
 }
 .section-2 .box{
     max-width: 550px;
-    min-width: 420px;
+    min-width: 470px;
     width: 50%;
     margin-bottom: 30px;
     display: flex;
@@ -121,12 +121,16 @@ section{
 .sub-section-2{
     border-radius: 6px;
     background-color: whitesmoke;
-    width: 400px;
+    width: 450px;
     height: 200px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
+.sub-section-2 p{
+    max-width: 250px;
+    max-height: 350px;
+}
 .sub-section-2 .img{
-    border-radius: 8%;
+    border-radius: 3%;
     margin: 10px;
     height: 180px;
     aspect-ratio: 1 / 1;
@@ -140,4 +144,10 @@ section{
 #ID1{
     background-image: url(../../img/songbird.png);
     background-size: contain;
+}
+#ID2{
+    background-image: url(https://static.planetminecraft.com/files/image/minecraft/texture-pack/2024/364/17991007_m.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
