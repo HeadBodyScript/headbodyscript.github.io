@@ -65,6 +65,10 @@ section{
     height: 200px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
+.sub-section-2 h1{
+    max-width: 250px;
+    overflow: hidden;
+}
 .sub-section-2 p{
     max-width: 250px;
     max-height: 350px;
