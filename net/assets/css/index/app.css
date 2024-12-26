@@ -78,8 +78,8 @@ section{
     margin: 10px;
     height: 180px;
     aspect-ratio: 1 / 1;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;;
     background-position: center;
 }
 .sub-section-2 a{
@@ -93,3 +93,9 @@ section{
     position: relative;
     top: 1px;
 }
+/* .ui-component-card--image{
+    background-image: var(--bg);
+    background-size: cover;
+    background-repeat: no-repeat;;
+    background-position: center;
+  } */
