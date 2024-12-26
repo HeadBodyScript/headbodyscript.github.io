@@ -211,7 +211,40 @@
   | 6.4 CARD
   |
   --------------------------------------------------------------*/
-  
+  .version{
+    text-align: right;
+    padding-right: 8px;
+    padding-top: 4px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background: rgba(0, 0, 0, 0.2); */
+    /* box-sizing: border-box;
+    box-shadow: inset 0 24px 24px rgba(0, 0, 0, 0.2); */
+    /* text-shadow: 0 14px #000000; */
+    mix-blend-mode: difference;
+
+  }
+  .ui-component-card--image{
+    width: 100%;
+    height: 266px;
+    background-image: var(--bg);
+    background-size: cover;
+    background-repeat: no-repeat;;
+    background-position: center;
+  }
+  .bi{
+    position: relative;
+    top: 2px;
+  }
+  .ui-component-card--footer{
+    padding-top: 18px;
+    text-align: left;
+    align-self: self-start;
+    margin-top: auto;
+  }
+  .ui-component-card--footer a{
+    color: #5073b8;
+  }
   .ui-component-card {
     border: .0625rem solid var(--ui-color-border);
     border-radius: var(--ui-radius-card);
@@ -389,7 +422,7 @@
   
   .ui-component-card--feature { text-align: center; }
   
-  .ui-component-card--feature-content { padding: 2.25rem 1.5rem; background-color: whitesmoke; height: 100%;}
+  .ui-component-card--feature-content { padding: 2.25rem 1.5rem; background-color: whitesmoke; height:calc(100% - 266px - 4.5rem);}
   
   .ui-component-card--feature-title { margin-bottom: .5rem; }
   
