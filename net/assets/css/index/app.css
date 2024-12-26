@@ -1,63 +1,3 @@
-:root{
-    --bg: url(../../img/wallpaper.jpg);
-}
-body{
-    position: absolute; top: 0; min-height: 100dvh;
-    background-image: var(--bg);
-    background-size: cover;
-    /* background-position: center; */
-    background-repeat: no-repeat; background-attachment: fixed;
-    font-size: larger;
-}
-header{
-    width: 100%; height: 70px;
-    /* background-color: #363442; */
-    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.6); */
-    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%); */
-    /* background-color: black; */
-    /* opacity: 0.1; */
-    background: rgba(255, 255, 255, 0.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.6);
-
-}
-header .wrapper{
-    width: calc(100%); height: 42px;
-    background-color: var(--main);
-
-}
-header .wrapper ul{
-    height: 100%;
-}
-header .wrapper ul li{
-    font-size: x-large;
-    width: 33%;
-}
-header .wrapper ul li div{
-    margin: 0 8px;
-    /* text-shadow: 2px 2px 1px white; */
-}
-
-footer li,
-footer li a{
-    margin: 0 4px;
-}
-.visit{
-    /* border-radius: 3px; */
-    background: linear-gradient(60deg, #fc88ad, #ff7a99, #12d5f3, #774294);
-    animation: animatedgradient 10s ease alternate infinite;
-    background-size: 300% 300%;
-    height: 2px;
-    width: 100%;
-    margin: 0 !important;
-}
-.logo{
-    position: relative;
-    top: 4px;
-    font-family: headbodyscript;
-    font-size: xx-small;
-    height: 20px;
-}
 section{
     min-height: 800px;
     font-size: larger;
@@ -134,9 +74,17 @@ section{
     margin: 10px;
     height: 180px;
     aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sub-section-2 a{
+    /* margin-left: 4px; */
+    color: #5073b8;
 }
 .bi-cloud-arrow-down,
 .bi-play-fill,
+.bi-link-45deg,
 .bi-x{
     position: relative;
     top: 1px;

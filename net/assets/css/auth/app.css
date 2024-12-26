@@ -1,0 +1,30 @@
+p,
+h1{margin: 0 !important;color: white;}
+button{
+    margin: 8px 0;
+    color: white;
+}
+body{
+    height: calc(100dvh - 16px);
+}
+section{max-width: 40rem;}
+#app{
+    background: rgba(46, 46, 46, 0.5);
+    height: 100%;
+    padding: 8px;
+}
+.border{
+    position: relative;
+    top: 2px;
+    border-bottom: 1px solid white; width: 150px;
+}
+.bi{
+    font-size: larger;
+    position: relative;
+    top: 2px;
+}
+.width{width: 100%;}
+.bi-chevron-left{
+    font-size: xx-large;
+    top: 0px;
+}
