@@ -1,9 +1,9 @@
 section{
-    min-height: 800px;
     font-size: larger;
+    padding: 0 32px;
 }
 .section-1{
-    height: 500px;
+    min-height: 340px;
 }
 .section-2{
     min-height: 300px;
@@ -11,7 +11,7 @@ section{
 .sub-section-1{
     width: 400px;
     height: 100%;
-    padding-right: 60px;
+    /* padding-right: 60px; */
     /* margin: 50px 20px 20px 0; */
 }
 .sub-section-1 p,
@@ -99,3 +99,12 @@ section{
     background-repeat: no-repeat;;
     background-position: center;
   } */
+
+@media screen and (min-width: 48rem) {
+}
+
+@media screen and (min-width: 64rem) {
+}
+
+@media screen and (min-width: 75rem) {
+}

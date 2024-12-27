@@ -1,7 +1,7 @@
 header.innerHTML =
 `
 <div class="wrapper">
-        <ul class="center row justify-content-evenly">
+        <ul class="center row-desktop justify-content-evenly">
           <li class="center"><div>
             <a class="logo" href="https://headbodyscript.nl">HEADBODYSCRIPT</a>
             <!-- <img class="logo" src="assets/icon/logo.png" alt="HeadBodyScript"> -->

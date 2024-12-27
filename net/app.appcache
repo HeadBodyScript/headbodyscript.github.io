@@ -1,0 +1,7 @@
+CACHE MANIFEST
+#v0.0.1
+CACHE:
+./favicon.ico
+./assets/js/footer.js
+./assets/js/header.js
+./assets/css/init.css
