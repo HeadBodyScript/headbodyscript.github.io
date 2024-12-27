@@ -3,16 +3,18 @@ section{
     padding: 0 32px;
 }
 .section-1{
-    min-height: 340px;
+    min-height: 50%;
+}
+main{
+    height: calc(100dvh - 70px);
+    min-height: 870px;
 }
 .section-2{
-    min-height: 300px;
+    min-height: 50%;
 }
 .sub-section-1{
     width: 400px;
-    height: 100%;
-    /* padding-right: 60px; */
-    /* margin: 50px 20px 20px 0; */
+    height: 50%;
 }
 .sub-section-1 p,
 .sub-section-1 h1{
@@ -99,7 +101,11 @@ section{
     background-repeat: no-repeat;;
     background-position: center;
   } */
-
+.center-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
 @media screen and (min-width: 48rem) {
 }
 

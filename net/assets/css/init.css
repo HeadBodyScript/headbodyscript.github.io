@@ -43,6 +43,15 @@ header .wrapper ul li{
 header .wrapper ul li div{
     margin: 0 8px;
 }
+footer{
+    margin-top: 28px;
+    height: 80px;
+    background-color: whitesmoke;
+}
+footer ul{
+    position: relative;
+    top: 12px;
+}
 footer li,
 footer li a{
     margin: 0 4px;
@@ -188,6 +197,10 @@ li{
     }
     header .wrapper ul li{
         min-width: fit-content;
+    }
+    footer{
+        margin-top: 0;
+        height: 40px;
     }
 }
 

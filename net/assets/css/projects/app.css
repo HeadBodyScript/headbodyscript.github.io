@@ -108,7 +108,7 @@
   /*--------------------------------------------------------------
   5.0 LAYOUT
   --------------------------------------------------------------*/
-  
+
   .ui-layout-container {
     padding-left: var(--ui-layout-container);
     padding-right: var(--ui-layout-container);
@@ -490,21 +490,7 @@
   
   /* AMOUNT */
   
-  .ui-component-card--pricing-amount-1::before { content: "$5"; }
-  
-  #ui-component-toggle__yearly:checked ~ div
-  .ui-component-card--pricing-amount-1::before { content: "$3"; }
-  
-  .ui-component-card--pricing-amount-2::before { content: "$15"; }
-  
-  #ui-component-toggle__yearly:checked ~ div
-  .ui-component-card--pricing-amount-2::before { content: "$13"; }
-  
-  .ui-component-card--pricing-amount-3::before { content: "$25"; }
-  
-  #ui-component-toggle__yearly:checked ~ div
-  .ui-component-card--pricing-amount-3::before { content: "$23"; }
-  
+
   /* LIST */
   
   .ui-component-list--pricing {
@@ -646,10 +632,11 @@
     }
   
     .ui-layout-grid-2{
-            column-gap: var(--ui-layout-gutter);
-      /* grid-template-columns: repeat(2, 1fr); */
-      justify-items: center;
-    }
+      column-gap: var(--ui-layout-gutter);
+/* grid-template-columns: repeat(2, 1fr); */
+justify-items: center;
+}
+
     .ui-layout-grid-3 {
       column-gap: var(--ui-layout-gutter);
       /* grid-template-columns: repeat(2, 1fr); */
@@ -859,7 +846,11 @@
   --------------------------------------------------------------*/
   
   @media screen and (min-width: 75rem) {
-  
+    .ui-layout-grid-2-hero{
+      column-gap: var(--ui-layout-gutter);
+grid-template-columns: repeat(2, 1fr);
+justify-items: center;
+}
     /*------------------------------------------------------------
     VARIABLE
     ------------------------------------------------------------*/

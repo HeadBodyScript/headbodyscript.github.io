@@ -189,7 +189,7 @@ h4 {
   line-height: var(--ui-typography-h4-leading);
 }
 
-p,
+
 ul { margin-bottom: var(--ui-typography-margin-body); }
 
 p:last-child,
@@ -569,20 +569,20 @@ div label[for=ui-component-toggle__yearly] {
 
 /* AMOUNT */
 
-.ui-component-card--pricing-amount-1::before { content: "$5"; }
-
+.ui-component-card--pricing-amount-1::before { content: "$3"; }
+  
 #ui-component-toggle__yearly:checked ~ div
 .ui-component-card--pricing-amount-1::before { content: "$3"; }
 
-.ui-component-card--pricing-amount-2::before { content: "$15"; }
+.ui-component-card--pricing-amount-2::before { content: "$6"; }
 
 #ui-component-toggle__yearly:checked ~ div
-.ui-component-card--pricing-amount-2::before { content: "$13"; }
+.ui-component-card--pricing-amount-2::before { content: "$6"; }
 
-.ui-component-card--pricing-amount-3::before { content: "$25"; }
+.ui-component-card--pricing-amount-3::before { content: "$9"; }
 
 #ui-component-toggle__yearly:checked ~ div
-.ui-component-card--pricing-amount-3::before { content: "$23"; }
+.ui-component-card--pricing-amount-3::before { content: "$9"; }
 
 /* LIST */
 
