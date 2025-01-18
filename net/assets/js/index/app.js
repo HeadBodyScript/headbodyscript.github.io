@@ -1,15 +1,32 @@
 (async()=>{let response=await(await fetch("./assets/json/card.json")).json();
+  var list = "", listLength = response.card[0].list.length;
     for (let i = 0; i < response.card.length; i++) {
+      for (let num = 0; num < listLength; num++) {
+        var list = list + `<li class="ui-component-list--item ui-component-list--item-check">${response.card[i].list[num]}</li>`
+      }
         updateDisplay.innerHTML += 
         `
-          <div class="box">
-              <div class="sub-section-2 column">
-                 <div class="ui-component-card--image" style="background-image: url(${response.card[i].img});"></div>
-                 <h1>${response.card[i].title}</h1>
-                 <p>${response.card[i].txt}</p>
-                 <a href="${response.card[i].url}"><i class="bi bi-link-45deg"></i> ${response.card[i].title}</a>
-              </div>
+        <div class="ui-layout-container">
+        <div class="ui-section-feature__layout ui-layout-grid ui-layout-grid-2 row">
+          <img src="${response.card[i].img}" loading="lazy" alt="#" class="ui-image-half-right">
+          <!-- FEATURE -->
+          <div class="ui-section justify-content-between">
+            <small>${response.card[i].launcher} / ${response.card[i].format} : ${response.card[i].launcherVersion}</small>
+            <h2>${response.card[i].title}</h2>
+            <small>${response.card[i].packVersion}</small>
+            <p class="ui-text-intro">${response.card[i].txt}</p>
+            <ul class="ui-component-list ui-component-list-feature ui-layout-grid">
+              ${list}
+            </ul>
+              <small>Updated: ${response.card[i].dateUpdate}</small>
+              <small>Uploaded: ${response.card[i].dateUpload}</small>
+            <div>
+                <a href="${response.card[i].url}">Click for more information</a>              
             </div>
+          </div>
+          <!-- IMAGE -->
+        </div>
+      </div>
         `
         }
 })();

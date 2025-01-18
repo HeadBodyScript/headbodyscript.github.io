@@ -5,65 +5,68 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://headbodyscript.nl/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-main/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/404/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-0/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/cookies/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-1/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/disclaimer</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-2/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/donate/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-3/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/index/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-4/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/link/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/data-packs/project-5/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/privacy-policy/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/texture-packs/project-2/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/projects/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/texture-packs/project-1/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/refund-policy/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/texture-packs/project-0/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/terms-and-conditions/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://headbodyscript.nl/pages/map-packs/project-0/</loc>
-  <lastmod>2023-09-15T18:31:08+00:00</lastmod>
+<loc>https://headbodyscript.nl/user-login/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<loc>https://headbodyscript.nl/user/</loc>
+<lastmod>2025-01-17T14:46:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>

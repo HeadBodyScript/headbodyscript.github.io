@@ -1,38 +1,43 @@
+// set cookie
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*31*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+// on-load check for cookie if false cookie pop-up 
 var ready = (callback) => {
     if (document.readyState != "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
 ready(() => { 
-         document.getElementById("false").onclick = function() {
+    
+    if(document.cookie.indexOf("true") > 0 ){
+        getCookieValue()
+     }else{
+        document.getElementById("false").onclick = function() {
             document.getElementById("cookie").remove()
-            setCookie(cookie,false, 1)
-      }
-});
-ready(() => { 
-    document.getElementById("true").onclick = function() {
-       document.getElementById("cookie").remove()
-       setCookie("cookie",true, 1)
- }
-});
-function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
+            setCookie("cookie",false, 1)
     }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+      document.getElementById("true").onclick = function() {
+        document.getElementById("cookie").remove()
+        setCookie("cookie",true, 1)
+    }
+     }
+});
+
+function getCookieValue() {
+    const regex = new RegExp(`(^| )cookie=([^;]+)`)
+    var match = document.cookie.match(regex)
+    // console.log(match)
+    if (match == null){
+        insertMyCookie()
+    }
 }
-function getCookieValue(name) 
-    {
-        const regex = new RegExp(`(^| )${name}=([^;]+)`)
-        var match = document.cookie.match(regex)
-        console.log(match)
-        if (match == null){
-            insertMyCookie()
-        }
-   }
-getCookieValue("cookie")
+
 function insertMyCookie(){
     document.getElementsByTagName('body')[0].innerHTML += 
     `
