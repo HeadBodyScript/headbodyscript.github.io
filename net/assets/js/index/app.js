@@ -1,7 +1,9 @@
 (async()=>{let response=await(await fetch("./assets/json/card.json")).json();
-  var list = "", listLength = response.card[0].list.length;
+  var list = ""
     for (let i = 0; i < response.card.length; i++) {
-      for (let num = 0; num < listLength; num++) {
+      for (let num = 0; num < response.card[i].list.length; num++) {
+        if (num == 1){var list = ""};
+        console.log(num)
         var list = list + `<li class="ui-component-list--item ui-component-list--item-check">${response.card[i].list[num]}</li>`
       }
         updateDisplay.innerHTML += 

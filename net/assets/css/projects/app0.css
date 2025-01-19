@@ -132,7 +132,9 @@ TABLE OF CONTENT
 /*--------------------------------------------------------------
 3.0 TYPOGRAPHY
 --------------------------------------------------------------*/
-
+body{
+  background-position-x: -500px;
+}
 a {
   color: var(--ui-color-brand);
   text-decoration-color: var(--ui-color-typography-note);
@@ -404,12 +406,20 @@ div label[for=ui-component-toggle__yearly] {
   ------------------------------------------------------------*/
 
   .ui-image-half-left {
-    padding-right: var(--ui-layout-gutter);
+    margin-right: var(--ui-layout-gutter);
+    margin-left: 0;
+    height: 432px; height: 302px;
+    /* border: solid 6px; border-color: whitesmoke; */
+    border-radius: 8px;
+    box-shadow: 4px 4px 12px 6px rgba(0, 0, 0, 0.5) !important;
+
   }
 
-  .ui-image-half-right {
-    padding-left: var(--ui-layout-gutter);
-  }
+  /* .ui-image-half-right {
+    margin-right: var(--ui-layout-gutter);
+    height: 432px; height: 302px;
+    border: solid 6px; border-color: whitesmoke;
+    border-radius: 32px;  } */
 
   /*------------------------------------------------------------
   LAYOUT
@@ -497,7 +507,7 @@ div label[for=ui-component-toggle__yearly] {
 
   .ui-section-hero { text-align: left; }
 
-  .ui-section-hero .ui-component-cta { align-items: start; }
+  .ui-section-hero .ui-component-cta { align-items: center; }
 
   /*------------------------------------------------------------
   |
@@ -574,6 +584,20 @@ div label[for=ui-component-toggle__yearly] {
 --------------------------------------------------------------*/
 
 @media screen and (min-width: 75rem) {
+
+
+  .ui-section-hero .ui-component-cta {
+    align-items: center;
+    column-gap: var(--ui-gap-cta);
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ui-layout-grid-2-hero{
+    column-gap: var(--ui-layout-gutter);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 
   /*------------------------------------------------------------
   VARIABLE
@@ -757,3 +781,14 @@ header{
 footer{
   box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5) !important;
 }
+.ui-section{
+  width: 100%;
+}
+
+.ui-section-hero {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.ui-section-hero__layout { row-gap: var(--ui-gap-hero); }

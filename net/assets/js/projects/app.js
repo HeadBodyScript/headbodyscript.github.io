@@ -1,22 +1,36 @@
 (async()=>{let response=await(await fetch("./assets/json/projects.json")).json();
-    for (let i = 0; i < response.projects.length; i++) {
-      if (response.projects[i].type === "basic"){
+  var list = "";
+    for (let i = 0; i < response.card.length; i++) {
+      for (let num = 0; num < response.card[i].list.length; num++) {
+        var list = list + `<li class="ui-component-list--item ui-component-list--item-check">${response.card[i].list[num]}</li>`
+      }
         updateDisplay.innerHTML += 
         `
-                <div class="ui-component-card ui-component-card--feature">
-                  <a href="${response.projects[i].url}"><div class="ui-component-card--image"style="background-image: url(${response.projects[i].img});"><p class="version">${response.projects[i].packVersion}</p></div></a>
-                  <div class="ui-component-card--feature-content column">
-                    <h4 class="ui-component-card--feature-title">${response.projects[i].title}</h4>
-                    <p>${response.projects[i].txt}</p>
-                <div class=ui-component-card--footer column>
-                  <div class=row><p>${response.projects[i].gameVersion}</p><i class="bi bi-dot"></i><p>${response.projects[i].sort}</p></div>
-                  <p>Udated: ${response.projects[i].dateUpdate}</p>
-                  <p>Uploaded: ${response.projects[i].dateUpload}</p>
-                  <a href="${response.projects[i].url}"><i class="bi bi-link-45deg"></i> ${response.projects[i].title}</a>
-                </div>
-                  </div>
-                </div>
+        <div class="ui-layout-container">
+        <div class="ui-section-feature__layout ui-layout-grid ui-layout-grid-2">
+          <a href="${response.card[i].url}">
+            <img src="${response.card[i].img}" loading="lazy" alt="#" class="ui-image-half-left">
+          </a>              
+          <!-- FEATURE -->
+          <div class="ui-section justify-content-between">
+            <small>${response.card[i].launcher} / ${response.card[i].format} : ${response.card[i].launcherVersion}</small>
+            <h2>${response.card[i].title}</h2>
+            <small>${response.card[i].packVersion}</small>
+            <p class="ui-text-intro">${response.card[i].txt}</p>
+            <ul class="ui-component-list ui-component-list-feature ui-layout-grid">
+              ${list}
+            </ul>
+              <small>Updated: ${response.card[i].dateUpdate}</small>
+              <small>Uploaded: ${response.card[i].dateUpload}</small>
+            <div>
+                <a href="${response.card[i].url}">Click for more information</a>              
+            </div>
+          </div>
+          <!-- IMAGE -->
+        </div>
+      </div>
         `
-      }
-    }
+        var list = ""
+
+        }
 })();

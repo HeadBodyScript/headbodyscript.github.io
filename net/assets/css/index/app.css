@@ -79,7 +79,7 @@ svg {
     margin-right: 32px;
   }
 .ui-section{
-    width: calc(100% - 300px - 32px);
+    width: fit-content;
     min-width: 300px;
     display: flex;
     flex-direction: column;

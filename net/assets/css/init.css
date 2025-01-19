@@ -3,10 +3,6 @@
     font-family: headbodyscript;
     src: url(../font/headbodyscript.woff2) format('woff2')
 }
-@font-face {
-    font-family: cyberpunk;
-    src: url(../font/cyberpunk.ttf);
-}
 :root{
     --color: black;
 }
@@ -127,10 +123,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-}
-/*  */
-.headbodyscript{
-    font-family: headbodyscript;
 }
 /* MARGIN */
 .ml-2{margin-left: 2px;}

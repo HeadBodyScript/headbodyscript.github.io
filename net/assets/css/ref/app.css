@@ -138,7 +138,9 @@ TABLE OF CONTENT
   *,
   *:before,
   *:after { box-sizing: inherit; }
-  
+  body{
+    background-position-x: -500px;
+  }
   body {
     background-color: var(--ui-color-background-primary);
     color: var(--ui-color-typography-body);
@@ -613,7 +615,7 @@ TABLE OF CONTENT
   }
   
   .ui-section-faq--question {
-    background-image: url(https://res.cloudinary.com/uisual/image/upload/assets/icons/question.svg);
+    /* background-image: url(https://res.cloudinary.com/uisual/image/upload/assets/icons/question.svg); */
     margin-bottom: .5rem;
   }
   
@@ -716,9 +718,17 @@ TABLE OF CONTENT
     /*------------------------------------------------------------
     IMAGE
     ------------------------------------------------------------*/
-  
+/*   
     .ui-image-half-right {
       padding-left: var(--ui-layout-gutter);
+    } */
+    .ui-image-half-right {
+      margin-right: var(--ui-layout-gutter);
+      margin-left: 0;
+      height: 432px; height: 302px;
+      /* border: solid 6px; border-color: whitesmoke; */
+      border-radius: 8px;
+  
     }
   
     /*------------------------------------------------------------
@@ -1064,8 +1074,8 @@ TABLE OF CONTENT
     ------------------------------------------------------------*/
   
     .ui-section-testimonial {
-      padding-bottom: 7.5rem;
-      padding-top: 7.5rem;
+      padding-bottom: 4.5rem;
+      padding-top: 4.5rem;
     }
   
     /*------------------------------------------------------------
