@@ -239,7 +239,7 @@
         "packPrefix":"V",
         "packVersion":"1.1.23",
         "txt": "Add Custom Sounds/Music Without Replacing Existing Sounds",
-        "url": "https://headbodyscript.nl/ref/resourcepacks/template/music",
+        "url": "https://headbodyscript.nl/ref/resourcepackstemplate-music",
         "format":"resourcepack",
         "list":[
         ],
@@ -255,7 +255,7 @@
         "packPrefix":"V",
         "packVersion":"1.1.23",
         "txt": "Percentage Calculator",
-        "url": "https://headbodyscript.nl/ref/datapacks/template/percentage_calculator",
+        "url": "https://headbodyscript.nl/ref/datapacks/template-percentage_calculator",
         "format":"datapack",
         "list":[
         ],
