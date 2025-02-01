@@ -1,4 +1,5 @@
 // set cookie
+// !check for cookie changes!
 function setCookie(name,value,days) {
     var expires = "";
     if (days) {

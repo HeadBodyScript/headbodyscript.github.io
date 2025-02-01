@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Protest Riot", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  min-height: 100dvh;
+  background: url("./assets/background.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+img{
+  height: 230px;
+
+}
+.img{
+  border-radius: 8px;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+h1{
+  margin: 1rem 0;
+  font-size: 3.75rem;
+  line-height: 1;
+}
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+button{
+  font-family: inherit;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: large;
+  margin: 0 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+button:last-child{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
+}
+.flex{
+  gap: 12px;
+  margin: 12px 0;
+}
+.flex button,
+.flex button:last-child{
+  --tw-bg-opacity: 0;
+  background-color: none;
+  color: none;
+  margin: 0;
+  padding: 0;
+}

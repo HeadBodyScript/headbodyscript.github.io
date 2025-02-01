@@ -19,7 +19,6 @@ document.getElementsByTagName('head')[0].innerHTML +=
 <meta name="author" content="HeadBodyScript">
 <meta name="language" content="EN">
 
-<link rel="stylesheet" href="https://headbodyscript.nl/assets/css/init.css">
 <link rel="stylesheet" href="https://headbodyscript.nl/assets/css/cookies.css">
 <link rel="icon" href="https://headbodyscript.nl/favicon.ico">
 <link rel="apple-touch-icon" href="https://headbodyscript.nl/assets/icon/apple-touch-icon.png" sizes="180x180">

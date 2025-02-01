@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Will you be my Valentine?🩷" />
+    <meta name="author" content="Anish" />
+    <meta name="google-site-verification" content="A9PEz5S-vxuNEG2xsGVK1IdfeP5FBflKWeKKLMVwgzo" />
+    <meta name="msvalidate.01" content="D919EEC68AFB633DFFC35FA2609D73A8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="og:title" content="Be my Valentine?🩷" />
+    <meta name="og:description" content="Will you be my Valentine?🩷" />
+    <meta name="og:image" content="https://headbodyscript.nl/valentine/icon.ico" />
+    <meta name="og:url" content="https://headbodyscript.nl/valentine/" />
+    <meta name="og:site_name" content="Be my Valentine?🩷" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:title" content="Be my Valentine?🩷" />
+    <meta name="twitter:description" content="Will you be my Valentine?🩷" />
+    <meta name="twitter:image" content="https://i.imgur.com/8q884zIl.png" />
+    <meta name="twitter:url" content="https://headbodyscript.nl/valentine/" />
+    <title>Bunny, Be my Valentine</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="src/index.css">
+  </head>
+  <body>
+    <img class="img" src="https://gifdb.com/images/high/cute-Love-bear-roses-ou7zho5oosxnpo6k.gif">
+    <h1>will you be my Valentine?</h1>
+    <div>
+      <button id="yes" onclick="yes()" style="padding: 8px 12px !important; font-size: 15px;">Yes</button>
+      <button id="no" onclick="no()">No</button>
+    </div>
+  </body>
+  <script>
+    const phrases = [
+    "No",
+    "Are you sure?",
+    "Really sure?",
+    "Think again!",
+    "Last chance!",
+    "Surely not?",
+    "You might regret this!",
+    "Give it another thought!",
+    "Are you absolutely certain?",
+    "This could be a mistake!",
+    "Have a heart!",
+    "Don't be so cold!",
+    "Change of heart?",
+    "Wouldn't you reconsider?",
+    "Is that your final answer?",
+    "You're breaking my heart ;(",
+    "Is that your final answer?",
+    "You're breaking my heart ;(",
+    "Plsss? :( You're breaking my heart",
+  ];
+    var i = 0
+    function no(){
+    var no = document.getElementById('no')
+    var yes = document.getElementById('yes')
+    var padding_h = 14
+    var padding_v = 10
+    var fontsize = 15
+    i++
+    no.innerHTML = phrases[i];
+    yes.style.padding = `${padding_h + i + i + i + i + i + i}px ${padding_v + i + i + i + i + i + i}px`;
+    yes.style.fontSize = `${fontsize + i + i + i + i + i + i  }px`;
+    if (i == phrases.length)
+    {i = 0}
+  }
+  function yes(){
+    window.location.href = 'princess.html';
+  }
+  </script>
+</html>
