@@ -57,42 +57,27 @@ document.getElementsByTagName('header')[0].innerHTML =
 `
 document.getElementsByTagName('footer')[0].innerHTML = 
 `
-<div class="container row">
-	    	<div class="col-xs-4">
-	    		<h2>About</h2>
-	    		<p>This is a platform for data packs created by the HeadBodyScript team. All download links should refer to this website. All download links that do not refer to this website are not hosted by me, use at your own risk</p>
-	    	</div>
-
-	    	<div class="col-xs-4">
-	    		<h2>How to use</h2>
-	    		<p>Install the files in the corresponding directory. Installation tutorials can be found on each download page or click the following links <a href="">How to install datapacks</a>, <a href="">How to install texturepacks</a>, <a href="">How to install Optifine</a>.</p>
-	    	</div>
-
-	    	<div class="col-xs-4">
-	    		<h2>Need Help?</h2>
-	    		<p>Check out any of the videos on the <a href="">support page</a>. Additional information can be found on the official <a href="">Discord</a>.</p>
-	    	</div>
-	    	<div class="content-divider"></div>
-	    	<div class="col-xs-4" style="min-width: 250px">
-	    		<a class="logo" href="https://headbodyscript.nl">HEADBODYSCRIPT</a>
-	    	</div>
-	    	<div class="col-xs-8">
-	    		<ul class="row">
-            <li><a href="https://headbodyscript.nl/cookies">Cookies</a></li>
-            <li><a href="https://headbodyscript.nl/user/consent-preferences">Consent Preferences</a></li>
-            <li><a href="https://headbodyscript.nl/terms-and-conditions">Terms and Conditions</a></li>
-            <li><a href="https://headbodyscript.nl/disclaimer">Disclaimer</a></li>
-            <li><a href="https://headbodyscript.nl/privacy-policy">Privacy Policy</a></li>
-            <li><a href="https://headbodyscript.nl/refund-policy">Refund Policy</a></li>
-            <li><a href="https://headbodyscript.nl/credit">Credit</a></li>
-            <li class="row">
-            <a href="https://www.instagram.com/headbodyscript/"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/HeadBodyScript"><i class="bi bi-twitter"></i></a>
-            <a href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a>
-            <a href="https://github.com/HeadBodyScript"><i class="bi bi-github"></i></a>
-            <a href="https://www.planetminecraft.com/member/headbodyscript/"><i class="bi bi-globe-americas"></i></a></li>
-          </ul>
-	    	</div>
-	    </div>
+<div class="container row justify-content-between">
+            <div>
+              <a class="logo" href="https://headbodyscript.nl">HEADBODYSCRIPT</a>
+            </div>
+            <div>
+              <ul class="row">
+                <li><a href="https://headbodyscript.nl/cookies">Cookies</a></li>
+                <li><a href="https://headbodyscript.nl/user/consent-preferences">Consent Preferences</a></li>
+                <li><a href="https://headbodyscript.nl/terms-and-conditions">Terms and Conditions</a></li>
+                <li><a href="https://headbodyscript.nl/disclaimer">Disclaimer</a></li>
+                <li><a href="https://headbodyscript.nl/privacy-policy">Privacy Policy</a></li>
+                <li><a href="https://headbodyscript.nl/refund-policy">Refund Policy</a></li>
+                <li><a href="https://headbodyscript.nl/credit">Credit</a></li>
+                <li class="row">
+                <a href="https://www.instagram.com/headbodyscript/"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/HeadBodyScript"><i class="bi bi-twitter"></i></a>
+                <a href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a>
+                <a href="https://github.com/HeadBodyScript"><i class="bi bi-github"></i></a>
+                <a href="https://www.planetminecraft.com/member/headbodyscript/"><i class="bi bi-globe-americas"></i></a></li>
+              </ul>
+            </div>
+          </div>
 `
 

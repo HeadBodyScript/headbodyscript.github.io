@@ -48,13 +48,12 @@ header .wrapper ul li a{
 footer{
     border-top: solid 1px #eaeaea;
     margin-top: auto;
-    width: 100%; min-height: 70px;
+    width: 100%;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.5);
     /* box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.5); */
 }
-footer .container .col-xs-8 li,
-footer .container .col-xs-8 li a{
+footer .container li a{
     margin: 0 4px;
 }
 .col-xs-4 {
@@ -93,7 +92,7 @@ footer .container .col-xs-8 li a{
 }
 .logo{
     position: relative;
-    top: 4px;
+    top: 8px;
     font-family: headbodyscript;
     font-size: xx-small;
     height: 20px;
