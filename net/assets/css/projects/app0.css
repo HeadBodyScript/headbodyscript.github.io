@@ -408,7 +408,8 @@ div label[for=ui-component-toggle__yearly] {
   .ui-image-half-left {
     margin-right: var(--ui-layout-gutter);
     margin-left: 0;
-    height: 432px; height: 302px;
+    width: 300px; height: 300px;
+
     /* border: solid 6px; border-color: whitesmoke; */
     border-radius: 8px;
     box-shadow: 4px 4px 12px 6px rgba(0, 0, 0, 0.5) !important;
