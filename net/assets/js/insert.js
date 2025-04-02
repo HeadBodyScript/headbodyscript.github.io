@@ -24,15 +24,15 @@ document.getElementsByTagName('head')[0].innerHTML +=
 <link rel="apple-touch-icon" href="https://headbodyscript.nl/assets/icon/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="https://headbodyscript.nl/assets/icon/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="https://headbodyscript.nl/assets/icon/favicon-16x16.png" type="image/png" sizes="16x16">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BCEYTZM4F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BCEYTZM4F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-2BCEYTZM4F');
-</script>
+    gtag('config', 'G-2BCEYTZM4F');
+  </script>
 `
 document.getElementsByTagName('header')[0].innerHTML =
 `
