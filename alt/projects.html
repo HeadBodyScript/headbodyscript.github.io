@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Website description here" />
+    <meta name="keywords" content="website,keywords,here">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/other.css" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/main.js"></script>
+    <title>HeadBodyScript</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="navigation">
+                <ul>
+                    <li id="menu-home"><a href="https://headbodyscript.nl/" class="menu-current">
+                            <p class="icon">headbodyscript</p>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li id="menu-home"><a href="https://headbodyscript.nl/" class="menu-current">HOME</a></li>
+                    <li id="menu-news"><a href="https://headbodyscript.nl/projects/">PROJECTS</a></li>
+                    <li id="menu-computers"><a href="https://headbodyscript.nl/donate/">DONATE</a></li>
+                </ul>
+                <ul>
+                    <li id="menu-listicles"><a href="https://headbodyscript.nl/user/">USER</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="logo mobile">
+                <a href="#"><img alt="website logo" src="images/logo.png" /></a>
+            </div>
+            <div id="responsive-icon">
+                <a href="#"><img alt="menu" src="images/menu.png" /></a>
+            </div>
+        </div>
+        <div id="responsive-menu">
+            <ul>
+                <li id="menu-home-mobile" class="menu-current"><a href="#">HOME</a></li>
+                <li id="menu-news-mobile"><a href="#">NEWS</a></li>
+                <li id="menu-computers-mobile"><a href="#">COMPUTERS</a></li>
+                <li id="menu-tablets-mobile"><a href="#">TABLETS</a></li>
+                <li id="menu-mobiles-mobile"><a href="#">MOBILES</a></li>
+                <li id="menu-websites-mobile"><a href="#">WEBSITES</a></li>
+                <li id="menu-tips-mobile"><a href="#">TIPS</a></li>
+                <li id="menu-listicles-mobile"><a href="#">LISTICLES</a></li>
+            </ul>
+        </div>
+        <div style="height: 3em; width: 94%; margin: auto; padding-left: 1%;">
+            <input type="text" id="search-box" placeholder="Search..." maxlength="70"
+                onfocus=' if($( window ).innerWidth() >= 960){$(this).animate({"width": "40%"}, 700);}'
+                onblur=' if($( window ).innerWidth() >= 960){$(this).animate({"width": "15%"}, 700);}' />
+            <img alt="" draggable="false" style="float: left; display: inline; margin-left: -2em;"
+                src="images/search.png" />
+        </div>
+        <div class="tw-flex tw-flex-wrap tw-gap-12 tw-w-full tw-h-full 
+                    tw-place-content-center" id="template-data-container">
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/pixaai')">
+
+                <div class="template-preview">
+                    <img src="https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/refs/heads/main/src/saas/screenshots/pixa-dark.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Pixa Ai</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            saas
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/pixaai"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/navigator')">
+
+                <div class="template-preview">
+                    <img src="https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/apps/screenshots/navigator.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Navigator</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            apps
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/navigator"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://navigator-app.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/traveler')">
+
+                <div class="template-preview">
+                    <img src="https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/apps/screenshots/traveler.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Traveler</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            apps
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/traveler"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://traveler-dyno.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/SaaSyDark')">
+
+                <div class="template-preview">
+                    <img src="https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/saas/screenshots/saasydark.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">SaaSy Dark</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            saas
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/SaaSyDark"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://saasy-dark.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/saas/SaaS-AI')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/saas/screenshots/ai-saas.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">SaaS AI</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            saas
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/saas/SaaS-AI"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://ai-code.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/chatorigin')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/apps/screenshots/chat-origin.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Chat origin</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            apps
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/chatorigin"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://chatorigin.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/portfolio/Jamie-portfolio')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/portfolio/screenshots/jamie-dev-portfolio.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Jamie developer</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            portfolio
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/portfolio/Jamie-portfolio"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://jamie-dev-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/finance')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/saas/screenshots/finance.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Finance SaaS</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            saas
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/finance"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://finance-saas-template.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/saas/CelestialSaaS')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/saas/screenshots/celestialsaas.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Celestial SaaS</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            saas
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/saas/CelestialSaaS"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://celestialsaas.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/AISales')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/apps/screenshots/aisales.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">AI Sales app</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            apps
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/AISales"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://aisales-app.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/bistro')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/restaurant/screenshots/bistro.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Bistro restaurant</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            restaurant
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/bistro"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://bistro-rest.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/nutrio')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/restaurant/screenshots/nutrio.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Nutrio restaurant</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            restaurant
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/nutrio"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://nutrio-rest.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/ngo/project-africa')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/ngo/screenshots/project-africa.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Project africa</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            ngo
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/ngo/project-africa"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://project-africa.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/law/lawfire')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/law/screenshots/law-fire.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Law Fire</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            law
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/law/lawfire"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://law-fire.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/law/lawgroup')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/law/screenshots/lawgroup.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Law group</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            law
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/law/lawgroup"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://lawgroup.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/realestate/brickproperty')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/realestate/screenshots/brickstone.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Brick property</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            real-estate
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/realestate/brickproperty"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://brickproperty.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/jrdev')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/portfolio/screenshots/dev.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">JrDev portfolio</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            portfolio
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/jrdev"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://jrdev-port.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/bella')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/portfolio/screenshots/bella.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Bella Youtuber</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            portfolio
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/bella"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://bella-youtuber.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/portfolio/notion')">
+
+                <div class="template-preview">
+                    <img src="https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/portfolio/screenshots/notion.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Notion themed portfolio</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            portfolio
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/portfolio/notion"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://notion-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card"
+                onclick="showPreviewModal('https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/others/carwash')">
+
+                <div class="template-preview">
+                    <img src="https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/others/screenshots/carwash.png"
+                        alt="" class="tw-w-full tw-h-full tw-object-contain">
+                </div>
+                <div class="template-footer tw-w-full">
+
+                    <div class="tw-flex tw-w-full">
+                        <h2 class="tw-text-xl tw-font-medium">Car wash</h2>
+                        <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                            others
+                        </p>
+                    </div>
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/others/carwash"
+                            target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://supremecarwash.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div id="footer">
+            <div class="wrapper">
+                <div class="footer-left">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">COMPUTERS</a></li>
+                        <li><a href="#">TABLETS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-left">
+                    <ul>
+                        <li><a href="#">MOBILES</a></li>
+                        <li><a href="#">WEBSITES</a></li>
+                        <li><a href="#">TIPS</a></li>
+                        <li><a href="#">LISTICLES</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <div style="margin-bottom: 1em;">
+                        <a target="_blank" href="https://www.planetminecraft.com/member/headbodyscript/"><i
+                                class="bi bi-globe-americas"></i></a></li>
+                        <a target="_blank" href="https://www.instagram.com/headbodyscript/"><i
+                                class="bi bi-instagram"></i></a>
+                        <a target="_blank" href="https://x.com/HeadBodyScript"><i class="bi bi-twitter"></i></a>
+                        <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a>
+                        <a target="_blank" href="https://github.com/HeadBodyScript"><i class="bi bi-github"></i></a>
+                    </div>
+
+                    <ul>
+                        <li><a href="about">Cookies</a></li>
+                        <li><a href="privacy">Consent Preferences</a></li>
+                        <li><a href="advertise">Terms and Conditions</a></li>
+                        <li><a href="contact">Privacy Policy</a></li>
+                        <li><a href="contact">Refund Policy</a></li>
+                        <li><a href="contact">Disclaimer</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <p style="font-family: headbodyscript; position: relative; top: 5px; color: black;" id="copyright">
+                        headbodyscript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
