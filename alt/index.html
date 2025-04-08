@@ -26,17 +26,20 @@
     <link rel="icon" href="https://headbodyscript.nl/assets/icon/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="https://headbodyscript.nl/assets/icon/favicon-16x16.png" type="image/png" sizes="16x16">
 
-    <meta name="description" content="Website description here" />
+    <meta name="description" content="Website description here"/>
     <meta name="keywords" content="website,keywords,here">
-    <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+    <meta name="viewport" content="initial-scale=1.0,width=device-width"/>
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/other.css" type="text/css" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <script src="js/main.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/other.css" type="text/css"/>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/include.js"></script>
+    <script src="assets/js/cards.js"></script>
 </head>
 <body>
     <div id="container">
@@ -60,19 +63,19 @@
             </div>
             <div class="clear"></div>
             <div class="logo mobile">
-                <a href="#">
-                    <img alt="website logo" src="images/logo.png"/>
+                <a href="https://headbodyscript.nl/">
+                    <p class="icon">headbodyscript</p>
                 </a>
             </div>
             <div id="responsive-icon">
                 <a href="#">
-                    <img alt="menu" src="images/menu.png" />
+                    <i class="bi bi-list"></i>
                 </a>
             </div>
         </div>
         <div id="responsive-menu">
             <ul>
-                <li id="menu-home-mobile" class="menu-current"><a href="#">HOME</a></li>
+                <li id="menu-home-mobile"><a href="#">HOME</a></li>
                 <li id="menu-news-mobile"><a href="#">NEWS</a></li>
                 <li id="menu-computers-mobile"><a href="#">COMPUTERS</a></li>
                 <li id="menu-tablets-mobile"><a href="#">TABLETS</a></li>
@@ -86,237 +89,89 @@
             <input type="text" id="search-box" placeholder="Search..." maxlength="70"
                 onfocus=' if($( window ).innerWidth() >= 960){$(this).animate({"width": "40%"}, 700);}'
                 onblur=' if($( window ).innerWidth() >= 960){$(this).animate({"width": "15%"}, 700);}' />
-            <img alt="" draggable="false" style="float: left; display: inline;" src="images/search.png" />
         </div>
-        <div style="width: 94%; margin: auto;">
-            <div id="main-column">
-                <div class="article-first">
-                    <a href="article.html?id=1"><img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_p90.webp" /></a>
-                    <a href="article.html?id=1">
-                        <div class="text-wrapper center column">
-                            <h2>P90 Weapon Pack</h2>
-                            <p>add a customizable P90 to minecraft (no Optifine)</p>
-                            <div class="row justify-content-between">
-                                <a class="" href="https://headbodyscript.nl/ref/packs/cyberpunk">
-                                    <p><i class="bi bi-cloud-arrow-down"></i> Download</p>
-                                </a>
-                                <a class="" href="https://www.youtube.com/@HeadBodyScript">
-                                    <p><i class="bi bi-play-fill"></i> Watch video</p>
-                                </a>
-                            </div>
-                        </div>
-                    </a>
+        <main>
+            <div style="width: 94%; margin: auto;">
+                <div id="main-column">
+                    <section id="updatelatestPreviewDisplay"></section>
+                    <h1>Latest</h1>
+                    <section class="tw-flex tw-flex-wrap tw-gap-12 tw-w-full tw-h-full tw-place-content-center" id="updateDisplay"></section>
                 </div>
-                <h1>Featured</h1>
-                <div class="tw-flex tw-flex-wrap tw-gap-12 tw-w-full tw-h-full tw-place-content-center" id="template-data-container">
-                    <div class="template-card">
-                        <div class="template-preview">
-                            <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_hatsuneMiku.webp" alt="" class="tw-w-full tw-h-full tw-object-contain">
+                <div id="side-column">
+                    <div class="border">
+                        <h1>LATEST VIDEO</h1>
+                        <div class="popular-section" id="updateVideo">
+                            <iframe width="100%" height="auto" style="aspect-ratio: 2/1;"
+                                src="https://www.youtube.com/embed/3yWz2K2frcU?si=3gzQ5E36jve8-2r8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
                         </div>
-                        <div class="template-footer tw-w-full">
-                            <div class="tw-flex tw-w-full">
-                                <h2 class="tw-text-xl tw-font-medium">Hatsune Miku</h2>
-                                <div class="tw-ml-auto row">
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Texture pack</p>
-                                </div>                            </div>
-                            <div class="tw-flex tw-mt-5 tw-justify-between">
-                                <p class="row"><img class="ico" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/ico_fabric.webp" alt=""></p>
-                                <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                    <div class="border">
+                        <h1>IMPORTANT NOTICE</h1>
+                        <div class="popular-section row">
+                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/ico/data.gif" />
+                            <div class="popular-section-article">
+                                <h2><a href="article.html?id=1">REPORT BUGS</a></h2>
+                                <p style="font-size: 0.9em;">If you find any issues while playing, contact the #ask-for-help or #report-a-bug in the official Discord <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a></p>
+                                <br>
+                                <h2><a href="article.html?id=1">No Discord?</a></h2>
+                                <p style="font-size: 0.9em;">Report bugs here on through Github</p>
+                                <br>
+                                <h2><a href="article.html?id=1">Additional information</a></h2>
+                                <p style="font-size: 0.9em;">Additional information can be found on the official Discord <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="template-card">
-                        <div class="template-preview">
-                            <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_dimitra.webp" alt="" class="tw-w-full tw-h-full tw-object-contain">
-                        </div>
-                        <div class="template-footer tw-w-full">
-                            <div class="tw-flex tw-w-full">
-                                <h2 class="tw-text-xl tw-font-medium">DIMI's guns</h2>
-                                <div class="tw-ml-auto row">
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Data pack</p>
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Texture pack</p>
-                                </div>                            </div>
-                            <div class="tw-flex tw-mt-5 tw-justify-between">
-                                <p></p>
-                                <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="template-card">
-                        <div class="template-preview">
-                            <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_mantisBlade.webp" alt="" class="tw-w-full tw-h-full tw-object-contain">
-                        </div>
-                        <div class="template-footer tw-w-full">
-                            <div class="tw-flex tw-w-full">
-                                <h2 class="tw-text-xl tw-font-medium">Mantis Blade</h2>
-                                <div class="tw-ml-auto row">
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Texture pack</p>
-                                </div>
-                            </div>
-                            <div class="tw-flex tw-mt-5 tw-justify-between">
-                                <p></p>
-                                <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="template-card">
-                        <div class="template-preview">
-                            <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_nachtDerUntoten.webp" alt="" class="tw-w-full tw-h-full tw-object-contain">
-                        </div>
-                        <div class="template-footer tw-w-full">
-                            <div class="tw-flex tw-w-full">
-                                <h2 class="tw-text-xl tw-font-medium">Nacht Der Untoten: Zombies</h2>
-                                <div class="tw-ml-auto row">
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Map</p>
-                                </div>
-                            </div>
-                            <div class="tw-flex tw-mt-5 tw-justify-between">
-                                <p></p>
-                                <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="template-card">
-                        <div class="template-preview">
-                            <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_enderDragon.webp" alt="" class="tw-w-full tw-h-full tw-object-contain">
-                        </div>
-                        <div class="template-footer tw-w-full">
-                            <div class="tw-flex tw-w-full">
-                                <h2 class="tw-text-xl tw-font-medium">Improved Ender Dragon</h2>
-                                <div class="tw-ml-auto row">
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Data pack</p>
-                                </div>
-                            </div>
-                            <div class="tw-flex tw-mt-5 tw-justify-between">
-                                <p></p>
-                                <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="template-card">
-                        <div class="template-preview">
-                            <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_bunnyMask.webp" alt="" class="tw-w-full tw-h-full tw-object-contain">
-                        </div>
-                        <div class="template-footer tw-w-full">
-                            <div class="tw-flex tw-w-full">
-                                <h2 class="tw-text-xl tw-font-medium">Bunny Mask</h2>
-                                <div class="tw-ml-auto row">
-                                    <p class="tw-ml-1 tw-text-sm tw-p-1 tw-px-2 tw-border-primary tw-text-primary tw-rounded-full tw-border-[1px]">Texture pack</p>
-                                </div>
-                            </div>
-                            <div class="tw-flex tw-mt-5 tw-justify-between">
-                                <p class="row"><img class="ico" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/ico_optifine.webp" alt=""></p>
-                                <a href="https://pixapage.netlify.app/" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="side-column">
-                <div class="border">
-                    <h1>LATEST VIDEO</h1>
-                    <div class="popular-section">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/3yWz2K2frcU?si=3gzQ5E36jve8-2r8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="border">
-                    <h1>IMPORTANT NOTICE</h1>
-                    <div class="popular-section row">
-                        <img alt="" src="images/data.gif" />
-                        <div class="popular-section-article">
-                            <h2><a href="article.html?id=1">REPORT BUGS</a></h2>
-                            <p style="font-size: 0.9em;">If you find any issues while playing, contact the #ask-for-help or #report-a-bug in the official Discord <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a></p>
-                            <br>
-                            <h2><a href="article.html?id=1">No Discord?</a></h2>
-                            <p style="font-size: 0.9em;">Report bugs here on through Github</p>
-                            <br>
-                            <h2><a href="article.html?id=1">Additional information</a></h2>
-                            <p style="font-size: 0.9em;">Additional information can be found on the official Discord <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-                <div class="border">
-                    <h1>LATEST UPDATE</h1>
-                    <div class="popular-section row">
-                        <div class="popular-section-article">
-                            <h2><a href="article.html?id=1">LONG TEXT ABOUT AN UPDATE</a></h2>
-                            <p style="font-size: 0.9em;">INFORMATION</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-                <div class="border">
-                    <h1>POPULAR PACKS</h1>
-                    <div class="popular-section row">
-                        <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_dimitra.webp" />
-                        <div class="popular-section-article">
-                            <h2><a href="article.html?id=1">DIMI's guns</a></h2>
-                            <p style="font-size: 0.9em;">add multiple fire arms to Minecraft.</p>
-                        </div>
-                    </div>
-                    <div class="popular-section row">
-                        <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_enderDragon.webp" />
-                        <div class="popular-section-article">
-                            <h2><a href="article.html?id=1">Improved Ender Dragon</a></h2>
-                            <p style="font-size: 0.9em;">After respawning the ender dragon, the dragon will be upgraded to a stronger version. Health scaling with players. New attacks and beautiful new pillars.</p>
-                        </div>
-                    </div>
-                    <div class="popular-section row">
-                        <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_nachtDerUntoten.webp" />
-                        <div class="popular-section-article">
-                            <h2><a href="article.html?id=1">Nacht Der Untoten: Zombies</a></h2>
-                            <p style="font-size: 0.9em;">Experience zombies inside of Minecraft with custom guns, working power-ups, infinite scaling rounds, and working perk system. How many rounds can you last? Download the map and find out!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-        <div id="footer">
-            <div class="wrapper">
-                <div class="footer-left">
-                    <ul>
-                        <li><a href="https://headbodyscript.nl/">HOME</a></li>
-                        <li><a href="https://headbodyscript.nl/projects/">PROJECTS</a></li>
-                        <li><a href="https://headbodyscript.nl/donate/">DONATE</a></li>
-                    </ul>
-                </div>
-                <div class="footer-left">
-                    <ul>
-                        <!-- <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li> -->
-                    </ul>
-                </div>
-                <div class="footer-right">
-                    <div style="margin-bottom: 1em;">
-                        <a target="_blank" href="https://www.planetminecraft.com/member/headbodyscript/"><i class="bi bi-globe-americas"></i></a></li>
-                        <a target="_blank" href="https://www.instagram.com/headbodyscript/"><i class="bi bi-instagram"></i></a>
-                        <a target="_blank" href="https://x.com/HeadBodyScript"><i class="bi bi-twitter"></i></a>
-                        <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a>
-                        <a target="_blank" href="https://github.com/HeadBodyScript"><i class="bi bi-github"></i></a>
-                    </div>
-                    <ul>
-                        <li><a href="about">Cookies</a></li>
-                        <li><a href="privacy">Consent Preferences</a></li>
-                        <li><a href="advertise">Terms and Conditions</a></li>
-                        <li><a href="contact">Privacy Policy</a></li>
-                        <li><a href="contact">Refund Policy</a></li>
-                        <li><a href="contact">Disclaimer</a></li>
-                    </ul>
                     <div class="clear"></div>
-                    <p style="font-family: headbodyscript; position: relative; top: 5px; color: black;" id="copyright">headbodyscript</p>
+                    <div class="border">
+                        <h1>LATEST UPDATE</h1>
+                        <div class="popular-section row" id="updateLatestUpdate">
+                            <div class="popular-section-article">
+                                <h2><a href="article.html?id=1">LONG TEXT ABOUT AN UPDATE</a></h2>
+                                <p style="font-size: 0.9em;">INFORMATION</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="border">
+                        <h1>POPULAR PACKS</h1>
+                        <div class="popular-section row">
+                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_dimitra.webp" />
+                            <div class="popular-section-article">
+                                <h2><a href="article.html?id=1">DIMI's guns</a></h2>
+                                <p style="font-size: 0.9em;">add multiple fire arms to Minecraft.</p>
+                            </div>
+                        </div>
+                        <div class="popular-section row">
+                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_enderDragon.webp" />
+                            <div class="popular-section-article">
+                                <h2><a href="article.html?id=1">Improved Ender Dragon</a></h2>
+                                <p style="font-size: 0.9em;">After respawning the ender dragon, the dragon will be upgraded to a stronger version. Health scaling with players. New attacks and beautiful new pillars.</p>
+                            </div>
+                        </div>
+                        <div class="popular-section row">
+                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_nachtDerUntoten.webp" />
+                            <div class="popular-section-article">
+                                <h2><a href="article.html?id=1">Nacht Der Untoten: Zombies</a></h2>
+                                <p style="font-size: 0.9em;">Experience zombies inside of Minecraft with custom guns, working power-ups, infinite scaling rounds, and working perk system. How many rounds can you last? Download the map and find out!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
                 </div>
+                <div class="clear"></div>
             </div>
-        </div>
+        </main>
+        <div class="clear"></div>
+        <footer>
+
+        </footer>
     </div>
+    <script>
+        
+    </script>
 </body>
 </html>
