@@ -1,0 +1,2 @@
+(async()=>{(await fetch("assets/include/header.txt").then((response)=>{return response.text()}).then((text)=>{document.getElementsByTagName('header')[0].innerHTML = text;}));})();
+(async()=>{(await fetch("assets/include/footer.txt").then((response)=>{return response.text()}).then((text)=>{document.getElementsByTagName('footer')[0].innerHTML = text;}));})();

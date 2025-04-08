@@ -1,4 +1,4 @@
-(async()=>{let response=await(await fetch("assets/json/projects.json")).json();
+(async()=>{let response=await(await fetch("assets/json/data.json")).json();
   let updateHTML = "";
     for (let i = 0; i < response.card.length ; i++) {
         updateHTML += 
@@ -25,7 +25,7 @@
         </div>
         </div>
           <div class="tw-flex tw-mt-5 tw-justify-between">
-          <p class="row" style="align-items: start;"><img class="ico" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/ico_${response.card[i].dependency}.webp" alt=""></p>
+          <div class="row" style="align-items:center;"><img class="ico" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/ico_${response.card[i].dependency}.webp" alt=""><p>&nbsp${response.card[i].launcherVersion[0]}</p></div>
           <a href="${response.card[i].url}" target="_blank" rel="noopener noreferrer" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] tw-w-[30px] tw-h-[30px] tw-place-content-center tw-text-lg"><i class="bi bi-arrow-up-right"></i></a>
           </div>
         </div>
@@ -34,13 +34,4 @@
         updateDisplay.innerHTML += updateHTML;
         updateHTML = "";
       }
-      updateHTML +=
-      `
-      <iframe width="100%" height="auto" style="aspect-ratio: 2/1;"
-        src="${response.video}"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>
-      `
 })();

@@ -20,7 +20,6 @@
     <meta name="author" content="HeadBodyScript">
     <meta name="language" content="EN">
 
-    <link rel="stylesheet" href="https://headbodyscript.nl/assets/css/cookies.css">
     <link rel="icon" href="https://headbodyscript.nl/favicon.ico">
     <link rel="apple-touch-icon" href="https://headbodyscript.nl/assets/icon/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="https://headbodyscript.nl/assets/icon/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -29,62 +28,26 @@
     <meta name="description" content="Website description here"/>
     <meta name="keywords" content="website,keywords,here">
     <meta name="viewport" content="initial-scale=1.0,width=device-width"/>
-
+    
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
     <link href="http://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css"/>
+    
+    <!-- <link rel="stylesheet" href="https://headbodyscript.nl/assets/css/cookies.css"> -->
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/other.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/card.css" type="text/css"/>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.placeholder.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/include.js"></script>
-    <script src="assets/js/cards.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/index-dynamic.js"></script>
 </head>
 <body>
     <div id="container">
-        <div id="header">
-            <div id="navigation">
-                <ul>
-                    <li id="menu-home">
-                        <a href="https://headbodyscript.nl/">
-                            <p class="icon">headbodyscript</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li id="menu-home"><a href="https://headbodyscript.nl/" class="menu-current">HOME</a></li>
-                    <li id="menu-news"><a href="https://headbodyscript.nl/projects/">PROJECTS</a></li>
-                    <li id="menu-computers"><a href="https://headbodyscript.nl/donate/">DONATE</a></li>
-                </ul>
-                <ul>
-                    <li id="menu-listicles"><a href="https://headbodyscript.nl/user/">USER</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-            <div class="logo mobile">
-                <a href="https://headbodyscript.nl/">
-                    <p class="icon">headbodyscript</p>
-                </a>
-            </div>
-            <div id="responsive-icon">
-                <a href="#">
-                    <i class="bi bi-list"></i>
-                </a>
-            </div>
-        </div>
-        <div id="responsive-menu">
-            <ul>
-                <li id="menu-home-mobile"><a href="#">HOME</a></li>
-                <li id="menu-news-mobile"><a href="#">NEWS</a></li>
-                <li id="menu-computers-mobile"><a href="#">COMPUTERS</a></li>
-                <li id="menu-tablets-mobile"><a href="#">TABLETS</a></li>
-                <li id="menu-mobiles-mobile"><a href="#">MOBILES</a></li>
-                <li id="menu-websites-mobile"><a href="#">WEBSITES</a></li>
-                <li id="menu-tips-mobile"><a href="#">TIPS</a></li>
-                <li id="menu-listicles-mobile"><a href="#">LISTICLES</a></li>
-            </ul>
-        </div>
+        <header>
+           
+        </header>
         <div style="height: 3em; width: 94%; margin: auto; padding-left: 1%; margin-top: 10px;">
             <input type="text" id="search-box" placeholder="Search..." maxlength="70"
                 onfocus=' if($( window ).innerWidth() >= 960){$(this).animate({"width": "40%"}, 700);}'
@@ -95,7 +58,7 @@
                 <div id="main-column">
                     <section id="updatelatestPreviewDisplay"></section>
                     <h1>Latest</h1>
-                    <section class="tw-flex tw-flex-wrap tw-gap-12 tw-w-full tw-h-full tw-place-content-center" id="updateDisplay"></section>
+                    <section class="tw-flex tw-flex-wrap tw-gap-12 tw-w-full tw-h-full tw-place-content-center" id="updateLatestDisplay"></section>
                 </div>
                 <div id="side-column">
                     <div class="border">
@@ -112,53 +75,32 @@
                     <div class="border">
                         <h1>IMPORTANT NOTICE</h1>
                         <div class="popular-section row">
-                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/ico/data.gif" />
+                            <!-- <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/ico/data.gif" /> -->
                             <div class="popular-section-article">
-                                <h2><a href="article.html?id=1">REPORT BUGS</a></h2>
+                                <h2>REPORT BUGS</h2>
                                 <p style="font-size: 0.9em;">If you find any issues while playing, contact the #ask-for-help or #report-a-bug in the official Discord <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a></p>
                                 <br>
-                                <h2><a href="article.html?id=1">No Discord?</a></h2>
+                                <h2>No Discord?</h2>
                                 <p style="font-size: 0.9em;">Report bugs here on through Github</p>
                                 <br>
-                                <h2><a href="article.html?id=1">Additional information</a></h2>
+                                <h2>Additional information</h2>
                                 <p style="font-size: 0.9em;">Additional information can be found on the official Discord <a target="_blank" href="https://discord.gg/pxEk4Ey4Hv"><i class="bi bi-discord"></i></a></p>
                             </div>
                         </div>
                     </div>
                     <div class="clear"></div>
-                    <div class="border">
+                    <div>
                         <h1>LATEST UPDATE</h1>
-                        <div class="popular-section row" id="updateLatestUpdate">
-                            <div class="popular-section-article">
-                                <h2><a href="article.html?id=1">LONG TEXT ABOUT AN UPDATE</a></h2>
-                                <p style="font-size: 0.9em;">INFORMATION</p>
-                            </div>
+                        <div class="popular-section column" id="updateLatestUpdate">
+
                         </div>
                     </div>
                     <div class="clear"></div>
                     <div class="border">
                         <h1>POPULAR PACKS</h1>
-                        <div class="popular-section row">
-                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_dimitra.webp" />
-                            <div class="popular-section-article">
-                                <h2><a href="article.html?id=1">DIMI's guns</a></h2>
-                                <p style="font-size: 0.9em;">add multiple fire arms to Minecraft.</p>
-                            </div>
-                        </div>
-                        <div class="popular-section row">
-                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_enderDragon.webp" />
-                            <div class="popular-section-article">
-                                <h2><a href="article.html?id=1">Improved Ender Dragon</a></h2>
-                                <p style="font-size: 0.9em;">After respawning the ender dragon, the dragon will be upgraded to a stronger version. Health scaling with players. New attacks and beautiful new pillars.</p>
-                            </div>
-                        </div>
-                        <div class="popular-section row">
-                            <img alt="" src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_nachtDerUntoten.webp" />
-                            <div class="popular-section-article">
-                                <h2><a href="article.html?id=1">Nacht Der Untoten: Zombies</a></h2>
-                                <p style="font-size: 0.9em;">Experience zombies inside of Minecraft with custom guns, working power-ups, infinite scaling rounds, and working perk system. How many rounds can you last? Download the map and find out!</p>
-                            </div>
-                        </div>
+                        <section id="updatePopular">
+                           
+                        </section>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -170,8 +112,5 @@
 
         </footer>
     </div>
-    <script>
-        
-    </script>
 </body>
 </html>
