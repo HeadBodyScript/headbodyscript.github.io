@@ -12,7 +12,7 @@
         <div class="template-footer tw-w-full">
         <div class="tw-flex tw-w-full">
         <h2 class="tw-text-xl tw-font-medium">${response.card[i].title}</h2>
-        <div class="tw-ml-auto row">
+        <div class="tw-ml-auto row format">
         `
         for (let u = 0; u < response.card[i].format.length; u++) {
           updateHTML += 

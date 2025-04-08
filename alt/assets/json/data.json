@@ -12,14 +12,9 @@
         "txt": "Experience Minecraft like never before, with Miku herself joining the fun!",
         "url": "https://headbodyscript.nl/ref/resourcepacks/hatsune-miku",
         "format":["resourcepack"],
-        "list":[
-          "MIKU!!!"
-        ],
-        "launcher":"optifine",
         "dateUpload":"20/1/2025",
         "dateUpdate":"20/1/2025",
-        "dependency": "fabric",
-        "type": "basic"
+        "dependency": "fabric"
       },
       {
         "display": "basic",
@@ -31,17 +26,9 @@
         "txt": "Upgrade your world and experience Cyberpunk inside of Minecraft",
         "url": "https://headbodyscript.nl/ref/datapacks/cyberpunk",
         "format":["datapack","texturepack"],
-        "list":[
-          "Custom Weapons",
-          "New vehicles",
-          "NPC's with voice acting",
-          "Upgraded structures"
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -53,15 +40,9 @@
         "txt": "Play With Or Against Your Friends On This COD Style Map With Working Weapons, Tacticals, And Scorestreaks",
         "url": "https://headbodyscript.nl/ref/saves/showdown",
         "format":["map"],
-        "list":[
-          "Custom Weapons",
-          "Scorestreaks"
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "popular",
@@ -73,13 +54,9 @@
         "txt": "Elevate Your Gameplay With The New Firearms Such As:<br>- Kurz<br>- Mossberg<br>- UMP<br>- AK<br>- Glock",
         "url": "https://headbodyscript.nl/ref/resourcepacks/dimitra",
         "format":["resourcepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -91,13 +68,9 @@
         "txt": "Functional New Weapon<br>Karbiner98Kurz<br><br>3 Versions<br><br>Compatible With:<br>Firearm Enchantments",
         "url": "https://headbodyscript.nl/ref/resourcepacks/karbiner98kurz",
         "format":["resourcepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -109,13 +82,9 @@
         "txt": "Functional New Weapon<br>Mossberg<br><br>2 Versions<br><br>Compatible With:<br>Firearm Enchantments",
         "url": "https://headbodyscript.nl/ref/resourcepacks/mossberg",
         "format":["resourcepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -127,13 +96,9 @@
         "txt": "Functional New Weapon<br>UMP<br><br>4 Versions<br><br>Compatible With:<br>Firearm Enchantments",
         "url": "https://headbodyscript.nl/ref/resourcepacks/ump",
         "format":["resourcepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -145,13 +110,9 @@
         "txt": "Functional New Weapon<br>AK<br><br>6 Versions<br><br>Compatible With:<br>Firearm Enchantments",
         "url": "https://headbodyscript.nl/ref/resourcepacks/ak",
         "format":["resourcepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -163,13 +124,9 @@
         "txt": "Functional New Weapon<br>Glock<br><br>3 Versions<br><br>Compatible With:<br>Firearm Enchantments",
         "url": "https://headbodyscript.nl/ref/resourcepacks/glock",
         "format":["resourcepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -181,13 +138,9 @@
         "txt": "Changes The Trident To A Stopsign",
         "url": "https://headbodyscript.nl/ref/resourcepacks/stopsignrident",
         "format":["resourcepack"],
-        "list":[
-        ],
-        "launcher":"optifine",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "optifine"
       },
       {
         "display": "basic",
@@ -199,13 +152,9 @@
         "txt": "Adds The Mantis Blade To The Game",
         "url": "https://headbodyscript.nl/ref/resourcepacks/mantis_blade",
         "format":["resourcepack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -217,13 +166,9 @@
         "txt": "Adds Player Model Variants To The Armor Stand With CEM",
         "url": "https://headbodyscript.nl/ref/resourcepacks/armorstandlayer_model",
         "format":["resourcepack"],
-        "list":[
-        ],
-        "launcher":"optifine",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "optifine"
       },
       {
         "display": "basic",
@@ -235,13 +180,9 @@
         "txt": "Adds A Wearable Bunny Mask To The Game",
         "url": "https://headbodyscript.nl/ref/resourcepacks/bunny_mask",
         "format":["resourcepack"],
-        "list":[
-        ],
-        "launcher":"optifine",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "optifine"
       },
       {
         "display": "basic",
@@ -253,13 +194,9 @@
         "txt": "Craft New Amethyst Tools And Armor",
         "url": "https://headbodyscript.nl/ref/datapacks/amethystools_and_armor",
         "format":["texturepack","datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -271,13 +208,9 @@
         "txt": "Add Custom Sounds/Music Without Replacing Existing Sounds",
         "url": "https://headbodyscript.nl/ref/resourcepackstemplate-music",
         "format":["resourcepack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "basic",
@@ -289,13 +222,9 @@
         "txt": "Percentage Calculator",
         "url": "https://headbodyscript.nl/ref/datapacks/template-percentage_calculator",
         "format":["datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "popular",
@@ -307,13 +236,9 @@
         "txt": "Modifies The Boss Fight To Make It More Difficult",
         "url": "https://headbodyscript.nl/ref/datapacks/ender_dragon",
         "format":["datapack"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       },
       {
         "display": "popular",
@@ -325,13 +250,9 @@
         "txt": "Fully Functioning Zombies Survival Map",
         "url": "https://headbodyscript.nl/ref/saves/ndu",
         "format":["map"],
-        "list":[
-        ],
-        "launcher":"vanilla",
         "dateUpload":"26/12/2024",
         "dateUpdate":"26/12/2024",
-        "dependency": "vanilla",
-        "type": "basic"
+        "dependency": "vanilla"
       }
     ]
 }

@@ -25,6 +25,13 @@ body {
     position: relative;
     top: 4px;
 }
+.tw-text-xl{
+    max-height: 30px;
+    width: fit-content;
+}
+.format{
+    flex-wrap:initial !important;
+}
 .bi {
     color: black;
 }
