@@ -1,4 +1,4 @@
-(async()=>{let response=await(await fetch("assets/json/data.json")).json();
+(async()=>{let response=await(await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/alt/assets/json/data.json")).json();
   let updateHTML = "";
     for (let i = 0; i < response.card.length ; i++) {
         updateHTML += 
