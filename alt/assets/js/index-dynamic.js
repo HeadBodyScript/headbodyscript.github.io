@@ -35,7 +35,7 @@
         </div>
         <div class="template-footer tw-w-full">
         <div class="tw-flex tw-w-full">
-        <h2 class="tw-text-xl tw-font-medium">${response.card[i].title}</h2>
+        <h2 class="template-card-title tw-text-xl tw-font-medium">${response.card[i].title}</h2>
         <div class="tw-ml-auto row">
         `
         for (let u = 0; u < response.card[i].format.length; u++) {

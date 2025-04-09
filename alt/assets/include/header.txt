@@ -1,23 +1,23 @@
 <div id="navigation">
     <ul>
         <li id="menu-home">
-            <a href="https://headbodyscript.nl/">
+            <a href="https://headbodyscript.nl">
                 <p class="icon">headbodyscript</p>
             </a>
         </li>
     </ul>
     <ul>
-        <li><a href="https://headbodyscript.nl/" class="menu-current">HOME</a></li>
-        <li><a href="https://headbodyscript.nl/projects/">PROJECTS</a></li>
-        <li><a href="https://headbodyscript.nl/donate/">DONATE</a></li>
+        <li><a href="https://headbodyscript.nl">HOME</a></li>
+        <li><a href="https://headbodyscript.nl/projects">PROJECTS</a></li>
+        <li><a href="https://headbodyscript.nl/donate">DONATE</a></li>
     </ul>
     <ul>
-        <li id="menu-listicles"><a href="https://headbodyscript.nl/user/">USER</a></li>
+        <li id="menu-listicles"><a href="https://headbodyscript.nl/user">USER</a></li>
     </ul>
 </div>
 <div class="clear"></div>
 <div class="logo mobile">
-    <a href="https://headbodyscript.nl/">
+    <a href="https://headbodyscript.nl">
         <p class="icon">headbodyscript</p>
     </a>
 </div>

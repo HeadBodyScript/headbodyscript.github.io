@@ -16,12 +16,16 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
-header{
-    /* background-color: #fff;
-    color: #000; */
+.template-card-title{
+    height: 30px;
 }
-
-
+.format{
+    flex-wrap: nowrap;
+}
+.bi-arrow-up-right{
+    position: relative;
+    top: 1px;
+}
 header > .collapsible-header{
     display: flex;
     gap: 1rem;
