@@ -1,5 +1,6 @@
 (async()=>{let response=await(await fetch("https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/alt/assets/json/data.json")).json();
   let updateHTML = "";
+  var int = 0;
     for (let i = 0; i < response.card.length ; i++) {
         updateHTML += 
         `
@@ -33,5 +34,23 @@
         `
         updateDisplay.innerHTML += updateHTML;
         updateHTML = "";
+        int++;
+        if (int == 4) {
+          updateDisplay.innerHTML += 
+          `
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6873165850026223"
+     crossorigin="anonymous"></script>
+<!-- unit_1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:440px;height:340px"
+     data-ad-client="ca-pub-6873165850026223"
+     data-ad-slot="5320957513"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          `;
+          updateHTML = "";
+          int = 0; 
+        }
       }
 })();
