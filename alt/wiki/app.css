@@ -1,0 +1,168 @@
+   body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+      color: #202122;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    
+    li{
+      list-style: none;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #a2a9b1;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      /* max-width: 1200px; */
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    nav {
+      width: 180px;
+	  top: 0;
+      padding-right: 1rem;
+      border-right: 1px solid #ccc;
+	  position: sticky;
+	  height: fit-content;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0645ad;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 0 1rem;
+    }
+
+    main h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1rem;
+        position: initial;
+        top: initial;
+      }
+    }
+
+	table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.item{
+  position: relative;
+  top: 4px;
+  width: 24px; height: 24px;
+}
+.item-big{
+  position: relative;
+  top: 64px;
+  height: 48px;
+  transform: rotate(180deg);
+  /* margin-right: 8px; */
+}
+.bit-64{
+  width: 256px; height: 256px;
+}
+.tier-dark-blue{
+  color: #0000AA;
+}
+.tier-dark-green{
+  color: #00AA00;
+}
+.tier-dark-aqua{
+  color: #00AAAA;
+}
+.tier-dark-red{
+  color: #AA0000;
+}
+.tier-dark-purple{
+  color: #AA00AA;
+}
+.tier-gold{
+  color: #FFAA00;
+}
+.tier-gray{
+  color: #AAAAAA;
+}
+.tier-dark-gray{
+  color: #555555;
+}
+.tier-blue{
+  color: #5555FF;
+}
+.tier-green{
+  color: #55FF55;
+}
+.tier-aqua{
+  color: #55FFFF;
+}
+.tier-red{
+  color: #FF5555;
+}
+.tier-light-purple{
+  color: #FF55FF;
+}
+.tier-yellow{
+  color: #FFFF55;
+}
