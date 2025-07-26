@@ -2,7 +2,7 @@ import "dimi/app/assets/css/auth.css";
 
 export default function auth() {
   return (
-    <div id="container center" >
+    <div id="container center" style={{ backgroundImage: `url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/net/assets/img/app-vista.jpg?raw=true)`, backgroundSize: 'cover' }}>
       <main className="center auth">
         <div className="wrapper">
 

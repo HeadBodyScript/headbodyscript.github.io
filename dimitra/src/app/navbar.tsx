@@ -7,18 +7,18 @@ const headbodyscriptFont = localFont({
 export default function Home() {
   return (
         <header>
-        <ul>
+        {/* <ul>
             <li>
                 <a href="https://headbodyscript.nl">
                     <p className={`icon ${headbodyscriptFont.className}`}>headbodyscript</p>
                 </a>
             </li>
-        </ul>
-        <ul>
+        </ul> */}
+        {/* <ul>
             <li><a href="https://headbodyscript.nl">HOME</a></li>
             <li><a href="https://headbodyscript.nl/projects">PROJECTS</a></li>
             <li><a href="https://headbodyscript.nl/donate">DONATE</a></li>
-        </ul>
+        </ul> */}
         <ul>
           <li>
             <a>LOGIN</a>
