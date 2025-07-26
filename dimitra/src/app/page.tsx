@@ -11,6 +11,7 @@ export default function Home() {
       <main>MAIN
         <a href="/">home</a>
         <Link href="auth/">    AUTH</Link>
+        <Link href="vista/">    league</Link>
 
       </main>
       <Footer/>
