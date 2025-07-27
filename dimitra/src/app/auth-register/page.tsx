@@ -1,6 +1,6 @@
 import "dimi/app/assets/css/auth.css";
 
-export default function auth() {
+export default function authRegister() {
   return (
       <main className="center auth">
         <div className="wrapper">

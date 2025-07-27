@@ -8,7 +8,7 @@ export default function index() {
   return (
     <div id="container">
       <Navbar/>
-      <main className="center row">
+      <main className="center row-reverse">
         <section className='array'>
           <div className="card">
             <div className="row search">

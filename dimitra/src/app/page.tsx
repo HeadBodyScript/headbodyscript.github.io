@@ -10,8 +10,8 @@ export default function Home() {
       <Navbar/>
       <main>MAIN
         <a href="/">home</a>
-        <Link href="auth/">    AUTH</Link>
-        <Link href="vista/">    league</Link>
+        <Link href="/auth/">    AUTH</Link>
+        <Link href="/vista/pages/index/">    league</Link>
 
       </main>
       <Footer/>

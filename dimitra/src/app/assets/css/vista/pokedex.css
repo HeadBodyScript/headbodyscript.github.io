@@ -10,7 +10,11 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: row
 }
-
+.row-reverse {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse
+}
 .column {
 display: flex;
 flex-wrap: wrap;
@@ -27,12 +31,12 @@ justify-content: center
 
 section:nth-child(1){
     width: 1200px;
-    height: calc(100dvh - 100px);
+    min-height: calc(100dvh - 100px);
     padding: 1rem;
 }
 section:nth-child(2){
     width: 400px;
-    height: calc(100dvh - 100px);
+    min-height: calc(100dvh - 100px);
     /* background-color: aliceblue; */
     padding: 1rem;
 }
@@ -44,9 +48,8 @@ height: max-content;
     padding: 1rem;
     /* background-color: aliceblue; */
     border-radius: 8px;
-      -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
-
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
 .info{
     padding: 0;
@@ -125,10 +128,10 @@ grid-row-gap: 0px;
 .navbar .select .div:nth-child(4) { grid-area: 1 / 4 / 2 / 5; }
 .navbar .select .div:nth-child(5) { grid-area: 1 / 5 / 2 / 6; }
 
-.display{
+/* .display{
     position: sticky;
     top: 100px;
-}
+} */
 
 .player-list{
     border-top: 1px solid gray;
@@ -168,4 +171,39 @@ grid-row-gap: 0px;
     border-color: rgb(221, 95, 92);
     border-width: 2px;
     border-radius: 10px;
+}
+
+.buy{
+    border-radius: 0 0 8px 8px !important;
+    position: relative;
+    top: -15px;
+    width: 100%;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+@media not all and (min-width: 1024px) {
+    .display-array {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .navbar .select {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-column-gap: 12px;
+        grid-row-gap: 6px;
+    }
+    section:nth-child(2) {
+        min-height: auto;
+        width: calc(100dvw - 1rem);
+    }
+    .row-reverse {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    section:nth-child(1) {
+        min-height: auto;
+        width: calc(100dvw - 1rem);
+    }
 }

@@ -2,7 +2,6 @@ import "dimi/app/assets/css/auth.css";
 
 export default function auth() {
   return (
-    <div id="container center" >
       <main className="center auth">
         <div className="wrapper">
 
@@ -62,6 +61,5 @@ export default function auth() {
 
           </div>
       </main>
-      </div>
   );
 }

@@ -103,10 +103,14 @@ export default function index() {
           </div>
         </section>
         <section className="display">
-          <div className="card"></div>
+          <div className="card">
+            <p>Displaye additional information about cards here</p>
+          </div>
         </section>
       </main>
-      <Script src="https://example.com/script.js" />
+<Script>
+  {`console.log("meow")`}
+</Script>
       <Footer/>
       </div>
   );

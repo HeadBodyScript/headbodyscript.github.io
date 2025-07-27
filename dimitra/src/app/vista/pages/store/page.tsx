@@ -31,6 +31,7 @@ export default function store() {
                 <p>Health: 2</p>
                 <p>ID: 001</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/2.jpg?raw=true" alt="" />
@@ -40,6 +41,7 @@ export default function store() {
                 <p>Health: 3</p>
                 <p>ID: 002</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/3.jpg?raw=true" alt="" />
@@ -49,6 +51,7 @@ export default function store() {
                 <p>Health: 7</p>
                 <p>ID: 003</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/4.jpg?raw=true" alt="" />
@@ -58,6 +61,7 @@ export default function store() {
                 <p>Health: 4</p>
                 <p>ID: 004</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/5.jpg?raw=true" alt="" />
@@ -67,6 +71,7 @@ export default function store() {
                 <p>Health: 2</p>
                 <p>ID: 005</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/6.jpg?raw=true" alt="" />
@@ -76,6 +81,7 @@ export default function store() {
                 <p>Health: 2</p>
                 <p>ID: 006</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/7.jpg?raw=true" alt="" />
@@ -85,6 +91,7 @@ export default function store() {
                 <p>Health: 9</p>
                 <p>ID: 007</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/item-health.jpg?raw=true" alt="" />
@@ -93,6 +100,7 @@ export default function store() {
                 <p>+Health</p>
                 <p>Common</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/item-strength.jpg?raw=true" alt="" />
@@ -101,6 +109,7 @@ export default function store() {
                 <p>+Strength</p>
                 <p>Common</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/item-evade.jpg?raw=true" alt="" />
@@ -109,6 +118,7 @@ export default function store() {
                 <p>+Evade</p>
                 <p>Common</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/lootbox-basic.png?raw=true" alt="" />
@@ -116,6 +126,7 @@ export default function store() {
                 <p>LOOTBOX</p>
                 <p>COMMON</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/lootbox-epic.png?raw=true" alt="" />
@@ -123,6 +134,7 @@ export default function store() {
                 <p>LOOTBOX</p>
                 <p>EPIC</p>
                 </div>
+                <button className="buy">BUY</button>
               </div>
             </div>
           </div>

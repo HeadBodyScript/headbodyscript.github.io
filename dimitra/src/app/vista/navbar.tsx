@@ -15,11 +15,16 @@ export default function Home() {
         </ul>
         <ul>
           <li>
-            <a>LOGIN</a>
+            <a href="/auth/">LOGIN</a>
           </li>
           <li>
             <div>
               <p>00</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>0€$</p>
             </div>
           </li>
           <li>

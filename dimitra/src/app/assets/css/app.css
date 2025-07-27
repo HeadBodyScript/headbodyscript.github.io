@@ -49,7 +49,11 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: row
 }
-
+.row-reverse {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row-reverse
+}
 .column {
 display: flex;
 flex-wrap: wrap;
@@ -256,4 +260,17 @@ footer .wrapper .legal li:first-child {
 #copyright{
     position: relative;
     top: 20px;
+}
+
+@media not all and (min-width: 1024px) {
+    footer {
+        position: relative;
+        bottom: 0;
+        height: var(--footer);
+        margin-top: 2em;
+        overflow: hidden;
+        width: 100%;
+        border-top: .125em solid #bbb;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
 }
