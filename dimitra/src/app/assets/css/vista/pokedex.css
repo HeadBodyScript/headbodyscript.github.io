@@ -37,7 +37,8 @@ section:nth-child(2){
     padding: 1rem;
 }
 section:nth-child(2) div{
-height: 400px;
+/* height: 400px; */
+height: max-content;
 }
 .card{
     padding: 1rem;
@@ -49,7 +50,7 @@ height: 400px;
 }
 .info{
     padding: 0;
-width: calc(400px - 68px);
+/* width: calc(400px - 68px); */
 height: 200px;
 }
 
@@ -63,6 +64,16 @@ height: 200px;
 .info div{
     width: 50%;
     padding: 1rem;
+}
+.info button{
+    margin-top: 0.3rem;
+    color: white;
+    height: 30px;
+    padding: 0 1rem 0 1rem;
+    background-color: rgb(221, 95, 92);
+    border-radius: 8px;
+    -webkit-box-shadow: 4px 4px 2px 0 rgba(251, 83, 81, .30), 0 1px 3px 1px rgba(251, 83, 81, .15);
+    box-shadow: 4px 4px 2px 0 rgba(251, 83, 81, .30), 0 1px 3px 1px rgba(251, 83, 81, .15);
 }
 /*  */
 .search{
@@ -85,7 +96,8 @@ height: 200px;
   grid-area: auto;
   /* flex-wrap: wrap; */
   grid-auto-rows: minmax(150px, 150px);
-  gap: 80px;
+  row-gap: 120px;
+  column-gap: 40px;
   /* height: 10000px; */
 }
 
@@ -116,4 +128,44 @@ grid-row-gap: 0px;
 .display{
     position: sticky;
     top: 100px;
+}
+
+.player-list{
+    border-top: 1px solid gray;
+}
+.player-list div{
+    height: 30px;
+    padding: 0.5rem 0;
+    /* padding-left: 1rem; */
+}
+.player-list p{
+    height: 30px;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    padding-left: 1rem;
+    position: relative;
+    top: -4px;
+}
+.player-list p span{
+    color: white;
+    padding-left: 1rem;
+}
+.player-list button{
+    color: white;
+    height: 30px;
+    padding: 0 1rem 0 1rem;
+    background-color: rgb(221, 95, 92);
+    border-radius: 8px;
+    -webkit-box-shadow: 4px 4px 2px 0 rgba(251, 83, 81, .30), 0 1px 3px 1px rgba(251, 83, 81, .15);
+    box-shadow: 4px 4px 2px 0 rgba(251, 83, 81, .30), 0 1px 3px 1px rgba(251, 83, 81, .15);
+}
+/* .player-list p:hover{
+    background-color: black;
+    color: white;
+} */
+
+.selected{
+    border-color: rgb(221, 95, 92);
+    border-width: 2px;
+    border-radius: 10px;
 }

@@ -1,8 +1,6 @@
 import "dimi/app/assets/css/app.css";
 import "dimi/app/assets/css/vista/pokedex.css";
 
-import Script from 'next/script'
-
 import Navbar from 'dimi/app/vista/navbar'
 import Footer from 'dimi/app/vista/footer'
 
@@ -13,30 +11,25 @@ export default function index() {
       <main className="center row">
         <section className='array'>
           <div className="card">
-            <form action="" className="row search">
-              <input type="text" placeholder="Search your fighter!" />
-              <label htmlFor="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" className="bi bi-search" viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-              </label>
-            </form>
+            <div className="row search">
+              <p>Select your loadout!</p>
+            </div>
           </div>
           <div>
             <div className="navbar column">
               <div className="row">
                 <div></div>
               </div>
-              <div className="row select">
+              {/* <div className="row select">
                 <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Type</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
                 <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Weakness</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
                 <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Ability</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
                 <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Height</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
                 <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Weight</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
-              </div>
+              </div> */}
             </div>
             <div className="display-array">
-              <div className="card info center row justify-content-between">
+              <div className="card info center row justify-content-between selected">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
                 <div className="column">
                 <p>???</p>
@@ -44,6 +37,7 @@ export default function index() {
                 <p>Health: 2</p>
                 <p>ID: 001</p>
                 </div>
+                <button>Select</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/2.jpg?raw=true" alt="" />
@@ -53,6 +47,7 @@ export default function index() {
                 <p>Health: 3</p>
                 <p>ID: 002</p>
                 </div>
+                <button>Select</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/3.jpg?raw=true" alt="" />
@@ -62,6 +57,7 @@ export default function index() {
                 <p>Health: 7</p>
                 <p>ID: 003</p>
                 </div>
+                <button>Select</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/4.jpg?raw=true" alt="" />
@@ -71,6 +67,7 @@ export default function index() {
                 <p>Health: 4</p>
                 <p>ID: 004</p>
                 </div>
+                <button>Select</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/5.jpg?raw=true" alt="" />
@@ -80,6 +77,7 @@ export default function index() {
                 <p>Health: 2</p>
                 <p>ID: 005</p>
                 </div>
+                <button>Select</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/6.jpg?raw=true" alt="" />
@@ -89,6 +87,7 @@ export default function index() {
                 <p>Health: 2</p>
                 <p>ID: 006</p>
                 </div>
+                <button>Select</button>
               </div>
               <div className="card info center row justify-content-between">
                 <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/7.jpg?raw=true" alt="" />
@@ -98,15 +97,27 @@ export default function index() {
                 <p>Health: 9</p>
                 <p>ID: 007</p>
                 </div>
+                <button>Select</button>
               </div>
             </div>
           </div>
         </section>
         <section className="display">
-          <div className="card"></div>
+          <div className="card">
+            <h1>Available Players:</h1>
+            <div className="player-list">
+                <div className="row">
+                  <button>JOIN</button>
+                  <p>Dimitra</p>
+                </div>
+                <div className="row">
+                  <button>JOIN</button>
+                  <p>Dimitra</p>
+                </div>
+            </div>
+          </div>
         </section>
       </main>
-      <Script src="https://example.com/script.js" />
       <Footer/>
       </div>
   );
