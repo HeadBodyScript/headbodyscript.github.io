@@ -3,8 +3,8 @@ import "dimi/app/assets/css/vista/pokedex.css";
 
 import Script from 'next/script'
 
-import Navbar from 'dimi/app/vista/navbar'
-import Footer from 'dimi/app/vista/footer'
+import Navbar from 'dimi/app/include/navbar'
+import Footer from 'dimi/app/include/footer'
 
 export default function index() {
   return (

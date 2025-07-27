@@ -1,5 +1,16 @@
 import "dimi/app/assets/css/auth.css";
 
+// import { StyledFirebaseAuth } from "react-firebaseui/StyledFirebaseAuth";
+import firebase from "../firebase/clientApp";
+
+// const uiConfig = {
+//   signInSuccessUrl: "/",
+//   signInOptions: [firebase.auth.GithubAuthProvider.PROVIDER_ID],
+// }
+
+var provider = new firebase.auth.GithubAuthProvider();
+firebase.auth().signInWithRedirect(provider);
+
 export default function auth() {
   return (
       <main className="center auth">

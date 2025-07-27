@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import "dimi/app/assets/css/app.css";
 
-import Navbar from 'dimi/app/include/navbar'
-import Footer from 'dimi/app/include/footer'
+import Navbar from 'dimi/app/navbar'
+import Footer from 'dimi/app/footer'
 
 export default function Home() {
   return (

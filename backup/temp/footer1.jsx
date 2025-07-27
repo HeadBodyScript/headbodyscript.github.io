@@ -1,12 +1,4 @@
-import localFont from 'next/font/local'
- 
-const headbodyscriptFont = localFont({
-  src: "assets/font/headbodyscript.woff2"
-})
-
-export default function Home() {
-  return (
-    <footer>
+<footer>
       <div className="wrapper">
           <ul>
               <li><a href="https://headbodyscript.nl">HOME</a></li>
@@ -33,5 +25,3 @@ export default function Home() {
           <p className={` ${headbodyscriptFont.className}`} id="copyright">headbodyscript</p>
       </div>
     </footer>
-  );
-}
