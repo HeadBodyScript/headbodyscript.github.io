@@ -4,7 +4,7 @@ import "dimi/app/assets/css/vista/pokedex.css";
 import Navbar from 'dimi/app/vista/navbar'
 import Footer from 'dimi/app/vista/footer'
 
-export default function Home() {
+export default function index() {
   return (
     <div id="container">
       <Navbar/>

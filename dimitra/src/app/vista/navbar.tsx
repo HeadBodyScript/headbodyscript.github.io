@@ -3,15 +3,15 @@ export default function Home() {
         <header>
         <ul>
             <li>
-                <a href="https://headbodyscript.nl">
+                <a href="/">
                     <p>HOME</p>
                 </a>
             </li>
         </ul>
         <ul>
-            <li><a href="https://headbodyscript.nl">POKEDEX</a></li>
-            <li><a href="https://headbodyscript.nl/projects">DUAL</a></li>
-            <li><a href="https://headbodyscript.nl/donate">STORE</a></li>
+            <li><a href="/vista/pages/index">INDEX</a></li>
+            <li><a href="/vista/pages/dual">DUAL</a></li>
+            <li><a href="/vista/pages/store">STORE</a></li>
         </ul>
         <ul>
           <li>
