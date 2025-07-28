@@ -1,5 +1,5 @@
 import "dimi/app/assets/css/app.css";
-import "dimi/app/assets/css/vista/pokedex.css";
+import "dimi/app/assets/css/pokedex.css";
 
 import Navbar from 'dimi/app/vista/navbar'
 import Footer from 'dimi/app/vista/footer'

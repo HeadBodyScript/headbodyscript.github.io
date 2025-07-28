@@ -1,5 +1,5 @@
 import "dimi/app/assets/css/app.css";
-import "dimi/app/assets/css/vista/pokedex.css";
+import "dimi/app/assets/css/pokedex.css";
 
 import Script from 'next/script'
 
