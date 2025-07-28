@@ -16,10 +16,10 @@ const Btn = () => {
         const credential = GithubAuthProvider.credentialFromResult(credentials);
         const token = credential.accessToken;
         const user = credentials.user;
-        localStorage.setItem("user-credential", JSON.stringify(credential));
-        localStorage.setItem("user-token", JSON.stringify(token));
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("userCheck", "true")
+        // localStorage.setItem("user-credential", JSON.stringify(credential));
+        // localStorage.setItem("user-token", JSON.stringify(token));
+        // localStorage.setItem("user", JSON.stringify(user));
+        // localStorage.setItem("userCheck", "true")
         console.log(credentials)
         console.log(credentials.uid)
         // userResetCredentials(credentials.user.uid)

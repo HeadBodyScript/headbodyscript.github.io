@@ -4,11 +4,13 @@ import firebase from "dimi/components/firebase";
 
 // import { getAuth, signInWithRedirect, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 // import { useSession } from "next-auth/react";
+
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 import app from "dimi/components/firebase";
+
 import localFont from 'next/font/local'
- import Icon from "dimi/components/icon";
+import Icon from "dimi/components/icon";
 
 const headbodyscriptFont = localFont({
   src: "../assets/font/headbodyscript.woff2"
