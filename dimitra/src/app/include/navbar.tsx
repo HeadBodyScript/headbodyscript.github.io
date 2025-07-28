@@ -1,10 +1,23 @@
+"use client";
+import Link from 'next/link';
+import firebase from "dimi/components/firebase";
+
+// import { getAuth, signInWithRedirect, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+// import { useSession } from "next-auth/react";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import app from "dimi/components/firebase";
 import localFont from 'next/font/local'
- 
+ import Icon from "dimi/components/icon";
+
 const headbodyscriptFont = localFont({
   src: "../assets/font/headbodyscript.woff2"
 })
  
 export default function Home() {
+    const auth = getAuth(app);
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user, loading, error);
   return (
         <header className="bg-white shadow">
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -52,11 +65,7 @@ export default function Home() {
           >
             <span className="sr-only">Toggle dashboard menu</span>
 
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-              className="size-10 object-cover"
-            />
+            <Icon></Icon>
           </button>
 
           {/* <div

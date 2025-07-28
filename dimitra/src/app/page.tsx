@@ -1,10 +1,19 @@
 import Link from 'next/link';
+import firebase from "dimi/components/firebase";
+
+// import { getAuth, signInWithRedirect, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+// import { useSession } from "next-auth/react";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import app from "dimi/components/firebase";
+
 import "dimi/app/assets/css/app.css";
 
 import Navbar from 'dimi/app/include/navbar'
 import Footer from 'dimi/app/include/footer'
 
 export default function Home() {
+
   return (
     <div className="main">
       <Navbar/>
