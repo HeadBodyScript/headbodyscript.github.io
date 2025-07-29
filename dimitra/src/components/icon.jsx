@@ -1,23 +1,14 @@
 "use client"
-import { useSession } from "next-auth/react";
 import React from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 import app from "dimi/components/firebase";
 
 const Icon = () => {
-    // const { data: session } = useSession();
-    // console.log(session);
 
-
-    const auth = getAuth(app);
+  const auth = getAuth(app);
   const [user, loading, error] = useAuthState(auth);
-  // console.log(loading);
-  // console.log(error);
-  // console.log(user);
-  
-    console.log(user, loading, error);
-    console.log("mew")
+
     return (
       <div>
         {!user && 
