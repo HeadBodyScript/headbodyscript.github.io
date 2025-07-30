@@ -1,45 +1,3 @@
-html * {
-font-family: Roboto, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-color: black;
-}
-
-html {
-overflow-y: scroll;
-height: 100%
-}
-
-body {
-margin: 0;
-padding: 0;
-height: 100%;
-width: 100%;
-background-color: #fafafd
-}
-
-main{
-  height: 100%;
-  width: 100%;
-}
-.center {
-display: flex;
-justify-content: center;
-align-items: center
-}
-
-.row {
-display: flex;
-flex-wrap: wrap;
-flex-direction: row
-}
-
-.column {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column
-}
 .gsi-material-button {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -139,16 +97,16 @@ flex-direction: column
 input[type="submit"],
 input[type="reset"] {
   background: none;
-  color: inherit;
   border: none;
   padding: 0;
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  color: inherit;
 }
 input {
-  width: 100%;
+  /* width: auto; */
+  /* max-width: 400px;
+  min-width: 250px; */
   padding: 10px 20px;
   margin-bottom: 8px;
   border-color: transparent;
@@ -156,7 +114,6 @@ input {
   background: rgba(46, 46, 46, 0.30);
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  color: inherit;
 
 }
 input:focus {
@@ -165,63 +122,29 @@ input:focus {
 input::-webkit-input-placeholder {
   padding-left: 5px;
   font-size: 15px;
-  color:inherit;
 }
 input:-moz-placeholder {
   /* Firefox 18- */
   padding-left: 5px;
   font-size: 15px;
-  color: inherit;
 }
 input::-moz-placeholder {
   /* Firefox 19+ */
   padding-left: 5px;
   font-size: 15px;
-  color: inherit;
 }
 input:-ms-input-placeholder {
   padding-left: 5px;
   font-size: 15px;
-  color: inherit;
 }
 input,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 50px rgba(46, 46, 46, 0.30) inset !important;
-  background-color: rgba(46, 46, 46, 0.30) !important;
+  /* -webkit-box-shadow: 0 0 50px rgba(46, 46, 46, 0.30) inset !important;
+  background-color: rgba(46, 46, 46, 0.30) !important; */
   background-clip: text;
-  color: var(--txt);
-  -webkit-text-fill-color: var(--txt);
-}
-input, select, textarea{
-  color: var(--txt);
+  border: 1px solid #747775
 }
 
 /*  */
-
-.auth .wrapper .wrapper{
-    padding: 2rem 0 2rem 0;
-}
-.auth .wrapper .gsi{
-    padding: 0rem 0 2rem 0;
-}
-.auth .wrapper .gsi button{
-    margin: 8px 0 8px 0;
-}
-
-.auth .wrapper .manual{
-      border-top: 1px solid;
-  border-bottom: 1px solid;
-}
-.auth .space{
-    position: relative;
-    top: 13px;
-    background-color: #fafafd;
-    padding: 0 8px 0 8px;
-}
-
-label{
-  width: 100%;
-  text-align: left;
-}

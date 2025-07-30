@@ -1,11 +1,12 @@
-import Link from 'next/link';
-import firebase from "dimi/components/firebase";
+// import Link from 'next/link';
+// import firebase from "dimi/components/firebase";
 
 // import { getAuth, signInWithRedirect, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 // import { useSession } from "next-auth/react";
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import app from "dimi/components/firebase";
+
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+// import app from "dimi/components/firebase";
 
 import "dimi/app/assets/css/app.css";
 
@@ -15,35 +16,35 @@ import Footer from 'dimi/app/include/footer'
 export default function Home() {
 
   return (
-    <div className="main">
+    <div className="main bg-neutral-300">
       <Navbar/>
       <main>
         <div className='flex justify-center gap-8 flex-wrap'>
           <section className='w-220 my-4'>
-            <div className='p-2 mb-8 background-white shadow rounded-lg'>
+            <div className='p-2 mb-8 bg-white shadow rounded-lg'>
               <img className='w-full h-140 rounded-lg' src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
               <div className="text-black text-3xl md:text-4xl whitespace-nowrap leading-tight"><b>Variations</b> <br/>on a theme by Mozart</div>
               <div className="text-black text-xl italic sm:text-2xl">Fernando Sor (1778-1839)</div>
             </div>
             <div className="mt-1 grid grid-cols-2 font-sm gap-[0.625rem]">
-              <div className='p-2 background-white shadow rounded-lg'>
+              <div className='p-2 bg-white shadow rounded-lg'>
                 <img className='w-full h-100 rounded-lg' src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
                 <div className="text-black text-1xl md:text-4xl whitespace-nowrap leading-tight"><b>Variations</b> <br/>on a theme by Mozart</div>
                 <div className="text-black text-xl italic sm:text-2xl">Fernando Sor (1778-1839)</div>
               </div>
-              <div className='p-2 background-white shadow rounded-lg'>
+              <div className='p-2 bg-white shadow rounded-lg'>
                 <img className='w-full h-100 rounded-lg' src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
                 <div className="text-black text-1xl md:text-4xl whitespace-nowrap leading-tight"><b>Variations</b> <br/>on a theme by Mozart</div>
                 <div className="text-black text-xl italic sm:text-2xl">Fernando Sor (1778-1839)</div>
               </div>
-              <div className='p-2 background-white shadow rounded-lg'>
+              <div className='p-2 bg-white shadow rounded-lg'>
                 <img className='w-full h-100 rounded-lg' src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
                 <div className="text-black text-1xl md:text-4xl whitespace-nowrap leading-tight"><b>Variations</b> <br/>on a theme by Mozart</div>
                 <div className="text-black text-xl italic sm:text-2xl">Fernando Sor (1778-1839)</div>
               </div>
             </div>
           </section>
-          <section className='w-150 my-4'>
+          <section className='w-150 my-4 bg-white'>
             <div>
               <h1><strong>LATEST VIDEO</strong></h1>
               <iframe width="100%" height="auto" style={{aspectRatio: 2/1}} src="https://www.youtube.com/embed/3yWz2K2frcU?si=3gzQ5E36jve8-2r8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}>
@@ -73,7 +74,7 @@ export default function Home() {
             <div>
               <h1><strong>POPULAR</strong></h1>
               <div className='p-2'>
-              <div className='px-20 background-white rounded-lg'>
+              <div className='px-20 rounded-lg'>
                 <img className='w-full h-100 rounded-lg' src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
                 <div className="text-black text-3xl md:text-4xl whitespace-nowrap leading-tight"><b>Variations</b> <br/>on a theme by Mozart</div>
                 <div className="text-black text-xl italic sm:text-2xl">Fernando Sor (1778-1839)</div>

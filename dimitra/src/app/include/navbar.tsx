@@ -1,5 +1,11 @@
 "use client";
 
+import localFont from 'next/font/local'
+
+const headbodyscriptFont = localFont({
+  src: "../assets/font/headbodyscript.woff2"
+})
+
 import Link from 'next/link'
 import { getAuth,signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -10,6 +16,7 @@ export default function Home() {
   const auth = getAuth(app);
   const [user, loading, error] = useAuthState(auth);
   console.log(user, loading, error);
+  console.log(user?.providerData[0]?.photoURL);
 
   const signOutUser = async () => {
     await signOut(auth);
@@ -24,6 +31,13 @@ export default function Home() {
           </div>
 
           <div className="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" className="hidden md:block">
+              <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript</Link>
+                </li>
+              </ul>
+            </nav>
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
@@ -44,7 +58,7 @@ export default function Home() {
                   }
                   {user && 
                     <div className="md:relative md:block group">
-                      <img className="size-10 object-cover" src={user.providerData[0].photoURL} alt="" />
+                      <img className="size-10 object-cover" src={user?.providerData[0]?.photoURL} alt="" />
 
                       <div
                         className="hidden group-hover:block absolute end-0 z-10 mt-0.5 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"

@@ -1,54 +1,47 @@
-import React from "react";
-
-import Btn from "../../components/btn";
+import Auth from "dimi/components/auth";
 import "dimi/app/assets/css/auth.css";
 export default function auth() {
 
   return (
-    <main className="center auth">
-        <div className="wrapper">
-
-              <div className="wrapper column gsi">
-                <Btn></Btn>
-                <button type="button" id="IDuserGitHub" className="gsi-material-button">
-                  <div className="gsi-material-button-state"></div>
-                  <div className="gsi-material-button-content-wrapper">
-                    <div className="gsi-material-button-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 1792 1792">
-                        <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"></path>
-                      </svg>
-                    </div>
-                    <span className="gsi-material-button-contents">Continue with GitHub</span>
-                  </div>
-                </button>
-              </div>
-              <span className="space">OR</span>
-              <div className="wrapper manual">
+      <main className="center w-dvw h-dvh bg-neutral-300 text-black">
+        <div className="w-dvw md:rounded-lg md:w-285 min-h-dvh md:min-h-200 shadow bg-white row">
+          <div className="invisible md:visible w-0 rounded-lg md:w-[calc(100%_-_450px)] md:max-w-135 h-200" style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/img/auth.webp?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
+            <div className="w-dvw md:w-150 h-200 p-8 center column">
+            <div className="center invisible md:visible">
+              <img className="invert h-40" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/alt/android-chrome-192x192.png?raw=true" alt="website-icon" />
+            </div>
+            <h1 className="text-3xl font-bold text-center">Welcome Back</h1>
+            <h2 className="text-center">Please enter your credentials</h2>
+              <Auth></Auth>
+              <div className="wrapper mt-12 manual">
                 <div className="center column redirect">
-                  <form id="userFormLogin" className="center column">
-                          <label htmlFor="">example@example.com</label>
-                          <input type="" id="" placeholder=""></input>
-                          <label htmlFor="">Password</label>
-                          <input type="" id="" placeholder=""></input>   
-                          <button type="button" id="IDuserLogin" className="gsi-material-button">
-                              <div className="gsi-material-button-state"></div>
-                              <div className="gsi-material-button-content-wrapper">
-                              <span className="gsi-material-button-contents">Login</span>
-                              </div>    
-                          </button>
-                  </form>
+                      <form id="userFormLogin" className="column md:w-134">
+                        <label htmlFor=""><strong>Example@example.com</strong></label>
+                        <input className="w-auto" type="" id="" placeholder=""></input>
+                        <label htmlFor=""><strong>Password</strong></label>
+                        <input className="w-auto" type="" id="" placeholder=""></input>   
+                        <button type="button" id="IDuserLogin" className="gsi-material-button !bg-black !text-white hover:!bg-neutral-800 hover:!text-white !border-red-50">
+                            <div className="gsi-material-button-state"></div>
+                            <div className="gsi-material-button-content-wrapper">
+                            <span className="gsi-material-button-contents">
+                              Login
+                            </span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                              </svg>
+                            </div>    
+                        </button>
+                      </form>
+                    </div>
+                </div>
+                <div className="text-gray mt-2">
+                  <span className="text-sm">By creating an account, you agree to our <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://headbodyscript.nl/terms-of-service">Terms of Service</a> and <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://headbodyscript.nl/privacy-policy">Privacy Policy</a></span>
+                    <div className="center column mt-2">
+                  <span className="text-neutral-500">Don't have an account? <a className="text-blue-600 dark:text-blue-500 hover:underline" href="">Sign up</a></span>
                   </div>
-              </div>
-
-              <div className="wrapper footer">
-                  <div className="center column">
-                    <button>Forgot Password?</button>
-                    <span>OR</span>
-                    <button >Make an account</button>
                 </div>
               </div>
-
-          </div>
-      </main>
+            </div>
+        </main>
   );
 }
