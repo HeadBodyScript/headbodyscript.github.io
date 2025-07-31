@@ -8,7 +8,7 @@
 // import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 // import app from "dimi/components/firebase";
 
-import "dimi/app/assets/css/app.css";
+// import "dimi/app/assets/css/app.css";
 
 import Navbar from 'dimi/app/include/navbar'
 import Footer from 'dimi/app/include/footer'
