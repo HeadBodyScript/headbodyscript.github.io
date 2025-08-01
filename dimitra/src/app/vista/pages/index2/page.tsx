@@ -1,11 +1,9 @@
 
 import Navbar from 'dimi/app/include/navbar'
 import Footer from 'dimi/app/include/footer'
-import Vista from "dimi/components/vista";
+import Vista from "dimi/components/vista"
 
 import { promises as fs } from 'fs';
-import Auth from 'dimi/components/vista';
-
 
 export default async function index() {
   const file = await fs.readFile( 'src/app/vista/pages/data.json', 'utf8');
@@ -78,24 +76,28 @@ var int = 0;
             <div className="grid grid-cols-3 gap-4">
               {
               
-
-              data.map((item : any) =>  (
-                <div key={item.id} >
-                    <Auth>
+              data.map((item: any) => (
+                <div key={item.id}>
+                  <Vista>
                     <data value={int++}></data>
-                    <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: item.url, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+                    <div
+                      className='w-full aspect-square rounded-lg'
+                      style={{
+                        backgroundImage: `${item.url}`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center"
+                      }}
+                    ></div>
                     <div className="column p-4 w-full">
-                    <p>Name: <span>{item.name}</span></p>
-                    <p>Attack: <span>{item.attack}</span></p>
-                    <p>Health: <span>{item.health}</span></p>
-                    <p>ID: <span>{item.id}</span></p>
-                    {/* <button id={item.id} onClick={meow(this)}>button</button> */}
+                      <p>Name: <span>{item.name}</span></p>
+                      <p>Attack: <span>{item.attack}</span></p>
+                      <p>Health: <span>{item.health}</span></p>
+                      <p>ID: <span>{item.id}</span></p>
                     </div>
-                    </Auth>
-                  </div>
+                  </Vista>
+                </div>
               ))}
             </div>
-            
         </section>
         <section id='display' className="md:w-90 w-full px-2 py-4">
           <div className="bg-white shadow min-h-200 rounded-lg">
