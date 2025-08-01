@@ -48,6 +48,14 @@
         "attack": "2"
     },
     {
+        "url": "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/6.gif?raw=true)",
+        "name": "Violet",
+        "id": "006-Legacy",
+        "description": "Punch first, ask questions while punching.",
+        "health": "24",
+        "attack": "4"
+    },
+    {
         "url": "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/7.jpg?raw=true)",
         "name": "DIMI",
         "id": "007",

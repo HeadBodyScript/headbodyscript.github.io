@@ -31,8 +31,8 @@ const fetcher = async () => {
 
                           if (display) {
                             display.innerHTML = `
-                              <div class="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0">
-                                <div class='w-4/4 h-auto md:w-full md:h-auto aspect-square md:rounded-lg' style="background-image: ${item[children[0].props.value].url}; background-size: cover; background-position: center;"></div>
+                              <div class="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0 md:w-90">
+                                <div class='w-4/4 h-auto md:w-90 md:h-auto aspect-square md:rounded-lg' style="background-image: ${item[children[0].props.value].url}; background-size: cover; background-position: center;"></div>
                                 <div class="md:w-full md:p-4 max-h-full md:max-h-auto max-w-dvw md:max-w-90 grid grid-cols-2">
                                   <p class='text-left'>Name:</p>
                                   <p class='text-left'>${item[children[0].props.value].name}</p>

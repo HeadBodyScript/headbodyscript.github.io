@@ -1,8 +1,7 @@
+import Navbar from 'dimi/app/include/navbar-vista'
+import Footer from 'dimi/app/include/footer'
 import "dimi/app/assets/css/app.css";
 import "dimi/app/assets/css/pokedex.css";
-
-import Navbar from 'dimi/app/vista/navbar'
-import Footer from 'dimi/app/vista/footer'
 
 export default function index() {
   return (
