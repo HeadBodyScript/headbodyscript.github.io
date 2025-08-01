@@ -1,7 +1,15 @@
+
 import Navbar from 'dimi/app/include/navbar'
 import Footer from 'dimi/app/include/footer'
+// import ReadMore from "dimi/components/vista";
 
-export default function index() {
+import { promises as fs } from 'fs';
+
+export default async function index() {
+  const file = await fs.readFile( 'src/app/vista/data.json', 'utf8');
+  const data = JSON.parse(file);
+  // console.log(data);
+              
   return (
     <div className='bg-neutral-100'>
       <Navbar/>
@@ -67,71 +75,20 @@ export default function index() {
               </div>
             </div>
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                {/* <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" /> */}
-                <div className="column p-4">
-                <p>???</p>
-                <p>Attack: 20</p>
-                <p>Health: 2</p>
-                <p>ID: 001</p>
-                </div>
-              </div>
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/2.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p>Sky</p>
-                <p>Attack: 18</p>
-                <p>Health: 3</p>
-                <p>ID: 002</p>
-                </div>
-              </div>
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/3.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p>Withered Rose</p>
-                <p>Attack: 16</p>
-                <p>Health: 7</p>
-                <p>ID: 003</p>
-                </div>
-              </div>
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/4.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p>Ellie</p>
-                <p>Attack: 12</p>
-                <p>Health: 4</p>
-                <p>ID: 004</p>
-                </div>
-              </div>
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/5.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p>Techy</p>
-                <p>Attack: 30</p>
-                <p>Health: 2</p>
-                <p>ID: 005</p>
-                </div>
-              </div>
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/6.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p>Violet</p>
-                <p>Attack: 22</p>
-                <p>Health: 2</p>
-                <p>ID: 006</p>
-                </div>
-              </div>
-              <div className="bg-white flex row rounded-lg shadow w-full items-start">
-                <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/7.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p>DIMI</p>
-                <p>Attack: 11</p>
-                <p>Health: 9</p>
-                <p>ID: 007</p>
-                </div>
-              </div>
+              {data.map((item : any) => (
+                  <div key={item.id} className="bg-white flex row rounded-lg shadow w-full items-start">
+                    <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: item.url, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+                    <div className="column p-4">
+                    <p>{item.name}</p>
+                    <p>Attack: {item.attack}</p>
+                    <p>Health: {item.health}</p>
+                    <p>ID: {item.id}</p>
+                    </div>
+                  </div>
+              ))}
             </div>
+            
+            {/* <ReadMore></ReadMore> */}
         </section>
         <section className="md:w-90 w-full px-2 py-4">
           <div className="bg-white shadow min-h-200 rounded-lg">

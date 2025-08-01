@@ -15,8 +15,8 @@ export default function Home() {
 
   const auth = getAuth(app);
   const [user, loading, error] = useAuthState(auth);
-  console.log(user, loading, error);
-  console.log(user?.providerData[0]?.photoURL);
+  // console.log(user, loading, error);
+  // console.log(user?.providerData[0]?.photoURL);
 
   const signOutUser = async () => {
     await signOut(auth);
