@@ -2,6 +2,7 @@
 import Navbar from 'dimi/app/include/navbar'
 import Footer from 'dimi/app/include/footer'
 import Vista from "dimi/components/vista"
+import Display from "dimi/components/display"
 
 import { promises as fs } from 'fs';
 
@@ -77,7 +78,7 @@ var int = 0;
               {
               
               data.map((item: any) => (
-                <div key={item.id}>
+                <div key={item.id} className='h-full'>
                   <Vista>
                     <data value={int++}></data>
                     <div
@@ -89,27 +90,37 @@ var int = 0;
                       }}
                     ></div>
                     <div className="column p-4 w-full">
-                      <p>Name: <span>{item.name}</span></p>
-                      <p>Attack: <span>{item.attack}</span></p>
-                      <p>Health: <span>{item.health}</span></p>
-                      <p>ID: <span>{item.id}</span></p>
+                      <p className='text-left'>Name: <span>{item.name}</span></p>
+                      <p className='text-left'>Attack: <span>{item.attack}</span></p>
+                      <p className='text-left'>Health: <span>{item.health}</span></p>
+                      <p className='text-left'>ID: <span>{item.id}</span></p>
                     </div>
                   </Vista>
                 </div>
               ))}
             </div>
         </section>
-        <section id='display' className="md:w-90 w-full px-2 py-4">
-          <div className="bg-white shadow min-h-200 rounded-lg">
+        <Display>
+          <section id='display' className="md:w-90 w-full px-0 md:px-2 py-0 md:py-4 fixed md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0">
+          <div className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg">
               <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/3.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
                 <div className="column p-4">
-                <p>Withered Rose</p>
-                <p>Attack: 16</p>
-                <p>Health: 7</p>
-                <p>ID: 003</p>
+                <p className='text-left'>Name: Withered Rose</p>
+                <p className='text-left'>Attack: 16</p>
+                <p className='text-left'>Damage: Physical</p>
+                <p className='text-left'>Health: 7</p>
+                <p className='text-left'>Physical armor: 7</p>
+                <p className='text-left'>Magic armor: 7</p>
+                <p className='text-left'>ID: 003</p>
+                <p className='text-left'>Abilities:</p>
+                <p className='text-left'>Domination: Basic 50%</p>
+                <p className='text-left'>Blade of Quartz: quick 25%</p>
+                <p className='text-left'>Spectral Maw: Special: 100%</p>
+                <p className='text-left'>Heartbreaker: passive</p>
               </div>
           </div>
         </section>
+        </Display>
       </main>
       </div>
       <Footer/>
