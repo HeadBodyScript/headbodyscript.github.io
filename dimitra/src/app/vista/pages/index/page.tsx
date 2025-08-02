@@ -2,11 +2,32 @@ import Navbar from 'dimi/app/include/navbar-vista'
 import Footer from 'dimi/app/include/footer'
 import Vista from "dimi/components/vista"
 import Display from "dimi/components/display"
-import { promises as fs } from 'fs';
+import firebase from 'firebase/compat/app'
+// import user from "dimi/components/authState"
+// import { promises as fs } from 'fs';
+import { getDatabase, ref, set, get, child } from "firebase/database";
+import { app } from "dimi/components/firebase";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export default async function index() {
-  const file = await fs.readFile( 'src/app/vista/pages/data.json', 'utf8');
-  const data = JSON.parse(file);
+
+
+
+// console.log(user)
+  // const file = await fs.readFile( 'src/app/vista/pages/data.json', 'utf8');
+  // const data = JSON.parse(file);
+    const dbRef = ref(getDatabase(app));
+     const snapshot = await get(child(dbRef, `characters/`)).then((snapshot) => {
+        if (snapshot.exists()) {
+          // console.log(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+        return snapshot.val()
+      }
+    )
+    // console.log(snapshot)
+    // console.log(prop)
 var int = 0;
   return (
     <div className='bg-neutral-100'>
@@ -68,7 +89,7 @@ var int = 0;
             <div className="grid grid-cols-3 gap-4">
               {
               
-              data.map((item: any) => (
+              snapshot.map((item: any) => (
                 <div key={item.id} className='h-full'>
                   <Vista>
                     <data value={int++}></data>

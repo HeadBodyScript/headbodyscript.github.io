@@ -9,7 +9,7 @@ const headbodyscriptFont = localFont({
 import Link from 'next/link'
 import { getAuth,signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import app from "dimi/components/firebase";
+import { app } from "dimi/components/firebase";
 
 export default function Home() {
 

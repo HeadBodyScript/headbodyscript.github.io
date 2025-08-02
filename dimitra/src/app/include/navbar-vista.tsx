@@ -1,15 +1,16 @@
 "use client";
 
 import localFont from 'next/font/local'
-
-const headbodyscriptFont = localFont({
-  src: "../assets/font/headbodyscript.woff2"
-})
-
 import Link from 'next/link'
 import { getAuth,signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import app from "dimi/components/firebase";
+import { app } from "dimi/components/firebase";
+
+const headbodyscriptFont = localFont({
+  src: "../assets/font/headbodyscript.woff2"
+})  
+
+
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
   const [user, loading, error] = useAuthState(auth);
   // console.log(user, loading, error);
   // console.log(user?.providerData[0]?.photoURL);
+
 
   const signOutUser = async () => {
     await signOut(auth);

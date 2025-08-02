@@ -1,23 +1,41 @@
 "use client"
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 import React from "react";
 import { getAuth, signInWithRedirect, signInWithPopup , GithubAuthProvider } from "firebase/auth";
-import app from "dimi/components/firebase";
+import { app } from "dimi/components/firebase";
+import { getDatabase, ref, set } from "firebase/database";
+
 const Auth = () => {
   
   const provider = new GithubAuthProvider();
   
   const auth = getAuth(app);
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
-  function signInWithGitHub(){
+  async function signInWithGitHub(){
     signInWithPopup(auth, provider)
     .then((credentials) => {
-        const credential = GithubAuthProvider.credentialFromResult(credentials);
-        const token = credential.accessToken;
-        const user = credentials.user;
-        console.log(credentials)
-        console.log(credentials.uid)
+      const credential = GithubAuthProvider.credentialFromResult(credentials);
+      const token = credential.accessToken;
+      const user = credentials.user;
+      console.log(token)
+      console.log(user)
+      console.log(credential)
+
+
+      if (user.proactiveRefresh.user.metadata.createdAt === user.proactiveRefresh.user.metadata.lastLoginAt) {
+        // User signed up
+        const db = getDatabase(app);
+        set(ref(db, 'users/' + user.uid), {
+            username: user.displayName,
+            email: user.email,
+            currency: 10000
+          });
+      } else {
+        console.log("Welcome back user")
+        // User logged in (not first time)
+      }
+ 
     }).catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -25,7 +43,6 @@ const Auth = () => {
         const credential = GithubAuthProvider.credentialFromError(error);
     });
 }
-
   return (
             <div>
               <div className="md:w-134 mt-4 column">

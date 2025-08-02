@@ -1,4 +1,5 @@
-[
+{
+    "characters" : [
     {
         "url": "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true)",
         "name": "???",
@@ -62,13 +63,7 @@
         "description": "An angel found at the end of the world, a new beginning.",
         "health": "11",
         "attack": "9"
-    },
-    {
-        "url": "url(https://cdn.discordapp.com/attachments/1230061066197798982/1400912870572822648/F4A1D66D-490C-458A-9543-61F50ED40166.jpg?ex=688e5d48&is=688d0bc8&hm=4f851bf464aace92949164b716133038a2fa88613242be6a76d7e13c454c530f&)",
-        "name": "Bennu the bunny",
-        "id": "008",
-        "description": "Moslty sleeps all day but is very active when excited.",
-        "health": "14",
-        "attack": "6"
     }
 ]
+
+}
