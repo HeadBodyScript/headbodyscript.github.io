@@ -2,6 +2,7 @@ import Navbar from 'dimi/app/include/navbar-vista'
 import Footer from 'dimi/app/include/footer'
 import Vista from "dimi/components/vista"
 import Display from "dimi/components/display"
+import Meow from "dimi/components/temp"
 import firebase from 'firebase/compat/app'
 // import user from "dimi/components/authState"
 // import { promises as fs } from 'fs';
@@ -28,6 +29,27 @@ export default async function index() {
     )
     // console.log(snapshot)
     // console.log(prop)
+
+
+
+const auth = getAuth();
+const user = auth.currentUser;
+console.log(user)
+if (user !== null) {
+  // The user object has basic properties such as display name, email, etc.
+  const displayName = user.displayName;
+  const email = user.email;
+  const photoURL = user.photoURL;
+  const emailVerified = user.emailVerified;
+
+  // The user's ID, unique to the Firebase project. Do NOT use
+  // this value to authenticate with your backend server, if
+  // you have one. Use User.getToken() instead.
+  const uid = user.uid;
+  console.log(displayName)
+  console.log(uid)
+}
+
 var int = 0;
   return (
     <div className='bg-neutral-100'>
@@ -45,6 +67,7 @@ var int = 0;
               </label>
             </form>
           </div>
+          <Meow></Meow>
             <div className="bg-white rounded-lg shadow p-2 column h-fit mt-4 mb-4">
               <div className="row grid gap-2">
                 <div className="row rounded-lg shadow p-2 text-gray-500 hover:bg-gray-200 hover:text-gray-800">

@@ -4,6 +4,7 @@ import React from "react";
 import { getAuth, signInWithRedirect, signInWithPopup , GithubAuthProvider } from "firebase/auth";
 import { app } from "dimi/components/firebase";
 import { getDatabase, ref, set } from "firebase/database";
+// import { cookies } from "next/headers";
 
 const Auth = () => {
   
@@ -21,7 +22,7 @@ const Auth = () => {
       console.log(token)
       console.log(user)
       console.log(credential)
-
+      document.cookie = user
 
       if (user.proactiveRefresh.user.metadata.createdAt === user.proactiveRefresh.user.metadata.lastLoginAt) {
         // User signed up

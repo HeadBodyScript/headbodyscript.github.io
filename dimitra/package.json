@@ -12,6 +12,7 @@
     "@next/env": "^15.4.4",
     "next": "15.4.4",
     "next-auth": "^4.24.11",
+    "next-firebase-auth": "^1.4.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-firebase-hooks": "^5.1.1"
