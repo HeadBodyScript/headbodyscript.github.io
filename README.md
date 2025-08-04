@@ -51,3 +51,20 @@ Dimitra
 7
 14
 5
+
+<!-- database -->
+import { getDatabase, ref, set, get, child } from "firebase/database";
+import { app } from "dimi/config/firebase.config";
+
+
+    const dbRef = ref(getDatabase(app));
+    const snapshot = await get(child(dbRef, `characters/`)).then((snapshot) => {
+        if (snapshot.exists()) {
+          // console.log(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+        return snapshot.val()
+      }
+    )
+    // console.log(snapshot)

@@ -2,24 +2,19 @@
 
 import localFont from 'next/font/local'
 import Link from 'next/link'
-import { getAuth,signOut } from 'firebase/auth';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { app } from "dimi/components/firebase";
+import { signOut } from 'firebase/auth';
+import { auth } from 'dimi/config/firebase.config';
 
 const headbodyscriptFont = localFont({
-  src: "../assets/font/headbodyscript.woff2"
+  src: "../../app/assets/font/headbodyscript.woff2"
 })  
 
+interface NavbarProps {
+   user: any;
+}
 
-
-export default function Home() {
-
-  const auth = getAuth(app);
-  const [user, loading, error] = useAuthState(auth);
-  // console.log(user, loading, error);
-  // console.log(user?.providerData[0]?.photoURL);
-
-
+export default function NavbarVista({user}: NavbarProps) {
+    
   const signOutUser = async () => {
     await signOut(auth);
   };
@@ -36,7 +31,7 @@ export default function Home() {
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript</Link>
+                  <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript{user?.currency}</Link>
                 </li>
               </ul>
             </nav>

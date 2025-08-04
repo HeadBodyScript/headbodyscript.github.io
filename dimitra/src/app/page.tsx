@@ -1,20 +1,8 @@
-// import Link from 'next/link';
-// import firebase from "dimi/components/firebase";
+"use client"
+import Navbar from 'dimi/components/include/navbar'
+import Footer from 'dimi/components/include/footer'
 
-// import { getAuth, signInWithRedirect, signInWithPopup, GithubAuthProvider } from "firebase/auth";
-// import { useSession } from "next-auth/react";
-
-// import { useAuthState } from 'react-firebase-hooks/auth';
-// import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-// import app from "dimi/components/firebase";
-
-// import "dimi/app/assets/css/app.css";
-
-import Navbar from 'dimi/app/include/navbar'
-import Footer from 'dimi/app/include/footer'
-
-export default function Home() {
-
+export default function Home() {  
   return (
     <div className="main bg-neutral-300">
       <Navbar/>
@@ -83,83 +71,6 @@ export default function Home() {
             </div>
           </section>
         </div>
-        {/* <div className="mx-48 lg:mx-64 max-w-screen-xs px-4 sm:px-6 lg:px-8">
-          <div className="mt-1 grid grid-cols-2 font-sm gap-[0.625rem] lg:grid-cols-3 lg:gap-x-0.75">
-            <div className='col-span-2 px-8'>
-                <img src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_hatsuneMiku.webp" alt="" />
-                <div className="mt-1 grid grid-cols-1 font-sm gap-[0.625rem] md:grid-cols-2 md:gap-x-0.75">
-                  <div className='flex flex-col gap-2 h-96'>
-                    <img className='h-54' src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_cyberpunk.png" alt="" />
-                    <div className='bg-white'>
-                      <div>
-                        <p>NAME</p>
-                        <p>Datapack</p>
-                      </div>
-                      <div>
-                        <p>1.21.1</p>
-                        <p>ICON</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='flex flex-col gap-2 h-96'>
-                    <img className='h-54' src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_glock.webp" alt="" />
-                    <div className='bg-white'>
-                      <div>
-                        <p>NAME</p>
-                        <p>Datapack</p>
-                      </div>
-                      <div>
-                        <p>1.21.1</p>
-                        <p>ICON</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='flex flex-col gap-2 h-96'>
-                    <img className='h-54' src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_showdown.webp" alt="" />
-                    <div className='bg-white'>
-                      <div>
-                        <p>NAME</p>
-                        <p>Datapack</p>
-                      </div>
-                      <div>
-                        <p>1.21.1</p>
-                        <p>ICON</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='flex flex-col gap-2 h-96'>
-                    <img className='h-54' src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_mantisBlade.webp" alt="" />
-                    <div className='bg-white'>
-                      <div>
-                        <p>NAME</p>
-                        <p>Datapack</p>
-                      </div>
-                      <div>
-                        <p>1.21.1</p>
-                        <p>ICON</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='flex flex-col gap-2 h-96'>
-                    <img className='h-54' src="https://raw.githubusercontent.com/HeadBodyScript/headbodyscript.github.io/refs/heads/main/static/assets/img/card_amethystTools.webp" alt="" />
-                    <div className='bg-white'>
-                      <div>
-                        <p>NAME</p>
-                        <p>Datapack</p>
-                      </div>
-                      <div>
-                        <p>1.21.1</p>
-                        <p>ICON</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div className='col-span-2 lg:col-span-1 px-8'>
-              <p>meow</p>
-            </div>
-        </div>
-        </div> */}
       </main>
       <Footer/>
       </div>

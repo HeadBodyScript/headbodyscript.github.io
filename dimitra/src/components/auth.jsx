@@ -1,28 +1,24 @@
 "use client"
 // import { useSession } from "next-auth/react";
 import React from "react";
-import { getAuth, signInWithRedirect, signInWithPopup , GithubAuthProvider } from "firebase/auth";
-import { app } from "dimi/components/firebase";
+import { signInWithPopup , GithubAuthProvider } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
-// import { cookies } from "next/headers";
+import { auth, app } from 'dimi/config/firebase.config';
+
 
 const Auth = () => {
   
   const provider = new GithubAuthProvider();
-  
-  const auth = getAuth(app);
-  // const { data: session } = useSession();
-
   async function signInWithGitHub(){
     signInWithPopup(auth, provider)
     .then((credentials) => {
       const credential = GithubAuthProvider.credentialFromResult(credentials);
       const token = credential.accessToken;
       const user = credentials.user;
-      console.log(token)
-      console.log(user)
-      console.log(credential)
-      document.cookie = user
+      // console.log(token)
+      // console.log(user)
+      // console.log(credential)
+      // document.cookie = user
 
       if (user.proactiveRefresh.user.metadata.createdAt === user.proactiveRefresh.user.metadata.lastLoginAt) {
         // User signed up

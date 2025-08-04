@@ -1,12 +1,12 @@
-import Navbar from 'dimi/app/include/navbar-vista'
-import Footer from 'dimi/app/include/footer'
+import Navbar from 'dimi/components/include/navbar-vista'
+import Footer from 'dimi/components/include/footer'
 import "dimi/app/assets/css/app.css";
 import "dimi/app/assets/css/pokedex.css";
 
 export default function index() {
   return (
     <div id="container">
-      <Navbar/>
+      <Navbar user={""}/>
       <main className="center row-reverse">
         <section className='array'>
           <div className="card">
@@ -19,13 +19,6 @@ export default function index() {
               <div className="row">
                 <div></div>
               </div>
-              {/* <div className="row select">
-                <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Type</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
-                <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Weakness</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
-                <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Ability</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
-                <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Height</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
-                <div className="card row justify-content-between"><div><span><i className="bi bi-"></i></span>Weight</div><div><span><i className="bi bi-chevron-down"></i></span></div></div>
-              </div> */}
             </div>
             <div className="display-array">
               <div className="card info center row justify-content-between selected">

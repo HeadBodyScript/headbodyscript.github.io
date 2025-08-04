@@ -1,59 +1,13 @@
-import Navbar from 'dimi/app/include/navbar-vista'
-import Footer from 'dimi/app/include/footer'
+import Navbar from 'dimi/components/include/navbar-vista'
+import Footer from 'dimi/components/include/footer'
 import Vista from "dimi/components/vista"
 import Display from "dimi/components/display"
-import Meow from "dimi/components/temp"
-import firebase from 'firebase/compat/app'
-// import user from "dimi/components/authState"
-// import { promises as fs } from 'fs';
-import { getDatabase, ref, set, get, child } from "firebase/database";
-import { app } from "dimi/components/firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export default async function index() {
-
-
-
-// console.log(user)
-  // const file = await fs.readFile( 'src/app/vista/pages/data.json', 'utf8');
-  // const data = JSON.parse(file);
-    const dbRef = ref(getDatabase(app));
-     const snapshot = await get(child(dbRef, `characters/`)).then((snapshot) => {
-        if (snapshot.exists()) {
-          // console.log(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-        return snapshot.val()
-      }
-    )
-    // console.log(snapshot)
-    // console.log(prop)
-
-
-
-const auth = getAuth();
-const user = auth.currentUser;
-console.log(user)
-if (user !== null) {
-  // The user object has basic properties such as display name, email, etc.
-  const displayName = user.displayName;
-  const email = user.email;
-  const photoURL = user.photoURL;
-  const emailVerified = user.emailVerified;
-
-  // The user's ID, unique to the Firebase project. Do NOT use
-  // this value to authenticate with your backend server, if
-  // you have one. Use User.getToken() instead.
-  const uid = user.uid;
-  console.log(displayName)
-  console.log(uid)
-}
-
 var int = 0;
   return (
     <div className='bg-neutral-100'>
-      <Navbar/>
+      <Navbar user={""}/>
       <div className='center text-black'>
         <main className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
         <section className='w-full md:w-[calc(100%_-_298px)] sm:w-full px-2 py-4'>
@@ -67,7 +21,6 @@ var int = 0;
               </label>
             </form>
           </div>
-          <Meow></Meow>
             <div className="bg-white rounded-lg shadow p-2 column h-fit mt-4 mb-4">
               <div className="row grid gap-2">
                 <div className="row rounded-lg shadow p-2 text-gray-500 hover:bg-gray-200 hover:text-gray-800">
@@ -110,29 +63,7 @@ var int = 0;
               </div>
             </div>
             <div className="grid grid-cols-3 gap-4">
-              {
-              
-              snapshot.map((item: any) => (
-                <div key={item.id} className='h-full'>
-                  <Vista>
-                    <data value={int++}></data>
-                    <div
-                      className='w-full aspect-square rounded-lg'
-                      style={{
-                        backgroundImage: `${item.url}`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center"
-                      }}
-                    ></div>
-                    <div className="column p-4 w-full">
-                      <p className='text-left'>Name: <span>{item.name}</span></p>
-                      <p className='text-left'>Attack: <span>{item.attack}</span></p>
-                      <p className='text-left'>Health: <span>{item.health}</span></p>
-                      <p className='text-left'>ID: <span>{item.id}</span></p>
-                    </div>
-                  </Vista>
-                </div>
-              ))}
+
             </div>
         </section>
         <Display>

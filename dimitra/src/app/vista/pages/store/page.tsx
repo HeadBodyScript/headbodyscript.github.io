@@ -1,32 +1,13 @@
-import Navbar from 'dimi/app/include/navbar-vista'
-import Footer from 'dimi/app/include/footer'
-// import Shop from "dimi/components/shop"
+import Navbar from 'dimi/components/include/navbar-vista'
+import Footer from 'dimi/components/include/footer'
 import "dimi/app/assets/css/app.css";
 import "dimi/app/assets/css/pokedex.css";
-import { getDatabase, ref, set, get, child } from "firebase/database";
-import { app } from "dimi/components/firebase";
-
-
-
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-
 
 export default async function store() {
 
-    const dbRef = ref(getDatabase(app));
-    const snapshot = await get(child(dbRef, `characters/`)).then((snapshot) => {
-        if (snapshot.exists()) {
-          console.log(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-        return snapshot.val()
-      }
-    )
-    // console.log(snapshot)
   return (
     <div id="container">
-      <Navbar/>
+      <Navbar user={""}/>
       <div className='center text-black'>
         <main className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
         <section className='w-full md:w-[calc(100%_-_298px)] sm:w-full px-2 py-4'>
@@ -82,7 +63,7 @@ export default async function store() {
               </div>
             </div>
             <div className="grid grid-cols-4 gap-4">
-{
+{/* {
               
               snapshot.map((item: any) => (
                 <div key={item.id} className='h-full bg-white'>
@@ -101,7 +82,7 @@ export default async function store() {
                       <p className='text-left'>ID: <span>{item.id}</span></p>
                     </div>
                 </div>
-              ))}
+              ))} */}
             </div>
         </section>
 
