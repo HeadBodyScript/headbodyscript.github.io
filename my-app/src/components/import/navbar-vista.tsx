@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { signOut } from 'firebase/auth';
 import { auth } from '@/config/firebase.config';
 
-// const headbodyscriptFont = localFont({
-//   src: "../../app/assets/font/headbodyscript.woff2"
-// })  
+const headbodyscriptFont = localFont({
+  src: '../../app/headbodyscript.woff2'
+})  
 
 interface NavbarProps {
    user: any;
@@ -31,8 +31,8 @@ export default function NavbarVista({user}: NavbarProps) {
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <Link className={`text-gray-500 text-[5px]`} href="/">headbodyscript{user?.currency}</Link>
-                  {/* <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript{user?.currency}</Link> */}
+                  {/* <Link className={`text-gray-500 text-[5px]`} href="/">headbodyscript{user?.currency}</Link> */}
+                  <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript{user?.currency}</Link>
                 </li>
               </ul>
             </nav>
