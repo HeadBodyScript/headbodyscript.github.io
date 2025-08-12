@@ -10,17 +10,19 @@ const headbodyscriptFont = localFont({
 })  
 
 interface NavbarProps {
-   user: any;
+   userData: any;
+   userCookie: any;
 }
 
-export default function NavbarVista({user}: NavbarProps) {
-    console.log(user)
-  const signOutUser = async () => {
+export default function NavbarVista({userData, userCookie}: NavbarProps) {
+    // console.log(userData)
+    // console.log(userCookie)
+    const signOutUser = async () => {
     await signOut(auth);
   };
 
   return (
-    <header className="bg-white shadow">
+    <header className="bg-white shadow text-gray-500">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -30,23 +32,27 @@ export default function NavbarVista({user}: NavbarProps) {
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
+                <li className='text-gray-500 row'>
+                  {/* <span>Currency: {userData?.currency}</span>  */}
+                  {/* <img className='ml-2 relative bottom-[1px]' src="/gem.png" alt="" /> */}
+                </li>
                 <li>
                   {/* <Link className={`text-gray-500 text-[5px]`} href="/">headbodyscript{user?.currency}</Link> */}
-                  <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript{user?.currency}</Link>
+                  <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript</Link>
                 </li>
               </ul>
             </nav>
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/vista/pages/index">Home</Link>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/vista/index">Home</Link>
                 </li>
 
                 <li>
-                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/vista/pages/dual">Dual</Link>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/vista/dual">Dual</Link>
                 </li>
                 <li>
-                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/vista/pages/store">Store</Link>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/vista/store">Store</Link>
                 </li>
               </ul>
             </nav>
@@ -54,12 +60,13 @@ export default function NavbarVista({user}: NavbarProps) {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   
-                  {!user && 
+                  {!userCookie && 
                     <Link className="text-gray-500 transition hover:text-gray-500/75" href="/auth">Login</Link>
                   }
-                  {user && 
-                    <div className="md:relative md:block group">
-                      <img className="size-10 object-cover" src={user?.providerData[0]?.photoURL} alt="" />
+                  {userCookie && 
+                    <div className='row'>
+                      <div className="md:relative md:block group">
+                      <img className="size-10 object-cover" src={userCookie?.providerData[0]?.photoURL} alt="" />
 
                       <div
                         className="hidden group-hover:block absolute end-0 z-10 mt-0.5 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"
@@ -100,6 +107,10 @@ export default function NavbarVista({user}: NavbarProps) {
                           </form>
                         </div>
                       </div>
+                    </div>
+                    <div className='center'>
+                      <span>Currency: {userData?.currency}</span> 
+                    </div>
                     </div>
                   }
                 </li>

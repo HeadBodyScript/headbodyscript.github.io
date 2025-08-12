@@ -1,115 +1,48 @@
-import Navbar from 'dimi/components/include/navbar-vista'
-import Footer from 'dimi/components/include/footer'
-import "dimi/app/assets/css/app.css";
-import "dimi/app/assets/css/pokedex.css";
+import Navbar from '@/components/import/navbar-vista'
+import Footer from '@/components/import/footer'
+import Vista from "@/components/vista/dual"
+// import Display from "@/components/vista/display"
+// import snapshot from '@/components/data.json'
+import { getDatabase, ref, set, get, child } from "firebase/database";
+import { app } from "@/config/firebase.config";
+import { cookies } from 'next/headers'
+export default async function index() {
+    const cookieStore = await cookies()
+    const cookie = cookieStore.get('user0') || {value:""}
+    const userCookie = await JSON.parse(cookie.value)
 
-export default function index() {
+    const dbRef = ref(getDatabase(app));
+    const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
+      return snapshot.val()
+    })
+    const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
+      return snapshot.val()
+    })
+var int = 0;
   return (
-    <div id="container">
-      <Navbar user={""}/>
-      <main className="center row-reverse">
-        <section className='array'>
-          <div className="card">
-            <div className="row search">
-              <p>Select your loadout!</p>
-            </div>
-          </div>
-          <div>
-            <div className="navbar column">
-              <div className="row">
-                <div></div>
-              </div>
-            </div>
-            <div className="display-array">
-              <div className="card info center row justify-content-between selected">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/1.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>???</p>
-                <p>Attack: 20</p>
-                <p>Health: 2</p>
-                <p>ID: 001</p>
-                </div>
-                <button>Select</button>
-              </div>
-              <div className="card info center row justify-content-between">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/2.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>Sky</p>
-                <p>Attack: 18</p>
-                <p>Health: 3</p>
-                <p>ID: 002</p>
-                </div>
-                <button>Select</button>
-              </div>
-              <div className="card info center row justify-content-between">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/3.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>Withered Rose</p>
-                <p>Attack: 16</p>
-                <p>Health: 7</p>
-                <p>ID: 003</p>
-                </div>
-                <button>Select</button>
-              </div>
-              <div className="card info center row justify-content-between">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/4.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>Ellie</p>
-                <p>Attack: 12</p>
-                <p>Health: 4</p>
-                <p>ID: 004</p>
-                </div>
-                <button>Select</button>
-              </div>
-              <div className="card info center row justify-content-between">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/5.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>Techy</p>
-                <p>Attack: 30</p>
-                <p>Health: 2</p>
-                <p>ID: 005</p>
-                </div>
-                <button>Select</button>
-              </div>
-              <div className="card info center row justify-content-between">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/6.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>Violet</p>
-                <p>Attack: 22</p>
-                <p>Health: 2</p>
-                <p>ID: 006</p>
-                </div>
-                <button>Select</button>
-              </div>
-              <div className="card info center row justify-content-between">
-                <img className="img" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/7.jpg?raw=true" alt="" />
-                <div className="column">
-                <p>DIMI</p>
-                <p>Attack: 11</p>
-                <p>Health: 9</p>
-                <p>ID: 007</p>
-                </div>
-                <button>Select</button>
-              </div>
-            </div>
+    <div className='bg-neutral-100 min-h-dvh'>
+      <Navbar userCookie={userCookie} userData={userData} />
+      <div className='center text-black'>
+        <main className="center w-fit row 2xl:w-150 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+        <section className='w-full sm:w-full px-2 py-4'>
+          <div className="bg-white rounded-lg shadow p-4 h-fit">
+            <form action="" className="row search">
+              <input type="text" placeholder="Enter lobby code!" />
+              <label htmlFor="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" className="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+              </label>
+            </form>
           </div>
         </section>
-        <section className="display">
-          <div className="card">
-            <h1>Available Players:</h1>
-            <div className="player-list">
-                <div className="row">
-                  <button>JOIN</button>
-                  <p>Dimitra</p>
-                </div>
-                <div className="row">
-                  <button>JOIN</button>
-                  <p>Dimitra</p>
-                </div>
-            </div>
+        <section className='w-full sm:w-full px-2 py-4'>
+          <div className="bg-white rounded-lg shadow p-2 h-fit">
+            <div className='shadow p-2 rounded-lg hover:bg-gray-200'>Create Lobby</div>
           </div>
         </section>
       </main>
+      </div>
       <Footer/>
       </div>
   );

@@ -1,22 +1,31 @@
 import Navbar from '@/components/import/navbar-vista'
 import Footer from '@/components/import/footer'
-import Vista from "@/components/vista/vista"
+import Vista from "@/components/vista"
 import Display from "@/components/vista/display"
-import snapshot from '@/components/data.json'
-;import { cookies } from 'next/headers'
-
+// import snapshot from '@/components/data.json'
+import { getDatabase, ref, set, get, child } from "firebase/database";
+import { app } from "@/config/firebase.config";
+import { cookies } from 'next/headers'
 export default async function index() {
     const cookieStore = await cookies()
     const cookie = cookieStore.get('user0') || {value:""}
-    const user = await JSON.parse(cookie.value)
+    const userCookie = await JSON.parse(cookie.value)
+
+    const dbRef = ref(getDatabase(app));
+    const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
+      return snapshot.val()
+    })
+    const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
+      return snapshot.val()
+    })
 var int = 0;
   return (
     <div className='bg-neutral-100'>
-      <Navbar user={user}/>
+      <Navbar userCookie={userCookie} userData={userData} />
       <div className='center text-black'>
         <main className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
-        <section className='w-full md:w-[calc(100%_-_298px)] sm:w-full px-2 py-4'>
-          <div className="bg-white rounded-lg shadow p-4 h-fit">
+          <section className="w-fit column sm:w-full w-full p-2">
+           <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
             <form action="" className="row search">
               <input type="text" placeholder="Search your fighter!" />
               <label htmlFor="">
@@ -26,7 +35,7 @@ var int = 0;
               </label>
             </form>
           </div>
-            <div className="bg-white rounded-lg shadow p-2 column h-fit mt-4 mb-4">
+          <div className="bg-white rounded-lg shadow p-2 column h-fit mt-4">
               <div className="row grid gap-2">
                 <div className="row rounded-lg shadow p-2 text-gray-500 hover:bg-gray-200 hover:text-gray-800">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-eye-slash-fill" viewBox="0 0 16 16">
@@ -67,53 +76,83 @@ var int = 0;
                   </div>
               </div>
             </div>
+          </section>
+        <section className='w-full md:w-[calc(100%_-_270px)] sm:w-full p-2'>
             <div className="grid grid-cols-3 gap-4">
                {
-              
-              snapshot.characters.map((item: any) => (
+              item.map((item: any) => (
                 <div key={item.id} className='h-full'>
                   <Vista>
                     <data value={int++}></data>
                     <div
                       className='w-full aspect-square rounded-lg'
                       style={{
-                        backgroundImage: `${item.url}`,
+                        backgroundImage: `${item.url ?? "0"}`,
                         backgroundSize: "cover",
                         backgroundPosition: "center"
                       }}
                     ></div>
                     <div className="column p-4 w-full">
-                      <p className='text-left'>Name: <span>{item.name}</span></p>
-                      <p className='text-left'>Attack: <span>{item.attack}</span></p>
-                      <p className='text-left'>Health: <span>{item.health}</span></p>
-                      <p className='text-left'>ID: <span>{item.id}</span></p>
+                      <h1><span>{item.name}</span></h1>
+                      <table className='w-full'>
+                        <tbody>
+                          <tr>
+                          <td className='text-left'>
+                            <div className='row'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                              </svg>
+                              <span>Attack Damage</span>
+                            </div>
+                          </td>
+                          <td className='text-right'>{item.attack ?? "0"}</td>
+                        </tr>
+                        <tr>
+                          <td className='text-left'>
+                            <div className='row'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                              </svg>
+                              <span>Health</span>
+                            </div>
+                          </td>
+                          <td className='text-right'>{item.health ?? "0"}</td>
+                        </tr>
+                        <tr>
+                          <td className='text-left'>
+                            <div className='row'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                              </svg>
+                              <span>Physical Armor</span>
+                            </div>
+                          </td>
+                          <td className='text-right'>{item.physical_armor ?? "0"}</td>
+                        </tr>
+                        <tr>
+                          <td className='text-left'>
+                            <div className='row'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                              </svg>
+                              <span>Magic Armor</span>
+                            </div>
+                          </td>
+                          <td className='text-right'>{item.magic_armor ?? "0"}</td>
+                        </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </Vista>
                 </div>
               ))}
             </div>
         </section>
+          <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 fixed md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
         <Display>
-          <section id='display' className="md:w-90 w-full px-0 md:px-2 py-0 md:py-4 fixed md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0">
-          <div className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0 md:w-90">
-              <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/vista/3.jpg?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="column p-4">
-                <p className='text-left'>Name: Withered Rose</p>
-                <p className='text-left'>Attack: 16</p>
-                <p className='text-left'>Damage: Physical</p>
-                <p className='text-left'>Health: 7</p>
-                <p className='text-left'>Physical armor: 7</p>
-                <p className='text-left'>Magic armor: 7</p>
-                <p className='text-left'>ID: 003</p>
-                <p className='text-left'>Abilities:</p>
-                <p className='text-left'>Domination: Basic 50%</p>
-                <p className='text-left'>Blade of Quartz: quick 25%</p>
-                <p className='text-left'>Spectral Maw: Special: 100%</p>
-                <p className='text-left'>Heartbreaker: passive</p>
-              </div>
-          </div>
-        </section>
+          <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
         </Display>
+        </section>
       </main>
       </div>
       <Footer/>

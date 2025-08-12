@@ -47,3 +47,13 @@ flex-direction: column
     -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
+
+.active{
+  background-color: #CF2846;
+  color: white;
+}
+
+.bi{
+  position: relative;
+  bottom: -1px;
+}

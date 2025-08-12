@@ -9,7 +9,7 @@ const closeDisplay = async () => {
   };
 
   return (
-      <button type="button" onClick={() => { closeDisplay(); console.log("Close") }} className="flex row items-start">
+      <button type="button" onClick={() => { closeDisplay(); console.log("Close") }} className="flex row items-start w-[256px]">
         {children}
       </button>
   )
