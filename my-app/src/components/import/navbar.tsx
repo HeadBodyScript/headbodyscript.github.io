@@ -46,7 +46,7 @@ const Navbar = (user: any) => {
                   }
                   {user && 
                     <div className="md:relative md:block group">
-                      <img className="size-10 object-cover" src={user?.user.photoURL} alt="" />
+                      <img className="size-10 object-cover" src={user?.user?.photoURL ?? null} alt="" />
 
                       <div
                         className="hidden group-hover:block absolute end-0 z-10 mt-0.5 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"
