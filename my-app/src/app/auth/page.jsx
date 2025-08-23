@@ -4,10 +4,10 @@ export default function auth() {
   return (
       <main className="center w-dvw h-dvh bg-neutral-300 text-black">
         <div className="w-dvw md:rounded-lg md:w-285 min-h-dvh md:min-h-200 shadow bg-white row">
-          <div className="invisible md:visible w-0 rounded-lg md:w-[calc(100%_-_450px)] md:max-w-135 h-200" style={{ backgroundImage: "url(https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/static/img/auth.webp?raw=true)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
+          <div className="invisible md:visible w-0 rounded-lg md:w-[calc(100%_-_450px)] md:max-w-135 h-200" style={{ backgroundImage: "url(auth.webp)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
             <div className="w-dvw md:w-150 h-200 p-8 center column">
             <div className="center invisible md:visible">
-              <img className="invert h-40" src="https://github.com/HeadBodyScript/headbodyscript.github.io/blob/main/alt/android-chrome-192x192.png?raw=true" alt="website-icon" />
+              <img className="invert h-40" src="android-chrome-192x192.png" alt="website-icon" />
             </div>
             <h1 className="text-3xl font-bold text-center">Welcome Back</h1>
             <h2 className="text-center">Please enter your credentials</h2>
