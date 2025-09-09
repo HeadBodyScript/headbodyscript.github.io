@@ -7,6 +7,7 @@ import { getDatabase, ref, set, get, child } from "firebase/database";
 import { app } from "@/config/firebase.config";
 import { cookies } from 'next/headers'
 export default async function index() {
+  let int = 0;
     const cookieStore = await cookies()
     const cookie = cookieStore.get('user0') || {value:""}
     const userCookie = await JSON.parse(cookie.value)
@@ -18,13 +19,12 @@ export default async function index() {
     const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
       return snapshot.val()
     })
-var int = 0;
   return (
     <div className='bg-neutral-100'>
       <Navbar userCookie={userCookie} userData={userData} />
       <div className='center text-black'>
-        <main className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
-          <section className="w-fit column sm:w-full w-full p-2">
+        <main className="min-h-dvh row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+          <section className="column sm:w-full w-full p-2">
            <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
             <form action="" className="row search">
               <input type="text" placeholder="Search your fighter!" />
@@ -148,7 +148,7 @@ var int = 0;
               ))}
             </div>
         </section>
-          <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 fixed md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
+          <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
         <Display>
           <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
         </Display>
