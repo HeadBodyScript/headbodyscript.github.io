@@ -149,9 +149,9 @@ export default async function index() {
             </div>
         </section>
           <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
-        <Display>
-          <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
-        </Display>
+            <Display>
+              <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
+            </Display>
         </section>
       </main>
       </div>
