@@ -1,31 +1,20 @@
-import Navbar from '@/components/import/navbar-vista'
-import Footer from '@/components/import/footer'
-import Vista from "@/components/vista"
-import Display from "@/components/vista/display"
-// import snapshot from '@/components/data.json'
-import { getDatabase, ref, set, get, child } from "firebase/database";
-import { app } from "@/config/firebase.config";
-import { cookies } from 'next/headers'
-export default async function index() {
-  let int = 0;
-    const cookieStore = await cookies()
-    const cookie = cookieStore.get('user0') || {value:'{"userCookie":"empty"}'}
-    const userCookie = await JSON.parse(cookie.value)
-    console.log(userCookie)
-
-    const dbRef = ref(getDatabase(app));
-    const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
-      return snapshot.val()
-    })
-    const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
-      return snapshot.val()
-    })
+import Vista from '@/components/vista';
+// import Display from "@/components/vista/display"
+import Image from 'next/image';
+import { createClient } from '@/config/supabase';
+export default async function Instruments() {
+  const supabase = await createClient();
+  const { data: response } = await supabase.from("characters").select();
+  // <pre>{JSON.stringify(characters, null, 2)}</pre>
+  var characters = response || [];
+  // console.log(characters);
+  console.log(characters);
   return (
-    <div className='bg-neutral-100'>
-      <Navbar userCookie={userCookie} userData={userData} />
-      <div className='center text-black'>
-        <main className="min-h-dvh row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
-          <section className="column sm:w-full w-full p-2">
+  <>
+  <div className='bg-neutral-100 shadow'>
+          <div className='center text-black'>
+            <main className="min-h-dvh row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+              <section className="column sm:w-full w-full p-2">
            <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
             <form action="" className="row search">
               <input type="text" placeholder="Search your fighter!" />
@@ -78,21 +67,32 @@ export default async function index() {
               </div>
             </div>
           </section>
-        <section className='w-full md:w-[calc(100%_-_270px)] sm:w-full p-2'>
-            <div className="grid grid-cols-3 gap-4">
-               {
-              item.map((item: any) => (
+                  <section className='w-full md:w-[calc(100%_-_270px)] sm:w-full p-2'>
+                    <div className="grid grid-cols-3 gap-4">
+{
+              characters.map((item: any) => (
                 <div key={item.id} className='h-full'>
                   <Vista>
-                    <data value={int++}></data>
-                    <div
+                    <data value={item.id}></data>
+                    {/* <div
                       className='w-full aspect-square rounded-lg'
                       style={{
                         backgroundImage: `${item.url ?? "0"}`,
                         backgroundSize: "cover",
                         backgroundPosition: "center"
                       }}
-                    ></div>
+                    ></div> */}
+                    <Image
+                      className='w-full aspect-square rounded-lg'
+                      priority
+                      placeholder="data:image/404-img.webp"
+                      src= {item.url || "/404-img.webp"}
+                      width={200}
+                      height={200}
+                      alt="Picture of character"
+                      quality={10}
+                    />
+                      
                     <div className="column p-4 w-full">
                       <h1><span>{item.name}</span></h1>
                       <table className='w-full'>
@@ -100,7 +100,7 @@ export default async function index() {
                           <tr>
                           <td className='text-left'>
                             <div className='row'>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
                                 <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
                               </svg>
                               <span>Attack Damage</span>
@@ -111,7 +111,7 @@ export default async function index() {
                         <tr>
                           <td className='text-left'>
                             <div className='row'>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
                                 <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
                               </svg>
                               <span>Health</span>
@@ -122,7 +122,7 @@ export default async function index() {
                         <tr>
                           <td className='text-left'>
                             <div className='row'>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
                                 <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
                               </svg>
                               <span>Physical Armor</span>
@@ -133,7 +133,7 @@ export default async function index() {
                         <tr>
                           <td className='text-left'>
                             <div className='row'>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right top-[1px] relative" viewBox="0 0 16 16">
                                 <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
                               </svg>
                               <span>Magic Armor</span>
@@ -144,19 +144,19 @@ export default async function index() {
                         </tbody>
                       </table>
                     </div>
-                  </Vista>
+                    </Vista>
                 </div>
               ))}
-            </div>
-        </section>
-          <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
-            <Display>
-              <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
-            </Display>
-        </section>
-      </main>
-      </div>
-      <Footer/>
-      </div>
+              </div>
+             </section>
+              {/* <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
+                <Display>
+                  <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
+                </Display>
+              </section> */}
+            </main>
+          </div>
+        </div>
+  </>
   );
 }

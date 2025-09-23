@@ -54,7 +54,11 @@ flex-direction: column
   color: white;
 }
 
-/* .bi{
+.bi{
   position: relative;
-  bottom: -1px;
-} */
+  top: 4px;
+}
+.bi-caret-right{
+  position: relative;
+  top: 4px;
+}

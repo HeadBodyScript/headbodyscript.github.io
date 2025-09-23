@@ -5,24 +5,25 @@ interface NavbarProps {
    user: any;
 }
 const Navbar = (user: any) => {
-
-  // console.log("user")
-  // console.log(user)
-  // console.log("user")
   return (
+    <>
+    {user && 
+    <div>
     <header className="bg-white shadow">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
+
+
+
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <Link className="block text-gray-500 text-sm" href="/projects"><span className="sr-only">Home</span></Link>
           </div>
-
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   {/* <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript</Link> */}
-                  <Link className={`text-gray-500 text-[5px]}`} href="/">headbodyscript</Link>
+                  <Link className={`text-gray-500 text-[5px]}`} href="/">headbodyscript Loged in</Link>
                 </li>
               </ul>
             </nav>
@@ -40,11 +41,6 @@ const Navbar = (user: any) => {
             <div aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  
-                  {!user && 
-                    <Link className="text-gray-500 transition hover:text-gray-500/75" href="/auth">Login</Link>
-                  }
-                  {user && 
                     <div className="md:relative md:block group">
                       <img className="size-10 object-cover" src={user?.user?.photoURL ?? null} alt="" />
 
@@ -88,7 +84,6 @@ const Navbar = (user: any) => {
                         </div>
                       </div>
                     </div>
-                  }
                 </li>
               </ul>
             </div>
@@ -111,9 +106,54 @@ const Navbar = (user: any) => {
               </button>
             </div>
           </div>
+
+
+
+          
         </div>
       </div>
     </header>
+    </div> 
+    || 
+    <div>
+    <header className="bg-white shadow">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+
+
+<div className="flex-1 md:flex md:items-center md:gap-12">
+            <Link className="block text-gray-500 text-sm" href="/projects"><span className="sr-only">Home</span></Link>
+          </div>
+          <div className="md:flex md:items-center md:gap-12">
+            <nav aria-label="Global" className="hidden md:block">
+              <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  {/* <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript</Link> */}
+                  <Link className={`text-gray-500 text-[5px]}`} href="/">headbodyscript</Link>
+                </li>
+              </ul>
+            </nav>
+            <nav aria-label="Global" className="hidden md:block">
+              <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/">Home</Link>
+                </li>
+
+                <li>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/projects">Projects</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+                  <div>USER TRUE</div>
+
+        </div>
+      </div>
+    </header>
+    </div>
+    }
+    </>
   );
 }
 export default Navbar;
