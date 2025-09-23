@@ -9,8 +9,9 @@ import { cookies } from 'next/headers'
 export default async function index() {
   let int = 0;
     const cookieStore = await cookies()
-    const cookie = cookieStore.get('user0') || {value:""}
+    const cookie = cookieStore.get('user0') || {value:'{"userCookie":"empty"}'}
     const userCookie = await JSON.parse(cookie.value)
+    console.log(userCookie)
 
     const dbRef = ref(getDatabase(app));
     const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
