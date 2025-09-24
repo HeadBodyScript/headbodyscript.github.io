@@ -26,7 +26,7 @@
   vertical-align: middle;
   white-space: nowrap;
   width: auto;
-  max-width: 400px;
+  /* max-width: 400px; */
   min-width: 250px;
 }
 .gsi-material-button .gsi-material-button-icon {
@@ -148,3 +148,8 @@ input:-webkit-autofill:focus {
 }
 
 /*  */
+
+.bi-arrow-right{
+  position: relative;
+  top: 0;
+}

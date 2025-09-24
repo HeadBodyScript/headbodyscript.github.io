@@ -1,4 +1,4 @@
-import Vista from '@/components/vista';
+import Vista from '@/components/app/vista-pokedex';
 // import Display from "@/components/vista/display"
 import Image from 'next/image';
 import { createClient } from '@/config/supabase';

@@ -8,7 +8,6 @@ const Navbar = (user: any) => {
   return (
     <>
     {user && 
-    <div>
     <header className="bg-white shadow">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
@@ -113,7 +112,6 @@ const Navbar = (user: any) => {
         </div>
       </div>
     </header>
-    </div> 
     || 
     <div>
     <header className="bg-white shadow">

@@ -1,6 +1,6 @@
 import Navbar from '@/components/import/navbar-vista'
 import Footer from '@/components/import/footer'
-import Vista from "@/components/vista/dual"
+import Vista from "@/components/app/vista-pokedex/dual"
 // import Display from "@/components/vista/display"
 // import snapshot from '@/components/data.json'
 import { getDatabase, ref, get, child } from "firebase/database";

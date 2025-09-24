@@ -15,6 +15,7 @@ const Auth = () => {
       const user = credentials.user;
       // console.log(token)
       console.log(user)
+      // CREATE JWT AND STORE IN COOKIE with $user
       // console.log(credential)
       // document.cookie = user
       document.cookie = `user0=`+JSON.stringify(user.proactiveRefresh.user);
@@ -41,7 +42,7 @@ const Auth = () => {
 }
   return (
             <div>
-              <div className="md:w-134 mt-4 column">
+              <div className="mt-4 column">
                 <button type="button" className="gsi-material-button">
                   <div className="gsi-material-button-state"></div>
                   <div className="gsi-material-button-content-wrapper">
@@ -58,7 +59,7 @@ const Auth = () => {
                   </div>
                 </button>
               </div>
-              <div className="md:w-134 mt-4 column">
+              <div className="mt-4 column">
                 <button onClick={() => signInWithGitHub(auth, provider)} type="button" className="gsi-material-button">
                   <div className="gsi-material-button-state"></div>
                   <div className="gsi-material-button-content-wrapper">
@@ -72,12 +73,12 @@ const Auth = () => {
                 </button>
               </div>
               <div className="wrapper mt-12 manual">
-                <div className="center column redirect">
+                <div className="column redirect">
                       <form id="userFormLogin" className="column md:w-134">
-                        <label htmlFor=""><strong>Example@example.com</strong></label>
-                        <input className="w-auto" type="" id="" placeholder=""></input>
-                        <label htmlFor=""><strong>Password</strong></label>
-                        <input className="w-auto" type="" id="" placeholder=""></input>   
+                        <label htmlFor="email">email</label>
+                        <input className="w-auto" type="email" id="email" name="password" autoComplete="email" placeholder="Email"></input>
+                        <label htmlFor="password">Password</label>
+                        <input className="w-auto" type="password" id="password" name="password" autoComplete="password" placeholder="Password"></input>   
                         <button type="button" id="IDuserLogin" className="gsi-material-button !bg-black !text-white hover:!bg-neutral-800 hover:!text-white !border-red-50">
                             <div className="gsi-material-button-state"></div>
                             <div className="gsi-material-button-content-wrapper">

@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { signOut } from 'firebase/auth';
 import { auth } from '@/config/firebase.config';
 
-const headbodyscriptFont = localFont({
-  src: '../../app/headbodyscript.woff2'
-})  
+// const headbodyscriptFont = localFont({
+//   src: '../../app/headbodyscript.woff2'
+// })  
 
 interface NavbarProps {
    userData: any;
