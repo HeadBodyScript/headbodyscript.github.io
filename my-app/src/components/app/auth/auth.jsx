@@ -2,7 +2,7 @@
 import { signInWithPopup , GithubAuthProvider } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
 import { auth, app } from '@/config/firebase.config';
-
+import { createSession } from "@/lib/session";
 
 const Auth = () => {
   
@@ -18,25 +18,27 @@ const Auth = () => {
       // CREATE JWT AND STORE IN COOKIE with $user
       // console.log(credential)
       // document.cookie = user
-      document.cookie = `user0=`+JSON.stringify(user.proactiveRefresh.user);
-
-      if (user.proactiveRefresh.user.metadata.createdAt === user.proactiveRefresh.user.metadata.lastLoginAt) {
-        // User signed up
-        const db = getDatabase(app);
-        set(ref(db, 'users/' + user.uid), {
-            username: user.displayName,
-            email: user.email,
-            currency: 10000
-          });
-      } else {
-        console.log("Welcome back user")
-        // User logged in (not first time)
-      }
+      // document.cookie = `user0=`+JSON.stringify(user.proactiveRefresh.user);
+      createSession( user.uid ,user.displayName, user.photoURL);
+      // if (user.proactiveRefresh.user.metadata.createdAt === user.proactiveRefresh.user.metadata.lastLoginAt) {
+      //   // User signed up
+      //   const db = getDatabase(app);
+      //   set(ref(db, 'users/' + user.uid), {
+      //       username: user.displayName,
+      //       email: user.email,
+      //       currency: 10000
+      //     });
+      // } else {
+      //   console.log("Welcome back user")
+      //   // User logged in (not first time)
+      // }
+      // change to DB
+      redirect(`/dimi`) // Navigate to the new post page
  
     }).catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        // const email = error.customData.email;
         const credential = GithubAuthProvider.credentialFromError(error);
     });
 }

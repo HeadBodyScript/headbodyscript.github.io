@@ -14,40 +14,53 @@
 import { NextRequest, NextResponse } from 'next/server'
 // import { decrypt } from '@/app/lib/session'
 import { cookies } from 'next/headers'
+import { updateSession, decrypt } from "@/lib/session";
+
  
 // 1. Specify protected and public routes
 const protectedRoutes = ['/dimi']
 const publicRoutes = ['/auth', '/']
  
-export default async function middleware(req: NextRequest) {
+export default async function middleware(request: NextRequest) {
+  await updateSession(request);
   // 2. Check if the current route is protected or public
-  const path = req.nextUrl.pathname
+  const path = request.nextUrl.pathname
   const isProtectedRoute = protectedRoutes.includes(path)
   const isPublicRoute = publicRoutes.includes(path)
  
   // 3. Decrypt the session from the cookie
-  const cookie = (await cookies()).get('user0')?.value
-  // const session = await decrypt(cookie)
-  console.log('MIDDLEWARE COOKIE:', cookie)
-  const session = JSON.parse(cookie || '{}');
-  // cookie = the thing I said it was
+  const cookie = (await cookies()).get('session')?.value
+  // console.log('MIDDLEWARE COOKIE:', cookie) // show jwt
+  const session = await decrypt(cookie || '').catch(() => null)
+  // console.log('MIDDLEWARE SESSION:', session) // show json
+  // req.globalSession = session;
+  
+
+
+  // response.headers.set('X-HEADER', 'some-value-to-pass');
+  const response = NextResponse.next();
+  response.headers.set('X-HEADER', 'some-value-to-pass');
+  // return response;
+
   // 4. Redirect to /login if the user is not authenticated
-  if (isProtectedRoute && !session?.uid) {
-    return NextResponse.redirect(new URL('/auth', req.nextUrl))
+  if (isProtectedRoute && !session?.user.uid) {
+    return NextResponse.redirect(new URL('/auth', request.nextUrl))
   }
  
   // 5. Redirect to /dashboard if the user is authenticated
   if (
     isPublicRoute &&
-    session?.uid 
+    session
+    
     // &&
-    // !req.nextUrl.pathname.startsWith('/dashboard')
+    // !request.nextUrl.pathname.startsWith('/dashboard')
   ) {
+    console.log('MIDDLEWARE IF')
     return 
     // NextResponse.redirect(new URL('/dashboard', req.nextUrl))
   }
- 
-  return NextResponse.next()
+ console.log('MIDDLEWARE return')
+  return NextResponse.next(), response;
 }
  
 // Routes Middleware should not run on

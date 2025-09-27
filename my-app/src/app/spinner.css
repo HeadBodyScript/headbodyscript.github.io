@@ -1,0 +1,94 @@
+/* body {
+  background: #618f4f;
+}
+.example {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 2rem;
+  width: 2rem;
+  transform: translateX(-50%) translateY(-50%);
+} */
+/* .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+} */
+/* .parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+} */
+/* .parent > .div {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background: #fff;
+  animation: move 0.5s linear infinite;
+} */
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.parent > div {
+  background-color: #000000;
+  width: 2rem;
+  height: 2rem;
+  animation: move 2s linear infinite;
+}
+.parent > .div1 {
+  animation-delay: 0s;
+}
+.parent > .div2 {
+  animation-delay: -0.5s;
+}
+.parent > .div3 {
+  animation-delay: -1s;
+}
+.parent > .div4 {
+  animation-delay: -1.5s;
+}
+.parent > .div5 {
+  animation-delay: -2s;
+}
+.parent > .div6 {
+  animation-delay: -2.5s;
+}
+.parent > .div7 {
+  animation-delay: -3s;
+}
+.parent > .div8 {
+  animation-delay: -3.5s;
+}
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 2 / 3 / 3 / 4; }
+.div5 { grid-area: 3 / 3 / 4 / 4; }
+.div6 { grid-area: 3 / 2 / 4 / 3; }
+.div7 { grid-area: 3 / 1 / 4 / 2; }
+.div8 { grid-area: 2 / 1 / 3 / 2; }
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
