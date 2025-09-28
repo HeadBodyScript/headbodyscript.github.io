@@ -1,7 +1,7 @@
 "use client"
 import { SessionProviderProps} from "next-auth/react";
 
-const Display = ({children}: SessionProviderProps) => {
+const ButtonDisplayAPI = ({children}: SessionProviderProps) => {
 const closeDisplay = async () => {
 
   const display = document.getElementById('display');
@@ -14,4 +14,4 @@ const closeDisplay = async () => {
       </button>
   )
 }
-export default Display;
+export default ButtonDisplayAPI;

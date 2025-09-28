@@ -1,29 +1,39 @@
-import Navbar from '@/components/import/navbar-vista'
-import Footer from '@/components/import/footer'
-import Vista from "@/components/app/vista-pokedex"
-import Display from "@/components/app/vista-pokedex/display"
+
+import ButtonPostAPI from "@/components/app/vista-pokedex/button-post-api"
+import ButtonDisplayApi from "@/components/app/vista-pokedex/button-display-api"
 // import snapshot from '@/components/data.json'
 import { getDatabase, ref, set, get, child } from "firebase/database";
 import { app } from "@/config/firebase.config";
 import { cookies } from 'next/headers'
-export default async function index() {
-  let int = 0;
-    const cookieStore = await cookies()
-    const cookie = cookieStore.get('user0') || {value:'{"userCookie":"empty"}'}
-    const userCookie = await JSON.parse(cookie.value)
-    console.log(userCookie)
 
-    const dbRef = ref(getDatabase(app));
-    const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
-      return snapshot.val()
-    })
-    const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
-      return snapshot.val()
-    })
+// DB
+import { createClient } from '@/config/supabase';
+
+export default async function index() {
+    const supabase = await createClient();
+    const { data: response } = await supabase.from("characters").select();
+    var characters = response || [];
+
+
+
+
+  // let int = 0;
+  //   const cookieStore = await cookies()
+  //   const cookie = cookieStore.get('user0') || {value:'{"userCookie":"empty"}'}
+  //   const userCookie = await JSON.parse(cookie.value)
+  //   console.log(userCookie)
+
+  //   const dbRef = ref(getDatabase(app));
+  //   const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
+  //     return snapshot.val()
+  //   })
+  //   const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
+  //     return snapshot.val()
+  //   })
   return (
     <div className='bg-neutral-100'>
       <div className='center text-black'>
-        <main className="min-h-dvh row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+        <main className="min-h-dvh 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
           <section className="column sm:w-full w-full p-2">
            <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
             <form action="" className="row search">
@@ -77,17 +87,21 @@ export default async function index() {
               </div>
             </div>
           </section>
-        <section className='w-full md:w-[calc(100%_-_270px)] sm:w-full p-2'>
+          <div className="row">
+            <section className='w-full md:w-[calc(100%_-_270px)] sm:w-full p-2'>
             <div className="grid grid-cols-3 gap-4">
                {
-              item.map((item: any) => (
+              characters.map((item: any) => (
                 <div key={item.id} className='h-full'>
-                  <Vista>
-                    <data value={int++}></data>
+                  <ButtonPostAPI>
+                    {/* <data value={item.id}></data> */}
+                    {/* <div className='w-full aspect-square rounded-lg'>
+                      <img className='w-full aspect-square rounded-lg' src={item.url || "404-img.webp"} alt="" />
+                    </div> */}
                     <div
                       className='w-full aspect-square rounded-lg'
                       style={{
-                        backgroundImage: `${item.url ?? "0"}`,
+                        backgroundImage: `url( ${item.url || "404-img.webp"} )`,
                         backgroundSize: "cover",
                         backgroundPosition: "center"
                       }}
@@ -143,16 +157,17 @@ export default async function index() {
                         </tbody>
                       </table>
                     </div>
-                  </Vista>
+                  </ButtonPostAPI>
                 </div>
               ))}
             </div>
         </section>
-          <section className="md:w-90 w-full px-0 md:px-2 py-0 md:py-2 md:relative right-1500 md:right-0 h-dvh md:h-fit bottom-0 !sticky !top-0">
-            {/* <Display>
-              <div id='display' className="bg-white shadow min-h-full md:min-h-200 md:rounded-lg p-4 md:p-0"></div>
-            </Display> */}
+          <section className="grow px-2 py-0 md:py-2">
+            <ButtonDisplayApi>
+              <div id='display' className="bg-white shadow min-h-full min-h-200 rounded-lg p-4 md:p-0"></div>
+            </ButtonDisplayApi>
         </section>
+          </div>
       </main>
       </div>
       </div>
