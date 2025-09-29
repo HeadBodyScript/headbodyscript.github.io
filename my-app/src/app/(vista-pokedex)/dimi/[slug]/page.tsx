@@ -1,33 +1,33 @@
-
+// basic
 import Link from "next/link";
 
-// DB
+// supabase database connection
 import { createClient } from '@/config/supabase';
 
 export default async function index({ params, }: { params: Promise<{ slug: number }> }) {
+  // fetch url param
   const { slug } = await params
-  console.log("slug", slug)
-    const supabase = await createClient();
-    const { data: response } = await supabase.from("characters").select();
-    const characters = response || [];
-    console.log("characters", characters)
+  // fetch table: "characters" from supabase
+  const supabase = await createClient();
+  const { data: response } = await supabase.from("characters").select();
+  const characters = response || [];
 
   return (
     <div className='bg-neutral-100'>
       <div className='center text-black'>
         <main className="min-h-dvh 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
           <section className="column sm:w-full w-full p-2">
-           <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
-            <form action="" className="row search">
-              <input type="text" placeholder="Search your fighter!" />
-              <label htmlFor="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" className="bi bi-search" viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-              </label>
-            </form>
-          </div>
-          <div className="bg-white rounded-lg shadow p-2 column h-fit mt-4">
+            <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
+              <form action="" className="row search">
+                <input type="text" placeholder="Search your fighter!" />
+                <label htmlFor="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" className="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+                </label>
+              </form>
+            </div>
+            <div className="bg-white rounded-lg shadow p-2 column h-fit mt-4">
               <div className="row grid gap-2">
                 <div className="row rounded-lg shadow p-2 text-gray-500 hover:bg-gray-200 hover:text-gray-800">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-eye-slash-fill" viewBox="0 0 16 16">
@@ -71,16 +71,57 @@ export default async function index({ params, }: { params: Promise<{ slug: numbe
           </section>
           <div className="row">
             <section className='w-full md:w-[calc(75%)] sm:w-full p-2'>
-            <div className="grid grid-cols-3 gap-4">
-               {
-              characters.map((item: any) => (
-                <div key={item.id} className='h-full'>
+              <div className="grid grid-cols-3 gap-4">
+                {
+                characters.map((item: any) => (
+                  <div key={item.id} className='h-full'>
                     <div className="bg-white flex row rounded-lg shadow w-full items-start h-full">
-                      <Link href={"/dimi/" + item.id} className='w-full aspect-square rounded-lg'>
+                      <Link prefetch={false} href={"/dimi/" + item.id} className='w-full aspect-square rounded-lg'>
                         <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: `url( ${item.url || "404-img.webp"} )`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
                       </Link>
+                      <div className="column p-4 w-full">
+                        <h1><span>{item.name}</span></h1>
+                        <table className='w-full'>
+                          <tbody>
+                            <tr>
+                              <td className='text-left'>
+                                <div className='row'>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                                    <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                                  </svg>
+                                  <span>Attack Damage</span>
+                                </div>
+                              </td>
+                              <td className='text-right'>{item.attack ?? "0"}</td>
+                            </tr>
+                            <tr>
+                              <td className='text-left'>
+                                <div className='row'>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                                    <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                                  </svg>
+                                  <span>Health</span>
+                                </div>
+                              </td>
+                              <td className='text-right'>{item.health ?? "0"}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section className="grow md:w-[calc(25%)] px-2 py-0 md:py-2">
+              <div className="bg-white flex row rounded-lg w-full items-start h-fit sticky top-2">
+                <div key={characters[slug- 1 ].id} className='h-full w-full'>
+                  <div className="bg-white rounded-lg shadow w-full items-start h-full">
+                    <div className='w-full aspect-square rounded-lg'>
+                      <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: `url( ${characters[slug- 1 ].url ?? "404-img.webp"} )`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+                    </div>
                     <div className="column p-4 w-full">
-                      <h1><span>{item.name}</span></h1>
+                      <h1><span>{characters[slug- 1 ].name ?? "name"}</span></h1>
                       <table className='w-full'>
                         <tbody>
                           <tr>
@@ -92,7 +133,7 @@ export default async function index({ params, }: { params: Promise<{ slug: numbe
                               <span>Attack Damage</span>
                             </div>
                           </td>
-                          <td className='text-right'>{item.attack ?? "0"}</td>
+                          <td className='text-right'>{characters[slug- 1 ].attack ?? "0"}</td>
                         </tr>
                         <tr>
                           <td className='text-left'>
@@ -103,84 +144,43 @@ export default async function index({ params, }: { params: Promise<{ slug: numbe
                               <span>Health</span>
                             </div>
                           </td>
-                          <td className='text-right'>{item.health ?? "0"}</td>
+                          <td className='text-right'>{characters[slug - 1 ].health ?? "0"}</td>
+                        </tr>
+                        <tr>
+                          <td className='text-left'>
+                            <div className='row'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                              </svg>
+                              <span>Physical Armor</span>
+                            </div>
+                          </td>
+                          <td className='text-right'>{characters[slug - 1 ].physical_armor ?? "0"}</td>
+                        </tr>
+                        <tr>
+                          <td className='text-left'>
+                            <div className='row'>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                              </svg>
+                              <span>Magic Armor</span>
+                            </div>
+                          </td>
+                          <td className='text-right'>{characters[slug- 1 ].magic_armor ?? "0"}</td>
+                        </tr>
+                        <tr>
+                          <td>Description</td>
                         </tr>
                         </tbody>
                       </table>
                     </div>
-                    </div>
-                </div>
-              ))}
-            </div>
-        </section>
-        <section className="grow md:w-[calc(25%)] px-2 py-0 md:py-2 sticky top-0">
-          <div className="bg-white flex row rounded-lg w-full items-start h-fit">
-            <div key={characters[slug- 1 ].id} className='h-full w-full'>
-              <div className="bg-white rounded-lg shadow w-full items-start h-full">
-                <div href={"/dimi/" + characters[slug- 1 ].id} className='w-full aspect-square rounded-lg'>
-                  <div className='w-full aspect-square rounded-lg' style={{ backgroundImage: `url( ${characters[slug- 1 ].url ?? "404-img.webp"} )`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                </div>
-                <div className="column p-4 w-full">
-                  <h1><span>{characters[slug- 1 ].name ?? "name"}</span></h1>
-                  <table className='w-full'>
-                    <tbody>
-                      <tr>
-                      <td className='text-left'>
-                        <div className='row'>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
-                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
-                          </svg>
-                          <span>Attack Damage</span>
-                        </div>
-                      </td>
-                      <td className='text-right'>{characters[slug- 1 ].attack ?? "0"}</td>
-                    </tr>
-                    <tr>
-                      <td className='text-left'>
-                        <div className='row'>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
-                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
-                          </svg>
-                          <span>Health</span>
-                        </div>
-                      </td>
-                      <td className='text-right'>{characters[slug - 1 ].health ?? "0"}</td>
-                    </tr>
-                    <tr>
-                      <td className='text-left'>
-                        <div className='row'>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
-                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
-                          </svg>
-                          <span>Physical Armor</span>
-                        </div>
-                      </td>
-                      <td className='text-right'>{characters[slug - 1 ].physical_armor ?? "0"}</td>
-                    </tr>
-                    <tr>
-                      <td className='text-left'>
-                        <div className='row'>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" className="bi bi-caret-right relative" viewBox="0 0 16 16">
-                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
-                          </svg>
-                          <span>Magic Armor</span>
-                        </div>
-                      </td>
-                      <td className='text-right'>{characters[slug- 1 ].magic_armor ?? "0"}</td>
-                    </tr>
-                    <tr>
-                      <td>Description</td>
-                    </tr>
-                    </tbody>
-                  </table>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
-      </section>
+        </main>
+      </div>
     </div>
-  </main>
-</div>
-</div>
   );
 }

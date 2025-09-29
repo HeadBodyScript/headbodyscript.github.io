@@ -55,7 +55,7 @@ export async function decrypt(input: string): Promise<any> {
 }
 
 export async function createSession(uid: string, userName: string, photoURL: string) {
-  console.log(uid, userName, photoURL)
+  // console.log(uid, userName, photoURL)
 
     const user = { uid: uid, userName: userName, photoURL: photoURL };
 

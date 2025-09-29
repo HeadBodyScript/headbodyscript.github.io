@@ -1,4 +1,4 @@
-import Vista from '@/components/app/vista-pokedex/button-post-api';
+// import Vista from '@/components/app/vista-pokedex/button-post-api';
 // import Display from "@/components/vista/display"
 import Image from 'next/image';
 import { createClient } from '@/config/supabase';
@@ -72,7 +72,7 @@ export default async function Instruments() {
 {
               characters.map((item: any) => (
                 <div key={item.id} className='h-full'>
-                  <Vista>
+                  {/* <Vista> */}
                     <data value={item.id}></data>
                     {/* <div
                       className='w-full aspect-square rounded-lg'
@@ -144,7 +144,7 @@ export default async function Instruments() {
                         </tbody>
                       </table>
                     </div>
-                    </Vista>
+                    {/* </Vista> */}
                 </div>
               ))}
               </div>

@@ -55,11 +55,11 @@ export default async function middleware(request: NextRequest) {
     // &&
     // !request.nextUrl.pathname.startsWith('/dashboard')
   ) {
-    console.log('MIDDLEWARE IF')
+    // console.log('MIDDLEWARE IF')
     return 
     // NextResponse.redirect(new URL('/dashboard', req.nextUrl))
   }
- console.log('MIDDLEWARE return')
+//  console.log('MIDDLEWARE return')
   return NextResponse.next(), response;
 }
  

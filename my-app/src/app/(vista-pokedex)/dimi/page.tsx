@@ -1,10 +1,4 @@
 
-import ButtonPostAPI from "@/components/app/vista-pokedex/button-post-api"
-import ButtonDisplayApi from "@/components/app/vista-pokedex/button-display-api"
-// import snapshot from '@/components/data.json'
-import { getDatabase, ref, set, get, child } from "firebase/database";
-import { app } from "@/config/firebase.config";
-import { cookies } from 'next/headers'
 import Link from "next/link";
 // DB
 import { createClient } from '@/config/supabase';

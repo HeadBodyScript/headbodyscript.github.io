@@ -1,39 +1,37 @@
 "use client"
 import { signInWithPopup , GithubAuthProvider } from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
-import { auth, app } from '@/config/firebase.config';
+import { auth } from '@/config/firebase.config';
 import { createSession } from "@/lib/session";
 
-const Auth = () => {
-  
+export default function Auth() {
   const provider = new GithubAuthProvider();
   async function signInWithGitHub(){
     signInWithPopup(auth, provider)
     .then((credentials) => {
       const credential = GithubAuthProvider.credentialFromResult(credentials);
-      const token = credential.accessToken;
       const user = credentials.user;
-      // console.log(token)
+      const token = credential.accessToken;
+      console.log(credentials)
+      console.log(credential)
+      console.log(token)
       console.log(user)
-      // CREATE JWT AND STORE IN COOKIE with $user
-      // console.log(credential)
-      // document.cookie = user
-      // document.cookie = `user0=`+JSON.stringify(user.proactiveRefresh.user);
       createSession( user.uid ,user.displayName, user.photoURL);
       // if (user.proactiveRefresh.user.metadata.createdAt === user.proactiveRefresh.user.metadata.lastLoginAt) {
+        
       //   // User signed up
-      //   const db = getDatabase(app);
-      //   set(ref(db, 'users/' + user.uid), {
-      //       username: user.displayName,
-      //       email: user.email,
-      //       currency: 10000
-      //     });
+      //   console.log("Welcome new user")
+
       // } else {
       //   console.log("Welcome back user")
-      //   // User logged in (not first time)
       // }
-      // change to DB
-      redirect(`/dimi`) // Navigate to the new post page
+      fetch(`http://localhost:3000/api/auth/new-user`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ dataObj: { uid: user.uid } }),
+        });
+      // window.history.go(-1); return false;
  
     }).catch((error) => {
         // const errorCode = error.code;
@@ -98,5 +96,3 @@ const Auth = () => {
             </div>
   );
 }
-
-export default Auth;

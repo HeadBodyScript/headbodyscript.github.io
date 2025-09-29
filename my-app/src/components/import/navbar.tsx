@@ -6,7 +6,7 @@ interface NavbarProps {
    session: any;
 }
 const Navbar = ({session}: NavbarProps) => {
-  console.log('NAVBAR SESSION from Props:', session) // show json
+  // console.log('NAVBAR SESSION from Props:', session) // show json
   return (
     <>
     {session && 

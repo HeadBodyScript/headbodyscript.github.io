@@ -1,4 +1,4 @@
-// "use server"
+"use server"
 // import { auth } from '@/config/firebase.config';
 // import { signOut } from "firebase/auth";
 // import { cookies } from "next/headers";
@@ -55,10 +55,10 @@ export default async function signOutPage() {
   // console.log('step 1');
   //  signOut(auth).then(async() => {
   // console.log('step 2');
-  //   // (await cookies()).set('session', 'value', { maxAge: 0 })
-  //   cookies().set("session", "", { expires: new Date(0) });
+    // (await cookies()).set('session', 'value', { maxAge: 0 })
+    // cookies().set("session", "", { expires: new Date(0) });
   //   console.log('SIGN OUT SUCCESS')
-  //   // document.cookie = "session"+'=; Max-Age=-99999999;'; 
+    // document.cookie = "session"+'=; Max-Age=-99999999;'; 
   // }).catch((error) => {
   //   // An error happened.
   //   console.log('SIGN OUT ERROR:', error) 
