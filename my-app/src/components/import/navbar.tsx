@@ -24,18 +24,22 @@ const Navbar = ({session}: NavbarProps) => {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   {/* <Link className={`text-gray-500 text-[5px] ${headbodyscriptFont.className}`} href="/">headbodyscript</Link> */}
-                  <Link className={`text-gray-500 text-[5px]}`} href="/">headbodyscript Loged in</Link>
+                  <Link className={`text-gray-500 text-[5px]}`} href="/">Home</Link>
                 </li>
               </ul>
             </nav>
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/">Home</Link>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/dimi/store">Store</Link>
                 </li>
 
                 <li>
-                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/projects">Projects</Link>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/dimi/index">Index</Link>
+                </li>
+
+                <li>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/dimi/game">Game</Link>
                 </li>
               </ul>
             </nav>
