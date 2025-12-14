@@ -35,7 +35,7 @@ const Navbar = ({session}: NavbarProps) => {
                 </li>
 
                 <li>
-                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/dimi/index">Index</Link>
+                  <Link className="text-gray-500 transition hover:text-gray-500/75" href="/dimi/1">Index</Link>
                 </li>
 
                 <li>

@@ -6,20 +6,9 @@ import { app } from "@/config/firebase.config";
 import { cookies } from 'next/headers'
 
 export default async function store() {
-      const cookieStore = await cookies()
-      const cookie = cookieStore.get('user0') || {value:""}
-      const userCookie = await JSON.parse(cookie.value)
 
-    const dbRef = ref(getDatabase(app));
-    const item = await get(child(dbRef, `characters/`)).then((snapshot) => {
-      return snapshot.val()
-    })
-    const userData = await get(child(dbRef, `users/${userCookie.uid}/`)).then((snapshot) => {
-      return snapshot.val()
-    })
   return (
     <div className='bg-neutral-100'>
-      <Navbar userCookie={userCookie} userData={userData} />
       <div className='center text-black'>
         <main className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
         <section className='w-full md:w-full sm:w-full px-2 py-4'>
@@ -98,7 +87,7 @@ export default async function store() {
               </div>
             </div>            
             <div className="grid grid-cols-4 gap-4">
-              {
+              {/* {
               
               item.map((item: any) => (
                 <div key={item.id} className='h-full'>
@@ -168,7 +157,7 @@ export default async function store() {
                     </div>
                   </DisplayStore>
                 </div>
-              ))}
+              ))} */}
 {/* {
               
               snapshot.map((item: any) => (
@@ -194,7 +183,6 @@ export default async function store() {
 
       </main>
       </div>
-      <Footer/>
       </div>
   );
 }
