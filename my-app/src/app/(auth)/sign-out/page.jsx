@@ -45,7 +45,7 @@
 import { auth } from '@/config/firebase.config';
 import { signOut } from "firebase/auth";
 import { cookies } from "next/headers";
-import '@/app/spinner.css'
+// import '@/app/spinner.css'
 import { signoutUser } from '@/components/app/auth/signout';
 
 export default async function signOutPage() {

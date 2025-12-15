@@ -1,17 +1,11 @@
-import Navbar from '@/components/import/navbar-vista'
-import Footer from '@/components/import/footer'
-import DisplayStore from "@/components/app/vista-pokedex/store"
-import { getDatabase, ref, set, get, child } from "firebase/database";
-import { app } from "@/config/firebase.config";
-import { cookies } from 'next/headers'
-
 export default async function store() {
 
   return (
     <div className='bg-neutral-100'>
       <div className='center text-black'>
-        <main className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
-        <section className='w-full md:w-full sm:w-full px-2 py-4'>
+        <main>
+        <div className="min-h-dvh w-fit row 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+          <section className='w-full md:w-full sm:w-full px-2 py-4'>
           <div className="bg-white rounded-lg shadow p-4 h-fit">
             <form action="" className="row search">
               <input type="text" placeholder="Search your fighter!" />
@@ -181,6 +175,7 @@ export default async function store() {
             </div>
         </section>
 
+        </div>
       </main>
       </div>
       </div>

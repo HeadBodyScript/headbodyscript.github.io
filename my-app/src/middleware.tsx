@@ -18,8 +18,8 @@ import { updateSession, decrypt } from "@/lib/session";
 
  
 // 1. Specify protected and public routes
-const protectedRoutes = ['/dimi']
-const publicRoutes = ['/auth', '/']
+const protectedRoutes = ['/dimi', '/admin', '/user']
+const publicRoutes = ['/auth', '/public', '/test-env']
  
 export default async function middleware(request: NextRequest) {
   await updateSession(request);

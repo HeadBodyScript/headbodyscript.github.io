@@ -1,16 +1,13 @@
 "use client";
 import Link from 'next/link'
-// import { signOutUser } from "@/components/app/auth/signout";
-
 interface NavbarProps {
    session: any;
 }
 const Navbar = ({session}: NavbarProps) => {
-  // console.log('NAVBAR SESSION from Props:', session) // show json
   return (
     <>
     {session && 
-    <header className="bg-white shadow">
+    <header className="bg-white shadow z-256">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
 
@@ -124,13 +121,10 @@ const Navbar = ({session}: NavbarProps) => {
       </div>
     </header>
     || 
-    <div>
     <header className="bg-white shadow">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-
-
-<div className="flex-1 md:flex md:items-center md:gap-12">
+        <div className="flex-1 md:flex md:items-center md:gap-12">
             <Link className="block text-gray-500 text-sm" href="/projects"><span className="sr-only">Home</span></Link>
           </div>
           <div className="md:flex md:items-center md:gap-12">
@@ -161,7 +155,6 @@ const Navbar = ({session}: NavbarProps) => {
         </div>
       </div>
     </header>
-    </div>
     }
     </>
   );

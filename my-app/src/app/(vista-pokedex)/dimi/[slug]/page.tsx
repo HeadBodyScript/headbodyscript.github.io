@@ -15,8 +15,9 @@ export default async function index({ params, }: { params: Promise<{ slug: numbe
   return (
     <div className='bg-neutral-100'>
       <div className='center text-black'>
-        <main className="min-h-dvh 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
-          <section className="column sm:w-full w-full p-2">
+        <main>
+          <div className="min-h-dvh 2xl:w-350 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+            <section className="column sm:w-full w-full p-2">
             <div className="bg-white rounded-lg shadow p-4 h-fit mt-2">
               <form action="" className="row search">
                 <input type="text" placeholder="Search your fighter!" />
@@ -178,6 +179,7 @@ export default async function index({ params, }: { params: Promise<{ slug: numbe
                 </div>
               </div>
             </section>
+          </div>
           </div>
         </main>
       </div>

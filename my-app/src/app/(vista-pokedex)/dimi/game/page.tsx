@@ -1,12 +1,17 @@
-import "@/app/game.css";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "HeadBodyScript || Game",
+  description: "The future of web development starts here.",
+};
 
 export default async function index() {
 
   return (
     <div className='bg-neutral-100 min-h-dvh'>
       <div className='center text-black'>
-        <main className="center w-fit column 2xl:w-150 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
-          <section className='w-full sm:w-full px-2 py-4'>
+        <main>
+          <div className="center w-fit column 2xl:w-150 xl:w-300 lg:w-250 md:w-200 sm:w-full w-full">
+            <section className='w-full sm:w-full px-2 py-4'>
             <div className="bg-white rounded-lg shadow p-4 h-fit">
               <form action="" className="row search">
                 <input type="text" placeholder="Enter lobby code!" />
@@ -23,12 +28,13 @@ export default async function index() {
               <div className='shadow p-2 rounded-lg hover:bg-gray-200'>Create Lobby</div>
             </div>
           </section>
-          <section className="w-full aspect-ratio: 16 / 9;">
-            <canvas></canvas>
+          <section className="w-full h-full center">
+            <canvas className="w-full"></canvas>
           </section>
+          </div>
         </main>
       </div>
-      <script src="/game.js"></script>
+      <script src="/game/index.js" type="module"></script>
     </div>
   );
 }
