@@ -1,18 +1,4 @@
-
-firebase.exe
-firebase.json
-.firebase/
 .github/
-.firebaserc
-firebase-new.exe
 node_modules/
-firebase-debug.log
-firebase-tools-instant-win.exe
+/.next/
 ads.txt
-static/vista/icon/ability_power - Copy.webp
-static/vista/icon/armor - Copy.webp
-static/vista/icon/attack_damage - Copy.webp
-static/vista/icon/health - Copy.webp
-static/vista/icon/magic_armor - Copy.webp
-my-app/src/components/temp.json
-my-app/src/components/temp.json
