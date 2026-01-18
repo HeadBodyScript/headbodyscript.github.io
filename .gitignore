@@ -1,3 +1,4 @@
+.firebase/
 .github/
 node_modules/
 /.next/

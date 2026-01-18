@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "dimi/out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/out/_next/**",
+      "**/out/_not-found/**"
+    ]
+  }
+}
