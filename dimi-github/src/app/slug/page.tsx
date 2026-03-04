@@ -9,7 +9,7 @@ export default async function index() {
 //     const { slug } = await params
 
   let slug = 1
-    
+  let i = 0
     const responseData = await import(`../data/${slug}.json`)
     
     console.log(slug);
@@ -17,12 +17,13 @@ export default async function index() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans">
-      <p>{slug}</p>
+      <p> test {slug}</p>
 {
   responseData.structure.map((item: any) => (
     
-    <div key={item}>
-        <p>{item.id}</p>
+    // <div key={item}>
+    <div key={i++}>
+        <p className="mr-2 ml-2"> {item.id} </p>
       {/* {item.id == "001" && <Footer />}
       {item.id == "002" && <Test />} */}
     </div>

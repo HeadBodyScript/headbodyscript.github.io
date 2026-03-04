@@ -79,9 +79,9 @@ const ComponentDataDownload = {
           <ComponentFeature SessionData={ComponentDataFeature}/>
           <ComponentInformation SessionData={ComponentDataInformation}/>
           <ComponentDownload SessionData={ComponentDataDownload}/>
-          <ComponentLink SessionData={}/>
+          {/* <ComponentLink SessionData={}/>
           <ComponentCollaborator SessionData={}/>
-          <ComponentContributor SessionData={}/>
+          <ComponentContributor SessionData={}/> */}
     </>
   );
 }
