@@ -1,0 +1,51 @@
+.cart {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0d0d;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.4);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+}
+
+.emptyText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.3);
+}
+
+.emptySubtext {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent-yellow, #d4c832);
+  opacity: 0.5;
+}
