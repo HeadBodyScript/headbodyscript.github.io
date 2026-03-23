@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dimi/out",
+    "public": "dimi-vista/out",
     "ignore": [
       "firebase.json",
       "**/.*",

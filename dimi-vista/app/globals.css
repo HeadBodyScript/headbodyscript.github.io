@@ -64,3 +64,8 @@ button {
   /* object-fit: cover; */
   /* object-position: center; */
 }
+
+.image-max {
+  max-width: max-content;
+  height: auto;
+}

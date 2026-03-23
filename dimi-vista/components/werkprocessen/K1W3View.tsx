@@ -1,25 +1,17 @@
 'use client'
-import { useState } from 'react'
-import styles from './ProductView.module.css'
+import styles from './WerkprocessenView.module.css'
 
-interface ProductViewProps {
+interface WerkprocessenViewProps {
   onBack: () => void
 }
 
-export default function ProductView({ onBack }: ProductViewProps) {
-  const [selectedSize, setSelectedSize] = useState('S')
-  const [added, setAdded] = useState(false)
-
-  const handleAddToCart = () => {
-    setAdded(true)
-    setTimeout(() => setAdded(false), 2000)
-  }
+export default function ProductView({ onBack }: WerkprocessenViewProps) {
 
   return (
     <div className={styles.product}>
       {/* Left: Large image */}
       <div className={styles.imagePanel}>
-        <div className={styles.imagePlaceholder}>
+        <div className={styles.imagePlaceholder} style={{ backgroundImage: 'url(./empty.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className={styles.crossH} />
           <div className={styles.crossV} />
           <span className={styles.placeholderTag}>TECHWEAR JACKET</span>
@@ -33,62 +25,79 @@ export default function ProductView({ onBack }: ProductViewProps) {
       <div className={styles.infoPanel}>
         <div className={styles.titleRow}>
           <h1 className={styles.productName}>
-            TESTc.FUTURE <span className={styles.bracket}>[W]</span>
+            REALISEERT (ONDERDELEN VAN) SOFTWARE <span className={styles.bracket}>[k1-w3]</span>
           </h1>
-          <span className={styles.nameJp}>[身の上]</span>
+          <span className={styles.nameJp}>[Realized (parts of the) software]</span>
         </div>
 
-        <div className={styles.price}>$129.99</div>
+        <div className={styles.price}>Gerealiseerde functionaliteit<span className={styles.bracket}> [T1]</span></div>
 
         <div className={styles.divider} />
 
-        <div className={styles.sizeSection}>
-          <span className={styles.label}>[SIZE]</span>
-          <div className={styles.sizes}>
-            {['XS', 'S', 'M', 'L', 'XL'].map(size => (
-              <button
-                key={size}
-                className={`${styles.sizeBtn} ${selectedSize === size ? styles.sizeBtnActive : ''}`}
-                onClick={() => setSelectedSize(size)}
-              >
-                {size}
-              </button>
-            ))}
+        <div className={styles.specs}>
+          <div className={styles.specBlock}>
+            <span className={styles.specTitle}>[TITLE]</span>
+            <p className={styles.specText}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </div>
         </div>
 
-        <button
-          className={`${styles.addToCart} ${added ? styles.added : ''}`}
-          onClick={handleAddToCart}
-        >
-          {added ? '[ ADDED ]' : 'ADD TO CART'}
-        </button>
+        <div className={styles.divider} />
+
+
+        <div className={styles.price}>Kwaliteit opgeleverde functionaliteiten<span className={styles.bracket}> [T1]</span></div>
+
+        <div className={styles.divider} />
 
         <div className={styles.specs}>
           <div className={styles.specBlock}>
-            <span className={styles.specTitle}>[TECHNICAL CLOTHING]</span>
+            <span className={styles.specTitle}>[TITLE]</span>
             <p className={styles.specText}>
-              This techwear jacket is equipped with a multitude of storage pockets to easily
-              carry your personal belongings.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
           <div className={styles.specBlock}>
-            <span className={styles.specTitle}>[BREATHABLE MATERIALS]</span>
+            <span className={styles.specTitle}>[TITLE]</span>
             <p className={styles.specText}>
-              This techwear jacket is made of polyester, cotton and spandex and can be
-              worn all year round.
-            </p>
-          </div>
-          <div className={styles.specBlock}>
-            <span className={styles.specTitle}>[WATER RESISTANT]</span>
-            <p className={styles.specText}>
-              Treated with DWR coating for light rain and moisture resistance.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </div>
 
+        <div className={styles.divider} />
+
+        <div className={styles.price}>Kwaliteit code<span className={styles.bracket}> [T1]</span></div>
+
+        <div className={styles.divider} />
+
+        <div className={styles.specs}>
+          <div className={styles.specBlock}>
+            <span className={styles.specTitle}>[TITLE]</span>
+            <p className={styles.specText}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.divider} />
+
+        <div className={styles.price}>Versiebeheer<span className={styles.bracket}> [T1]</span></div>
+
+        <div className={styles.divider} />
+
+        <div className={styles.specs}>
+          <div className={styles.specBlock}>
+            <span className={styles.specTitle}>[GITHUB]</span>
+            <p className={styles.specText}>
+              Hier kun je zien dat de code regelmatig gecommit is, met duidelijke commit messages, en dat er branches gebruikt worden voor nieuwe features of bug fixes. Dit geeft aan dat er een gestructureerde aanpak is voor het ontwikkelen van de software, wat bijdraagt aan de kwaliteit en onderhoudbaarheid ervan.
+            </p>
+          </div>
+              <img className='image-max' src="github.png" alt="" />
+        </div>
+
         <button className={styles.backBtn} onClick={onBack}>
-          ← BACK TO STORE
+          ← BACK TO SELECTION
         </button>
       </div>
     </div>

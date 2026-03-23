@@ -5,3 +5,6 @@ node_modules/
 ads.txt
 .next/
 my-app/.env
+out/
+dimitra
+dimitra.rar
